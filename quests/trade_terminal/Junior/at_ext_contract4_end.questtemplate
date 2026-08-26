@@ -1,0 +1,40 @@
+{
+  "id" : "at_ext_contract4_end",
+  "prerequisites" : [ "at_ext_contract4_2","at_ext_contract4_1","at_ext_contract4_3" ],
+  "title" : "^yellow;New Reputation^reset;",
+  "text" :  "^#FF7C00;Thank you for your cooperation. You've got new reputation level.",
+  
+  "completionText" : "Thanks,^yellow;Your reputation has increased!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    [ "at_ext_rf", 1 ]
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "turnInDescription" : "Go to the ^yellow;Trade Terminal^reset; to confirm your new rank.",
+    //"description" : "Find required items for outpost.",
+	"requireTurnIn" : true,
+	
+    "conditions" : [
+
+    ]
+  }
+}

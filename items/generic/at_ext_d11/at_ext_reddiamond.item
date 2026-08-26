@@ -1,0 +1,12 @@
+{
+  "itemName" : "at_ext_reddiamond",
+  "price" : 0,
+  "rarity" : "Legendary",
+  "tooltipKind" : "at_ext_item",
+  "category" : "quest",
+  "largeImage" : "at_ext_reddiamond.png",
+  "inventoryIcon" : "at_ext_reddiamond.png",
+  "description" : "A crystal-clear red diamond. Someone would be willing to pay a high price for it.\n^green;Can be sold at the trade terminal!^reset;",
+  "shortdescription" : "Red Diamond",
+  "itemTags" : [ "reagent" ]
+}

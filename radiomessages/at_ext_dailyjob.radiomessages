@@ -1,0 +1,35 @@
+{
+
+  
+     "at_ext_dailyjob1_1" : {
+    "type" : "mission",
+	"senderName" : "Forgex",
+	"portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "Looks like you're on route. Keep your eyes open; this place is a wasteland for scum. ^red;Anyone gets in your way, put them down. They're expendable.^reset;"
+  },
+     "at_ext_dailyjob1_end" : {
+    "type" : "mission",
+	"senderName" : "Forgex",
+	"portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "Hmm... Someone left a mark here. I'd call that a clue. That door should lead you back to the surface."
+  }
+  
+  
+
+
+//[█    %]
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}

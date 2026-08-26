@@ -1,0 +1,84 @@
+{
+  "timeToLive" :3.25,
+  "animation": "recondrone_controller.animation",
+  "animationDelta": 5,
+  "animationParts": {
+    "controller": "smi_drone_Tier2_loitering.png",
+    "fullbright" : "smi_drone_Tier2_loitering_iconfullbright.png"
+  },
+  "boundingBox": [
+    -1,
+    -1,
+    1,
+    1
+  ],
+  "category": "^yellow;Attacking Drone T2",
+  "description": "This Loitering Munition is from a military corporation from another dimension.
+  ^green;[Primary]Spawn/Despawn,[Alt]Arm the warhead.^reset;",
+  "inventoryIcon": "smi_drone_Tier2_loitering.png",
+  "itemName": "smi_drone_Tier2_loitering_controller",
+  "itemTags": [],
+  "level": 7,
+  "maxStack": 1,
+  "controllerConfig" : {
+    "droneParam" : {
+      "droneConfig" : {
+        "moveConfig" : {
+            "controlForce" : 250,
+            "speed" : 60,
+            "minTriggerDistance" : 2,
+            "maxSpeedDistance" : 14
+          },
+        "abilityClass" : "Fire",
+        "controlType" : "followMouse",
+        "abilityConfig" : {
+          "inaccuracy" : 0,
+          "projectileCount" : 1,
+          "muzzleOffset" : [0, 0],
+          "onGround" : false,
+          "burstTime" : 0.25,
+          "burstCount" : 5,
+          "projectileParam" : {
+			        "timeToLive" : 0,
+              "processing" : "?scale=0",
+              "renderLayer" : "ForegroundEntity+10"
+          },
+          "animationConfig" : {
+            "fireSound" : "fire",
+            "fireAnimation" : {
+              "stateType" : "body",
+              "state" : "fire",
+              "time" : 0.4
+            },
+            "windupAnimation" : {
+              "stateType" : "body",
+              "state" : "firewindup",
+              "time" : 0.6
+            },
+            "winddownAnimation" : {
+              "stateType" : "body",
+              "state" : "firewinddown",
+              "time" : 0.4
+
+            },
+            "turretGroup" : "body",
+            "rotationCenter" : [0, 0]
+          },
+          "fireType" : "single",
+          "projectileType" : "standardbullet"
+        },
+        "abilityScript" : "/droneAbility/fire/fire.lua"
+      }
+    },
+    "droneType":"loiteringmunition",
+    "rightClickCooldown" :1
+  },
+  "price": 0,
+  "rarity": "Legendary",
+  "scripts": [
+    "/scripts/droneControllerBase.lua" //通用控制器脚本，
+  ],
+  "shortdescription": "SMI Loitering Munition Controller",
+  "tooltipKind": "arcana_base_item",
+  "twoHanded": true
+}

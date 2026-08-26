@@ -1,0 +1,11 @@
+{
+  "itemName" : "at_ext_ct2",
+  "rarity" : "common",
+  "category" : "quest",
+  "tooltipKind" : "at_ext_qitem",
+  "largeImage" : "at_ext_ct2_lg.png",
+  "inventoryIcon" : "at_ext_ct2.png",
+  "description" : "^orange;The lost cargo of Titancorp, contains a signal generator.^reset;",
+  "shortdescription" : "^yellow;Package#TC-2716^reset;",
+  "price" : 0
+}

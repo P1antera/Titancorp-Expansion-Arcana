@@ -1,0 +1,94 @@
+{
+  "objectName" : "at_ext_cotv",
+  "colonyTags" : ["outpost"],
+  "rarity" : "Uncommon",
+ 
+  "printable" : false,
+  
+ 
+  "description" : "...",
+  "shortdescription" : "...",
+  "race" : "generic",
+
+
+
+
+
+
+  "category" : "light",
+  "price" : 10,
+  "lightColor" : [110, 110, 116],
+  "flickerDistance" : 0.2,
+  "flickerStrength" : 0.05,
+  "flickerTiming" : 4,
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "body.png:<color>.on",
+      "imagePosition" : [0, 0],
+	  "lightPosition" : [1, 0],
+
+      "direction" : "left",
+
+      "flipImages" : true,
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "body.png:<color>.on",
+      "imagePosition" : [0, 0],
+	  "lightPosition" : [1, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    }
+  ],
+  "animation" : "/objects/arcana_light_fullbright_animated.animation",
+  "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "light" : {
+          "states" : {
+            "on" : {
+              "frames" : 8,
+              "cycle" : 0.8,
+			  "mode" : "loop"
+            }
+          }
+        }
+	  }
+    },
+    "sounds" : {
+      "on" : [ "/sfx/objects/tinywallswitch.ogg" ],
+      "off" : [ "/sfx/objects/tinywallswitch.ogg" ]
+    }
+  },
+  "animationParts" : {
+    "bg" : "body.png",
+    "fg" : "fullbright.png"
+  },
+"animationPosition" : [0, 0],
+
+  "scripts" : [ "/objects/at_ext_npc/colony/at_ext_cotv.lua" ],
+  "scriptDelta" : 20,
+
+  
+
+  "chatRadius" : 10,
+  "chatCooldown" : 6,
+  "chatOptions" : [
+  "The Section 8's latest generation of standard-issue rifles has entered production, reportedly featuring the most variant models of any rifle in history.",
+	"Studies show that reducing employees' sleep time by one hour can increase productivity by 0.001%.",
+    
+	"A facility was attacked by the Horizon Fleet, and preliminary estimates suggest this will delay 0.23% of the production schedule.",
+	"When traveling, always carry a weapon to ensure you can deliver a strong counterattack if you encounter enemies.",
+	"When using the machine, ensure you use fuel with a purity greater than 98%; otherwise, you will be responsible for any consequences!",
+	"Yesterday, a new type of high-energy explosive was tested, and the results showed that its extraction efficiency is five times that of traditional mining methods.",
+  "Landing Zone 7 will enter maintenance ahead of schedule. Some flight schedules will be adjusted. Please plan your travel accordingly.",
+  "Section 8's latest aircraft has successfully completed technical verification and entered the market, poised to become the best-selling flight vehicle.",
+	"A thief claiming to be a ''Protector'' broke into a resident's home and stole a large amount of property. The criminal has now been apprehended."
+  ]
+}

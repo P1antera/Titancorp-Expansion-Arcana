@@ -1,0 +1,48 @@
+{
+  "projectileName" : "metallicteafrag",
+  "physics" : "grenade",
+  
+  "timeToLive" : 5,
+  "bounces" : 0,
+  "speed" : 36,
+  
+  "image" : "greenteafrag.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  
+  "fullbright" : true,
+  "lightColor" : [107, 105, 98],
+  "emitters" : ["arcana_particle_ember_white"],
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "metallicteaplant",
+      "direction" : [1,0]
+    }
+  ],
+  
+  "periodicActions" : [
+    {
+      "time" : 0.005,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/luyedrone/metallictea/metallicteatrail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    }
+  ],
+  
+  "damageKind" : "default"
+ 
+}

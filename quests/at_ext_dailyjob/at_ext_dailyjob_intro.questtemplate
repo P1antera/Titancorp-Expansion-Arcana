@@ -1,0 +1,52 @@
+{
+  "id" : "at_ext_dailyjob_intro",
+  "mainQuest" : false,
+  "prerequisites" : [  "at_ext_shippad", "at_ext_pre" ],
+  "title" : "^yellow;Incoming message^reset;",
+  "text" : "Hello there! I'm looking for a partner. If you're interested, come find me in the ^yellow;TitanColony^reset;.",
+  "completionText" : "Hi, my name is Forgex, thank you for being willing to help me!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0,0],
+  "rewards" : [
+    [
+     
+    ]
+    ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_unknown2.png"} ],
+          "title" : "Unknown"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Forgex"
+        }
+    },
+    "descriptions" : {
+      "enterInstance" : "Go to ^orange;Titancolony^reset;.",
+      "findGoal" : "Find the ^orange;Sender^reset;.",
+      "turnIn" : "Talk with^orange;Stranger^reset;."
+    },
+	
+    "warpEntityUid" : "at_ext_pilot",
+    "warpAction" : "instanceworld:at_ext_colony",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:at_ext_rl2",
+	
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+	
+    "goalEntityUid" : "at_ext_forgex",
+	  //"interactEntityUid" : "at_ext_d1_goal",
+    "indicateGoal" : true,
+    "trackGoalEntity" : true,
+	
+    "turnInEntityUid" : "at_ext_forgex"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name" : "acidsprayerenemy",
+  "category" : "acidsprayerenemy",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "fullbright" : "fullbright.png"
+  }
+}

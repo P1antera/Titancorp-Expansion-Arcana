@@ -1,0 +1,30 @@
+{
+  "id" : "at_ext_tut",
+  "prerequisites" : [ "human_mission1" ],
+  "title" : "The Titancorp",
+  "text" : "I got a poster from ^orange;Titancorp^reset;, you may be interested in the content on it.",
+  "completionText" : "Here, this is the poster.",
+  "canBeAbandoned" : false,
+  "moneyRange" : [0, 0],
+  "rewards" : [ 
+  [ ["at_ext_tut-codex", 1] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : "questGiver",
+      "questComplete" : "questGiver"
+    },
+    "requireTurnIn" : true,
+    "conditions" : [
+      {
+        "type" : "gatherItem",
+        "itemName" : "money",
+        "count" : 1,
+        "consume" : false
+      }
+    ]
+  }
+}

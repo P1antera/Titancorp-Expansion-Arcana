@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 2100 },
+	{ "item" : "arcana_misc_behestDongle", "count" : 2 },
+	{ "item" : "arcana_misc_exoslateComposite", "count" : 1 },
+	{ "item" : "arcana_misc_enartzComposite", "count" : 1 }
+  ],
+  "output" : { "item" : "sd_exp_t2exousiadrone_controller", "count" : 1 },
+  "groups" : [ "sd_exp_shop_2", "sd_exp_shop","sd_exp_droneshop"]
+}

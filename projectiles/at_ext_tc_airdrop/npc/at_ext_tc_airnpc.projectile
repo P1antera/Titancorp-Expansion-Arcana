@@ -1,0 +1,55 @@
+{
+  "projectileName" : "at_ext_tc_airnpc",
+  "physics" : "at_ext_droppod",
+ 
+  "timeToLive" : 2.0,
+  "image" : "at_ext_tc_airnpc.png",
+  "speed" : 100,
+  "animationCycle" : 0.25,
+  "animationLoops" : true,
+  "frameNumber" : 2,
+  "power" : 200,
+  "fullbright" : true,
+  "damageKind" : "hidden",
+ "damagePoly" : [ [8, -0.2], [8.5, -0.2], [8.5, 0.2], [8, 0.2] ],
+  "orientationLocked" : true,
+
+ 
+  
+
+ 
+  "onlyHitTerrain" : true,
+  
+     "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [ 
+	  "/sfx/at_ext_airdrop.ogg"
+	  ]
+    }
+  ],
+  
+  "actionOnTimeout" : [
+    {
+      "action" : "projectile",
+      "type" : "at_ext_tc_airitem_1",
+      "angleAdjust" : -120
+    },
+	    {
+      "action" : "projectile",
+      "type" : "at_ext_tc_airitem_2",
+      "angleAdjust" : 120
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/at_ext_tc_airdrop/at_ext_regularexplosion.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_ally_t8"
+    }
+
+  ]
+  
+
+}

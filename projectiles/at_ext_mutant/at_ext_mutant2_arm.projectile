@@ -1,0 +1,26 @@
+{
+  "projectileName" : "at_ext_mutant2_arm",
+  "image" : "at_ext_mutant2_arm.png",
+  "physics" : "largeGrenade",
+  "animationCycle" : 2,
+  "frameNumber" : 1,
+  "renderLayer" : "Object+1",
+  "power" : 0,
+  "speed" : 20,
+  "piercing" : true,
+  "initialVelocity" : 20,
+  "timeToLive" : 100,
+  "bounces" : 7,
+  "flippable" : true,
+  "orientationLocked" : false,
+
+  "actionOnCollide" : [
+
+  ],
+
+  "actionOnReap" : [
+
+  ],
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

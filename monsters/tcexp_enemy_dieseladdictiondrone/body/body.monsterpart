@@ -1,0 +1,10 @@
+{
+  "name" : "tcexp_enemy_dieseladdictiondrone",
+  "category" : "tcexp_enemy_dieseladdictiondrone",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "eyes" : "fullbright.png"
+  }
+}

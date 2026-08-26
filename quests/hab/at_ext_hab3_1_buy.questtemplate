@@ -1,0 +1,44 @@
+{
+  "id" : "at_ext_hab3_1_buy",
+  "prerequisites" : [  ],
+  "mainQuest" : false,
+  
+  "title" : "^yellow;Reserve the room^reset;",
+  "text" : "Reserve this apartment now and pay at your convenience.",
+  "completionText" : "Transfer completed!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    [ "at_ext_habcontract", 1 ]    
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "turnInDescription" :  "^yellow;Complete the payment at housing agency^reset;",  
+    "requireTurnIn" : true,
+
+    "conditions" : [
+	  {
+        "type" : "gatherItem",
+        "itemName" : "arcana_currency_credit",
+        "count" : 8000,
+        "consume" : true
+      }
+    ]
+  }
+}

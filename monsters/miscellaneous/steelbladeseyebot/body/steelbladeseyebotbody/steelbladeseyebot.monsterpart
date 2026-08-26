@@ -1,0 +1,10 @@
+{
+  "name" : "steelbladeseyebot",
+  "category" : "steelbladeseyebot",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "steelbladeseyebot.png",
+    "fullbright":"steelbladeseyebotfullbright.png"
+  }
+}

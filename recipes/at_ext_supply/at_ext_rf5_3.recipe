@@ -1,0 +1,12 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 3800 },
+	{ "item" : "at_ext_coupon", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "at_ext_rf5_3",
+    "count" : 1
+  },
+  "duration" : 0.1,
+  "groups" : ["at_ext_supply","at_ext_supply1" ]
+}

@@ -1,0 +1,87 @@
+{
+  "id" : "at_ext_d7",
+  "mainQuest" : true,
+  "canBeAbandoned" : true,
+  "prerequisites" : ["at_ext_d6"],
+  "title" : "^yellow;Special mission^reset;",
+  "text" : "Section 8 has recently developed a new type of micro-missile and is currently seeking a contractor to conduct technical verification for this new weapon. The task requires traveling to a designated testing site and performing simple firing tests. ^yellow;Environmental protection gear is recommended!^reset;",
+  "completionText" : "Technical verification is complete! You can keep the prototype.\n^yellow;(You can replay the missions using the teleporter at the Titan Colony!)^reset;",
+  "moneyRange" : [0, 0],
+  "rewards" : [
+  [ ["arcana_currency_credit", 3200]]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/at_ext_mptg.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+
+    "descriptions" : {
+
+      "enterInstance" : "Go to your ^orange;Titan ship^reset; and talk with the ^yellow;Pilot.^reset;",
+      "turnIn" : "Return to ^orange;Titancorp Laptop^reset;."
+    },
+	
+
+    "warpEntityUid" : "at_ext_pilot",
+
+    "warpAction" : "instanceworld:at_ext_d7",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:at_ext_d7",
+	
+   
+    "targets" : [
+	  {
+        "targetEntityUid" : "at_ext_d7_goal1",
+        "description" : "Retrieve the ^yellow;prototype^reset;",
+        "indicator" : true,
+        "targetTrigger" : "interact",
+        "track" : true
+      },
+	  {
+      
+        "targetEntityUid" : "at_ext_d7_goal2",
+        "description" : "Go to the ^yellow;testing site.^reset;",
+        
+        "targetTrigger" : "proximity",
+        "proximityRange" : 10,
+        "track" : true
+      },
+      {
+        "targetEntityUid" : "at_ext_d7_goal3",
+        "description" : "Complete the Mission",
+        "targetTrigger" : "interact",
+		"indicator" : true,
+        "track" : false
+      }
+    ],
+	
+    "checkpoints" : [
+
+
+	  {
+        "checkpointUid" : "at_ext_d7_cp1"
+        
+      },
+	  {
+        "checkpointUid" : "at_ext_d7_goal2"
+        
+      }
+      
+    ],	
+
+    //交付任务的uid
+    "turnInEntityUid" : "at_ext_lptp"
+  }
+}

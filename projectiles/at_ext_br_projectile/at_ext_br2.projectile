@@ -1,0 +1,183 @@
+{
+  "projectileName" : "at_ext_br2",
+  "physics" : "laser",
+  
+  "timeToLive" : 3,
+  "bounces" : 0,
+  "speed" : 100,
+  
+  "image" : "at_ext_br2.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  
+  "fullbright" : true,
+  "lightColor" : [255, 132, 0],
+  //"emitters" : [ "arcana_particle_ember_cyan_2" ],
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/arcana_explosion_plasma_1_yellow/arcana_explosion_plasma_1_yellow.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_br2_frag",
+      "fuzzAngle" : 20,
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 35
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_br2_frag",
+      "fuzzAngle" : 20,
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 215
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_br2_frag",
+      "fuzzAngle" : 20,
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 20
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_br2_frag",
+      "fuzzAngle" : 20,
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 200
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_br2_frag",
+      "fuzzAngle" : 20,
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 50
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_br2_frag",
+      "fuzzAngle" : 20,
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 230
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_br2_frag",
+      "fuzzAngle" : 20,
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 60
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_br2_frag",
+      "fuzzAngle" : 20,
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 240
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_br2_frag",
+      "fuzzAngle" : 20,
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 80
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_br2_frag",
+      "fuzzAngle" : 20,
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 260
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_br2_frag",
+      "fuzzAngle" : 20,
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 90
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_br2_frag",
+      "fuzzAngle" : 20,
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 270
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_br2_frag",
+      "fuzzAngle" : 20,
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_br2_frag",
+      "fuzzAngle" : 20,
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 180
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_br2_frag",
+      "fuzzAngle" : 20,
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 10
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_br2_frag",
+      "fuzzAngle" : 20,
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 190
+    }
+  ],
+  "persistentAudio" : "/sfx/at_ext_rl3/at_ext_jetLong.ogg",  
+  "periodicActions" : [
+   {
+  "rotate" : false,
+  "time" : 0,
+  
+  "repeat" : false,
+  "action" : "projectile",
+  "inheritDamageFactor" : 0,
+  "autoFlipAdjust" : true,
+  "type" : "at_ext_case_trigger_br2",
+  "angleAdjust" : 180,
+  "fuzzAngle" :0
+  },
+	{
+      "time" : 0.015,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/at_ext_br_projectile/trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 1.0,
+        "destructionTime" : 1.5,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+         
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+  ],
+  "scripts" : ["/projectiles/at_ext_br_projectile/at_ext_br2.lua"],
+ "statusEffects" : ["stun"],  
+  "damageKind" : "default"
+ 
+}

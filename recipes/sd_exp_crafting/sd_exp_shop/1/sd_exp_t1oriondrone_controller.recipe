@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 1300 },
+	{ "item" : "orion_crafting_orionTechCard", "count" : 2 },
+	{ "item" : "orion_crafting_ursaplate", "count" : 3 },
+	{ "item" : "orion_crafting_enhancedBattery", "count" : 1 }
+  ],
+  "output" : { "item" : "sd_exp_t1oriondrone_controller", "count" : 1 },
+  "groups" : [ "sd_exp_shop_1", "sd_exp_shop","sd_exp_droneshop"]
+}

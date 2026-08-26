@@ -1,0 +1,76 @@
+{
+  "animation": "recondrone_controller.animation",
+  "animationDelta": 5,
+  "animationParts": {
+    "controller": "misc_soul_icon.png",
+    "fullbright" : "misc_soul_iconfullbright.png"
+  },
+  "boundingBox": [
+    -1,
+    -1,
+    1,
+    1
+  ],
+  "category": "^blue;Attacking Drone T1",
+  "description": "A small soul lodged in a lantern.\n^green;[Primary]Spawn/Despawn,[Alt]Fire.^reset; This one can ^orange;auto attack^reset;\n^yellow;Donator:NorthseaIndustry^reset;",
+  "inventoryIcon": "misc_soul_icon.png",
+  "itemName": "misc_soul_icon_controller",
+  "itemTags": [],
+  "level": 7,
+  "maxStack": 1,
+  "controllerConfig" : {
+    "droneParam" : {
+      "droneConfig" : {
+        "abilityClass" : "Fire",
+        "controlType" : "wasd",
+        "abilityConfig" : {
+          "inaccuracy" : 0.03,
+          "projectileCount" : 1,
+          "muzzleOffset" : [0, 0],
+          "onGround" : false,
+          "burstTime" : 1,
+          "burstCount" : 1,
+          "projectileParam" : {
+            	"renderLayer" : "ForegroundEntity+10",
+			        "power" : 30,
+              "speed" : 100
+          },
+          "animationConfig" : {
+            "fireSound" : "fire",
+            "fireAnimation" : {
+              "stateType" : "body",
+              "state" : "fire",
+              "time" : 0.2
+            },
+            "windupAnimation" : {
+              "stateType" : "body",
+              "state" : "firewindup",
+              "time" : 0.4
+            },
+            "winddownAnimation" : {
+              "stateType" : "body",
+              "state" : "firewinddown",
+              "time" : 0.4
+
+            },
+            "turretGroup" : "",
+            "rotationCenter" : [0.8, -1.7]
+          },
+          "fireType" : "single",
+          "projectileType" : "misc_soul_rocket"
+        },
+        "abilityScript" : "/droneAbility/fire/fire.lua"
+      }
+    },
+    "droneType":"misc_soul",
+    "rightClickCooldown" :0.01
+  },
+  "price": 0,
+  "rarity": "Legendary",
+  "scripts": [
+    "/scripts/droneControllerBase.lua" //通用控制器脚本，
+  ],
+  "shortdescription": "Lost lantern",
+  "tooltipKind": "arcana_base_item",
+  "twoHanded": true
+}

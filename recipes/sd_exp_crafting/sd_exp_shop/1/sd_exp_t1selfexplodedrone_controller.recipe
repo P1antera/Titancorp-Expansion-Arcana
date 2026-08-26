@@ -1,0 +1,7 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 1100 }
+  ],
+  "output" : { "item" : "sd_exp_t1selfexplodedrone_controller", "count" : 1 },
+  "groups" : [ "sd_exp_shop_1", "sd_exp_shop","sd_exp_droneshop"]
+}

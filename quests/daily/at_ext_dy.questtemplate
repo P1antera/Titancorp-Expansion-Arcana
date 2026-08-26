@@ -1,0 +1,149 @@
+{
+  "id" : "at_ext_dy",
+  //"prerequisites" : [ "" ],
+  "title" : "^yellow;Contract^reset;",
+  "text" : "",
+  "completionText" : "Well done! The ^yellow;credits^reset; have been transferred to your account!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0, 0],
+  "rewards" : [[
+    [ "arcana_currency_credit", 600 ]
+  ]],
+  "ephemeral" : true,
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/at_ext_dmain.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "turnInDescription" : "Deliver all ^green;cargo^reset; to the ^yellow;Trade Terminal^reset;.",
+    "requireTurnIn" : true,
+    "conditions" : [
+      [
+        {
+          "type" : "gatherItem",
+          "itemName" : "workshop_crafting_motor",
+          "count" : 25,
+          "consume" : true
+        }
+      ],
+      [
+        {
+          "type" : "gatherItem",
+          "itemName" : "workshop_crafting_motor",
+          "count" : 15,
+          "consume" : true
+        },
+        {
+          "type" : "gatherItem",
+          "itemName" : "workshop_crafting_reinforcedFrame",
+          "count" : 4,
+          "consume" : true
+        }
+      ],
+      [
+        {
+          "type" : "gatherItem",
+          "itemName" : "workshop_crafting_reinforcedFrame",
+          "count" : 10,
+          "consume" : true
+        }
+      ],
+      [
+        {
+          "type" : "gatherItem",
+          "itemName" : "workshop_crafting_motor",
+          "count" : 10,
+          "consume" : true
+        },
+        {
+          "type" : "gatherItem",
+          "itemName" : "workshop_crafting_reinforcedFrame",
+          "count" : 6,
+          "consume" : true
+        }
+      ],
+      [
+        {
+          "type" : "gatherItem",
+          "itemName" : "workshop_crafting_motor",
+          "count" : 5,
+          "consume" : true
+        },
+        {
+          "type" : "gatherItem",
+          "itemName" : "workshop_crafting_reinforcedFrame",
+          "count" : 8,
+          "consume" : true
+        }
+      ],
+      [
+        {
+          "type" : "gatherItem",
+          "itemName" : "workshop_crafting_motor",
+          "count" : 5,
+          "consume" : true
+        },
+        {
+          "type" : "gatherItem",
+          "itemName" : "workshop_crafting_dustriumPanel",
+          "count" : 30,
+          "consume" : true
+        },
+        {
+          "type" : "gatherItem",
+          "itemName" : "workshop_crafting_reinforcedFrame",
+          "count" : 5,
+          "consume" : true
+        }
+      ],
+      [
+        {
+          "type" : "gatherItem",
+          "itemName" : "workshop_crafting_dustriumPanel",
+          "count" : 20,
+          "consume" : true
+        },
+        {
+          "type" : "gatherItem",
+          "itemName" : "workshop_crafting_reinforcedFrame",
+          "count" : 8,
+          "consume" : true
+        }
+      ],
+      [
+        {
+          "type" : "gatherItem",
+          "itemName" : "workshop_crafting_motor",
+          "count" : 15,
+          "consume" : true
+        },
+        {
+          "type" : "gatherItem",
+          "itemName" : "workshop_crafting_dustriumPanel",
+          "count" : 40,
+          "consume" : true
+        }
+      ],
+      [
+        {
+          "type" : "gatherItem",
+          "itemName" : "workshop_crafting_dustriumPanel",
+          "count" : 100,
+          "consume" : true
+        }
+      ]
+    ]
+  }
+}

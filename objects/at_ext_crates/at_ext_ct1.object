@@ -1,0 +1,44 @@
+{
+  "objectName" : "at_ext_ct1_obj",
+  "colonyTags" : ["misc"],
+  "rarity" : "Common",
+  "description" : "^orange;The lost cargo of Titancorp, contains a signal generator.^reset;",
+  "shortdescription" : "^yellow;Package#TC-2743^reset;",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 0,
+  "printable" : false,
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+	  "imageLayers" : [ { "image" : "at_ext_ct1.png:<color>", "fullbright" : false } ],
+      "direction" : "left",
+	  "flipImages" : true,
+      "imagePosition" : [-0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    },
+	{
+	  "imageLayers" : [ { "image" : "at_ext_ct1.png:<color>", "fullbright" : false } ],
+      "direction" : "right",
+      "imagePosition" : [-0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+  
+  "scripts" : [ "/objects/scripts/breakoninteract.lua" ],
+  "scriptDelta" : 5,
+  
+  "smashDropPool" : "at_ext_ct1",
+  "breakDropPool" : "at_ext_ct1"
+}

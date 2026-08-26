@@ -1,0 +1,51 @@
+{
+  "background" : {
+    "type" : "background",
+    "fileHeader" : "/interface/tooltips/at_ext_headeritem.png",
+    "fileBody" : "/interface/tooltips/at_ext_bodyitemlong.png",
+    "fileFooter" : "/interface/tooltips/at_ext_footeritem.png"
+  },
+  "moneyIcon" : {
+    "type" : "image",
+    "position" : [137, 23],
+    "file" : "/interface/money.png"
+  },
+  "priceLabel" : {
+    "type" : "label",
+    "position" : [150, 23],
+    "hAnchor" : "left",
+    "value" : "0"
+  },
+  "descriptionLabel" : {
+    "type" : "label",
+    "position" : [11, 89],
+    "hAnchor" : "left",
+    "vAnchor" : "top",
+	  "fontSize" : 7.3,
+    "wrapWidth" : 159
+  },
+  "hintDescriptionLabel" : {
+    "type" : "label",
+    "position" : [75, 120],
+    "hAnchor" : "left",
+    "vAnchor" : "mid",
+	  "fontSize" : 7.2,
+    "wrapWidth" : 98,
+    "value" : "^yellow;Tea ingredient is permanently unlocked once you've acquired respective item.\n[Extra ingredients can be used to trade coupons^reset;]"
+  },
+  "rarityLabel" : {
+    "type" : "label",
+    "position" : [7, 23],
+    "hAnchor" : "left",
+    "centered" : true,
+    "wrapWidth" : 126
+  },
+  "objectImage" : {
+    "type" : "image",
+    "position" : [40, 120],
+    "file" : "",
+    "centered" : true,
+    "maxSize" : [40, 40],
+    "minSize" : [30, 30]
+  }
+}

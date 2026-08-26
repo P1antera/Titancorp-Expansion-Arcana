@@ -1,0 +1,29 @@
+{
+  "projectileName" : "at_ext_tc_airitem_1",
+  "physics" : "arrow",
+ 
+  "timeToLive" : 4.0,
+  "image" : "at_ext_tc_airitem_1.png",
+  "speed" : 30,
+  "animationCycle" : 1.0,
+  "animationLoops" : true,
+  "frameNumber" : 1,
+  "power" : 0,
+  "fullbright" : false,
+  "damageKind" : "hidden",
+
+  "orientationLocked" : false,
+
+ 
+  
+
+ 
+  "onlyHitTerrain" : true,
+  
+  "actionOnTimeout" : [
+
+
+  ]
+  
+
+}

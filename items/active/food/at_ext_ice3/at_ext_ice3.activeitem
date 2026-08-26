@@ -1,0 +1,40 @@
+{
+  "itemName" : "at_ext_ice3",
+  "rarity" : "Rare",
+  "category" : "preparedFood",
+  "inventoryIcon" : "at_ext_ice3_icon.png",
+  "tooltipKind" : "at_ext_food",
+  "largeImage" : "at_ext_ice3_icon.png",
+  "description" : "A grapefruit-flavored soda. Healthy in moderation.\n^yellow;Grants the [Ruby Grapefruit Fizz] effect when consumed.^reset;",
+  "shortdescription" : "^#ff596b;Ruby Grapefruit Fizz^reset;",
+  "maxStack" : 99,
+
+  "price" : 0,
+
+  "twoHanded" : true,
+  "itemTags" : [ "at_ext_food" ],
+
+  "animation" : "at_ext_ice3.animation",
+  "animationParts" : {
+    "drink" : "at_ext_ice3.png"
+  },
+
+  "scripts" : [ "at_ext_ice3.lua" ],
+  "scriptDelta" : 1,
+
+  "idleArmAngle" : -0.5,
+  "idleDrinkAngle" : -0.1,
+  "raiseArmAngle" : 0,
+  "raiseDrinkAngle" : 0.0,
+  "drinkArmAngle" : 0.4,
+  "drinkDrinkAngle" : 1.7,
+  "raiseTime" : 1,
+  "drinkTime" : 4.0,
+  "recapTime" : 1.5,
+  "firstEffectName" : "at_ext_ice3_1",
+  "firstEffectDuration" : 60,
+  "secondEffectName" : "at_ext_ice3_2",
+  "secondEffectDuration" : 180,
+  "foodCost" : 10,
+  "emptyBottleItem" : "at_ext_emptybottle"
+}

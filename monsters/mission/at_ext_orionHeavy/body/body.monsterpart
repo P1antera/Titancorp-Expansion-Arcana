@@ -1,0 +1,10 @@
+{
+  "name" : "at_ext_orionHeavy",
+  "category" : "at_ext_orionHeavy",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "eyes" : "fullbright.png"
+  }
+}

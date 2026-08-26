@@ -1,0 +1,14 @@
+{
+  "name" : "at_ext_ice2_1",
+  "defaultDuration" : 30,
+  "scripts" : [
+    "at_ext_ice2_1.lua"
+  ],
+  "effectConfig" : {
+    "powerMultiplier" : 1.1,
+    "nextEffect" : "at_ext_ice2_2",
+    "nextDuration" : 180
+  },
+  "label" : "Lemon Frost Pop [+10% damage]",
+  "icon" : "/interface/statuses/at_ext_ice2_icon.png"
+}

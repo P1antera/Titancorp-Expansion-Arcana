@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 320 }
+  ],
+  "output" : {
+    "item" : "at_ext_greentea",
+    "count" : 1
+  },
+   "duration" : 0.1,
+  "groups" : ["at_ext_vendingmachine","at_ext_vendingmachine1" ]
+}

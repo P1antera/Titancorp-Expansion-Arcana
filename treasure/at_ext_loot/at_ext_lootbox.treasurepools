@@ -1,0 +1,145 @@
+
+{
+
+   
+  "at_ext_lootbox1" : [
+    [0, {
+	  "fill" : [
+	    {"weight" : 1.0, "item" : ["workshop_crafting_GS8TechChip", 1]}
+      ],
+      "pool" : [
+		{"weight" : 0.5, "item" : ["arcana_currency_credit", 40]},
+		{"weight" : 0.4, "item" : ["workshop_crafting_dustriumPlate", 2]},
+        {"weight" : 0.4, "item" : ["workshop_crafting_dustriumPlate", 4]}
+		
+      ],
+      "poolRounds" : [
+        [1.0, 2]
+      ]
+    }]
+  ],
+  "at_ext_lootbox2" : [
+    [8, {
+	  "fill" : [
+	    {"weight" : 1.0, "item" : ["workshop_crafting_GS8TechChip", 2]}
+      ],
+      "pool" : [
+		{"weight" : 0.5, "item" : ["arcana_currency_credit", 200]},
+		{"weight" : 0.3, "item" : ["arcana_currency_credit", 500]},
+		{"weight" : 0.2, "item" : ["arcana_currency_credit", 800]},
+
+		{"weight" : 0.01, "item" : ["arcana_augment_halcyon", 1]},
+		{"weight" : 0.03, "item" : ["arcana_misc_behestDongle", 1]},
+		{"weight" : 0.03, "item" : ["arcana_misc_preceptDongle", 1]},
+		{"weight" : 0.03, "item" : ["arcana_misc_elementalHeart", 1]},
+		{"weight" : 0.05, "item" : ["arcana_misc_verrostinTechCard", 1]},
+		{"weight" : 0.05, "item" : ["horizon_crafting_horizonTechCard", 1]},
+		{"weight" : 0.03, "item" : ["arcana_misc_raidenComponent", 1]},
+		{"weight" : 0.03, "item" : ["arcana_misc_horizonEliteBadge", 1]},
+		{"weight" : 0.1, "item" : ["arcana_throwable_noveltyStar", 1]},
+
+ 		{"weight" : 0.4, "item" : ["workshop_sniperRifle_1", 1]},
+ 		{"weight" : 0.4, "item" : ["workshop_battleaxe_1", 1]},
+ 		{"weight" : 0.4, "item" : ["workshop_assaultRifle_1", 1]},   
+ 		{"weight" : 0.1, "item" : ["steelblades_sniperRifle_1", 1]},
+ 		{"weight" : 0.1, "item" : ["steelblades_assaultRifle_1", 1]}, 
+ 		{"weight" : 0.1, "item" : ["solar_lance_2", 1]}, 
+ 		{"weight" : 0.1, "item" : ["orion_rocketLauncher_1", 1]}, 
+ 		{"weight" : 0.5, "item" : ["misc_wand_tripleDecker", 1]},
+ 		{"weight" : 0.1, "item" : ["horizon_assaultRifle_1", 1]}, 
+ 		{"weight" : 0.1, "item" : ["exousia_police_shotgun_1", 1]}, 
+
+ 		{"weight" : 0.2, "item" : ["arcana_nanopack", 3]},
+ 		{"weight" : 0.2, "item" : ["arcana_neoNanopack", 1]},
+ 		{"weight" : 0.2, "item" : ["arcana_energizedNanopack", 1]},
+
+ 		{"weight" : 0.3, "item" : ["arcana_bar_necroiumBar", 3]},  
+ 		{"weight" : 0.3, "item" : ["arcana_bar_thoriumBar", 3]}, 
+ 		{"weight" : 0.3, "item" : ["arcana_bar_enartz", 3]}, 
+ 		{"weight" : 0.3, "item" : ["arcana_bar_exoslate", 3]}, 
+ 		{"weight" : 0.5, "item" : ["arcana_bar_galvasteelBar", 3]}, 
+ 		{"weight" : 0.5, "item" : ["workshop_crafting_dustriumPlate", 6]},
+
+    {"weight" : 0.5, "pool" : "basicTreasure"},
+		{"weight" : 0.4, "item" : ["workshop_crafting_dustriumPlate", 2]},
+        {"weight" : 0.4, "item" : ["workshop_crafting_dustriumPlate", 4]}
+		
+      ],
+      "poolRounds" : [
+        [0.45, 1],
+       [0.35, 2],
+       [0.2, 3]
+      ]
+    }]
+  ],
+  
+   "at_ext_ship_c1" : [
+    [0, {
+	  "fill" : [
+	    {"weight" : 1.0, "item" : ["at_ext_ship_c1key", 1]}
+      ]
+    }]
+  ],
+
+  "at_ext_snp" : [
+    [0, {
+	  "fill" : [
+	    {"weight" : 1.0, "item" : ["at_ext_snp", 1]}
+      ]
+    }]
+  ],
+  "at_ext_keycard_d10" : [
+    [0, {
+	  "fill" : [
+	    {"weight" : 1.0, "item" : ["at_ext_keycard_d10", 1]}
+      ]
+    }]
+  ],
+  "at_ext_d10_hdd" : [
+    [0, {
+	  "fill" : [
+	    {"weight" : 1.0, "item" : ["at_ext_hdd", 1]}
+      ]
+    }]
+  ],
+  "at_ext_rf4" : [
+    [0, {
+	  "fill" : [
+	    {"weight" : 1.0, "item" : ["at_ext_rf4", 1]}
+      ]
+    }]
+  ],
+  "at_ext_d11_supply" : [
+    [0, {
+	  "fill" : [
+	    {"weight" : 1.0, "item" : ["arcana_nanopack", 20]},
+	    {"weight" : 1.0, "item" : ["exousia_police_assaultRifle_1", 1]},
+	    {"weight" : 1.0, "item" : ["cannedfood", 5]}
+      ]
+    }]
+  ],
+  "at_ext_rf6" : [
+    [0, {
+	  "fill" : [
+	    {"weight" : 1.0, "item" : ["at_ext_rf6", 1]}
+      ]
+    }]
+  ],
+  "at_ext_reddiamond" : [
+    [0, {
+	  "fill" : [
+	    {"weight" : 1.0, "item" : ["at_ext_reddiamond", 1]}
+      ]
+    }]
+  ],
+  "at_ext_medevice" : [
+    [0, {
+	  "fill" : [
+	    {"weight" : 1.0, "item" : ["at_ext_medevice", 1]}
+      ]
+    }]
+  ]
+ 
+}
+
+

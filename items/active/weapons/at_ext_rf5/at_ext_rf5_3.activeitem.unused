@@ -1,0 +1,138 @@
+{
+  "itemName" : "at_ext_rf5_3",
+  "price" : 0,
+  "maxStack" : 1,
+  "rarity" : "rare",
+  "description" : "...",
+  "shortdescription" : "Forgeline 475",
+  "tooltipKind" : "at_ext_gun",
+  "category" : "assaultRifle",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","assaultrifle","titancorp","upgradeableWeapon"],
+  "level" : 8,
+
+  "inventoryIcon" : "at_ext_rf5_3_icon.png",
+  "largeImage" : "at_ext_rf5_3_lg.png",
+  "cursor" : "/cursors/arcana_cursor_neonGenesis.cursor",
+
+  "animation" : "at_ext_rf5_3.animation",
+  "animationParts" : {
+    "gun" : "at_ext_rf5_3.png",
+    "gunfullbright" : "fullbright3.png",
+	  //"charge" : "charge.png",
+    "muzzleFlash" : "/items/active/weapons/at_ext_rf5/muzzleflash2.png"
+  },
+
+  "animationCustom" : {
+    "animatedParts" : {
+	  "parts" : {
+	    "muzzleFlash" : {
+		  "properties" : {
+		    "offset" : [0, -0.1]
+		  }
+		}
+	  }
+	}
+  },
+  
+  "baseOffset" : [1.0, 0.2],
+  "muzzleOffset" : [2.6, 0.22],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  //"primaryAbilityType" : "chargefire",
+  "altAbilityType" :"flashlight",
+
+
+  
+  
+  
+  
+  
+  
+  
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/at_ext_chargefire2.lua"],
+    "class" : "GunFire",  
+    "fireTime" : 0.15,
+    "baseDps" : 40,
+    "energyUsage" : 100.0,
+    "inaccuracy" : 0.01,
+
+    "projectileCount" : 1,
+    "fireType" : "auto",
+
+    "projectileType" : "at_ext_rf5_2",
+    "projectileParameters" : {
+	  "speed" : 200,
+      "knockback" : 3
+    },
+  
+  
+  
+  
+  
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+	
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+	   "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 2,
+        "twoHanded" : true,
+		"weaponOffset" : [-0.4, 0],
+
+        "allowRotate" : true,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.15,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+		"weaponOffset" : [-0.2, 0],
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    "chargeLevels" : [
+
+
+      {
+        "time" : 0.8
+
+      }
+    ]
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

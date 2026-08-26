@@ -1,0 +1,52 @@
+{
+  "id" : "at_ext_d11",
+  //"mainQuest" : true,
+  "prerequisites" : [ "at_ext_d10" ],
+  "title" : "^yellow;Special mission",
+  "text" : "I've had my eye on you for a while. You're one hell of a mercenary, and as it happens, I've got a job that suits you perfectly. I need you to infiltrate the contested zone between Exousia and Horizon. I've already set up a teleporter there in advance. We'll talk about the details once you're on site.",
+  "completionText" : "Good job!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0,0],
+  "rewards" : [
+    [
+[ "arcana_currency_credit", 5000 ]
+    ]
+    ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_unknown2.png"} ],
+          "title" : "Unknown"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_unknown2.png"} ],
+          "title" : "Unknown"
+        }
+    },
+    "descriptions" : {
+      "enterInstance" : "Go to your ^orange;Titan ship^reset; and talk with the ^yellow;Pilot.^reset;",
+      "findGoal" : "Complete main objective",
+      "turnIn" : "Continue searching or evacuate."
+    },
+	
+    "warpEntityUid" : "at_ext_pilot",
+    "warpAction" : "instanceworld:at_ext_d11",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:at_ext_d11",
+	
+    "goalTrigger" : "interact",
+
+	
+    "goalEntityUid" : "at_ext_d11_goal",
+	"interactEntityUid" : "at_ext_d11_goal",	
+    "indicateGoal" : true,
+    "trackGoalEntity" : false,
+	
+    "turnInEntityUid" : "at_ext_lptp"
+  }
+}

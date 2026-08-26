@@ -1,0 +1,10 @@
+{
+  "name" : "overseerbody",
+  "category" : "overseer",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "overseerbody.png",
+    "fullbright" : "overseerbodyfullbright.png"
+  }
+}

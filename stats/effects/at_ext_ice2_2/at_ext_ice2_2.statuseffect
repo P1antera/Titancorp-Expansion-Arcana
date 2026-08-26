@@ -1,0 +1,13 @@
+{
+  "name" : "at_ext_ice2_2",
+  "defaultDuration" : 180,
+  "scripts" : [
+    "at_ext_ice2_2.lua"
+  ],
+  "effectConfig" : {
+    "speedModifier" : 1.1,
+    "groundMovementModifier" : 1.1
+  },
+  "label" : "Lemon Frost Pop [+10% movement speed]",
+  "icon" : "/interface/statuses/at_ext_ice2_icon2.png"
+}

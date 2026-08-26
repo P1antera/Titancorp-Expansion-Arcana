@@ -1,0 +1,25 @@
+{
+  "itemName" : "at_ext_ebar",
+  "rarity" : "Common",
+  "price" : 0,
+  "category" : "food",
+  "inventoryIcon" : "at_ext_ebar.png",
+  "description" : "An energy bar used by Titancorp employees to quickly replenish energy.",
+  "shortdescription" : "Energy bar",
+  "foodValue" : 50,
+  "tooltipKind" : "at_ext_item",
+  "largeImage" : "at_ext_ebar.png",
+  "builder" : "/items/buildscripts/buildfood.lua",
+  "maxStack" : 999,
+    "effects" : [ [
+    {
+      "effect" : "maxenergyscalingboost",
+      "duration" : 60
+    }
+  ] ],
+  "itemAgingScripts" : ["/scripts/items/rotting.lua"],
+  "rottingMultiplier" : 0.5,
+  "blockingEffects" : [
+    "wellfed"
+  ]
+}

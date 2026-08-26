@@ -1,0 +1,23 @@
+{
+  "kind" : "at_ext_shipshard2",
+  "definition" : {
+    "type" : "animated",
+                "animation" : "/animations/dust2/dust2.animation",
+                "approach" : [20, 20],
+                "timeToLive" : 2.0,
+				        "fade": 0.5,
+                "finalVelocity" : [1, 0],
+                "initialVelocity" : [5, 1],
+                "ignoreWind" : false,
+                "collidesForeground" : true,
+                "collidesLiquid" : true,
+				        "size": 0.8,
+                "variance" : {
+                "initialVelocity" : [-5, 0],
+                "finalVelocity" : [-1, 1],
+				        "size": 0.75,
+                "timeToLive" : 2.5,
+                "rotation" : 360
+    }
+  }
+}

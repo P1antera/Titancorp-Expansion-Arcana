@@ -1,0 +1,10 @@
+{
+  "name" : "loiteringmunition",
+  "category" : "loiteringmunition",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "fullbright" : "fullbright.png"
+  }
+}

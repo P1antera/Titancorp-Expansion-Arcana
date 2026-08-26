@@ -1,0 +1,21 @@
+{
+  "id" : "at_ext_tut",
+
+  "title" : "^yellow;Join The Titancorp Today!",
+  "description" : "A Titancorp poster.",
+  "icon" : "at_ext_tut.png",
+  
+  "contentPages" :
+  [
+"
+We provide the best automated production solutions. For more information, please visit ^yellow;Titancorp Creditshop^reset;.
+^cyan;Job opportunities available!
+"
+  ],
+    
+    "itemConfig" : {
+    "rarity" : "rare",
+    "pickupQuestTemplates" : ["at_ext_tut2"],
+    "price" : 0
+  }
+}

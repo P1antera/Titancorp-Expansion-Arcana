@@ -1,0 +1,16 @@
+{
+  "itemName" : "at_ext_teabag1",
+  "price" : 750,
+  "rarity" : "essential",
+  "tooltipKind" : "at_ext_teabag",
+  "category" : "tradingCard",
+  "inventoryIcon" : "at_ext_teabag1.png",
+  "description" : "Plant tissue from the colossal jungle beast-wonder what it tastes like when brewed in water? When health drops below 40%,^yellow;Heal 10% of max health/s^reset; for 40 seconds after drinking.",
+  "shortdescription" : "Plantera's Tissue",
+  "itemTags" : [ "mwhaddon_teaIngredient" ],
+  "radioMessagesOnPickup" : [ "mwhaddon_radiomessage_pickup_teaIngredient" ],
+  "collectablesOnPickup" : { "mwhaddon_collection_material_teaIngredient" : "at_ext_teabag1" },
+  "tooltipFields" : {
+    "subtitle" : "^#cef498;Tea Ingredient^reset;"
+  }
+}

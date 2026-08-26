@@ -1,0 +1,12 @@
+{
+  "itemName" : "at_ext_dronecontrol",
+  "price" : 0,
+  "rarity" : "Legendary",
+  "tooltipKind" : "at_ext_item",
+  "category" : "quest",
+  "largeImage" : "at_ext_dronecontrol.png",
+  "inventoryIcon" : "at_ext_dronecontrol.png",
+  "description" : "Exousia drone control unit.\n^green;Can be sold at the trade terminal!^reset;",
+  "shortdescription" : "DCU",
+  "itemTags" : [ "reagent" ]
+}

@@ -1,0 +1,34 @@
+{
+  "itemName" : "at_ext_ship_c1controller",
+  "level" : 8,
+  "price" : 0,
+  "rarity" : "essential",
+  "category" : "tool",
+  "description" : "^#fff2e2;A heavily customized Steelbreaker, coated with a distinctive metal layer that combines aesthetic appeal with exceptional durability. ^green;[Self-Repair System]: When the vehicle's HP drops below 2000, it recovers 20 hp/s.^reset;",
+  "shortdescription" : "^orange;''Steelbreaker''^yellow; customized^reset;",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["at_ext_ship_c1controller.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "at_ext_vehicle",
+  "largeImage" : "at_ext_ship_c1.png",
+
+  "respawnTime" : 1.0,
+
+  //=============Item specifc bits.
+  "vehicleType" : "at_ext_ship_c1",
+  "vehicleBoundingBox" : [-5, -5, 5, 5],
+  "vehicleImage" : "/items/active/vehiclecontroller/at_ext_ship_c1.png",
+
+  "animationParts" : {
+    "casing" : "at_ext_ship_c1controller.png"
+  },
+
+  "inventoryIcon" : "at_ext_ship_c1controller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/at_ext_ship_c1controller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/at_ext_ship_c1controller.png:full"
+}

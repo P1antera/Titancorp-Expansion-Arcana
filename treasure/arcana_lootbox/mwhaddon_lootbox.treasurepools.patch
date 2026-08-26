@@ -1,0 +1,19 @@
+[
+  [
+  { "op" : "test", "path" : "/mwhaddon_lootbox_teaBox_t5"},
+  {
+    "op" : "add",
+    "path" : "/mwhaddon_lootbox_teaBox_t5/0/1/pool/-",
+    "value" :  {"weight" : 1,"item" : ["at_ext_teabag1", 1]}
+ 
+  },
+  {
+    "op" : "add",
+    "path" : "/mwhaddon_lootbox_teaBox_t3/0/1/pool/-",
+    "value" : {"weight" : 1,"item" : ["at_ext_teabag2", 1]}
+
+  }
+  ]
+
+
+]

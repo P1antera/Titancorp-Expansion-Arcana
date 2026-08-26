@@ -1,0 +1,35 @@
+{
+  "projectileName" : "zinnofeurteaplant",
+  "physics" : "laser",
+  "bounces" : -1,
+  "timeToLive" : 6,
+  "power" : 15,
+  "speed" : 0,
+  "image" : "zinnofeurteaplant.png",
+  "animationCycle" : 6,
+  "lightColor" : [244, 89, 72],
+  "frameNumber" : 8,
+  "statusEffects" : [
+    "burning"
+  ],
+  "emitters" : [ "arcana_particle_ember_red" ],
+  "piercing" : true,
+  "damagePoly" : [ [-6, 0], [-4, -4], [0, -6], [4, -4], [6, 0], [4, 4], [0, 6], [-4, 4] ],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "razorleaf",
+      "config" : {
+        "processing":"?hueshift=-70",
+        "power" : 0,
+        "speed" : 0,
+        "timeToLive" : 0.25
+      }
+    },
+    { 
+      "action" : "sound",
+      "options" : [ "/sfx/objects/florancrate_open.ogg" ]
+    }
+  ],
+  "damageKind" : "fire"
+}

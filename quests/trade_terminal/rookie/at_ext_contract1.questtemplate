@@ -1,0 +1,47 @@
+{
+  "id" : "at_ext_contract1",
+  
+  "title" : "^yellow;Special contract: starter^reset;",
+  "text" : "Greeting, civilian! We are now offering you a ^orange;special contract^reset;: simply hand over the goods on the manifest to us, and we will give you a generous reward!",
+  "completionText" : "Good job,The ^yellow;credits^reset; have been transferred to your account!",
+  "canBeAbandoned" : false,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    [ "arcana_currency_credit", 50 ]
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "turnInDescription" : "Deliver all ^green;cargo^reset; to the ^yellow;Trade Terminal^reset;.",
+    "requireTurnIn" : true,
+    "conditions" : [
+      {
+        "type" : "gatherItem",
+        "itemName" : "ironbar",
+        "count" : 10,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "copperbar",
+        "count" : 10,
+        "consume" : true
+      }
+    ]
+  }
+}

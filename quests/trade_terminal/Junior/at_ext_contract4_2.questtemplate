@@ -1,0 +1,63 @@
+{
+  "id" : "at_ext_contract4_2",
+  "prerequisites" : [ "at_ext_contract4" ],
+  "title" : "^cyan;[Junior]^yellow;Special contract:Prospecting^reset;",
+  "text" : 
+"We are looking for someone who can help us collect some samples from the moon.
+Here is samples we need:
+===========================
+^yellow;[moonrock x20]
+[moondust x20]
+[moonstone x20]^reset;
+===========================
+You hand over samples to us, you get paid.
+",
+  "completionText" : "Thanks,The ^yellow;credits^reset; have been transferred to your account!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    [ "arcana_currency_credit", 420 ]
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "turnInDescription" : "Deliver all ^green;cargo^reset; to the ^yellow;Trade Terminal^reset;.",
+    "requireTurnIn" : true,
+    "conditions" : [
+      {
+        "type" : "gatherItem",
+        "itemName" : "moonrock",
+        "count" : 20,
+        "consume" : true
+      },
+	        {
+        "type" : "gatherItem",
+        "itemName" : "moondust",
+        "count" : 20,
+        "consume" : true
+      },
+	  	        {
+        "type" : "gatherItem",
+        "itemName" : "moonstone",
+        "count" : 20,
+        "consume" : true
+      }
+    ]
+  }
+}

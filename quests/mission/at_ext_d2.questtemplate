@@ -1,0 +1,55 @@
+{
+  "id" : "at_ext_d2",
+  "mainQuest" : true,
+  "prerequisites" : [ "at_ext_d1" ],
+  "title" : "^cyan;[Senior]^yellow;Special mission^reset;",
+  "text" : 
+  "One of our facilities is attacked by ^red;Anarkyons^reset;, We have recaptured most of the area, but there are still small areas occupied by them. We now need a contractor to clear the remaining enemies in that area.
+^yellow;It's best to have combat experience!",
+  
+  "completionText" : "Thanks,The ^yellow;credits^reset; have been transferred to your account!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    [ "arcana_currency_credit", 800 ]
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "descriptions" : {
+      "enterInstance" : "Go to your ^orange;Titan ship^reset; and talk with the ^yellow;Pilot.^reset;",
+      "findGoal" : "Clear the remaining enemies in the area",
+      "turnIn" : "Return to ^orange;Titancorp Laptop^reset; and report."
+    },
+	
+    "warpEntityUid" : "at_ext_pilot",
+    "warpAction" : "instanceworld:at_ext_d2",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:at_ext_d2",
+	
+    "goalTrigger" : "interact",
+    //"proximityRange" :,
+	
+    "goalEntityUid" : "at_ext_d2_goal",
+	"interactEntityUid" : "at_ext_d2_goal",
+    "indicateGoal" : true,
+    "trackGoalEntity" : false,
+	
+    "turnInEntityUid" : "at_ext_lptp"
+  }
+}

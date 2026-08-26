@@ -1,0 +1,79 @@
+{
+  "objectName" : "at_ext_td",
+  "colonyTags" : ["light", "titancorp"],
+  "rarity" : "Rare",
+  "description" : "A tea planting pod, engineers use it to obtain refreshing drinks.",
+  "shortdescription" : "Tea pod",
+  "race" : "generic",
+
+  "category" : "wire",
+  "price" : 260,
+  "lightColor" : [140, 80, 30],
+  //"flickerDistance" : 0.2,
+  //"flickerStrength" : 0.05,
+  //"flickerTiming" : 4,
+  //"pointLight" : true,
+  //"pointBeam" : 10,
+ //"beamAmbience" : 0.4,
+
+  "inventoryIcon" : "at_ext_td_icon.png",
+  "orientations" : [
+    {
+      "image" : "at_ext_td.png:<color>.on",
+      "imagePosition" : [0, 0],
+	  "lightPosition" : [1, 4],
+      "flipImages" : true,
+      "direction" : "left",
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "at_ext_td.png:<color>.on",
+      "imagePosition" : [0, 0],
+	  "lightPosition" : [1, 4],
+	  
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "soundEffect" : "/sfx/objects/fluorescent_light_quiet.ogg",
+  "soundEffectRangeMultiplier" : 0.5,
+  
+  "animation" : "/objects/misc/at_ext_td/at_ext_td.animation",
+  "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "light" : {
+          "states" : {
+            "on" : {
+              "frames" : 4,
+              "cycle" : 0.7,
+			  "mode" : "loop"
+            }
+          }
+        }
+	  }
+    },
+    "sounds" : {
+      "on" : [ "/sfx/objects/tinywallswitch.ogg" ],
+      "off" : [ "/sfx/objects/tinywallswitch.ogg" ]
+    }
+  },
+  "animationParts" : {
+    "bg" : "at_ext_td.png",
+    "fg" : "at_ext_td_fb.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+  
+  "interactive" : true,
+  
+
+  "inputNodes" : [ [0, 0] ]
+}

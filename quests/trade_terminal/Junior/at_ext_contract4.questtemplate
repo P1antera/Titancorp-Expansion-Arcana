@@ -1,0 +1,64 @@
+{
+  "id" : "at_ext_contract4",
+  "prerequisites" : [ "at_ext_contract3_end" ],
+  "title" : "^cyan;[Junior]^yellow;Special contract^reset;",
+  "text" : 
+  "One of our outpost requesting the following supplies:
+========================================
+  ^yellow;[20x durasteelbar]
+  [10x manipulatormodule]
+  [3x syntheticmaterial]^reset;.
+========================================
+  Waiting for your good news!",
+  
+  "completionText" : "Thanks,The ^yellow;credits^reset; have been transferred to your account!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    [ "arcana_currency_credit", 600 ]
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "turnInDescription" : "Deliver all ^green;cargo^reset; to the ^yellow;Trade Terminal^reset;.",
+    //"description" : "Find required items for outpost.",
+	"requireTurnIn" : true,
+	
+    "conditions" : [
+      {
+        "type" : "gatherItem",
+        "itemName" : "durasteelbar",
+        "count" : 20,
+        "consume" : true
+      },
+	        {
+        "type" : "gatherItem",
+        "itemName" : "manipulatormodule",
+        "count" : 10,
+        "consume" : true
+      },
+	  	        {
+        "type" : "gatherItem",
+        "itemName" : "syntheticmaterial",
+        "count" : 3,
+        "consume" : true
+      }
+    ]
+  }
+}

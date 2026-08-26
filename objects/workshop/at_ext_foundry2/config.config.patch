@@ -1,0 +1,498 @@
+[
+  {
+    "op": "add",
+    "path": "/recipes/arcana_bar_animaBar",
+    "value":
+
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_animaOre", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_animaBar", "count" : 2 }
+	}
+	
+  },
+  
+  {
+    "op": "add",
+    "path": "/recipes/arcana_bar_arcaniumBar",
+    "value": 
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_arcaniumOre", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_arcaniumBar", "count" : 2 }
+	}
+	
+   },
+	
+  {
+    "op": "add",
+    "path": "/recipes/arcana_bar_atlaGoldBar",
+    "value":
+ 
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_atlaGoldOre", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_atlaGoldBar", "count" : 2 }
+	}
+	
+    },
+	
+	{
+    "op": "add",
+    "path": "/recipes/arcana_bar_atumiumBar",
+    "value":
+
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_atumiumOre", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_atumiumBar", "count" : 2 }
+	}
+	
+	},
+	
+	{
+	    "op": "add",
+    "path": "/recipes/arcana_bar_azuriumBar",
+    "value":
+ 
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_azuriumOre", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_azuriumBar", "count" : 2 }
+	}
+	
+	},
+	
+	{
+	"op": "add",
+    "path": "/recipes/arcana_bar_borealiteBar",
+    "value":
+
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_borealiteOre", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_borealiteBar", "count" : 2 }
+	}
+	
+	},
+
+{
+    "op": "add",
+    "path": "/recipes/arcana_bar_chromaBar",
+    "value":
+ 
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_chromaOre", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_chromaBar", "count" : 2 }
+	}
+	
+	},
+	
+	{
+	    "op": "add",
+    "path": "/recipes/arcana_bar_corrodiumBar",
+    "value":
+
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_corrodiumOre", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_corrodiumBar", "count" : 4 }
+	}
+	
+	},
+	
+	{
+	    "op": "add",
+    "path": "/recipes/arcana_bar_enartz",
+    "value":
+
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_enartzFragment", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_enartz", "count" : 2 }
+	}
+	
+	},
+	
+	{
+	"op": "add",
+    "path": "/recipes/arcana_bar_exoslate",
+    "value":
+
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_exoslateFragment", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_exoslate", "count" : 2 }
+	}
+	
+	},
+	
+	{
+	    "op": "add",
+    "path": "/recipes/arcana_bar_galvasteelBar",
+    "value":
+ 
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_galvasteelOre", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_galvasteelBar", "count" : 2 }
+	}
+	
+	},
+	
+	{
+	    "op": "add",
+    "path": "/recipes/arcana_bar_holosiumBar",
+    "value":
+ 
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_holosiumFragment", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_holosiumBar", "count" : 2 }
+	}
+	
+	},
+	
+	
+	{
+	    "op": "add",
+    "path": "/recipes/arcana_bar_luminariumBar",
+    "value":
+
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_luminariumOre", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_luminariumBar", "count" : 2 }
+	}
+	
+	},
+	
+	{
+	    "op": "add",
+    "path": "/recipes/arcana_bar_morphosisBar",
+    "value":
+ 
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_morphosisShard", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_morphosisBar", "count" : 2 }
+	}
+	
+	},
+	
+	{
+	 "op": "add",
+    "path": "/recipes/arcana_bar_necroiumBar",
+    "value":
+ 
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_necroiumFragment", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_necroiumBar", "count" : 2 }
+	}
+	
+	},
+
+{
+    "op": "add",
+    "path": "/recipes/arcana_bar_refinedAspirite",
+    "value":
+ 
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_aspiriteOre", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_refinedAspirite", "count" : 2 }
+	}
+	
+	},
+	
+	{
+    "op": "add",
+    "path": "/recipes/arcana_bar_refinedImmorite",
+    "value":
+ 
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_immoriteOre", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_refinedImmorite", "count" : 2 }
+	}
+	
+	},
+	
+{
+    "op": "add",
+    "path": "/recipes/arcana_bar_refinedNoxion",
+    "value":
+
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_noxionOre", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_refinedNoxion", "count" : 2 }
+	}
+	
+   },	
+	
+	{
+	"op": "add",
+    "path": "/recipes/arcana_bar_thoriumBar",
+    "value":
+ 
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_thoriumOre", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_thoriumBar", "count" : 2 }
+	}
+	
+	},
+	
+		{
+	"op": "add",
+    "path": "/recipes/arcana_bar_hakenVerrostin",
+    "value":
+ 
+	{
+      "input" : 
+	  [
+        { "name" : "arcana_ore_verrostinOre", "count" : 4 }
+      ],
+      "output" : { "name" : "arcana_bar_hakenVerrostin", "count" : 2 }
+	}
+	
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	{
+      "op": "add",
+    "path": "/recipes/wire",
+    "value":
+	{
+	    "input" : [
+        { "name" : "copperbar", "count" : 2 }
+		],
+      "output" : { "name" : "wire", "count" : 10 }
+	
+	}
+  },
+	
+	
+	
+	
+	{
+	 "op": "add",
+    "path": "/recipes/silverbar",
+    "value":
+
+	{
+      "input" : 
+	  [
+        { "name" : "silverore", "count" : 4 }
+      ],
+      "output" : { "name" : "silverbar", "count" : 2 }
+	}
+	
+	},
+	
+	{
+	"op": "add",
+    "path": "/recipes/platinumbar",
+    "value":
+
+	{
+      "input" : 
+	  [
+        { "name" : "platinumore", "count" : 4 }
+      ],
+      "output" : { "name" : "platinumbar", "count" : 2 }
+	}
+	
+	},
+	
+	{
+	    "op": "add",
+    "path": "/recipes/goldbar",
+    "value":
+
+	{
+      "input" : 
+	  [
+        { "name" : "goldore", "count" : 4 }
+      ],
+      "output" : { "name" : "goldbar", "count" : 2 }
+	}
+	
+	},
+	
+	{
+	"op": "add",
+    "path": "/recipes/durasteelbar",
+    "value":
+ 
+	{
+      "input" : 
+	  [
+        { "name" : "durasteelore", "count" : 4 }
+      ],
+      "output" : { "name" : "durasteelbar", "count" : 2 }
+	}
+	
+	},
+	
+	{
+	    "op": "add",
+    "path": "/recipes/copperbar",
+    "value":
+
+	{
+      "input" : 
+	  [
+        { "name" : "copperore", "count" : 4 }
+      ],
+      "output" : { "name" : "copperbar", "count" : 2 }
+	}
+	
+	},
+	
+	{
+	    "op": "add",
+    "path": "/recipes/solariumstar",
+    "value":
+
+	{
+      "input" : 
+	  [
+        { "name" : "solariumore", "count" : 4 }
+      ],
+      "output" : { "name" : "solariumstar", "count" : 2 }
+	}
+	
+	},
+	
+	{
+	    "op": "add",
+    "path": "/recipes/tungstenbar",
+    "value":
+
+	{
+      "input" : 
+	  [
+        { "name" : "tungstenore", "count" : 4 }
+      ],
+      "output" : { "name" : "tungstenbar", "count" : 2 }
+	}
+	
+	},
+	
+	{
+	    "op": "add",
+    "path": "/recipes/titaniumbar",
+    "value":
+ 
+	{
+      "input" : 
+	  [
+        { "name" : "titaniumore", "count" : 4 }
+      ],
+      "output" : { "name" : "titaniumbar", "count" : 2 }
+	}
+	
+	},
+	
+	
+	{
+	 "op": "add",
+    "path": "/recipes/refinedaegisalt",
+    "value": 
+	{
+      "input" : 
+	  [
+        { "name" : "aegisaltore", "count" : 4 }
+      ],
+      "output" : { "name" : "refinedaegisalt", "count" : 2 }
+	}
+	},
+	
+	{
+	    "op": "add",
+    "path": "/recipes/refinedviolium",
+    "value":
+	{ 
+      "input" : 
+	         [
+        { "name" : "violiumore", "count" : 4 }
+      ],
+      "output" : { "name" : "refinedviolium", "count" : 2 }
+	}
+	},
+	
+{
+	    "op": "add",
+    "path": "/recipes/refinedferozium",
+    "value":
+		 
+	{
+      "input" : 
+	     [
+        { "name" : "feroziumore", "count" : 4 }
+      ],
+      "output" : { "name" : "refinedferozium", "count" : 2 }
+	}
+	}
+
+]

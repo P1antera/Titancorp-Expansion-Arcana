@@ -1,0 +1,62 @@
+{
+  "atExtRandomAltFire": {
+    "type": "action",
+    "name": "atExtRandomAltFire",
+    "title": "atExtRandomAltFire",
+    "properties": {
+      "entity": {"type": "entity", "value": null},
+      "chance": {"type": "number", "value": 0.2},
+      "cooldown": {"type": "number", "value": 8},
+      "retryInterval": {"type": "number", "value": 1},
+      "holdTime": {"type": "number", "value": 0.6},
+      "minRange": {"type": "number", "value": 0},
+      "maxRange": {"type": "number", "value": 120},
+      "minEnergyPercentage": {"type": "number", "value": 0.05}
+    },
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_guardSpecial.lua",
+    "output": {}
+  },
+  "atExtRangedFireMonitor": {
+    "type": "action",
+    "name": "atExtRangedFireMonitor",
+    "title": "atExtRangedFireMonitor",
+    "properties": {
+      "entity": {"type": "entity", "value": null}
+    },
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_guardSpecial.lua",
+    "output": {}
+  },
+  "atExtMaintainLostSight": {
+    "type": "action",
+    "name": "atExtMaintainLostSight",
+    "title": "atExtMaintainLostSight",
+    "properties": {
+      "entity": {"type": "entity", "value": null}
+    },
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_guardSpecial.lua",
+    "output": {}
+  },
+  "atExtResetRangedCombat": {
+    "type": "action",
+    "name": "atExtResetRangedCombat",
+    "title": "atExtResetRangedCombat",
+    "properties": {},
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_guardSpecial.lua",
+    "output": {}
+  },
+  "atExtPrepareRangedFire": {
+    "type": "action",
+    "name": "atExtPrepareRangedFire",
+    "title": "atExtPrepareRangedFire",
+    "properties": {
+      "entity": {"type": "entity", "value": null}
+    },
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_guardSpecial.lua",
+    "output": {}
+  }
+}

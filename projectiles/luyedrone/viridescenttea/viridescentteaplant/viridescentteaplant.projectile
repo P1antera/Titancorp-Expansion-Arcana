@@ -1,0 +1,34 @@
+{
+  "projectileName" : "viridescentteaplant",
+  "physics" : "laser",
+  "bounces" : -1,
+  "timeToLive" : 6,
+  "power" : 15,
+  "speed" : 0,
+  "image" : "viridescentteaplant.png",
+  "animationCycle" : 6,
+  "lightColor" : [227, 242, 153],
+  "frameNumber" : 8,
+  "statusEffects" : [
+    "arcana_status_acidicMelting"
+  ],
+  "emitters" : [ "arcana_particle_ember_green" ],
+  "piercing" : true,
+  "damagePoly" : [ [-6, 0], [-4, -4], [0, -6], [4, -4], [6, 0], [4, 4], [0, 6], [-4, 4] ],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "razorleaf",
+      "config" : {
+        "power" : 0,
+        "speed" : 0,
+        "timeToLive" : 0.25
+      }
+    },
+    { 
+      "action" : "sound",
+      "options" : [ "/sfx/objects/florancrate_open.ogg" ]
+    }
+  ],
+  "damageKind" : "poison"
+}

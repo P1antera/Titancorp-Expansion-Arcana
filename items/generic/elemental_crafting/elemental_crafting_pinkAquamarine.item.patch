@@ -1,0 +1,7 @@
+[
+  {
+    "op": "add",
+    "path": "/learnBlueprintsOnPickup",
+    "value": ["elemental_crafting_pinkAquamarine"]
+  }
+]

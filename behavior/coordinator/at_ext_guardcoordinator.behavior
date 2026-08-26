@@ -1,0 +1,15 @@
+{
+  "name": "at_ext_guardcoordinator",
+  "description": "",
+  "scripts": [],
+  "parameters": {},
+  "root": {
+    "title": "runFunction",
+    "type": "action",
+    "name": "runFunction",
+    "parameters": {
+      "func": {"value": "npcCombat"},
+      "script": {"value": "/stagehands/coordinator/at_ext_guardcoordinator.lua"}
+    }
+  }
+}

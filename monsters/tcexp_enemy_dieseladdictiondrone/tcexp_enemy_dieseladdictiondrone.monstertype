@@ -1,0 +1,448 @@
+{
+  "type" : "tcexp_enemy_dieseladdictiondrone",
+  "shortdescription" : "Diesel addiction",
+  "description" : "An Anarkyon offense drone,extremely dangerous,explode on destroy.",
+
+  "categories" : [ "tcexp_enemy_dieseladdictiondrone" ],
+  "parts" : [ "body" ],
+
+  "animation" : "animation.animation",
+
+  "dropPools" : [ { "default" : "empty" } ],
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua"
+    ],
+    
+    "damageBar" : "default", 
+
+    "behavior" : "monster",
+
+	"aggressive" : true,
+
+    "seeThroughLiquid" : true,
+    "behaviorConfig" : {
+      "damageOnTouch" : false,
+
+      "targetQueryRange" : 150,
+      "targetOnDamage" : true,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 200,
+      "targetOutOfSightTime" : 10.0,
+//"deathActions" : [
+//        {
+//          "name" : "action-projectile",
+//          "parameters" : {
+//            "projectileCount" : 1,
+//            "projectileType" : "acidrocket",
+//            "projectileParameters" : {
+//              "timeToLive":0,
+//              "power" : 200,
+//              "processing": "?scale=0",
+//             "damageTeam" : { "type" : "enemy", "team" : 0 }
+//            },
+//            "aimDirection" : [0, 0],
+//            "inaccuracy" : 0,
+//            "fireOffset" : [0, 0]
+//          }
+//       }
+//      ],这一部分坏了，不知道为什么deathActions不生效 This part is glitched,we have no idea why "deathActions" don't work.
+      "foundTargetActions" : [ ],
+
+      "fleeActions" : [ ],
+
+      "hostileActions" : [
+        {
+          "name" : "action-fire",
+          "cooldown" : 1.0,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 6,
+            "minimumRange" : 1,
+            "onGround" : false,
+            "windupStopForce" : 50,
+            "windupState" : "",
+            "windupTime" : 0.5,
+
+            "projectileType" : "arcana_projectile_flame_poison",
+            "projectileParameters" : {
+              "processing" : "?border=2;428A0073;428A0073",
+                      "movementSettings" : {
+          "gravityMultiplier" : 0.3
+        },
+        "physics" : "grenade",
+              "speed" : 30.0,
+              "timeToLive" : 2.0,
+              "periodicActions" : [{
+            "inheritDamageFactor" : 0.5,
+            "inheritSpeedFactor" : 0.1,
+            "action" : "projectile",
+            "fuzzAngle" : 180,
+            "type" : "arcana_projectile_flame_poison",
+            "time" : 0.09,
+            "config" : {
+              "processing" : "?border=2;428A0073;428A0073",
+              "statusEffects" : ["vulnerability", "arcana_status_acidicMelting"]
+            }
+          }]
+            },
+            "fireOffset" : [0.0, 0.0],
+            "aimAtTarget" : false,
+            "inaccuracy" : 3.14,
+            "projectileCount" : 10,
+            "projectileInterval" : 0.0,
+            "fireState" : "",
+            "fireDelay" : 0.0,
+            "fireSound" : "",
+
+            "winddownState" : "",
+            "winddownTime" : 0.5
+          }
+        },{
+          "name" : "action-charge",
+          "cooldown" : 5,
+          "parameters" : {
+            "airDirection" : [1, 0],
+            "maximumRange" : 80,
+            "windupStopForce" : 50,
+            "windupTime" : 0.5,
+            "onGround" : false,
+            "wallCollide" : false,
+            "aimAtTarget" : false,
+            "chargeTime" : 0.1,
+            "chargeSpeed" : 800,
+            "chargeControlForce" : 300,
+            "windupState" : "",
+            "chargeState" : "",
+            "winddownState" : ""
+          }
+        },{
+          "name" : "action-charge",
+          "cooldown" : 1,
+          "parameters" : {
+            "maximumRange" : 30,
+            "minimumRange" : 5,
+            "windupStopForce" : 50,
+            "windupTime" : 0.5,
+            "onGround" : false,
+            "wallCollide" : false,
+            "aimAtTarget" : true,
+            "chargeTime" : 0.1,
+            "chargeSpeed" : 200,
+            "chargeControlForce" : 250,
+            "windupState" : "",
+            "chargeState" : "",
+            "winddownState" : ""
+          }
+        },
+        {
+          "name" : "action-fire",
+          "cooldown" : 2.0,
+          "parameters" : {
+             "fireDelay" : 0.0,
+            "requireLineOfSight" : true,
+            "maximumRange" : 150,
+            "minimumRange" : 20,
+            "windupStopForce" : 50,
+            "windupState" : "firewindup",
+            "windupTime" : 0.4,
+
+            "projectileType" : "acidrocket",
+			"projectileCount" : 4,
+            "projectileInterval" : 0,
+            "projectileParameters" : {
+			  "renderLayer" : "ForegroundEntity+10"
+            },
+			"inaccuracy" : 0.1,
+            "fireOffset" : [1.1, 0],
+            "aimAtTarget" : true,
+            "onGround" : false,
+            "fireState" : "fire",
+            "fireSound" : "fire",
+
+            "winddownState" : "fire",
+            "winddownTime" : 0.4
+          }
+        }, {
+          "name" : "action-fire",
+          "cooldown" : 2.0,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 60,
+            "minimumRange" : 10,
+            "windupStopForce" : 50,
+            "windupState" : "",
+            "windupTime" : 0.4,
+
+            "projectileType" : "flamethrower",
+			"projectileCount" : 5,
+            "projectileInterval" : 0.01,
+            "projectileParameters" : {
+              "processing" : "?border=2;DA530250;DA530200?hueshift=-20",
+        "piercing" : true,
+        "hydrophobic" : true,
+        "movementSettings" : {
+          "gravityMultiplier" : 0.3
+        },
+        "physics" : "grenade",
+        "damagePoly" : [[-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6]],
+        "power" : 60,
+        "speed" : 70,
+        "statusEffects" : ["burning", "melting","vulnerability","biomeheat"],
+        "timeToLive" : 2,
+        "damageKind" : "fire",
+        "emitters" : [ "flames" ],
+        "lightColor" : [235, 126, 2],
+        "actionOnCollide" : [{
+            "inheritDamageFactor" : 1,
+            "action" : "projectile",
+            "angle" : -90,
+            "fuzzAngle" : 360,
+            "type" : "molotovflame",
+            "config" : {
+              "processing" : "?border=2;DA530250;DA530200?hueshift=-20",
+              "timeToLive" : 2,
+              "damageTeam" : { "type" : "environment" },
+              "statusEffects" : ["burning", "melting","vulnerability","biomeheat"]
+            }
+          }],
+          "actionOnHit" : [{
+            "inheritDamageFactor" : 1,
+            "action" : "projectile",
+            "angle" : -90,
+            "fuzzAngle" : 360,
+            "type" : "molotovflame",
+            "config" : {
+              "processing" : "?border=2;DA530250;DA530200?hueshift=-20",
+              "timeToLive" : 2,
+              "damageTeam" : { "type" : "environment" },
+              "statusEffects" : ["burning", "melting","vulnerability","biomeheat"]
+            }
+          }],
+        "periodicActions" : [{
+            "inheritDamageFactor" : 0.5,
+            "inheritSpeedFactor" : 0.1,
+            "action" : "projectile",
+            "fuzzAngle" : 180,
+            "type" : "flamethrower",
+            "time" : 0.09,
+            "config" : {
+              "processing" : "?border=2;DA530250;DA530200?hueshift=-20",
+              "statusEffects" : ["burning", "melting","vulnerability","biomeheat"]
+            }
+          },    {
+            "time" : 0.09,
+            "repeat" : true,
+            "action" : "particle",
+            "rotate" : true,
+            "specification" : {
+              "type" : "animated",
+              "image" : "/animations/flamepuff/flamepuff.animation?border=2;DA530250;DA530200?hueshift=-20",
+              "position" : [0, 0],
+              "layer" : "back",
+              "timeToLive" : 0.5,
+              "destructionTime" : 0.10,
+              "destructionAction" : "shrink",
+              "fullbright" : true
+            }
+          }],
+        "bounces" : 8
+      
+            },
+			"inaccuracy" : 0.05,
+            "fireOffset" : [1.1, -1.9],
+            "aimAtTarget" : true,
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire2",
+
+            "winddownState" : "",
+            "winddownTime" : 0.4
+          }
+        },
+        {
+          "name" : "action-fire",
+          "cooldown" : 1.0,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 150,
+            "minimumRange" : 60,
+            "windupStopForce" : 50,
+            "windupState" : "firewindup",
+            "windupTime" : 0.4,
+             "fireDelay" : 0.1,
+            "projectileType" : "acidrocket",
+			"projectileCount" : 4,
+            "projectileInterval" : 0.1,
+            "projectileParameters" : {
+			  "renderLayer" : "ForegroundEntity+10"
+            },
+			"inaccuracy" : 0.1,
+            "fireOffset" : [1.1, 0],
+            "aimAtTarget" : true,
+            "onGround" : false,
+            "fireState" : "fire",
+            "fireSound" : "fire",
+
+            "winddownState" : "fire",
+            "winddownTime" : 0.4
+          }
+        }
+      ],
+
+      "periodicActions" : [
+       ],
+
+      "approachActions" : [
+        {
+          "name" : "approach-fly",
+          "parameters" : {
+            "minRange" : 1,
+            "maxRange" : 20
+          }
+        }
+      ],
+
+      "followActions" : [
+        {
+          "name" : "approach-teleport",
+          "parameters" : {
+          }
+        },
+        {
+          "name" : "approach-fly"
+        }
+      ],
+
+      "wanderActions" : [
+        {
+          "name" : "wander-fly",
+          "parameters" : {
+            "wanderTime" : [2,6],
+            "groundDistance" : 15,
+            "ceilingDistance" : 6,
+            "xVelocity" : 4,
+            "yVelocity" : 10
+          }
+        }
+      ],
+
+      "concurrentActions" : [ ],
+
+      "concurrentHostileActions" : [ ]
+    },
+
+    "touchDamage" : {
+      "poly" : [ [-1.0, -1.0], [1.0, -1.0], [1.0, 1.0], [-1.0, 1.0] ],
+      "damage" : 30,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "slash",
+      "knockback" : 2,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-2, -2, 2, 2],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionPoly" : [ [-1.0, -1.0], [1.0, -1.0], [1.0, 1.0], [-1.0, 1.0] ],
+
+      "mass" : 0.5,
+      "walkSpeed" : 6,
+      "runSpeed" : 10,
+      "gravityEnabled" : false,
+
+      "airFriction" : 1,
+      "airForce" : 20,
+      "flySpeed" : 40
+    },
+
+    "bodyMaterialKind" : "robotic",
+
+    "knockoutTime" : 0.0,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : false,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.2
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 6
+        },
+        "maxHealth" : {
+          "baseValue" : 2000
+        },
+        "protection" : {
+          "baseValue" : 50.0
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "physicalResistance" : {
+          "baseValue" : 0.0
+        },
+        "fireResistance" : {
+          "baseValue" : 1.0
+        },
+        "iceResistance" : {
+          "baseValue" : 0.0
+        },
+        "electricResistance" : {
+          "baseValue" : -1.0
+        },
+        "poisonResistance" : {
+          "baseValue" : 1.0
+        },
+        "arcana_resistance_lumen" : {
+          "baseValue" : 0.0
+        },
+        "arcana_resistance_abyss" : {
+          "baseValue" : 0.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -1],
+    "capturable" : true,
+    "captureHealthFraction" : 0.5,
+    "nametagColor" : [64, 200, 255]
+  }
+}

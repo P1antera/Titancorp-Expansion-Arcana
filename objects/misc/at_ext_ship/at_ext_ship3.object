@@ -1,0 +1,36 @@
+{
+  "objectName" : "at_ext_ship3",
+  "colonyTags" : ["misc"],
+  "rarity" : "Legendary",
+  "description" : "An unarmed ''Steelbreaker'' model.",
+  "shortdescription" : "TC aircraft model",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 0,
+
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "at_ext_ship3.png:<color>", "fullbright" : false }],
+	  "direction" : "left",
+
+      "imagePosition" : [0, 0],
+
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    },
+	{
+      "imageLayers" : [ { "image" : "at_ext_ship3.png:<color>", "fullbright" : false } ],
+	  "direction" : "right",
+      "imagePosition" : [0, 0],
+	  "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

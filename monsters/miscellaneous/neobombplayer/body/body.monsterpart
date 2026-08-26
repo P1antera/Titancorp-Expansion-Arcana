@@ -1,0 +1,10 @@
+{
+  "name" : "neobombplayer",
+  "category" : "neobombplayer",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "fullbright" : "fullbright.png"
+  }
+}

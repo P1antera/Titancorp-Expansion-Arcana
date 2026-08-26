@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 1440 }
+  ],
+  "output" : {
+    "item" : "arcana_bar_corrodiumBar",
+    "count" : 20
+  },
+  "duration" : 0.1,
+  "groups" : ["at_ext_mining","at_ext_mining_main" ]
+}

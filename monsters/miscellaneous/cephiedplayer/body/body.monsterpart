@@ -1,0 +1,10 @@
+{
+  "name" : "cephiedplayer",
+  "category" : "cephiedplayer",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "fullbright" : "fullbright.png"
+  }
+}

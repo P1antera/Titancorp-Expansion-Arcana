@@ -1,0 +1,17 @@
+[
+  {
+    "op" : "add",
+    "path" : "/music/-",
+    "value" : { "name" : "[TCexp] PLANTERA", "filename" : "at_ext_bgm_plantera" }
+  },
+  {
+    "op" : "add",
+    "path" : "/music/-",
+    "value" : { "name" : "[TCexp] Titancolony bgm", "filename" : "at_ext_city_bgm" }
+  },
+  {
+    "op" : "add",
+    "path" : "/music/-",
+    "value" : { "name" : "[TCexp] Bass Thrombosis", "filename" : "at_ext_bgm1" }
+  }
+]

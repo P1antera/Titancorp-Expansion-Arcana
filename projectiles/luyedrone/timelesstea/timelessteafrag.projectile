@@ -1,0 +1,47 @@
+{
+  "projectileName" : "timelessteafrag",
+  "physics" : "grenade",
+  
+  "timeToLive" : 5,
+  "bounces" : 0,
+  "speed" : 36,
+  
+  "image" : "timelessteafrag.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  
+  "fullbright" : true,
+  "lightColor" : [108, 217, 247],
+  "emitters" : ["arcana_particle_ember_cyan"],
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "timelessmine"
+    }
+  ],
+  
+  "periodicActions" : [
+    {
+      "time" : 0.005,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/luyedrone/timelesstea/timelessteatrail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    }
+  ],
+  
+  "damageKind" : "default"
+ 
+}

@@ -1,0 +1,140 @@
+{
+  "objectName" : "at_ext_mining3",
+  "colonyTags" : ["factorypaint"],
+  "rarity" : "Legendary",
+  "description" : "^white;An automatic extractor that slowly produces ores. ^orange;Can be wired to other machines.^reset;",
+  "shortdescription" : "^yellow;[TC]^reset;Ore Extractor ^blue;MK2",
+  "subtitle" : "Turn ores into pixels",
+  "race" : "generic",
+  "category" : "crafting",
+  "price" : 60,
+  "objectType" : "container",
+  "printable" : false,
+  "health" : 1.5,
+
+  //"lightColor" : [179, 149, 107],
+
+  "flickerPeriod" : 0.5,
+  "flickerMinIntensity" : 0.9,
+  "flickerMaxIntensity" : 1,
+  "flickerPeriodVariance" : 0.075,
+  "flickerIntensityVariance" : 0.025,
+  
+  "scripts" : [ "script.lua" ],
+  "scriptDelta" : 5,
+  
+  "inputNodes" : [ [0, 0] ],
+  "outputNodes" : [ [1, 0] ],
+  
+  "animation" : "animation.animation",
+  "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "switchState" : {
+          "states" : {
+            "on" : {
+              "frames" : 7,
+              "cycle" : 0.4,
+			  "mode" : "loop"
+            }
+          }
+        }
+	  }
+    },
+    "sounds" : {
+      "on" : [ "/sfx/objects/console_generic_switchon.ogg" ],
+	  "onloop" : [ "/sfx/objects/terraformer_active_loop.ogg" ],
+      "off" : [ "/sfx/objects/console_generic_switchoff.ogg" ]
+    }
+  },
+  "animationParts" : {
+    "bg" : "1.png",
+    "fg" : "1_fb.png"
+  },
+
+  "inventoryIcon" : "1_icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "1.png:<color>.<frame>", "fullbright" : true }, { "image" : "1_fb.png:<color>.<frame>" } ],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "1.png:<color>.<frame>", "fullbright" : true }, { "image" : "1_fb.png:<color>.<frame>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  
+  "placementImage" : "1.png:default.0",
+  "placementImagePosition" : [0, 0],
+
+  "soundEffect" : "",
+  "soundEffectRangeMultiplier" : 0.5,
+
+  "openSounds" : [ "/sfx/objects/shippingcontainer_open.ogg" ],
+  "slotCount" : 3,
+  "uiConfig" : "/interface/arcana/arcana_auto/at_ext_mining3.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600,
+  
+  "resources" : 
+{
+	"tungstenore" : {"name" : "tungstenore", "count" : 1},
+	"titaniumore" : {"name" : "titaniumore", "count" : 1},
+	"durasteelbar" : {"name" : "durasteelore", "count" : 1},
+	"aegisaltore" : {"name" : "aegisaltore", "count" : 1},
+	"feroziumore" : {"name" : "feroziumore", "count" : 1},
+	"violiumore" : {"name" : "violiumore", "count" : 1},
+	"solariumore" : {"name" : "solariumore", "count" : 1},
+	"moon" : {"name" : "solidfuel", "count" : 2},
+	
+	
+	"common" : {"name" : "ironore", "count" : 1},
+    "common2" : {"name" : "copperore", "count" : 1},
+	"common3" : {"name" : "goldore", "count" : 1},
+	
+    "arcane" :{ "name" : "arcana_ore_arcaniumOre", "count" : 1 },
+	"arcane2" :{ "name" : "arcana_ore_atlaGoldOre", "count" : 1 },
+	"arcane3" :{ "name" : "arcana_ore_borealiteOre", "count" : 1 },
+	    		 
+    "illuminated" :{ "name" : "arcana_ore_holosiumFragment", "count" : 1 },
+	"illuminated2" :{ "name" : "arcana_ore_necroiumFragment", "count" : 1 },
+	"illuminated3" :{ "name" : "arcana_ore_morphosisShard", "count" : 1 },
+	"illuminated4" :{ "name" : "arcana_ore_animaOre", "count" : 1 },
+	
+	"superstorm" : { "name" : "arcana_ore_thoriumOre", "count" : 1 },
+	"superstormcommon" : { "name" : "arcana_ore_galvasteelOre", "count" : 1 },
+	"superstorm2" : { "name" : "workshop_crafting_rawDustrium", "count" : 1 },
+	"superstorm3" : { "name" : "arcana_ore_verrostinOre", "count" : 1 },
+    "superstorm4" : { "name" : "arcana_ore_corrodiumOre", "count" : 1 }
+	    
+},
+  
+  
+  
+  
+  
+  
+  
+  "maxPower" : 30,
+  "powerUseAmount" : 30,
+  "voltage" : 30,
+  "craftingTime" : 5.0,
+  "outputRate" : 4,
+  "directives" : ""
+
+}

@@ -1,0 +1,82 @@
+{
+  "animation": "recondrone_controller.animation",
+  "animationDelta": 5,
+  "animationParts": {
+    "controller": "sd_exp_Tier2_exousia_icon.png",
+    "fullbright" : "sd_exp_Tier2_exousia_iconfullbright.png"
+  },
+  "boundingBox": [
+    -1,
+    -1,
+    1,
+    1
+  ],
+  "category": "^yellow;Attacking Drone T2",
+  "description": "Exousia Military drone with homing missiles.
+  ^green;[Primary]Spawn/Despawn，[Alt]Fire.^reset;",
+  "inventoryIcon": "sd_exp_Tier2_exousia_icon.png",
+  "itemName": "sd_exp_t2exousiadrone_controller",
+  "itemTags": [],
+  "level": 7,
+  "maxStack": 1,
+  "controllerConfig" : {
+    "droneParam" : {
+      "droneConfig" : {
+        "moveConfig" : {
+            "controlForce" : 250,
+            "speed" : 50,
+            "minTriggerDistance" : 5,
+            "maxSpeedDistance" : 15
+          },
+        "abilityClass" : "Fire",
+        "controlType" : "followMouse",
+        "abilityConfig" : {
+          "inaccuracy" : 0.03,
+          "projectileCount" : 1,
+          "muzzleOffset" : [2.4, -0.5],
+          "onGround" : false,
+          "burstTime" : 0.25,
+          "burstCount" : 3,
+          "projectileParam" : {
+            	"renderLayer" : "ForegroundEntity+10",
+			        "power" : 90
+          },
+          "animationConfig" : {
+            "fireSound" : "fire",
+            "fireAnimation" : {
+              "stateType" : "body",
+              "state" : "fire",
+              "time" : 0.2
+            },
+            "windupAnimation" : {
+              "stateType" : "body",
+              "state" : "firewindup",
+              "time" : 0.4
+            },
+            "winddownAnimation" : {
+              "stateType" : "body",
+              "state" : "firewinddown",
+              "time" : 0.4
+
+            },
+            "turretGroup" : "body",
+            "rotationCenter" : [0,0]
+          },
+          "fireType" : "burst",
+          "projectileType" : "exousia_police_assaultRifle_1_projectile_1"
+        },
+        "abilityScript" : "/droneAbility/fire/fire.lua"
+      }
+    },
+    "droneType":"Sirius",
+    "rightClickCooldown" :0.01
+  },
+  "price": 0,
+  "rarity": "Legendary",
+  "scripts": [
+    "/scripts/droneControllerBase.lua" //通用控制器脚本，
+  ],
+  "shortdescription": "OSR-M2 Controller",
+  "tooltipKind": "arcana_base_item",
+  "twoHanded": true
+}

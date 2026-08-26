@@ -1,0 +1,85 @@
+{
+  "type" : "at_ext_ally_snp",
+  "baseType" : "villageguard",
+  
+  "dropPools" : [ "money" ],
+  "displayTitle" : "Titancorp sniper",
+
+
+ 
+  "movementParameters" : {
+    "mass" : 1.0,
+    "walkSpeed" : 10,
+    "runSpeed" : 20.0
+  },
+
+
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "arcana_armor_gearsS8E_head", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "chest" : [
+              { "name" : "arcana_armor_gearsS8E_chest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "arcana_armor_gearsS8E_legs", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "primary" : [
+              "at_ext_rf2"
+            ],
+            "alt" : [
+              "at_ext_rf2"
+            ]
+          },
+          {
+            "chest" : [
+              { "name" : "arcana_armor_gearsS8E_chest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "arcana_armor_gearsS8E_legs", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "primary" : [
+              "at_ext_rf2"
+            ],
+            "alt" : [
+              "at_ext_rf2"
+            ]
+          }
+        ]
+	  ]
+    ]
+  },
+  
+  "statusControllerSettings" : {    
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 100.0
+      },
+      "maxEnergy" : {
+        "baseValue" : 350.0
+      },
+      "powerMultiplier" : {
+        "baseValue" : 1.0
+      },
+      "protection" : {
+        "baseValue" : 0.2
+      },
+      "fireStatusImmunity" : {
+        "baseValue" : 0.5
+      },
+      "iceStatusImmunity" : {
+        "baseValue" : 0.5
+      },
+      "electricStatusImmunity" : {
+        "baseValue" : 0.3
+      },
+      "poisonStatusImmunity" : {
+        "baseValue" : 0.5
+      }
+    }
+  }
+}

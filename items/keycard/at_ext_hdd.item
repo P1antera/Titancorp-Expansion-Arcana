@@ -1,0 +1,14 @@
+{
+  "itemName" : "at_ext_hdd",
+  "rarity" : "Legendary",
+  "maxStack" : 1,
+  "tooltipKind" : "at_ext_qitem",
+  "category" : "quest",
+  "inventoryIcon" : "at_ext_hdd.png",
+  "largeImage" : "at_ext_hdd.png",
+  
+  
+  "description" : "An encrypted data hard drive.",
+  "shortdescription" : "Encrypted hard drive"
+  
+}

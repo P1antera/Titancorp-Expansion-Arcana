@@ -1,0 +1,52 @@
+{
+  "id" : "at_ext_dailyjob1",
+  "mainQuest" : false,
+  "prerequisites" : [ "at_ext_dailyjob_intro" ],
+  "title" : "^#ffb294;Operation Anvil^reset;",
+  "text" : "One of my squad members was deployed on a mission in deep Undercity, but he's been missing for too long. Given that the area he was in has been derelict for years, I'm sure he's in trouble. Let's start by searching the sewer sector, maybe we'll find a lead there.",
+  "completionText" : "Well done! There's a trade terminal on the rooftop where you can sell your loot. I'll start drafting the next phase of the plan. I'll contact you as soon as everything is ready!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0,0],
+  "rewards" : [
+    [
+ [ "arcana_currency_credit", 300 ]    
+    ]
+    ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Unknown"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Frogex"
+        }
+    },
+    "descriptions" : {
+      "enterInstance" : "Talk with Forgex to ^orange;Deploy^reset;.",
+      "findGoal" : "Find the ^orange;Clues^reset;.",
+      "turnIn" : "Talk with ^orange;Forgex^reset;."
+    },
+	
+    "warpEntityUid" : "at_ext_forgex",
+    "warpAction" : "instanceworld:at_ext_dailyjob1",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:at_ext_dailyjob1",
+	
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+	
+    "goalEntityUid" : "at_ext_dailyjob1_goal",
+	  //"interactEntityUid" : "at_ext_d1_goal",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+	
+    "turnInEntityUid" : "at_ext_forgex"
+  }
+}

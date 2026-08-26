@@ -1,0 +1,10 @@
+{
+  "name" : "falconeyebody",
+  "category" : "falconeye",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "falconeyebody.png",
+    "fullbright" : "falconeyebodyfullbright.png"
+  }
+}

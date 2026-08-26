@@ -1,0 +1,10 @@
+{
+  "name" : "wicked",
+  "category" : "wicked",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "fullbright" : "fullbright.png"
+  }
+}

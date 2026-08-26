@@ -1,0 +1,25 @@
+{
+  "name" : "at_ext_black",
+  "friendlyName" : "at_ext_black",
+
+  "parallax" : "/parallax/space/at_ext_black.parallax",
+
+  "spawnProfile" : {
+    "groups" : [],
+    "monsterParameters" : {}
+  },
+    "musicTrack" : {
+    "day" : {
+      "tracks" : [ 
+	  "/music/at_ext_dailyjob.ogg"
+	  ]
+    },
+    "night" : {
+      "tracks" : [
+	  "/music/at_ext_dailyjob.ogg"
+	  ]
+    }
+  },
+
+  "hueShiftOptions" : [0]
+}

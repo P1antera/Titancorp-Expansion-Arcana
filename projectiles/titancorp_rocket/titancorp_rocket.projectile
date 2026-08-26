@@ -1,0 +1,46 @@
+{
+  "projectileName" : "titancorp_rocket",
+  "image" : "titancorp_rocket.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 3,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [255, 169, 61],
+  "pointLight" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/arcana_explosion_fire_2/arcana_explosion_fire_2.config"
+    }
+  ],
+    "periodicActions" : [
+    {
+      "time" : 0.005,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/activeitems/axe/workshop_axe_1_projectile_1/workshop_axe_1_projectile_1_trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    }
+  ],
+  "emitters" : [ "rockettrail" ],
+  "power" : 10.0,
+  "speed" : 15.0,
+  "timeToLive" : 30.0,
+  "acceleration" : 30,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+
+  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
+  "scriptDelta" : 3,
+  "rotationRate" : 2.5,
+  "trackingLimit" : 2.0
+}

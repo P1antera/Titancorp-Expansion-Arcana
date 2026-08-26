@@ -1,0 +1,47 @@
+{
+  "projectileName" : "at_ext_rl2_1",
+  "physics" : "laser",
+  
+  "timeToLive" : 4,
+  "bounces" : 0,
+  "speed" : 100,
+  
+  "image" : "at_ext_rl2_1.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  
+  "fullbright" : true,
+  "lightColor" : [156, 222, 251],
+  //"emitters" : ["arcana_particle_yellow"],
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/at_ext_rl2_1/at_ext_rl2_1_expl.config"
+    }
+  ],
+  
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/at_ext_rl2/at_ext_rl2_1_trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    }
+  ],
+  
+  "damageKind" : "default"
+ 
+}

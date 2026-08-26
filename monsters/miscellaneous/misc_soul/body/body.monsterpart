@@ -1,0 +1,10 @@
+{
+  "name" : "misc_soul",
+  "category" : "misc_soul",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "fullbright" : "fullbright.png"
+  }
+}

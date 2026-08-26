@@ -1,0 +1,78 @@
+{
+  "objectName" : "at_ext_generator",
+  "colonyTags" : ["human","electronic"],
+  "rarity" : "Legendary",
+  "description" : "Power Generator",
+  "shortdescription" : "Power Generator",
+  "race" : "human",
+  "price" : 0,
+  "lightColor" : [78, 111, 128],
+  "category" : "wire",
+  "printable" : false,
+
+
+
+  "inventoryIcon" : "at_ext_generatoricon.png",
+  "orientations" : [
+    {
+      "image" : "at_ext_generator.png:<color>.<frame>",
+      "flipImages" : true,
+      "direction" : "left",
+
+      "imagePosition" : [-32, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "lightPosition" : [-1, 1],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "at_ext_generator.png:<color>.<frame>",
+      "direction" : "right",
+
+      "imagePosition" : [-32, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "lightPosition" : [1, 1],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "animation" : "at_ext_generator.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "on" : [ "/sfx/objects/apexconsole1on.ogg" ],
+      "off" : [ "/sfx/objects/apexconsole2switch.ogg" ]
+    }
+  },
+  "animationParts" : {
+    "bg" : "at_ext_generator.png",
+    "fg" : "at_ext_generatorlit.png"
+  },
+
+  "animationPosition" : [-32, 0],
+
+  "smashable" : true,
+  "smashSounds" : [ "/sfx/melee/kill_robotic1.ogg" ],
+  "health" : 10000,
+  "interactive" : false,
+
+  "smashParticles" : [ { "count" : 50, "particle" : "generatorshard" }, { "count" : 50, "particle" : "at_ext_d8_gen" }, { "count" : 10, "particle" : "generatorglassshard" } ],
+  "smashDropPool" : "empty",
+  "breakDropPool" : "empty",
+
+  "scripts" : [ "at_ext_generator.lua" ],
+  "scriptDelta" : 5,
+
+  "outputNodes" : [ [-4, 0] ],
+  "inputNodes" : [ [0, 0] ],
+
+  "explodeOnSmash" : true,
+  "explosionProjectile" : "explosivegenerator",
+  "explosionOffset" : [1, 1]
+}

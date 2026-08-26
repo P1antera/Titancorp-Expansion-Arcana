@@ -1,0 +1,106 @@
+{
+  "itemName" : "at_ext_rl",
+  "price" : 0,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A prototype missile launcher.Capable of launching a series of micro-missiles, requiring a significant cooldown period after each launch.",
+  "shortdescription" : "''Forgehammer''",
+  "tooltipKind" : "at_ext_gun",
+  "category" : "rocketLauncher",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","rocketlauncher"],
+  "level" : 8,
+  "largeImage" : "body.png",
+  "inventoryIcon" : "body.png:default.1",
+
+  "animation" : "animation.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "body.png",
+	"fullbright" : "fullbright.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/active/weapons/ranged/arcana_muzzleflash_purple.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : {
+	  "parts" : {
+	    "fullbright" : {
+		  "properties" : {
+		    "offset" : [0, 0.2] //Same as baseOffset
+		  }
+		}
+	  }
+	},
+    "particleEmitters" : {
+      "muzzleFlash" : {
+        "burstCount" : 3,
+        "particles" : [
+          { "particle" : "rocketbarrelpuff" }
+        ]
+      }
+    },
+    "sounds" : {
+      "fire" : [ "/sfx/gun/rocket1.ogg" ]
+    }
+  },
+
+  "baseOffset" : [0, 0.2],
+  "muzzleOffset" : [2.7, 0.3],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "fire",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.8,
+    "baseDps" : 16,
+    "energyUsage" : 50.0,
+    "inaccuracy" : 0.2,
+
+    "projectileCount" : 1,
+	"burstCount": 6,
+	"burstTime": 0.1,
+	"fireType": "burst",
+
+    "projectileType" : "at_ext_missile",
+    "projectileParameters" : {
+      "knockback" : 30
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "weaponOffset" : [0, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "weaponOffset" : [-0.2, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.4,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "weaponOffset" : [-0.2, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

@@ -1,0 +1,10 @@
+{
+  "name" : "at_ext_exo",
+  "category" : "at_ext_exo",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "fullbright" : "fullbright.png"
+  }
+}

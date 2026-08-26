@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 2350 },
+	{ "item" : "horizon_crafting_horizonTechCard", "count" : 4 },
+	{ "item" : "arcana_liquid_ruinousWater", "count" : 50 },
+	{ "item" : "arcana_bar_necroiumBar", "count" : 2 }
+  ],
+  "output" : { "item" : "sd_exp_ruinousmunition_controller", "count" : 1 },
+  "groups" : [ "sd_exp_shop_2", "sd_exp_shop","sd_exp_droneshop"]
+}

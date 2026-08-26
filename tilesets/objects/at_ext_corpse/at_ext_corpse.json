@@ -1,0 +1,66 @@
+{
+    "margin":0,
+    "name":"at_ext_corpse",
+    "properties":
+        {
+
+        },
+    "spacing":0,
+    "tilecount":5,
+    "tileheight":15,
+    "tilewidth":40,
+    "tileproperties" : {
+        "0":{
+         "\/\/shortdescription":"",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"at_ext_corpse",
+         "tilesetDirection":"right"
+        },
+        "1":{
+         "\/\/shortdescription":"",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"at_ext_corpse2",
+         "tilesetDirection":"right"
+        },
+        "2":{
+         "\/\/shortdescription":"",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"at_ext_corpse4",
+         "tilesetDirection":"right"
+        },
+        "3":{
+         "\/\/shortdescription":"",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"at_ext_corpse5",
+         "tilesetDirection":"right"
+        },
+        "4":{
+         "\/\/shortdescription":"",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"at_ext_corpse6",
+         "tilesetDirection":"right"
+        }
+    },
+    "tiles" : {
+        "0":{
+         "image":"at_ext_corpse.png"
+        },
+        "1":{
+         "image":"at_ext_corpse2.png"
+        },
+        "2":{
+         "image":"at_ext_corpse4.png"
+        },
+        "3":{
+         "image":"at_ext_corpse5.png"
+        },
+        "4":{
+         "image":"at_ext_corpse6.png"
+        }
+    }
+}

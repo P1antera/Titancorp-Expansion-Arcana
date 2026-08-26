@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 600 }
+  ],
+  "output" : {
+    "item" : "at_ext_monitor",
+    "count" : 1
+  },
+  "groups" : [ "arcana_titancorp_crafting_1", "arcana_titancorp_crafting_1_main" ]
+}

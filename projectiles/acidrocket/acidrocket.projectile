@@ -1,0 +1,73 @@
+{
+  "projectileName" : "acidrocket",
+  "image" : "acidrocket.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 3,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [132, 190, 0],
+  "pointLight" : true,
+    "emitters" : ["arcana_particle_ember_green"],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/poisonexplosionknockback.config"
+    },{
+      "action" : "loop",
+      "count" : 5,
+      "body" : [{
+        "fuzzAngle" :50,
+        "angle" : 90,
+        "action" : "projectile",
+        "type" : "arcana_projectile_flame_poison",
+        "config" : {
+          "processing" : "?border=2;428A0073;428A0073",
+                                "movementSettings" : {
+          "gravityMultiplier" : 0.5
+        },
+        "physics" : "grenade",
+              "speed" : 30.0,
+              "timeToLive" : 0.8,
+              "periodicActions" : [{
+            "inheritDamageFactor" : 0.5,
+            "inheritSpeedFactor" : 0.1,
+            "action" : "projectile",
+            "fuzzAngle" : 180,
+            "type" : "arcana_projectile_flame_poison",
+            "time" : 0.09,
+            "config" : {
+              "timeToLive" : 0.8,
+              "processing" : "?border=2;428A0073;428A0073",
+              "statusEffects" : ["vulnerability", "arcana_status_acidicMelting"]
+            }
+          }]
+        }
+      }]
+      
+    }
+  ],
+    "periodicActions" : [
+    {
+      "time" : 0.005,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/acidrocket/trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    }
+  ],
+  "power" : 10.0,
+  "speed" : 100.0,
+  "timeToLive" : 3.25,
+  "acceleration" : 10,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

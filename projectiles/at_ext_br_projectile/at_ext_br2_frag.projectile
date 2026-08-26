@@ -1,0 +1,63 @@
+{
+  "projectileName" : "at_ext_br2_frag",
+  "physics" : "at_ext_br2_frag",
+  
+  "timeToLive" : 0.1,
+  "bounces" : 0,
+  "speed" : 150,
+  
+  "image" : "body.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  
+  "fullbright" : true,
+  "lightColor" : [255, 132, 0],
+  //"emitters" : [ "arcana_particle_ember_cyan_2" ],
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/at_ext_bulletimpact_br2_frag.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "arcana_bulletimpact",
+      "fuzzAngle" : 365,
+      "inheritDamageFactor" : 0.0,
+      "angleAdjust" : 35
+    },
+    {
+      "action" : "projectile",
+      "type" : "arcana_bulletimpact",
+      "fuzzAngle" : 365,
+      "inheritDamageFactor" : 0.0,
+      "angleAdjust" : 35
+    }
+  ],
+  
+  "periodicActions" : [
+            {
+      "time" : 0.001,
+      "repeat" : true,
+              "action" : "particle",
+              "specification" : {
+                "type" : "animated",
+                "animation" : "/animations/dust2/dust2.animation",
+                "approach" : [20, 20],
+                "timeToLive" : 2.0,
+				        "fade": 0.5,
+                "finalVelocity" : [0, 0],
+                "initialVelocity" : [5, 0],
+                "ignoreWind" : false,
+                "collidesForeground" : true,
+                "collidesLiquid" : true,
+				        "size": 0.5
+              }
+            }
+  ],
+  
+  "damageKind" : "plasma"
+ 
+}

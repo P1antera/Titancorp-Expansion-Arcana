@@ -1,0 +1,70 @@
+{
+  "type" : "at_ext_d8_apexscout",
+  "baseType" : "base",
+
+  "levelVariance" : [8, 9],
+
+  //"dropPools" : [  ],
+
+  "scriptConfig" : {
+    "behavior" : "at_ext_d8_apexscout",
+    
+    "behaviorConfig" : {
+      "leapWindup" : 0.75,
+      "rangedAimTime" : 0.5,
+      "rangedWindupTime" : 0.01
+    }, 
+    "dialog" : {
+      "attack" : "/dialog/scientist.config:attack",
+      "lostTarget" : "/dialog/combat.config:lostTarget"
+    }
+  },
+  "movementParameters" : {
+    "mass" : 1.0,
+    "walkSpeed" : 10,
+    "runSpeed" : 18.0
+  },
+
+  "statusControllerSettings" : {    
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 400.0
+      },
+      "maxEnergy" : {
+        "baseValue" : 300.0
+      },
+      "powerMultiplier" : {
+        "baseValue" : 1.0
+      },
+      "protection" : {
+        "baseValue" : 0.7
+      },
+      "fireStatusImmunity" : {
+        "baseValue" : 0.5
+      },
+      "iceStatusImmunity" : {
+        "baseValue" : 0.5
+      },
+      "electricStatusImmunity" : {
+        "baseValue" : 0.8
+      },
+      "poisonStatusImmunity" : {
+        "baseValue" : 0.5
+      }
+    }
+  },
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "visorhead" }, { "name" : "miniknoghead" }, "" ],
+            "chest" : [ { "name" : "miniknogchest", "parameters" : { "colorIndex" : 0 } } ],
+            "legs" : [ { "name" : "miniknogpants", "parameters" : { "colorIndex" : 0 } } ],
+            "primary" : [
+              "at_ext_d8_npc"
+            ]
+          }
+        ] ]
+    ]
+  }
+}

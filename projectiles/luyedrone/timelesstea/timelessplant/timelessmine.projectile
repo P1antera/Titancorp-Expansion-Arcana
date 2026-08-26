@@ -1,0 +1,23 @@
+{
+  "projectileName" : "timelessmine",
+  "physics" : "laser",
+  "bounces" : -1,
+  "timeToLive" : 20,
+  "power" : 0,
+  "speed" : 0,
+  "image" : "/assetsmissing.png",
+  "animationCycle" : 0.25,
+  "lightColor" : [108, 217, 247],
+  "frameNumber" : 1,
+  "emitters" : [ "arcana_particle_ember_cyan" ],
+  "piercing" : false,
+  "damagePoly" : [ [-6, 0], [-4, -4], [0, -6], [4, -4], [6, 0], [4, 4], [0, 6], [-4, 4] ],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "timelessteaplant",
+      "direction" : [1,0]
+    }
+  ],
+  "damageKind" : "default"
+}

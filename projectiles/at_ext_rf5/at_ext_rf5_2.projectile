@@ -1,0 +1,31 @@
+{
+  "projectileName" : "at_ext_rf5_2",
+  "physics" : "laser",
+  
+  "timeToLive" : 3,
+  "bounces" : 0,
+  "speed" : 124,
+  
+  "image" : "at_ext_rf5_2.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  
+  "fullbright" : true,
+  "lightColor" : [55, 158, 213],
+  
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/arcana_explosion_bullet_blue/arcana_explosion_bullet_blue.config"
+    }
+  ],
+  
+  "periodicActions" : [
+  ],
+  
+  "damageKind" : "electricplasmabullet"
+ 
+}

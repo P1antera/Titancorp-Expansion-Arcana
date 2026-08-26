@@ -1,0 +1,51 @@
+{
+  "itemName" : "at_ext_npc_bandage",
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "category" : "medicine",
+  "description" : "NPC medical item.",
+  "shortdescription" : "NPC Bandage",
+  "twoHanded" : false,
+  "itemTags" : [ "weapon", "ranged" ],
+
+  "inventoryIcon" : "at_ext_npc_bandage.png",
+  "effects" : [ [
+      {
+        "effect" : "nanowrapheal"
+      }
+    ] ],
+  "blockingEffects" : [
+    "salveheal",
+    "bandageheal",
+    "medkitheal",
+    "nanowrapheal"
+  ],
+
+  "animation" : "at_ext_npc_medical.animation",
+  "animationParts" : {
+    "medicalItem" : "at_ext_npc_bandage.png"
+  },
+  "scripts" : [ "at_ext_npc_medical.lua" ],
+  "scriptDelta" : 1,
+
+  "stances" : {
+    "idle" : {
+      "armRotation" : -20,
+      "animationState" : {
+        "item" : "visible"
+      },
+      "allowRotate" : true,
+      "allowFlip" : true
+    },
+    "use" : {
+      "duration" : 0.45,
+      "transitionFunction" : "finishUse",
+      "armRotation" : [ -20, 78, 62 ],
+      "animationState" : {
+        "item" : "visible"
+      },
+      "allowRotate" : false,
+      "allowFlip" : false
+    }
+  }
+}

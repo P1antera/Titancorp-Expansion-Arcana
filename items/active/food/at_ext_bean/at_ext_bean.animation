@@ -1,0 +1,62 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "juiceState" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "drink" : {
+            "frames" : 2
+          },
+          "empty" : {
+            "frames" : 1
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "juice" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "image" : "<partImage>:idle",
+          "offset" : [0, 0.25],
+          "transformationGroups" : [ "juice" ]
+        },
+        "partStates" : {
+          "juiceState" : {
+            "idle" : {
+              "properties" : {
+                "offset" : [-0.25, 0.5],
+                "image" : "<partImage>:idle"
+              }
+            },
+            "drink" : {
+              "properties" : {
+                "offset" : [-0.25, 0.0],
+                "image" : "<partImage>:drink.<frame>"
+              }
+            },
+            "empty" : {
+              "properties" : {
+                "offset" : [-0.25, 0.0],
+                "image" : "<partImage>:empty"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "juice" : {}
+  },
+
+  "sounds" : {
+    "drink" : [ "/sfx/at_ext_bean.ogg" ]
+  }
+}

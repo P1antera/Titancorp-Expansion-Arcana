@@ -1,0 +1,55 @@
+{
+  "id" : "at_ext_rl2_2",
+  "prerequisites" : [ "at_ext_rl2_1" ],
+  "mainQuest" : false,
+  
+  "title" : "^#ff1aa6;''Let the weapon's fury ignite your own'' I^reset;",
+  "text" : "Heard about my new weapon project? No? Well, I need help. Finish it, you take it, just give me the test data. Sounds good? Here's the initial materials list if you're in.",
+  "completionText" : "Wonderful! Come to me when you're ready for the next phase.",
+  "canBeAbandoned" : false,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        }
+    },
+    "turnInDescription" : "Give the materials to ^yellow;Scientist.^reset;",
+    "requireTurnIn" : true,
+    "conditions" : [
+	  {
+        "type" : "gatherItem",
+        "itemName" : "refinedferozium",
+        "count" : 5,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "refinedaegisalt",
+        "count" : 5,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "refinedviolium",
+        "count" : 5,
+        "consume" : true
+      }
+    ]
+  }
+}

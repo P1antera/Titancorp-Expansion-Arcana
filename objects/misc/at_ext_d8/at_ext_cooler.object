@@ -1,0 +1,89 @@
+{
+  "objectName" : "at_ext_cooler",
+  "colonyTags" : ["evil"],
+  "printable" : false,
+  "rarity" : "Legendary",
+  "description" : "Cooler.",
+  "shortdescription" : "Cooler",
+  "race" : "human",
+
+
+
+  "category" : "trap",
+  "price" : 0,
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+
+
+    {
+      "image" : "at_ext_cooler.png:<color>.<frame>",
+      "imagePosition" : [-8, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-8, 0],
+      "animationParts" : {
+        "bg" : "at_ext_cooler.png",
+        "fg" : "at_ext_cooler.png"
+      },
+
+      "projectileDirection" : [0, -1],
+      "projectilePosition" : [0, -0.2],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "at_ext_cooler.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "at_ext_cooler.png",
+        "fg" : "at_ext_cooler.png"
+      },
+
+      "projectileDirection" : [0, -1],
+      "projectilePosition" : [1, -0.2],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/projectiletrap/projectiletrap.lua" ],
+  "scriptDelta" : 2,
+
+  "animation" : "/objects/wired/projectiletrap/projectiletrap.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "shoot" : [ ],
+      "on" : [ ],
+      "off" : [ "/sfx/objects/gasbooster_off.ogg" ]
+    }
+  },
+
+  "soundEffect" : "/sfx/objects/gasbooster_loop.ogg", // this is a thing that also works
+
+  "inputNodes" : [ [0, 0] ],
+
+  "inactiveLightColor" : [0, 0, 0], // light color to emit when the object is 'off'
+  "activeLightColor" : [0, 0, 0], // light color to emit when the object is 'on'
+
+  "fireTime" : 0.1, // rate of fire
+  "fireTimeVariance" : 0.0, // variation in rate of fire
+  "projectile" : "trapice", // name of projectile (required)
+  "projectileConfig" : { 
+    "damageTeam" : { "type" : "environment" },
+    "power" : 0,
+    "speed" : 10
+  },
+  
+  "health" : 5,
+
+  "smashOnBreak" : false,
+  "smashSounds" : [ "/sfx/objects/rock_break1.ogg", "/sfx/objects/rock_break2.ogg", "/sfx/objects/rock_break3.ogg", "/sfx/objects/rock_break4.ogg", "/sfx/objects/rock_break5.ogg", "/sfx/objects/rock_crumble1.ogg", "/sfx/objects/rock_crumble2.ogg", "/sfx/objects/rock_crumble3.ogg", "/sfx/objects/rock_crumble4.ogg", "/sfx/objects/rock_crumble5.ogg" ],
+  "smashParticles" : [ { "count" : 6, "particle" : "greystoneshard" } ]
+}

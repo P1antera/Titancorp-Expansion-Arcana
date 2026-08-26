@@ -1,0 +1,163 @@
+{
+  "itemName" : "at_ext_sg1",
+  "price" : 0,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A high-caliber, fully automatic shotgun loaded with air-burst incendiary rounds. Its use is prohibited in many regions.",
+  "shortdescription" : "''Stress Fracture''",
+  "tooltipKind" : "at_ext_gun",
+  "category" : "shotgun",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","shotgun","titancorp","upgradeableWeapon"],
+  "level" : 6,
+  "largeImage" : "at_ext_sg1_lg.png",
+  "inventoryIcon" : "at_ext_sg1_icon.png",
+  
+  "animation" : "/items/active/weapons/ranged/at_ext_gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "at_ext_sg1.png",
+	"fullbright" : "fullbright.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/active/weapons/at_ext_rf5/muzzleflash.png"
+  },
+  "animationCustom" : {
+   
+    "animatedParts" : {
+    "stateTypes" : {
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+	"frames" : 1,
+	"mode":"end"	  
+		  },
+          "fire" : {
+            "frames" : 3,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      }
+    },
+	  
+	  "parts" : {
+
+      "fullbright" : {
+        "properties" : {
+		   "offset" : [0.75, 0.2],
+            "image" : null
+        },
+        "partStates" : {
+          "firing" : {
+            "off" : {
+            "properties" : {
+            "image" : "<partImage>:default.4"
+              }
+			},
+			"fire" : {
+              "properties" : {
+                "image" : "<partImage>:default.<frame>"
+              }
+            }
+          }
+        }
+      },
+
+      "middle" : {
+        "properties" : {
+            "image" : null
+        },
+        "partStates" : {
+          "firing" : {
+            "off" : {
+            "properties" : {
+            "image" : "<partImage>:default.4"
+              }
+			},
+			"fire" : {
+              "properties" : {
+                "image" : "<partImage>:default.<frame>"
+              }
+            }
+          }
+        }
+      },
+        "muzzleFlash" : {
+          "properties" : {
+            "offset" : [1, 0]
+		  }
+        }
+	  }
+	},
+
+    "sounds" : {
+      "fire" : ["/sfx/at_ext_sg1.ogg"]
+    }
+  },
+
+  "baseOffset" : [0.75, 0.2],
+  "muzzleOffset" : [2.0, 0.3],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.2,
+    "baseDps" : 10,
+    "energyUsage" : 180.0,
+    "inaccuracy" : 0.01,
+
+    "projectileCount" : 1,
+    "fireType" : "auto",
+
+    "projectileType" : "at_ext_sg1",
+    "projectileParameters" : {
+	  "speed" : 120,
+      "knockback" : 30
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 2,
+        "weaponOffset" : [-0.4, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.15,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "weaponOffset" : [-0.2, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+//  "altAbility" : {   
+//  },
+
+
+//"altAbilityType" : "Burstshot",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

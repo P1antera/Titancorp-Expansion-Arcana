@@ -1,0 +1,37 @@
+{
+  "projectileName" : "at_ext_shipc2missile2",
+  "physics" : "at_ext_missile",
+  
+  "timeToLive" : 0.2,
+  "bounces" : 0,
+  "speed" : 30,
+  "autoFlipAdjust" : true,
+  "image" : "at_ext_shipc2missile2.png",
+ 
+  "frameNumber" : 1,
+  "renderLayer" : "foregroundEntity",
+  "fullbright" : true,
+  //"lightColor" : [250, 178, 128],
+  //"pointLight" : true,
+
+
+  "supportsProcessing" : true,
+  
+  "actionOnTimeout" : [
+{
+  "action" : "projectile",
+ // "inheritDamageFactor" : 0,
+  "autoFlipAdjust" : true,
+  "type" : "at_ext_shipc2missile",
+  "angleAdjust" : 0,
+  "fuzzAngle" :0
+  }
+  ],
+  
+  "periodicActions" : [
+
+  ]
+  
+
+ 
+}

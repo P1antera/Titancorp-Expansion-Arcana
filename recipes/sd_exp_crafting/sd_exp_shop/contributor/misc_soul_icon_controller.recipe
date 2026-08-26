@@ -1,0 +1,8 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 700 },
+    { "item" : "arcana_throwable_noveltyStar", "count" : 5 }
+  ],
+  "output" : { "item" : "misc_soul_icon_controller", "count" : 1 },
+  "groups" : [ "sd_exp_shop_contributor", "sd_exp_shop","sd_exp_droneshop"]
+}

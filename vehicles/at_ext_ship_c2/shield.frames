@@ -1,0 +1,9 @@
+{
+  "frameGrid" : {
+    "size" : [125,100],
+    "dimensions" : [12, 1],
+    "names" : [
+      [ null, "open.1","open.2","open.3","open.4","open.5","opened","close.1","close.2","close.3","close.4", null ]
+    ]
+  }
+}

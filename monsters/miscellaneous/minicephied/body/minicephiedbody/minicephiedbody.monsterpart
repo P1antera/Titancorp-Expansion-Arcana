@@ -1,0 +1,10 @@
+{
+  "name" : "minicephiedbody",
+  "category" : "minicephied",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "minicephiedbody.png",
+    "fullbright" : "minicephiedbodyfullbright.png"
+  }
+}

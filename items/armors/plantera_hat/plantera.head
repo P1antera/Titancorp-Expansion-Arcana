@@ -1,0 +1,23 @@
+{
+  "itemName" : "plantera_hat",
+  "price" : 4000,
+  "inventoryIcon" : "plantera.png",
+  "maxStack" : 1,
+  "rarity" : "Essential",
+  "category" : "headarmour",
+  "description" : "A Plantera's bud,it's safe to wear it.",
+  "shortdescription" : "^#9B005A;Plantera's hat",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png",
+
+  "level" : 9
+
+  
+
+  
+
+
+}

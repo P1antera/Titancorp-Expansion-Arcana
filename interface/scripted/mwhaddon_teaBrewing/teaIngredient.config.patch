@@ -1,0 +1,38 @@
+[
+  {
+    "op" : "add",
+    "path" : "/teaIngredients/at_ext_teabag1",
+    "value" : 
+	{ 
+      "order" : 100,
+      "shortDescription" : "Plantera's Tissue",
+      "id" : "at_ext_teabag1",
+      "icon" : "/items/generic/at_ext_teabag/at_ext_teabag1.png",
+      "description" : "When health drops below 40%, ^yellow;Heal 10% of max health/s^reset; for 40 seconds after drinking.",
+      "statusEffect" : "at_ext_teabag1",
+      "healPercentage" : 0,
+      "healAmount" : 0,
+      "cooldownTime" : 0,
+      "cooldownTimePercentage" : 1,
+      "ultimateHealPercentage" : 1
+	}
+  },
+  {
+    "op" : "add",
+    "path" : "/teaIngredients/at_ext_teabag2",
+    "value" : 
+	{ 
+      "order" : 101,
+      "shortDescription" : "Dustrium teabag",
+      "id" : "at_ext_teabag2",
+      "icon" : "/items/generic/at_ext_teabag/at_ext_teabag2.png",
+      "description" : "When health drops below 50%, ^yellow;+15protection^reset; for 60 seconds after drinking.",
+      "statusEffect" : "at_ext_teabag2",
+      "healPercentage" : 0,
+      "healAmount" : 0,
+      "cooldownTime" : 0,
+      "cooldownTimePercentage" : 1,
+      "ultimateHealPercentage" : 1
+	}
+  }
+]

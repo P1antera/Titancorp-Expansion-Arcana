@@ -1,0 +1,29 @@
+{
+  "itemName" : "at_ext_poisionblock",
+  "price" : 10,
+  "tooltipKind" : "at_ext_item",
+  "rarity" : "Common",
+  "category" : "medicine",
+  "inventoryIcon" : "at_ext_poisionblock.png",
+  "largeImage" : "at_ext_poisionblock.png",
+  "description" : "Titancorp provides ^green;anti-toxin^reset; stim for employees working in harzard environments.^yellow;No side effects.^reset;",
+  "shortdescription" : "^blue;TCS-X1^reset;",
+  "effects" : [ [
+      {
+        "effect" : "poisonblock",
+        "duration" : 120
+      },
+
+      {
+        "effect" : "maxhealthscalingboostfood",
+        "duration" : 120
+      },
+    {
+        "effect" : "arcana_status_resistance_poisonStatus",
+        "duration" : 120
+    }
+    ] ],
+  "emote" : "",
+ "builder" : "/items/buildscripts/buildfood.lua",
+  "emitters" : [ "stimuse" ]
+}

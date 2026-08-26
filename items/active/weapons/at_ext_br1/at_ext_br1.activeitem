@@ -1,0 +1,161 @@
+{
+  "itemName" : "at_ext_br1",
+  "price" : 0,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A heavy rifle that fires jet-propelled rounds.\n^yellow;[Smart Warhead]:The ammunition detonates at the aimed location.^reset;",
+  "shortdescription" : "^#57bbec;Exce^#2c9bd3;lion^reset; Mod.0",
+  "tooltipKind" : "at_ext_gun",
+  "category" : "assaultRifle",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","assaultrifle"],
+  "level" : 9,
+
+  "inventoryIcon" : "at_ext_br1.png:default.4",
+  "largeImage" : "at_ext_br1_lg.png",
+  
+  "animation" : "/items/active/weapons/ranged/at_ext_gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "at_ext_br1.png",
+	"fullbright" : "fullbright.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/active/weapons/at_ext_br1/muzzleflash.png"
+  },
+  "animationCustom" : {
+   
+    "animatedParts" : {
+    "stateTypes" : {
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+	"frames" : 1,
+	"mode":"end"	  
+		  },
+          "fire" : {
+            "frames" : 3,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      }
+    },
+	  
+	  "parts" : {
+
+      "fullbright" : {
+        "properties" : {
+		   "offset" : [0.5, 0.2],
+            "image" : null
+        },
+        "partStates" : {
+          "firing" : {
+            "off" : {
+            "properties" : {
+            "image" : "<partImage>:default.4"
+              }
+			},
+			"fire" : {
+              "properties" : {
+                "image" : "<partImage>:default.<frame>"
+              }
+            }
+          }
+        }
+      },
+
+      "middle" : {
+        "properties" : {
+            "image" : null
+        },
+        "partStates" : {
+          "firing" : {
+            "off" : {
+            "properties" : {
+            "image" : "<partImage>:default.4"
+              }
+			},
+			"fire" : {
+              "properties" : {
+                "image" : "<partImage>:default.<frame>"
+              }
+            }
+          }
+        }
+      },
+        "muzzleFlash" : {
+          "properties" : {
+            "offset" : [2, -0.125]
+		  }
+        }
+	  }
+	},
+
+    "sounds" : {
+      "fire" : ["/sfx/at_ext_br2.ogg"]
+    }
+  },
+
+  "baseOffset" : [0.525, 0.2],
+  "muzzleOffset" : [0.75, 0.36],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/at_ext_br1/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.25,
+    "baseDps" : 35,
+    "energyUsage" : 230.0,
+    "inaccuracy" : 0.01,
+
+    "projectileCount" : 1,
+    "fireType" : "auto",
+
+    "projectileType" : "at_ext_br2",
+    "projectileParameters" : {
+	  "speed" : 140,
+      "knockback" : 10
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 6,
+        "weaponOffset" : [-0.4, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.6,
+        "armRotation" : 1,
+        "weaponRotation" : 3,
+        "weaponOffset" : [-0.2, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+
+  
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

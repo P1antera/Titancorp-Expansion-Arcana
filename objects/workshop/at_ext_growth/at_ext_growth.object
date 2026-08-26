@@ -1,0 +1,103 @@
+{
+  "objectName" : "at_ext_growth",
+  "colonyTags" : ["factorypaint","titancorp","storage"],
+  "rarity" : "Rare",
+  "description" : "^white;A hydroponic tray, grows your farmables! ^orange;Can be wired to other machines.^reset;",
+  "shortdescription" : "^yellow;[TC]^reset;Hydroponic tray",
+  //"subtitle" : "Turn ores into pixels",
+  "race" : "generic",
+  "category" : "crafting",
+  "price" : 0,
+  "objectType" : "container",
+  "printable" : false,
+  "health" : 1.5,
+
+  //"lightColor" : [179, 149, 107],
+
+  "flickerPeriod" : 0.5,
+  "flickerMinIntensity" : 0.9,
+  "flickerMaxIntensity" : 1,
+  "flickerPeriodVariance" : 0.075,
+  "flickerIntensityVariance" : 0.025,
+  
+  "scripts" : [ "at_ext_gt.lua" ],
+  "scriptDelta" : 5,
+  
+  "inputNodes" : [ [0, 0] ],
+  "outputNodes" : [ [7, 5] ],
+  
+  "animation" : "animation.animation",
+  "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "switchState" : {
+          "states" : {
+            "on" : {
+              "frames" : 8,
+              "cycle" : 1.0,
+			  "mode" : "loop"
+            }
+          }
+        }
+	  }
+    },
+    "sounds" : {
+      "on" : [ "/sfx/objects/console_generic_switchon.ogg" ],
+      "off" : [ "/sfx/objects/console_generic_switchoff.ogg" ]
+    }
+  },
+  "animationParts" : {
+    "bg" : "1.png",
+    "fg" : "1_fb.png"
+  },
+
+  "inventoryIcon" : "1_icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "1.png:<color>.<frame>", "fullbright" : true }, { "image" : "1_fb.png:<color>.<frame>" } ],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+	       "collision" : "platform"
+    },
+    {
+      "imageLayers" : [ { "image" : "1.png:<color>.<frame>", "fullbright" : true }, { "image" : "1_fb.png:<color>.<frame>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+	       "collision" : "platform"
+    }
+  ],
+  "placementImage" : "1.png:default.0",
+  "placementImagePosition" : [0, 0],
+  "soundEffect" : "/sfx/objects/apexpod.ogg",
+  "soundEffectRangeMultiplier" : 0.5,
+
+  "openSounds" : [ "/sfx/objects/miningchest_open.ogg" ],
+  "slotCount" : 3,
+  "uiConfig" : "/interface/arcana/arcana_auto/at_ext_growth.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600,
+  "itemAgeMultiplier" : 0.0,
+  
+  "configPath" : "/objects/workshop/at_ext_growth/config.config",
+
+  "maxPower" : 30,
+  "powerUseAmount" : 20,
+  "voltage" : 45,
+  "craftingTime" : 60.0,
+  "outputRate" : 6,
+  "directives" : ""
+
+}

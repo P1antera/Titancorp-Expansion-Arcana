@@ -1,0 +1,59 @@
+{
+  "frameGrid" : {
+    "size" : [46, 38],
+    "dimensions" : [30, 1],
+
+    "names" : [
+      [
+	  "walk.1",
+	  "walk.2",
+	  "walk.3",
+	  "walk.4",
+	  "walk.5",
+	  "walk.6",
+	  "walk.7",
+      "firewindup.1",
+	  "firewindup.2",
+	  "firewindup.3",
+	  "firewindup.4",
+	  "firewindup.5",
+	  "firewindup.6",
+	  "firewindup.7",
+	  "firewindup.8",
+	  "firewindup.9",
+	  "firewindup.10",
+	  "firewindup.11",
+	  "firewindup.12",
+	  "firewindup.13",
+	  "firewindup.14",
+	  "firewindup.15",
+	  "fire.1",
+	  "fire.2",
+	  "fire.3",
+	  "fire.16",
+	  "fire.17",
+	  "fire.18",
+	  "fire.19",
+	  "fire.20"
+	  ]
+    ]
+  },
+  "aliases" : {
+    "fire.4" : "fire.2",
+	"fire.5" : "fire.3",
+	"fire.6" : "fire.2",
+	"fire.7" : "fire.3",
+	"fire.8" : "fire.2",
+	"fire.9" : "fire.3",
+	"fire.10" : "fire.2",
+	"fire.11" : "fire.3",
+	"fire.12" : "fire.2",
+	"fire.13" : "fire.3",
+	"fire.14" : "fire.2",
+	"fire.15" : "fire.3",
+    "idle.1" : "walk.1",
+	"hurt.1" : "walk.1",
+	"fall.1" : "walk.1",
+	"jump.1" : "walk.1"
+  }
+}

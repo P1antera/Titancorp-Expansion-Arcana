@@ -1,0 +1,22 @@
+{
+  "objectName" : "at_ext_5back",
+  "colonyTags" : [],
+  "rarity" : "Common",
+  "description" : ".",
+  "shortdescription" : ".",
+  "scannable" : false,
+  "printable" : false,
+  "race" : "human",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "at_ext_5back.png",
+      "imagePosition" : [0, 40],
+      "renderLayer" : "BackgroundOverlay",
+      "metaBoundBox" : [-10, -10, 70, 70],
+
+      "anchors" : [  ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "atExtMeleeComboFire": {
+    "type": "action",
+    "name": "atExtMeleeComboFire",
+    "title": "atExtMeleeComboFire",
+    "properties": {
+      "taps": {"type": "number", "value": 3},
+      "pressTime": {"type": "number", "value": 0.08},
+      "releaseTime": {"type": "number", "value": 0.12}
+    },
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_guardMelee.lua",
+    "output": {}
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 4000 }
+  ],
+  "output" : {
+    "item" : "at_ext_shipcontroller3",
+    "count" : 1
+  },
+  "duration" : 0.1,
+  "groups" : ["at_ext_supply","at_ext_supply1" ]
+}

@@ -1,0 +1,52 @@
+{
+  "id" : "at_ext_d1",
+  //"mainQuest" : true,
+  "prerequisites" : [ "at_ext_shippad", "at_ext_pre" ],
+  "title" : "^cyan;[Senior]^yellow;Special mission",
+  "text" : "We have received a message that a transport ship belonging to Titancorp has crashed in the asteroid belt, which carrying an important document. We need a contractor to go to that location to locate the wreckage and eliminate all threats.",
+  "completionText" : "Good job! The ^yellow;Credits^reset; will be sent to you right now!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0,0],
+  "rewards" : [
+    [
+      [ "arcana_currency_credit", 600 ]
+    ]
+    ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "descriptions" : {
+      "enterInstance" : "Go to your ^orange;Titan ship^reset; and talk with the ^yellow;Pilot.^reset;",
+      "findGoal" : "Find the ^orange;shipwreck^reset; and secure the ^yellow;Cargo",
+      "turnIn" : "Return to ^orange;Titancorp Laptop^reset; and report."
+    },
+	
+    "warpEntityUid" : "at_ext_pilot",
+    "warpAction" : "instanceworld:at_ext_d1",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:at_ext_d1",
+	
+    "goalTrigger" : "interact",
+    //"proximityRange" :,
+	
+    "goalEntityUid" : "at_ext_d1_goal",
+	"interactEntityUid" : "at_ext_d1_goal",
+    "indicateGoal" : true,
+    "trackGoalEntity" : false,
+	
+    "turnInEntityUid" : "at_ext_lptp"
+  }
+}

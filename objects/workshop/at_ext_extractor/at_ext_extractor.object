@@ -1,0 +1,100 @@
+{
+  "objectName" : "at_ext_extractor",
+  "colonyTags" : ["factorypaint","titancorp","storage"],
+  "rarity" : "Common",
+  "description" : "^white;An automatic machine that extracts materials from tiles. ^orange;No power required. Can be wired to other machines.^reset;",
+  "shortdescription" : "^yellow;[TC]^reset;Resouce Extractor",
+  "subtitle" : "Turn tiles into materials",
+  "race" : "generic",
+  "category" : "crafting",
+  "price" : 0,
+  "objectType" : "container",
+  "printable" : false,
+  "health" : 1.5,
+
+  //"lightColor" : [40, 90, 130],
+
+  "flickerPeriod" : 0.5,
+  "flickerMinIntensity" : 0.9,
+  "flickerMaxIntensity" : 1,
+  "flickerPeriodVariance" : 0.075,
+  "flickerIntensityVariance" : 0.025,
+  
+  "scripts" : [ "script.lua" ],
+  "scriptDelta" : 5,
+  
+  "inputNodes" : [ [0, 0] ],
+  "outputNodes" : [ [3, 3] ],
+  
+  "animation" : "animation.animation",
+  "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "switchState" : {
+          "states" : {
+            "on" : {
+              "frames" : 6,
+              "cycle" : 0.7,
+			  "mode" : "loop"
+            }
+          }
+        }
+	  }
+    },
+    "sounds" : {
+      "on" : [ "/sfx/objects/console_generic_switchon.ogg" ],
+	  "onloop" : [ "/sfx/objects/terraformer_active_loop.ogg" ],
+      "off" : [ "/sfx/objects/console_generic_switchoff.ogg" ]
+    }
+  },
+  "animationParts" : {
+    "bg" : "at_ext_extc.png",
+    "fg" : "at_ext_extc_fb.png"
+  },
+
+  "inventoryIcon" : "at_ext_extc_icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "at_ext_extc.png:<color>.<frame>", "fullbright" : true }, { "image" : "at_ext_extc_fb.png:<color>.<frame>" } ],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "at_ext_extc.png:<color>.<frame>", "fullbright" : true }, { "image" : "at_ext_extc_fb.png:<color>.<frame>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  "placementImage" : "at_ext_extc.png:default.0",
+  "placementImagePosition" : [0, 0],
+  //"soundEffect" : "/sfx/objects/campfire.ogg",
+  //"soundEffectRangeMultiplier" : 0.5,
+
+"configPath" : "/objects/workshop/at_ext_extractor/at_ext_extc.config",
+
+
+
+  "openSounds" : [ "/sfx/objects/campfire_use.ogg" ],
+  "slotCount" : 5,
+  "uiConfig" : "/interface/arcana/arcana_auto/at_ext_extractor.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600,
+  
+ 
+ 
+  "directives" : ""
+
+}

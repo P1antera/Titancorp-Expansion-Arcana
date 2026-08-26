@@ -1,0 +1,8 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 1200 },
+	{ "item" : "arcana_bar_arcaniumBar", "count" : 5 }
+  ],
+  "output" : { "item" : "sd_exp_t1astraldrone_controller", "count" : 1 },
+  "groups" : [ "sd_exp_shop_1", "sd_exp_shop","sd_exp_droneshop"]
+}

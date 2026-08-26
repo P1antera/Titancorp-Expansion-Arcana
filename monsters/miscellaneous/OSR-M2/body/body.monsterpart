@@ -1,0 +1,10 @@
+{
+  "name" : "OSR-M2",
+  "category" : "OSR-M2",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "fullbright" : "fullbright.png"
+  }
+}

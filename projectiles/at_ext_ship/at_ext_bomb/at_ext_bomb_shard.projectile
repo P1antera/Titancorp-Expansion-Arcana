@@ -1,0 +1,73 @@
+{
+  "projectileName" : "at_ext_bomb_shard",
+  "physics" : "at_ext_bombshard",
+  "piercing" : true,
+  "timeToLive" : 0.4,
+  "speed" : 30,
+  "knockback" : 0,
+    "power" : 100.0,
+  
+  "movementSettings" : {
+  "bounceFactor" : 0
+  },
+  "image" : "assetmissing.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  //"damageType" : "default",
+  "damageKind" : "default",
+    "periodicActions" : [
+            {
+              "time" : 0.05,
+             //"repeat" : true,
+              "action" : "particle",
+               "rotate" : true,
+              "specification" : {
+                "type" : "animated",
+                "animation" : "/animations/dust3/dust3.animation",
+                //"approach" : [20, 20],
+                "timeToLive" : 5.5,
+				        "fade": 0.5,
+                "finalVelocity" : [0, 0],
+                "initialVelocity" : [1, 0],
+                "ignoreWind" : false,
+                "collidesForeground" : true,
+                "collidesLiquid" : true,
+				        "size": 1.5,
+                "variance" : {
+                "initialVelocity" : [1, 0],
+                "finalVelocity" : [0, 0],
+				        "size": 1,
+                "timeToLive" : 5,
+                "rotation" : 360
+                }
+              }
+            },
+    {
+      "time" : 0.05,
+      //"repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+              "specification" : {
+                "type" : "animated",
+                "animation" : "/animations/dust2/dust2.animation",
+               // "approach" : [20, 20],
+                "timeToLive" : 5.5,
+				        "fade": 0.5,
+                "finalVelocity" : [0, 0],
+                "initialVelocity" : [1, 0],
+                "ignoreWind" : false,
+                "collidesForeground" : true,
+                "collidesLiquid" : true,
+				        "size": 1,
+                "variance" : {
+                "initialVelocity" : [1, 0],
+                "finalVelocity" : [0, 0],
+				        "size": 0.8,
+                "timeToLive" : 5,
+                "rotation" : 360
+                }
+              }
+    }
+  ]
+
+}

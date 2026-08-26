@@ -1,0 +1,103 @@
+{
+  "objectName" : "at_ext_b2",
+  "colonyTags" : ["factorypaint","titancorp","storage"],
+  "rarity" : "Legendary",
+  "description" : "^white;A reactor that burns ^#9F3CCE;Erchius Fuel.^orange;Can be wired to other machines.^reset;",
+  "shortdescription" : "^yellow;[TC]^green;[Power]^#9F3CCE;Erchius reactor",
+  "subtitle" : "Burn the Erchius",
+  "race" : "generic",
+  "category" : "crafting",
+  "price" : 200,
+  "objectType" : "container",
+  "printable" : false,
+  "health" : 1.5,
+
+  "lightColor" : [240, 139, 255],
+
+  "flickerPeriod" : 0.5,
+  "flickerMinIntensity" : 0.3,
+  "flickerMaxIntensity" : 0.4,
+  "flickerPeriodVariance" : 0.075,
+  "flickerIntensityVariance" : 0.025,
+  
+  "scripts" : [ "b2.lua" ],
+  "scriptDelta" : 5,
+  
+  "inputNodes" : [ [0, 0] ],
+  "outputNodes" : [ [4, 4] ],
+  
+  "animation" : "b2_animation.animation",
+  "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "switchState" : {
+          "states" : {
+            "on" : {
+              "frames" : 4,
+              "cycle" : 0.4,
+			  "mode" : "loop"
+            }
+          }
+        }
+	  }
+    },
+    "sounds" : {
+      "on" : [ "/sfx/b2_loop.ogg" ],
+      "off" : [ "/sfx/objects/console_generic_switchoff.ogg" ],
+	  "onloop" : [ "/sfx/b2_loop.ogg" ]
+    }
+  },
+  "animationParts" : {
+    "bg" : "b2.png",
+    "fg" : "b2_fb.png"
+  },
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "b2.png:<color>.<frame>", "fullbright" : true }, { "image" : "b2_fb.png:<color>.<frame>" } ],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "b2.png:<color>.<frame>", "fullbright" : true }, { "image" : "b2_fb.png:<color>.<frame>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "placementImage" : "b2.png:default.0",
+  "placementImagePosition" : [0, 0],
+
+  "soundEffect" : "",
+  "soundEffectRangeMultiplier" : 0.5,
+
+  "openSounds" : [ "/sfx/objects/campfire_use.ogg" ],
+  "slotCount" : 2,
+  "uiConfig" : "/interface/arcana/arcana_auto/at_ext_b2.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600,
+  
+  "input" : [
+    { "name" : "solidfuel", "count" : 1 },
+	{ "name" : "liquidfuel", "count" : 2 }
+  ],
+  "consumptionTime" : 6.0,
+  "maxPower" : 60,
+  "voltage" : 1000,
+  "directives" : ""
+
+}

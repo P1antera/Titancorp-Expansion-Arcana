@@ -1,0 +1,112 @@
+{
+  "objectName" : "at_ext_trade",
+  "colonyTags" : ["factorypaint","storage","titancorp"],
+  "rarity" : "Rare",
+  "description" : "^white;An automatic Trade Terminal, Connected to Titan Corp's trading network, goods can be automatically shipped to Titan Corp's ^yellow;Trade Division. ",
+  "shortdescription" : "^yellow;[TC]^reset;Trade terminal",
+  "subtitle" : "Turn ores into pixels",
+  "race" : "generic",
+  "category" : "crafting",
+  "price" : 0,
+  //"uniqueId" : "at_ext_trade",
+  
+  "offeredQuests" : [
+    "at_ext_contract1",
+	"at_ext_contract2",
+	"at_ext_contract3",
+	
+	"at_ext_contract3_2",
+	"at_ext_contract3_end",
+	"at_ext_contract4",
+	"at_ext_contract4_3",
+	"at_ext_contract4_2",
+	"at_ext_contract4_1",
+	"at_ext_contract4_end"
+	
+	
+	
+  ],
+  
+  "turnInQuests" : [
+    "at_ext_contract1",
+	"at_ext_contract2",
+	"at_ext_contract3",
+	
+	"at_ext_contract3_2",
+	"at_ext_contract3_end",
+	"at_ext_contract4",
+	"at_ext_contract4_2",
+	"at_ext_contract4_1",
+	"at_ext_contract4_end"
+	
+
+  ],
+  
+  "objectType" : "container",
+  "printable" : false,
+  "health" : 1.5,
+
+  //"lightColor" : [179, 149, 107],
+
+  "flickerPeriod" : 0.5,
+  "flickerMinIntensity" : 0.9,
+  "flickerMaxIntensity" : 1,
+  "flickerPeriodVariance" : 0.075,
+  "flickerIntensityVariance" : 0.025,
+  
+  "scripts" : [ "script.lua" ],
+  "scriptDelta" : 1,
+  
+  "inputNodes" : [ [0, 0] ],
+  "outputNodes" : [ [5, 5] ],
+  
+
+
+
+
+  "inventoryIcon" : "1_icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "1.png:<color>.<frame>", "fullbright" : true }, { "image" : "1_fb.png:<color>.<frame>" } ],
+      "direction" : "left",
+
+
+      "imagePosition" : [0, 0],
+      "frames" : 33,
+      "animationCycle" : 2.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "1.png:<color>.<frame>", "fullbright" : true }, { "image" : "1_fb.png:<color>.<frame>" } ],
+      "direction" : "right",
+      "flipImages" : true,
+      "imagePosition" : [0, 0],
+      "frames" : 33,
+      "animationCycle" : 2.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "soundEffect" : "/sfx/objects/server_loop.ogg",
+  "soundEffectRangeMultiplier" : 0.5,
+
+  "openSounds" : [ "/sfx/objects/campfire_use.ogg" ],
+  "slotCount" : 3,
+  "uiConfig" : "/interface/arcana/arcana_auto/at_ext_trade.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600,
+  
+  "configPath" : "/objects/workshop/at_ext_trade/config.config",
+
+  "maxPower" : 30,
+  "powerUseAmount" : 0,
+  "voltage" : 45,
+  "craftingTime" : 2.5,
+  "outputRate" : 10,
+  "directives" : ""
+
+}

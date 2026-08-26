@@ -1,0 +1,37 @@
+{
+  "objectName" : "at_ext_foodsign",
+  "colonyTags" : ["misc"],
+  "rarity" : "Common",
+  "description" : "A direction marking.",
+  "shortdescription" : "Food court Sign",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 0,
+  "printable" : false,
+
+  "inventoryIcon" : "1_icon.png",
+  "orientations" : [
+    {
+	  "imageLayers" : [ { "image" : "1.png:<color>", "fullbright" : false } ],
+      "direction" : "left",
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    },
+	{
+	  "imageLayers" : [ { "image" : "1.png:<color>", "fullbright" : false } ],
+      "direction" : "right",
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

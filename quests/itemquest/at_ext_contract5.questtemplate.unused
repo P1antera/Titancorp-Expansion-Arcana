@@ -1,0 +1,50 @@
+{
+  "id" : "at_ext_contract5",
+  "prerequisites" : [ "at_ext_pre" ],
+  "title" : "^cyan;[Junior]^yellow;Special contract^reset;",
+  "text" : 
+  "We have decided to provide you with some equipment support as long as you obtain the following items:
+=====================================
+^yellow;[15x techcard]^reset;.
+=====================================
+  Waiting for your good news!",
+  
+  "completionText" : "Thanks, here is a special gift for you!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    [ "at_ext_shippad", 1 ]
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "turnInDescription" : "Deliver all ^green;cargo^reset; to the ^yellow;Trade Terminal^reset;.",
+    //"description" : "Find required items for outpost.",
+	"requireTurnIn" : true,
+	
+    "conditions" : [
+      {
+        "type" : "gatherItem",
+        "itemName" : "techcard",
+        "count" : 15,
+        "consume" : true
+      }
+    ]
+  }
+}

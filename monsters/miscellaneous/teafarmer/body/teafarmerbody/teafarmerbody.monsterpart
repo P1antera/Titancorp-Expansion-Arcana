@@ -1,0 +1,10 @@
+{
+  "name" : "teafarmerbody",
+  "category" : "teafarmer",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "teafarmerbody.png",
+    "fullbright" : "teafarmerbodyfullbright.png"
+  }
+}

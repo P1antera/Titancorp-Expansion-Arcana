@@ -1,0 +1,52 @@
+{
+  "id" : "at_ext_d9",
+  //"mainQuest" : true,
+  "prerequisites" : [ "at_ext_d7" ],
+  "title" : "^red;[Hard]^yellow;Special mission",
+  "text" : "A few weeks ago, we dispatched an Operator to an abandoned city for a reconnaissance mission. But just a few days ago, we suddenly received a distress signal from his safehouse, and we’ve lost all contact with him since. Now, we’re counting on you to head into that area and find out what happened. ^red;Just make sure you don’t become the next one we have to rescue!^reset;",
+  "completionText" : "The ^yellow;Credits^reset; will be sent to you right now!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0,0],
+  "rewards" : [
+    [
+      [ "arcana_currency_credit", 6000 ], [ "at_ext_coupon", 1 ]
+    ]
+    ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "descriptions" : {
+      "enterInstance" : "Go to your ^orange;Titan ship^reset; and talk with the ^yellow;Pilot.^reset;",
+      "findGoal" : "Find the ^yellow;Signal Source^reset;.",
+      "turnIn" : "Return to ^orange;Titancorp Laptop^reset; and report."
+    },
+	
+    "warpEntityUid" : "at_ext_pilot",
+    "warpAction" : "instanceworld:at_ext_d9",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:at_ext_d9",
+	
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+	
+    "goalEntityUid" : "at_ext_d9_goal",
+	
+    "indicateGoal" : true,
+    "trackGoalEntity" : false,
+	
+    "turnInEntityUid" : "at_ext_lptp"
+  }
+}

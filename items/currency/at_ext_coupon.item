@@ -1,0 +1,14 @@
+{
+  "itemName" : "at_ext_coupon",
+  "rarity" : "Legendary",
+  "maxStack" : 1,
+  "tooltipKind" : "at_ext_item",
+  "category" : "currency",
+  "inventoryIcon" : "at_ext_coupon.png",
+  "largeImage" : "at_ext_coupon_lg.png",
+  
+  
+  "description" : "Titancorp equipment coupon. ^orange;[Can be used to redeem equipment at the Section 8 terminal.]^reset;",
+  "shortdescription" : "Equipment coupon"
+  
+}

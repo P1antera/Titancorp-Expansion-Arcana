@@ -1,0 +1,68 @@
+{
+  "actionOnReap": [
+    {
+      "action": "option",
+      "options": [
+        {
+          "action": "projectile",
+          "config": {
+            "speed": 70
+          },
+          "type": "greenteabag"
+        },
+        {
+          "action": "projectile",
+          "config": {
+            "speed": 70
+          },
+          "type": "blackteabag"
+        },
+        {
+          "action": "projectile",
+          "config": {
+            "speed": 70
+          },
+          "type": "oolongteabag"
+        },
+        {
+          "action": "projectile",
+          "config": {
+            "speed": 70
+          },
+          "type": "zinnofeurteabag"
+        },
+        {
+          "action": "projectile",
+          "config": {
+            "speed": 70
+          },
+          "type": "timelessteabag"
+        },
+        {
+          "action": "projectile",
+          "config": {
+            "speed": 70
+          },
+          "type": "viridescentteabag"
+        },
+        {
+          "action": "projectile",
+          "config": {
+            "speed": 70
+          },
+          "type": "metallicteabag"
+        }
+      ]
+    }
+  ],
+  "animationCycle": 0.2,
+  "damageKind": "default",
+  "frameNumber": 8,
+  "image": "/assetsmissing.png",
+  "physics": "laser",
+  "piercing": true,
+  "power": 0,
+  "projectileName": "randomteabag",
+  "speed": 0,
+  "timeToLive": 0
+}

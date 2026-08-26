@@ -1,0 +1,53 @@
+{
+  "objectName" : "at_ext_habagency",
+  "colonyTags" : ["misc"],
+  "rarity" : "Legendary",
+  "description" : "A Hounsing Agency",
+  "shortdescription" : "Hounsing Agency",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 0,
+    "turnInQuests" : [
+    "at_ext_hab_0",
+    "at_ext_hab1_buy",
+    "at_ext_hab2_buy",
+    "at_ext_hab2_1_buy",
+    "at_ext_hab3_1_buy"
+  ],
+  "scripts" : [ "at_ext_habagency.lua" ],
+  "scriptDelta" : 20,
+  "chatRadius" : 10,
+  "chatCooldown" : 5,
+  "chatOptions" : 
+  [
+    "Welcome! Let me know if you want visit the sample apartment.",
+    "If you want to access your apartment, just use the teleporter right inside."
+  ],
+  "interactAction" : "OpenTeleportDialog",
+  "interactData" : "/interface/warping/at_ext_hab_preview.config",
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "at_ext_habagency.png:<color>" }],
+	  "direction" : "left",
+	  "flipImages" : true,
+      "imagePosition" : [0, 0],
+
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    },
+	{
+      "imageLayers" : [ { "image" : "at_ext_habagency.png:<color>" } ],
+	  "direction" : "right",
+      "imagePosition" : [0, 0],
+
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

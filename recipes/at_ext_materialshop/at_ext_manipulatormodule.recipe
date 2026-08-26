@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 40 }
+  ],
+  "output" : {
+    "item" : "manipulatormodule",
+    "count" : 1
+  },
+  "duration" : 0.1,
+  "groups" : ["at_ext_materialshop" ]
+}

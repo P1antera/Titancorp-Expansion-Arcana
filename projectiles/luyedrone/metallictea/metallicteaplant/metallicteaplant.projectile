@@ -1,0 +1,25 @@
+{
+  "projectileName" : "metallicteaplant",
+  "physics" : "laser",
+  "bounces" : -1,
+  "timeToLive" : 6,
+  "power" : 15,
+  "speed" : 0,
+  "image" : "metallicteaplant.png",
+  "animationCycle" : 6,
+  "lightColor" : [244, 89, 72],
+  "frameNumber" : 8,
+  "statusEffects" : [
+    "tarslow"
+  ],
+  "emitters" : [ "arcana_particle_ember_red" ],
+  "piercing" : true,
+  "damagePoly" : [ [-6, 0], [-4, -4], [0, -6], [4, -4], [6, 0], [4, 4], [0, 6], [-4, 4] ],
+  "actionOnReap" : [
+    { 
+      "action" : "sound",
+      "options" : [ "/sfx/tech/hoverbike_crash1.ogg","/sfx/tech/hoverbike_crash2.ogg","/sfx/tech/hoverbike_crash3.ogg" ]
+    }
+  ],
+  "damageKind" : "default"
+}

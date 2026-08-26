@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 500 }
+  ],
+  "output" : {
+    "item" : "at_ext_shippad",
+    "count" : 1
+  },
+  "groups" : [ "all","plain","arcana_crafting_main_1_inventions", "arcana_crafting_main_1" ],
+  "duration" : 1
+}

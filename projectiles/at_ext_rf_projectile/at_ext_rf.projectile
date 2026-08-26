@@ -1,0 +1,77 @@
+{
+  "projectileName" : "at_ext_rf",
+  "physics" : "at_ext_bulletfall_rf",
+  
+  "timeToLive" : 3,
+  "bounces" : 0,
+  "speed" : 80,
+  "piercing" : false,
+  "orientationLocked" : false,
+  
+  "image" : "at_ext_rf.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  //"scripts" : [  "at_ext_rf.lua" ],
+  //"SpawnOffset" : [-2, 0],
+  "fullbright" : false,
+  "lightColor" : [20, 20, 0],
+  "emitters" : ["sparks"],
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/at_ext_bulletimpact.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "arcana_bulletimpact",
+      "fuzzAngle" : 365,
+      "inheritDamageFactor" : 0.0,
+      "angleAdjust" : 35
+    },
+    {
+      "action" : "projectile",
+      "type" : "arcana_bulletimpact",
+      "fuzzAngle" : 365,
+      "inheritDamageFactor" : 0.0,
+      "angleAdjust" : 35
+    }
+  ],
+  "periodicActions" : [
+   {
+  "rotate" : false,
+  "time" : 0,
+  
+  "repeat" : false,
+  "action" : "projectile",
+  "inheritDamageFactor" : 0,
+  "autoFlipAdjust" : true,
+  "type" : "at_ext_case_trigger",
+  "angleAdjust" : 180,
+  "fuzzAngle" :0
+  }, 
+
+	
+	{
+      "time" : 0.005,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/activeitems/guns/bullets/workshop_pistol_1_projectile_1/trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.1,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    }
+  ],
+  
+  "damageKind" : "plasma"
+ 
+}

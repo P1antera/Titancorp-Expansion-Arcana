@@ -1,0 +1,19 @@
+{
+  "id" : "ar_atexp_CN",
+
+  "title" : "自动化配方手册 ^yellow;中文版",
+  "description" : "A manual for automation recipes extension mod.^yellow;Chinese translation version.",
+  "icon" : "ar_atexp_CN.png",
+  "contentPages" :
+  [
+
+"
+^red;配方手册版本已更新,请在^yellow;信用商店^red;重新获取新版本!^reset;
+"
+
+  ],
+    "itemConfig" : {
+    "rarity" : "rare",
+    "price" : 0
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "itemName" : "at_ext_ice",
+  "rarity" : "Rare",
+  "category" : "preparedFood",
+  "inventoryIcon" : "at_ext_ice_icon.png",
+  "tooltipKind" : "at_ext_food",
+  "largeImage" : "at_ext_ice_icon.png",
+  "description" : "A mint-flavored soda that sells exceptionally well in summer.\n^yellow;Grants the [Glacier Mint Fizz] effect when consumed.^reset;",
+  "shortdescription" : "^cyan;Glacier Mint Fizz^reset;",
+  "maxStack" : 99,
+
+  "price" : 0,
+
+  "twoHanded" : true,
+  "itemTags" : [ "at_ext_food" ],
+
+  "animation" : "at_ext_ice.animation",
+  "animationParts" : {
+    "drink" : "at_ext_ice.png"
+  },
+
+  "scripts" : [ "at_ext_ice.lua" ],
+  "scriptDelta" : 1,
+
+  "idleArmAngle" : -0.5,
+  "idleDrinkAngle" : -0.1,
+  "raiseArmAngle" : 0,
+  "raiseDrinkAngle" : 0.0,
+  "drinkArmAngle" : 0.4,
+  "drinkDrinkAngle" : 1.7,
+  "raiseTime" : 1,
+  "drinkTime" : 4.0,
+  "recapTime" : 1.5,
+  "effectName" : "at_ext_ice",
+  "effectDuration" : 180,
+  "emptyBottleItem" : "at_ext_emptybottle"
+}

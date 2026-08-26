@@ -1,0 +1,36 @@
+{
+  "itemName" : "at_ext_milk",
+  "rarity" : "Rare",
+  "category" : "preparedFood",
+  "inventoryIcon" : "at_ext_milk_icon.png",
+  "tooltipKind" : "at_ext_food",
+  "largeImage" : "at_ext_milk_icon.png",
+  "description" : "A carton of pure milk. One cup in the morning, one at night!\n^yellow;Grants the [Dawnfresh Milk] effect when consumed.^reset;",
+  "shortdescription" : "^white;Dawnfresh Milk^reset;",
+  "maxStack" : 99,
+  
+  "price" : 0,
+
+
+  "twoHanded" : true,
+  "itemTags" : [ "at_ext_food" ],
+
+  "animation" : "at_ext_milk.animation",
+  "animationParts" : {
+    "juice" : "at_ext_milk.png"
+  },
+
+  "scripts" : [ "at_ext_milk.lua" ],
+  "scriptDelta" : 1,
+
+  "idleArmAngle" : -0.5,
+  "idleJuiceAngle" : 0.0,
+  "drinkArmAngle" : 0,
+  "drinkJuiceAngle" : 0.0,
+  "raiseTime" : 1,
+  "drinkTime" : 3.0,
+  "emptyTime" : 1.0,
+  "effectName" : "at_ext_milk",
+  "effectDuration" : 180,
+  "foodValue" : 30
+}

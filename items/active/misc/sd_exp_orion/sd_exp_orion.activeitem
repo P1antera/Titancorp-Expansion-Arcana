@@ -1,0 +1,40 @@
+{
+    "animation": "recondrone_controller.animation",
+    "animationDelta": 5,
+    "animationParts": {
+        "controller": "sd_exp_orion_icon.png",
+        "fullbright" : "sd_exp_orion_iconfullbright.png"
+    },
+    "animationScripts": ["/items/active/misc/recondrone_controller/detector.lua"],
+    "boundingBox": [-1, -1, 1, 1],
+    "category": "^#DBC5A6;Reconnaissance Tool",
+    "description": "A drone with a heavy square head.I'm curious how it can fly.
+    ^green;[Primary]Spawn/Despawn，[Alt]emit a terrain-detecting ping.Can be used to detect entities.^reset;
+    ^#19A1E5;(> _<;)I feel so stressed!!!^reset;",
+    "inventoryIcon": "sd_exp_orion_icon.png",
+    "itemName": "sd_exp_oriondrone_controller",
+    "itemTags": [],
+    "level": 1,
+    "maxStack": 1,
+    "pingBandWidth": 8,
+    "pingCooldown": 0.5,
+    "pingDetectConfig": {
+        "colors": {
+            "empty": [0, 180, 0, 255],
+            "hostile": [255, 0, 0, 255],
+            "neutral": [255, 255, 0, 255],
+            "solid": [120, 160, 120, 50]
+        },
+        "image": "/items/active/unsorted/oredetector/detectnoise.png:<variant>",
+        "type": "entity",
+        "variants": 4
+    },
+    "pingDuration": 3.0,
+    "pingRange": 50,
+    "price": 0,
+    "rarity": "Legendary",
+    "scripts": ["sd_exp_orion.lua"],
+    "shortdescription": "Orion Blockyhead Drone Controller",
+    "tooltipKind": "arcana_base_item",
+    "twoHanded": true
+}

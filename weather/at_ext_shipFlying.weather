@@ -1,0 +1,63 @@
+{
+  "name" : "at_ext_shipFlying",
+
+  "particles" : [
+    
+    {
+
+      "density" : 0.005,
+      "autoRotate" : true,
+
+      "particle" : {
+        "type" : "textured",
+        "image" : "/particles/at_ext_stormfog/1.png",
+        "velocity" : [100, 0],
+        "approach" : [0, 0],
+        "angularVelocity" : 0,
+        "timeToLive" : 20,
+        "destructionTime" : 0.01,
+        "collidesForeground" : true,
+        "collidesLiquid" : true,
+        "ignoreWind" : true
+      }
+    },
+        {
+      "density" : 0.005,
+      "particle" : {
+        "type" : "animated",
+        "animation" : "/animations/windstorm/windstorm1.animation",
+        "velocity" : [100, 0],
+        "fade" : 0.5,
+        "looping" : true,
+        "destructionTime" : 0.01,
+        "timeToLive" : 20,
+        "collidesForeground" : true,
+        "collidesLiquid" : true,
+        "ignoreWind" : true
+      }
+    },
+    {
+      "density" : 0.005,
+      "particle" : {
+        "type" : "animated",
+        "animation" : "/animations/windstorm/windstorm2.animation",
+        "velocity" : [100, 0],
+        "fade" : 0.5,
+        "looping" : true,
+        "destructionTime" : 0.01,
+        "timeToLive" : 20,
+        "collidesForeground" : true,
+        "collidesLiquid" : true,
+        "ignoreWind" : true
+      }
+    }	
+
+  ],
+
+
+  "statusEffects" : [],
+
+  "duration" : [1000, 1000],
+  "maximumWind" : 0.0,
+  "weatherNoises" : [ "/sfx/at_ext_shipFlying.ogg" ]
+}

@@ -1,0 +1,67 @@
+{
+  "type" : "at_ext_d4_mtminer",
+  "baseType" : "hostile",
+
+  "scriptConfig" : {
+    "dialog" : {
+      "attack" : "/dialog/mutantminer.config:attack",
+      "reattack" : "/dialog/mutantminer.config:reattack",
+      "killedTarget" : "/dialog/mutantminer.config:killedTarget",
+      "lostTarget" : "/dialog/mutantminer.config:lostTarget",
+      "outOfSight" : "/dialog/mutantminer.config:outOfSight",
+      "cheerOn" : "/dialog/mutantminer.config:cheerOn",
+      "cantReach" : "/dialog/mutantminer.config:cantReach"
+    }
+  },
+
+  "dropPools" : [ "money" ],
+
+  "movementParameters" : {
+    "crouchingPoly" : [ [-0.75, -2.0], [-0.35, -2.5], [0.35, -2.5], [0.75, -2.0], [0.75, -0.5], [0.35, 0], [-0.35, 0], [-0.75, -0.5] ],
+    "mass" : 1.1
+  },
+
+  "statusControllerSettings" : {
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 280.0
+      },
+      "physicalResistance" : {
+        "baseValue" : 0.5
+      },
+      "protection" : {
+        "baseValue" : 0.6
+      }
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "at_ext_mthead", "parameters" : { "colorIndex" : 0 } } ],
+            "chest" : [ { "name" : "arcana_armor_gearsS8E_chest", "parameters" : { "colorIndex" : 0 } } ],
+            "legs" : [ { "name" : "arcana_armor_gearsS8E_legs", "parameters" : { "colorIndex" : 0 } } ],
+            "primary" : [
+              "workshop_axe_3"
+            ],
+            "alt" : [
+              "workshop_axe_3"
+            ]
+          },
+          {
+            "head" : [ { "name" : "at_ext_mthead2", "parameters" : { "colorIndex" : 0 } } ],
+            "chest" : [ { "name" : "at_ext_mtchest", "parameters" : { "colorIndex" : 0 } } ],
+            "legs" : [ { "name" : "arcana_armor_gearsS8E_legs", "parameters" : { "colorIndex" : 0 } } ],
+            "primary" : [
+              "workshop_axe_2"
+            ],
+            "alt" : [
+              "workshop_axe_2"
+            ]
+          }
+		  
+        ] ]
+    ]
+  }
+}

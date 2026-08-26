@@ -1,0 +1,37 @@
+{
+  "objectName" : "at_ext_dj_teleporter_exit",
+  "colonyTags" : ["human"],
+  "printable" : false,
+  "rarity" : "Common",
+  "description" : "An elevator leading down to the Undercity.",
+  "shortdescription" : "Elevator",
+  "race" : "human",
+  "category" : "teleporter",
+ // "lightColor" : [99, 132, 153],
+  //"flickerDistance" : 0.2,
+ // "flickerStrength" : 0.05,
+  //"flickerTiming" : 4,
+
+
+
+  "interactAction" : "OpenTeleportDialog",
+  "interactData" : "/interface/warping/returnteleporter.config",
+
+  //"soundEffect" : "/sfx/objects/shipengine.ogg",
+  //"soundEffectRangeMultiplier" : 1.5,
+
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "at_ext_dj_teleporter_exit.png:<color>", "fullbright" : true }, { "image" : "at_ext_dj_teleporter_exit_lit.png:<color>" } ],
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 1.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

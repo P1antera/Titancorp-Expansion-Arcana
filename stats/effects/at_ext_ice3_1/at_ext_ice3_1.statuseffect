@@ -1,0 +1,12 @@
+{
+  "name" : "at_ext_ice3_1",
+  "defaultDuration" : 60,
+  "scripts" : [
+    "at_ext_ice3_1.lua"
+  ],
+  "effectConfig" : {
+    "protection" : 5
+  },
+  "label" : "Ruby Grapefruit Fizz [+5 protection]",
+  "icon" : "/interface/statuses/at_ext_ice3_icon.png"
+}

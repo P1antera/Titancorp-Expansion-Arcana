@@ -1,0 +1,10 @@
+{
+  "name" : "seeder",
+  "category" : "seeder",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "fullbright" : "fullbright.png"
+  }
+}

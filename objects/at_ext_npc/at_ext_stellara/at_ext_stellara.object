@@ -1,0 +1,139 @@
+{
+  "objectName" : "at_ext_stellara",
+  "colonyTags" : ["misc"],
+  "rarity" : "Legendary",
+  "description" : "A mysterious girl who appears to be selling some goods.",
+  "shortdescription" : "Stellara",
+  "race" : "generic",
+  "category" : "furniture",
+  "price" : 0,
+  "uniqueId" : "at_ext_stellara",
+  "printable" : false,
+  "interactAction" : "OpenMerchantInterface",
+  "interactData" : {
+    "config" : "/interface/arcana/arcana_crafting_trading/at_ext_stellara.config"
+  },
+
+  "offeredQuests" : [
+
+  ],
+
+  "turnInQuests" : [
+
+  ],
+
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "at_ext_stellara.png:<color>.<frame>","fullbright" : true }, { "image" : "at_ext_stellara_fb.png:<color>.<frame>" } ],
+	  "direction" : "left",
+	  "flipImages" : true,
+      "imagePosition" : [-8, 0],
+      "frames" : 16,
+      "animationCycle" : 6.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    },
+	{
+      "imageLayers" : [ { "image" : "at_ext_stellara.png:<color>.<frame>","fullbright" : true }, { "image" : "at_ext_stellara_fb.png:<color>.<frame>" } ],
+	  "direction" : "right",
+      "imagePosition" : [-8, 0],
+      "frames" : 16,
+      "animationCycle" : 6.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+  
+  "animation" : "at_ext_stellara.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "talk" : [ "/sfx/humanoid/human_chatter_female1.ogg" ]
+    }
+  },  
+  "selectCount" : 5,  
+  "inventoryPool" : [
+    "horizon_crafting_horizonTechCard",
+    "orion_crafting_orionTechCard",
+    "arcana_misc_behestDongle",
+    "arcana_misc_horizonDiscipleBadge",
+    //"arcana_misc_horizonEliteBadge",
+    "arcana_misc_horizonSpecialistBadge",
+    "arcana_misc_oceanicTechCard",
+    "arcana_misc_preceptDongle",
+    "arcana_misc_verrostinComponent",
+    "workshop_crafting_GS8TechChip",
+    "orion_crafting_enhancedBattery",
+    "arcana_misc_voltaicShard",
+    //"arcana_misc_elementalHeart",
+//                          weapon
+    "steelblades_assaultRifle_1",
+    "steelblades_blastRifle_1",
+    "steelblades_shotgun_1",
+    "steelblades_sniperRifle_1",
+    "steelblades_broadsword_1",
+    "horizon_assaultRifle_1",
+    "horizon_assaultRifle_2",
+    "horizon_assaultRifle_3",
+    "horizon_assaultRifle_4",
+    "horizon_broadsword_2",
+    "horizon_rocketLauncher_1",
+    "horizon_shotgun_1",
+    "horizon_shotgun_2",
+    "horizon_sniperRifle_1",
+    "exousia_imperialArmy_3_sniperRifle_2",
+    "exousia_imperialArmy_1_shotgun_1",
+    "exousia_imperialArmy_1_broadsword_2",
+    "orion_assaultRifle_1",
+
+//              misc
+    "arcana_energizedNanopack",
+    "arcana_neoNanopack",
+    "arcana_misc_gingkoWood",
+    "arcana_misc_nanoweave",
+    "arcana_misc_kuromatsuWood",
+    "arcana_misc_robustaWood",
+    //"arcana_misc_morphosisEgg",
+    //"arcana_misc_cosmoTendrils",
+    "elemental_crafting_anemoneWood"
+
+
+
+  ],  
+
+"specialPool" : [
+  "arcana_misc_morphosisEgg",
+  "arcana_misc_aeonLeaf",
+  "arcana_misc_cosmoTendrils",
+  "arcana_misc_cryogenicCell",
+  //"arcana_misc_entropyEye",
+  "arcana_misc_aeonCore",
+  "arcana_misc_lunarInsignia",
+  "arcana_misc_solarMedallion"
+],
+
+  "costPool" : [
+    "arcana_bar_necroiumBar",
+    "arcana_bar_thoriumBar",
+    "arcana_bar_galvasteelBar",
+    "arcana_bar_corrodiumBar",
+    "arcana_bar_morphosisBar",
+    "workshop_crafting_dustriumPlate",
+    "orion_crafting_ursaplate",
+    "orion_crafting_jupiterCell"
+
+
+
+  ],  
+
+
+
+  "scripts" : [ "/objects/at_ext_npc/at_ext_stellara/at_ext_stellara.lua" ],
+  "scriptDelta" : 20
+
+}

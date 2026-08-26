@@ -1,0 +1,20 @@
+{
+  "itemName" : "at_ext_manual_Cn",
+  "shortdescription" : "^orange;自动化配方手册2.0 ^blue;中文版^reset;",
+  "description" : "Check complete recipes of ^orange;Automation Extension^reset; mod here.^yellow;Chinese translation version.",
+  "price" : 0,
+  "tooltipKind" : "at_ext_item",
+  "rarity" : "essential",
+  "category" : "tool",
+  "itemTags" : [],
+  "inventoryIcon" : "at_ext_manual_Cn.png",
+  "largeImage" : "at_ext_manual_Cn_lg.png",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "animation" : "animation.animation",
+  "animationParts" : {
+    "body" : "at_ext_manual_Cn.png"
+  },
+  "scripts" : ["at_ext_Cn.lua"],
+  "radioMessagesOnPickup" : [ "at_ext_manual2" ]
+}

@@ -1,0 +1,37 @@
+{
+  "projectileName" : "at_ext_d11_obj",
+  "physics" : "laser",
+ 
+  "timeToLive" : 0.1,
+  "image" : "at_ext_d11_obj.png",
+  "speed" : 10,
+  "animationCycle" : 1,
+  "animationLoops" : true,
+  "frameNumber" : 1,
+  "power" : 0,
+  "fullbright" : true,
+  "damageKind" : "hidden",
+ "damagePoly" : [ [8, -0.2], [8.5, -0.2], [8.5, 0.2], [8, 0.2] ],
+  "orientationLocked" : true,
+
+ 
+  
+
+ 
+  "onlyHitTerrain" : true,
+  
+     "actionOnCollide" : [
+
+  ],
+  
+  "actionOnTimeout" : [
+    {
+      "action" : "item",
+      "name" : "at_ext_d11_obj-codex",
+      "count" : 1
+    }
+
+  ]
+  
+
+}

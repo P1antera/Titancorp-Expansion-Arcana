@@ -1,0 +1,55 @@
+{
+  "id" : "at_ext_br2_2",
+  "prerequisites" : [ "at_ext_br2_1" ],
+  "mainQuest" : false,
+  
+  "title" : "^#57bbec;''Excelsior'' I: ^reset;Weapon Frame",
+  "text" : "So, I got the blueprint for a little gadget from the most famous tech company in the colony. They want me to turn it into a weapon, so first I need some basic materials to build the frame.",
+  "completionText" : "Wonderful! Come to me when you're ready for the next step.",
+  "canBeAbandoned" : false,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        }
+    },
+    "turnInDescription" : "Give the materials to ^yellow;Scientist.^reset;",
+    "requireTurnIn" : true,
+    "conditions" : [
+	  {
+        "type" : "gatherItem",
+        "itemName" : "titaniumbar",
+        "count" : 10,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "tungstenbar",
+        "count" : 10,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "workshop_crafting_reinforcedFrame",
+        "count" : 5,
+        "consume" : true
+      }
+    ]
+  }
+}

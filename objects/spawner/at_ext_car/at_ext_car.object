@@ -1,0 +1,38 @@
+{
+  "objectName" : "at_ext_car",
+  "colonyTags" : ["human"],
+  "rarity" : "Legendary",
+  "tooltipKind" : "at_ext_item",
+  "printable" : false,
+  "category" : "tool",
+  "description" : "A SportCar.",
+  "shortdescription" : "Sportcar",
+  "race" : "human",
+  "price" : 0,
+  "maxStack" : 1,
+  
+  "scripts" : [ "at_ext_car.lua" ],
+  "scriptDelta" : 5,
+
+  "inventoryIcon" : "at_ext_car.png",
+  "orientations" : [
+    {
+      "image" : "at_ext_car.png",
+      "imagePosition" : [0, 0],
+      "direction" : "left",
+      "spaceScan" : 0.1,
+      "anchors" : [ ]
+      
+    },
+    {
+      "image" : "at_ext_car.png",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      "spaceScan" : 0.1,
+      "anchors" : [ ]
+     
+    }
+  ]
+
+
+}

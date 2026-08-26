@@ -1,0 +1,13 @@
+{
+  "input" : [
+    { "item" : "workshop_crafting_motor", "count" : 8 },
+	
+	{ "item" : "workshop_crafting_dustriumWire", "count" : 10 },
+	{ "item" : "workshop_crafting_dustriumPanel", "count" : 15 },
+	
+	{ "item" : "at_ext_condenser", "count" : 1 }
+  ],
+  "output" : { "item" : "at_ext_condenser2", "count" : 1 },
+  "duration" : 0.4,
+  "groups"  : [ "arcana_titancorp_crafting_1", "arcana_titancorp_crafting_1_machine" ]
+}

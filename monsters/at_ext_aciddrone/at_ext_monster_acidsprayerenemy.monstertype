@@ -1,0 +1,225 @@
+{
+  "type" : "at_ext_monster_acidsprayerenemy",
+  "shortdescription" : "Acidsprayer",
+  "description" : "An Anarkyon drone, Can spray acid to the enemy.",
+
+  "categories" : [ "acidsprayerenemy" ],
+  "parts" : [ "body" ],
+
+  "animation" : "animation.animation",
+
+  "dropPools" : [ { "default" : "empty" } ],
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua"
+    ],
+    
+    "damageBar" : "default", 
+
+    "behavior" : "monster",
+
+	"aggressive" : true,
+
+    "seeThroughLiquid" : true,
+    "behaviorConfig" : {
+      "damageOnTouch" : false,
+
+      "targetQueryRange" : 30,
+      "targetOnDamage" : true,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 50,
+      "targetOutOfSightTime" : 5.0,
+
+      "foundTargetActions" : [ ],
+
+      "fleeActions" : [ ],
+
+      "hostileActions" : [
+        {
+          "name" : "action-fire",
+          "cooldown" : 1.0,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 10,
+            "minimumRange" : 1,
+            "windupStopForce" : 50,
+            "windupState" : "firewindup",
+            "windupTime" : 0.6,
+
+            "projectileType" : "arcana_projectile_flame_poison",
+			"projectileCount" : 8,
+            "projectileInterval" : 0.08,
+            "projectileParameters" : {
+			  "renderLayer" : "ForegroundEntity+10",
+			  "power" : 6.0,
+              "speed" : 20
+            },
+			"inaccuracy" : 0.1,
+            "fireOffset" : [1, -1],
+            "aimAtTarget" : true,
+            "onGround" : false,
+            "fireState" : "fire",
+            "fireSound" : "fire",
+
+            "winddownState" : "fire",
+            "winddownTime" : 0.4
+          }
+        }
+      ],
+
+      "periodicActions" : [
+       ],
+
+      "approachActions" : [
+        {
+          "name" : "approach-fly",
+          "parameters" : {
+            "minRange" : 4,
+            "maxRange" : 8
+          }
+        }
+      ],
+
+      "followActions" : [
+        {
+          "name" : "approach-teleport",
+          "parameters" : {
+          }
+        },
+        {
+          "name" : "approach-fly"
+        }
+      ],
+
+      "wanderActions" : [
+        {
+          "name" : "wander-fly",
+          "parameters" : {
+            "wanderTime" : [2,6],
+            "groundDistance" : 12,
+            "ceilingDistance" : 6,
+            "xVelocity" : 4,
+            "yVelocity" : 10
+          }
+        }
+      ],
+
+      "concurrentActions" : [ ],
+
+      "concurrentHostileActions" : [ ]
+    },
+
+    "touchDamage" : {
+      "poly" : [ [-1.0, -1.0], [1.0, -1.0], [1.0, 1.0], [-1.0, 1.0] ],
+      "damage" : 10,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "slash",
+      "knockback" : 2,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-2, -2, 2, 2],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionPoly" : [ [-1.0, -1.0], [1.0, -1.0], [1.0, 1.0], [-1.0, 1.0] ],
+
+      "mass" : 0.5,
+      "walkSpeed" : 6,
+      "runSpeed" : 20,
+      "gravityEnabled" : false,
+
+      "airFriction" : 1,
+      "airForce" : 20,
+      "flySpeed" : 50
+    },
+
+    "bodyMaterialKind" : "robotic",
+
+    "knockoutTime" : 0.0,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : false,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.2
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 6
+        },
+        "maxHealth" : {
+          "baseValue" : 330
+        },
+        "protection" : {
+          "baseValue" : 0.0
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "physicalResistance" : {
+          "baseValue" : 0.0
+        },
+        "fireResistance" : {
+          "baseValue" : 0.0
+        },
+        "iceResistance" : {
+          "baseValue" : 0.0
+        },
+        "electricResistance" : {
+          "baseValue" : -1.0
+        },
+        "poisonResistance" : {
+          "baseValue" : 1.0
+        },
+        "arcana_resistance_lumen" : {
+          "baseValue" : 0.0
+        },
+        "arcana_resistance_abyss" : {
+          "baseValue" : 0.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -1],
+    "capturable" : true,
+    "captureHealthFraction" : 0.5,
+    "nametagColor" : [64, 200, 255]
+  }
+}

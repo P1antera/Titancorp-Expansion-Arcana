@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "at_ext_hab2",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "at_ext_hab2" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "at_ext_hab2",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "at_ext_hab2.json" ]
+    }
+  ]
+}

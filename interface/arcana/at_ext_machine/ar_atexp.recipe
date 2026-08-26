@@ -1,0 +1,8 @@
+{
+  "input" : [
+	{ "item" : "money", "count" : 1 }
+  ],
+  "output" : { "item" : "at_ext_manual_En", "count" : 1 },
+  "duration" : 0.4,
+  "groups"  : [ "arcana_titancorp_crafting_1", "arcana_titancorp_crafting_1_machine" ]
+}

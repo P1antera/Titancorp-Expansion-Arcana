@@ -1,0 +1,49 @@
+{
+  "projectileName" : "misc_soul_rocket",
+  "image" : "body.png",
+  "animationCycle" : 0.5,
+  "timeToLive" : 30,
+  "frameNumber" : 1,
+  "speed" : 60,
+  "acceleration" : 0,
+  "damagePoly" : [ [-4, -2], [-4, 2], [4, 2], [4, -2] ],
+  "piercing" : false,
+  "flippable" : true,
+  "damageKind" : "ice",
+  "lightColor" : [0, 178, 251],
+  "supportsProcessing" : true,
+  
+  "movementSettings" : {
+    "collisionEnabled" : true
+  },
+  "renderLayer" : "foregroundEntity",
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/arcana_plasmablue/3.config"
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/boss/arcana_boss_wanderingSpirit/3/trail.png",
+        "position" : [0, 0],
+        "layer" : "front",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.2,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],  
+  
+  "fullbright" : true,
+  "emitters" : ["iceplasma","icetrail"]
+  
+  }

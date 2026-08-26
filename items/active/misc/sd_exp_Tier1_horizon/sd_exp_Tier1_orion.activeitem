@@ -1,0 +1,76 @@
+{
+  "animation": "recondrone_controller.animation",
+  "animationDelta": 5,
+  "animationParts": {
+    "controller": "sd_exp_Tier1_horizon_icon.png",
+    "fullbright" : "sd_exp_Tier1_horizon_iconfullbright.png"
+  },
+  "boundingBox": [
+    -1,
+    -1,
+    1,
+    1
+  ],
+  "category": "^yellow;Attacking Drone T1",
+  "description": "A horizon assault drone, Evaporate every enemy it sees.
+  ^green;[Primary]Spawn/Despawn，[Alt]Fire.^reset;",
+  "inventoryIcon": "sd_exp_Tier1_horizon_icon.png",
+  "itemName": "sd_exp_t1horizondrone_controller",
+  "itemTags": [],
+  "level": 7,
+  "maxStack": 1,
+  "controllerConfig" : {
+    "droneParam" : {
+      "droneConfig" : {
+        "abilityClass" : "Fire",
+        "controlType" : "wasd",
+        "abilityConfig" : {
+          "inaccuracy" : 0.03,
+          "projectileCount" : 1,
+          "muzzleOffset" : [0, 0],
+          "onGround" : false,
+          "burstTime" : 1,
+          "burstCount" : 1,
+          "projectileParam" : {
+			        "power" : 100,
+              "renderLayer" : "ForegroundEntity+10"
+          },
+          "animationConfig" : {
+            "fireSound" : "fire",
+            "fireAnimation" : {
+              "stateType" : "body",
+              "state" : "fire",
+              "time" : 0.4
+            },
+            "windupAnimation" : {
+              "stateType" : "body",
+              "state" : "firewindup",
+              "time" : 0.6
+            },
+            "winddownAnimation" : {
+              "stateType" : "body",
+              "state" : "firewinddown",
+              "time" : 0.4
+
+            },
+            "turretGroup" : "",
+            "rotationCenter" : [0.5, 0.5]
+          },
+          "fireType" : "single",
+          "projectileType" : "horizonscandroidprojectile"
+        },
+        "abilityScript" : "/droneAbility/fire/fire.lua"
+      }
+    },
+    "droneType":"wicked",
+    "rightClickCooldown" :1
+  },
+  "price": 0,
+  "rarity": "Legendary",
+  "scripts": [
+    "/scripts/droneControllerBase.lua" //通用控制器脚本，
+  ],
+  "shortdescription": "Wicked Controller",
+  "tooltipKind": "arcana_base_item",
+  "twoHanded": true
+}

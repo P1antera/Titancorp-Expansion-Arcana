@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "at_ext_hab3_1_preview",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "at_ext_hab3_1_preview" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "at_ext_hab3_1_preview",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "at_ext_hab3_1_preview.json" ]
+    }
+  ]
+}

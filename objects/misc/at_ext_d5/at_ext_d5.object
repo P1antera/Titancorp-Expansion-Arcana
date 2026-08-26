@@ -1,0 +1,24 @@
+{
+  "objectName" : "at_ext_d5",
+  "colonyTags" : ["orion"],
+  "rarity" : "Rare",
+  "description" : "A prototype blueprint.",
+  "shortdescription" : "Orion Weapon Poster",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 200,
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "at_ext_d5.png:<color>",
+      "imagePosition" : [-24, -0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

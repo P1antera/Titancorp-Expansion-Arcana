@@ -1,0 +1,38 @@
+{
+  "itemName" : "at_ext_ice2",
+  "rarity" : "Rare",
+  "category" : "preparedFood",
+  "inventoryIcon" : "at_ext_ice2_icon.png",
+  "tooltipKind" : "at_ext_food",
+  "largeImage" : "at_ext_ice2_icon.png",
+  "description" : "A bottled lemon soda that tastes even better chilled.\n^yellow;Grants the [Lemon Frost Pop] effect when consumed.^reset;",
+  "shortdescription" : "^yellow;Lemon Frost Pop^reset;",
+  "maxStack" : 99,
+
+  "price" : 0,
+
+  "twoHanded" : true,
+  "itemTags" : [ "at_ext_food" ],
+
+  "animation" : "at_ext_ice2.animation",
+  "animationParts" : {
+    "drink" : "at_ext_ice2.png"
+  },
+
+  "scripts" : [ "at_ext_ice2.lua" ],
+  "scriptDelta" : 1,
+
+  "idleArmAngle" : -0.5,
+  "idleDrinkAngle" : -0.1,
+  "raiseArmAngle" : 0,
+  "raiseDrinkAngle" : 0.0,
+  "drinkArmAngle" : 0.4,
+  "drinkDrinkAngle" : 1.7,
+  "raiseTime" : 1,
+  "drinkTime" : 4.0,
+  "recapTime" : 1.5,
+  "effectName" : "at_ext_ice2_1",
+  "effectDuration" : 30,
+  "effectsToClear" : [ "at_ext_ice2_1", "at_ext_ice2_2" ],
+  "emptyBottleItem" : "at_ext_emptybottle"
+}

@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 70 }
+  ],
+  "output" : {
+    "item" : "sweetpunch",
+    "count" : 1
+  },
+  "duration" : 0.1,
+  "groups" : ["at_ext_cafe" ]
+}

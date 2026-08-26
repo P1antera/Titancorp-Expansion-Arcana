@@ -1,0 +1,14 @@
+{
+  "itemName" : "at_ext_keycard_d10",
+  "rarity" : "Legendary",
+  "maxStack" : 1,
+  "tooltipKind" : "at_ext_qitem",
+  "category" : "quest",
+  "inventoryIcon" : "at_ext_keycard_d10.png",
+  "largeImage" : "at_ext_keycard_d10.png",
+  "pickupQuestTemplates" : ["at_ext_d10_item"],  
+  
+  "description" : "A Keycard for access.",
+  "shortdescription" : "Security Keycard"
+  
+}

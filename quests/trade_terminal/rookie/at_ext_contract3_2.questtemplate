@@ -1,0 +1,54 @@
+{
+  "id" : "at_ext_contract3_2",
+  "prerequisites" : [ "at_ext_contract2" ],
+  "title" : "^cyan;[Rookie]^yellow;Special contract^reset;",
+  "text" : "We urgently need the following goods: 
+==============================
+  ^yellow;[50x solidfuel]
+  [10x cannedfood]^reset;. 
+==============================
+  Anyone who can deliver the required cargo to us will get paid.",
+  
+  "completionText" : "Thanks,The ^yellow;credits^reset; have been transferred to your account!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    [ "arcana_currency_credit", 380 ]
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "turnInDescription" : "Deliver all ^green;cargo^reset; to the ^yellow;Trade Terminal^reset;.",
+    "requireTurnIn" : true,
+    "conditions" : [
+      {
+        "type" : "gatherItem",
+        "itemName" : "solidfuel",
+        "count" : 50,
+        "consume" : true
+      },
+	        {
+        "type" : "gatherItem",
+        "itemName" : "cannedfood",
+        "count" : 10,
+        "consume" : true
+      }
+    ]
+  }
+}

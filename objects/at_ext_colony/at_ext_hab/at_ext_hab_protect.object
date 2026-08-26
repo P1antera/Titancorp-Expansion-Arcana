@@ -1,0 +1,28 @@
+{
+  "objectName" : "at_ext_hab_protect",
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 0,
+  "printable" : false,
+  "scannable" : false,
+  "description" : "...",
+  "shortdescription" : "...",
+  "race" : "human",
+  "inputNodes" : [ [-1, 0] ],
+  "scripts" : [ "at_ext_hab_protect.lua" ],
+  "scriptDelta" : 10,
+  "targetzone" : "4861",
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "at_ext_hab.png",
+      "imagePosition" : [-8, -8],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "fullbright" : true,
+      "spaceScan" : 0.1,
+      "anchors" : [ ]
+
+    }
+  ]
+}

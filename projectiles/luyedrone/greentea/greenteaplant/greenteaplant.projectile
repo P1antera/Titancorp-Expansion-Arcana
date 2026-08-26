@@ -1,0 +1,31 @@
+{
+  "projectileName" : "greenteaplant",
+  "physics" : "laser",
+  "bounces" : -1,
+  "timeToLive" : 6,
+  "power" : 20,
+  "speed" : 0,
+  "image" : "greenteaplant.png",
+  "animationCycle" : 6,
+  "lightColor" : [173, 181, 51],
+  "frameNumber" : 8,
+  "emitters" : [ "arcana_particle_ember_green" ],
+  "piercing" : true,
+  "damagePoly" : [ [-6, 0], [-4, -4], [0, -6], [4, -4], [6, 0], [4, 4], [0, 6], [-4, 4] ],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "razorleaf",
+      "config" : {
+        "power" : 0,
+        "speed" : 0,
+        "timeToLive" : 0.25
+      }
+    },
+    { 
+      "action" : "sound",
+      "options" : [ "/sfx/objects/florancrate_open.ogg" ]
+    }
+  ],
+  "damageKind" : "default"
+}

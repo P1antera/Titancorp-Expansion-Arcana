@@ -1,0 +1,43 @@
+{
+  "id" : "at_ext_rl2_5",
+  "prerequisites" : [ "at_ext_rl2_4" ],
+  "mainQuest" : false,
+  
+  "title" : "^#ff1aa6;''Let the weapon's fury ignite your own'' IV^reset;",
+  "text" : "Let's be honest - I need research funding... Science doesn't come cheap, yes?",
+  "completionText" : "Thanks! We're almost there...",
+  "canBeAbandoned" : false,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        }
+    },
+    "turnInDescription" : "Give the materials to ^yellow;Scientist.^reset;",
+    "requireTurnIn" : true,
+    "conditions" : [
+	  {
+        "type" : "gatherItem",
+        "itemName" : "arcana_currency_credit",
+        "count" : 1000,
+        "consume" : true
+      }
+    ]
+  }
+}

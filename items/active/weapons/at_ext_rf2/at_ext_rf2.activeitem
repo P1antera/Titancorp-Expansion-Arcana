@@ -1,0 +1,107 @@
+{
+  "itemName" : "at_ext_rf2",
+  "price" : 100,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "^yellow;''bullet guards your private space.''^reset;
+  A battle rifle made from Dustrium. Used for self-defense",
+  "shortdescription" : "^blue;BR-203",
+  "tooltipKind" : "at_ext_gun",
+  "category" : "assaultRifle",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","assaultrifle"],
+  "level" : 7,
+
+  "inventoryIcon" : "at_ext_rf_2.png",
+  "largeImage" : "at_ext_rf2_lg.png",
+  
+  "animation" : "/items/active/weapons/ranged/arcana_gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "at_ext_rf_2.png",
+	"fullbright" : "fullbright.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+  },
+  "animationCustom" : {
+
+    "animatedParts" : {
+	  "parts" : {
+	    "fullbright" : {
+		  "properties" : {
+		    "offset" : [1.0, 0.2]
+		  }
+		},
+        "muzzleFlash" : {
+          "properties" : {
+            "offset" : [0.4, -0.2]
+		  }
+        }
+	  }
+	},
+    "sounds" : {
+      "fire" : ["/sfx/at_ext_brfire1.ogg"]
+    }
+  },
+
+  "baseOffset" : [1.0, 0.2],
+  "muzzleOffset" : [2.5, 0.36],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.6,
+    "baseDps" : 30,
+    "energyUsage" : 70.0,
+    "inaccuracy" : 0,
+
+    "projectileCount" : 1,
+    "fireType" : "auto",
+
+    "projectileType" : "at_ext_br",
+    "projectileParameters" : {
+	  "speed" : 140,
+      "knockback" : 4
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 6,
+        "weaponOffset" : [-0.4, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.6,
+        "armRotation" : 1,
+        "weaponRotation" : 3,
+        "weaponOffset" : [-0.2, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "altAbilityType" : "markedshot",
+  
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

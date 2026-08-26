@@ -1,0 +1,47 @@
+{
+  "projectileName" : "oolongteabag",
+  "physics" : "grenade",
+  
+  "timeToLive" : 0.5,
+  "bounces" : 0,
+  "speed" : 38,
+  
+  "image" : "oolongteabag.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  
+  "fullbright" : true,
+  "lightColor" : [179, 153, 79],
+  "emitters" : ["arcana_particle_ember_yellow"],
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/luyedrone/oolongtea/oolongteabagexplode.config"
+    }
+  ],
+  
+  "periodicActions" : [
+    {
+      "time" : 0.005,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/luyedrone/oolongtea/oolongteatrail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.25,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    }
+  ],
+  
+  "damageKind" : "default"
+ 
+}

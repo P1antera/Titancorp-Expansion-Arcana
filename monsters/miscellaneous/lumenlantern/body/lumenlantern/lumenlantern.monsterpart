@@ -1,0 +1,10 @@
+{
+  "name" : "lumenlantern",
+  "category" : "lumenlantern",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "lumenlantern.png",
+    "fullbright" : "lumenlanternfullbright.png"
+  }
+}

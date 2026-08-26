@@ -1,0 +1,12 @@
+{
+  "name" : "at_ext_milk",
+  "defaultDuration" : 180,
+  "scripts" : [
+    "at_ext_milk.lua"
+  ],
+  "effectConfig" : {
+    "maxHealth" : 10
+  },
+  "label" : "Dawnfresh Milk [+10 max health]",
+  "icon" : "/interface/statuses/at_ext_milk_icon.png"
+}

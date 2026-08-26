@@ -1,0 +1,54 @@
+{
+  "objectName" : "at_ext_rf6_obj",
+  "colonyTags" : ["storage"],
+  "rarity" : "Legendary",
+  "tooltipKind" : "at_ext_item",
+  "race" : "generic",
+  "health" : 1.5,
+ "largeImage" : "at_ext_rf6_lg.png",
+  "category" : "storage",
+  "price" : 0,
+  "printable" : false,
+  "description" : "...",
+  "shortdescription" : "Supply",
+
+  "inventoryIcon" : "icon.png",
+
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "at_ext_rf6.png:default", "fullbright" : true }, { "image" : "fullbright.png:default" } ],
+      "imagePosition" : [0, 0],
+
+      "direction" : "left",
+     
+
+      "spaceScan" : 0.1
+     
+    },
+    {
+      "imageLayers" : [ { "image" : "at_ext_rf6.png:default", "fullbright" : true }, { "image" : "fullbright.png:default" } ],
+      "imagePosition" : [0, 0],
+
+      "direction" : "right",
+      "flipImages" : true,
+      "spaceScan" : 0.1
+     
+    }
+  ],
+  
+  "smashable" : false,
+  //"smashSounds" : [ "/sfx/objects/capsule_break1.ogg", "/sfx/objects/capsule_break2.ogg", "/sfx/objects/capsule_break3.ogg" ],
+  //"smashParticles" : [ { "count" : 2, "particle" : "capsuleshard1" }, { "count" : 2, "particle" : "capsuleshard2" } ],
+
+  "animation" : "animation.animation",
+  "animationPosition" : [0, 0],
+
+  "scripts" : ["/objects/scripts/treasureburst.lua"],
+  "scriptDelta" : 0,
+
+  "burstTreasurePool" : "at_ext_rf6",
+  "burstItemVelocityRange" : [15, 30],
+  "burstAngleVariance" : 0.5,
+  "burstOffset" : [0.5, 0],
+  "burstIntangibleTimeRange" : [0.25, 0.5]
+}

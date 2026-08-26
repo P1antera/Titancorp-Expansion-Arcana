@@ -1,0 +1,43 @@
+{
+  "id" : "at_ext_ship_c1controller",
+  "prerequisites" : [  ],
+  "mainQuest" : true,
+  
+  "title" : "^yellow;Abandoned Aircraft^reset;",
+  "text" : "A modified aircraft, apparently unused for a long time, with its key placed right beside it. Take it! It'd be a waste not to!",
+  "completionText" : "A modified aircraft, apparently unused for a long time, with its key placed right beside it...... Take it! It'd be a waste not to!",
+  "canBeAbandoned" : false,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    [ "at_ext_ship_c1controller", 1 ]
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    
+    "requireTurnIn" : false,
+    "conditions" : [
+	  {
+        "type" : "gatherItem",
+        "itemName" : "money",
+        "count" : 1,
+        "consume" : false
+      }
+    ]
+  }
+}

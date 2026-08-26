@@ -1,0 +1,12 @@
+{
+  "itemName" : "at_ext_dj_loot_uncm1",
+  "price" : 0,
+  "rarity" : "Uncommon",
+  "tooltipKind" : "at_ext_loots",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "at_ext_dj_loot_uncm1.png",
+  "largeImage" : "at_ext_dj_loot_uncm1.png",
+  "description" : "A stack of synthetic plastic, very versatile as an assembly material.a circuit board removed from a machine, might still be useful.\n^green;Can be sold at the trade terminal!^reset;",
+  "shortdescription" : "Plastic",
+  "itemTags" : [ "at_ext_loots" ]
+}

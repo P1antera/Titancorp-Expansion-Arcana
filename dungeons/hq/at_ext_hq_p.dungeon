@@ -1,0 +1,24 @@
+{
+  "metadata" : {
+    "name" : "at_ext_hq_p",
+    "species" : "generic",
+    "rules" : [
+    ],
+
+    "anchor" : [ "at_ext_hq_p" ],
+
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "at_ext_hq_p",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "at_ext_hq_p.json" ]
+    }
+  ]
+}

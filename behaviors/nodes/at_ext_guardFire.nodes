@@ -1,0 +1,63 @@
+{
+  "atExtControlledGuardFire": {
+    "type": "action",
+    "name": "atExtControlledGuardFire",
+    "title": "atExtControlledGuardFire",
+    "properties": {
+      "entity": {"type": "entity", "value": null},
+      "burstRange": {"type": "number", "value": 120},
+      "interval": {"type": "number", "value": 1.5},
+      "fireTime": {"type": "number", "value": 0.5}
+    },
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_guardFire.lua",
+    "output": {}
+  },
+  "atExtBackpedalFromTarget": {
+    "type": "action",
+    "name": "atExtBackpedalFromTarget",
+    "title": "atExtBackpedalFromTarget",
+    "properties": {
+      "entity": {"type": "entity", "value": null},
+      "retryDelay": {"type": "number", "value": 1},
+      "run": {"type": "bool", "value": false},
+      "startRange": {"type": "number", "value": 100},
+      "stuckTimeout": {"type": "number", "value": 3},
+      "stopRange": {"type": "number", "value": 50}
+    },
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_guardFire.lua",
+    "output": {}
+  },
+  "atExtAdvanceWhileFiring": {
+    "type": "action",
+    "name": "atExtAdvanceWhileFiring",
+    "title": "atExtAdvanceWhileFiring",
+    "properties": {
+      "entity": {"type": "entity", "value": null},
+      "chance": {"type": "number", "value": 0.35},
+      "cooldown": {"type": "number", "value": 5},
+      "duration": {"type": "number", "value": 1},
+      "maxRange": {"type": "number", "value": 120},
+      "retryInterval": {"type": "number", "value": 1},
+      "run": {"type": "bool", "value": false},
+      "stopRange": {"type": "number", "value": 55}
+    },
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_guardFire.lua",
+    "output": {}
+  },
+  "atExtHoldRetreatPosition": {
+    "type": "action",
+    "name": "atExtHoldRetreatPosition",
+    "title": "atExtHoldRetreatPosition",
+    "properties": {
+      "entity": {"type": "entity", "value": null},
+      "startRange": {"type": "number", "value": 70},
+      "maxRange": {"type": "number", "value": 120}
+    },
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_guardFire.lua",
+    "output": {}
+  }
+}

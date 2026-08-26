@@ -1,0 +1,83 @@
+{
+  "animation": "recondrone_controller.animation",
+  "animationDelta": 5,
+  "animationParts": {
+    "controller": "sd_exp_Tier1_selfexplode.png",
+    "fullbright" : "sd_exp_Tier1_selfexplode_iconfullbright.png"
+  },
+  "boundingBox": [
+    -1,
+    -1,
+    1,
+    1
+  ],
+  "category": "^yellow;Attacking Drone T1",
+  "description": "^red;Kaboom!!!^reset;
+  ^green;[Primary]Spawn/Despawn，[Alt]Self Explode.^reset;",
+  "inventoryIcon": "sd_exp_Tier1_selfexplode.png",
+  "itemName": "sd_exp_t1selfexplodedrone_controller",
+  "itemTags": [],
+  "level": 7,
+  "maxStack": 1,
+  "controllerConfig" : {
+    "droneParam" : {
+      "droneConfig" : {
+        "moveConfig" : {
+            "controlForce" : 250,
+            "speed" : 60,
+            "minTriggerDistance" : 2,
+            "maxSpeedDistance" : 14
+          },
+        "abilityClass" : "Fire",
+        "controlType" : "followMouse",
+        "abilityConfig" : {
+          "inaccuracy" : 1,
+          "projectileCount" : 1,
+          "muzzleOffset" : [0, 0],
+          "onGround" : false,
+          "burstTime" : 0.25,
+          "burstCount" : 0,
+          "projectileParam" : {
+			        "timeToLive" : 0,
+              "processing" : "?scale=0",
+              "renderLayer" : "ForegroundEntity+10"
+          },
+          "animationConfig" : {
+            "fireSound" : "fire",
+            "fireAnimation" : {
+              "stateType" : "body",
+              "state" : "fire",
+              "time" : 0.4
+            },
+            "windupAnimation" : {
+              "stateType" : "body",
+              "state" : "fly",
+              "time" : 0.6
+            },
+            "winddownAnimation" : {
+              "stateType" : "body",
+              "state" : "firewinddown",
+              "time" : 0.4
+
+            },
+            "turretGroup" : "",
+            "rotationCenter" : [0.5, 0.5]
+          },
+          "fireType" : "single",
+          "projectileType" : "standardbullet"
+        },
+        "abilityScript" : "/droneAbility/fire/fire.lua"
+      }
+    },
+    "droneType":"neobombplayer",
+    "rightClickCooldown" :1
+  },
+  "price": 0,
+  "rarity": "Legendary",
+  "scripts": [
+    "/scripts/droneControllerBase.lua" //通用控制器脚本，
+  ],
+  "shortdescription": "Neobomb Controller",
+  "tooltipKind": "arcana_base_item",
+  "twoHanded": true
+}

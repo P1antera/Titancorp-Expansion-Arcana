@@ -1,0 +1,61 @@
+{
+  "id" : "at_ext_rl2_4",
+  "prerequisites" : [ "at_ext_rl2_3" ],
+  "mainQuest" : false,
+  
+  "title" : "^#ff1aa6;''Let the weapon's fury ignite your own'' III^reset;",
+  "text" : "Well, the next material might be a bit tricky, but it's definitely not a challenge for you.",
+  "completionText" : "Hmmm...I need do a analysis.",
+  "canBeAbandoned" : false,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        }
+    },
+    "turnInDescription" : "Give the materials to ^yellow;Scientist.^reset;",
+    "requireTurnIn" : true,
+    "conditions" : [
+	  {
+        "type" : "gatherItem",
+        "itemName" : "orion_crafting_orionTechCard",
+        "count" : 3,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "orion_crafting_enhancedBattery",
+        "count" : 1,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "orion_crafting_jupiterCell",
+        "count" : 1,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "monarch_crafting_holosiumStar",
+        "count" : 1,
+        "consume" : true
+      }
+    ]
+  }
+}

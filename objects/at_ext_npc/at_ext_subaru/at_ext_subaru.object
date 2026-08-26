@@ -1,0 +1,68 @@
+{
+  "objectName" : "at_ext_subaru",
+  "colonyTags" : ["misc"],
+  "rarity" : "Legendary",
+  "description" : "A pretty girl.",
+  "shortdescription" : "SBR",
+  "race" : "human",
+  "printable" : false,
+  "category" : "furniture",
+  "price" : 0,
+
+  "offeredQuests" : [
+ 
+  ],
+
+  "turnInQuests" : [
+ 
+  ],
+
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "at_ext_subaru.png:<color>.<frame>","fullbright" : true }, { "image" : "at_ext_subaru_fb.png:<color>.<frame>" } ],
+	  "direction" : "left",
+	  "flipImages" : true,
+      "imagePosition" : [-8, 0],
+      "frames" : 16,
+      "animationCycle" : 6.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    },
+	{
+      "imageLayers" : [ { "image" : "at_ext_subaru.png:<color>.<frame>","fullbright" : true }, { "image" : "at_ext_subaru_fb.png:<color>.<frame>" } ],
+	  "direction" : "right",
+      "imagePosition" : [-8, 0],
+      "frames" : 16,
+      "animationCycle" : 6.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+  
+  "animation" : "at_ext_subaru.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "talk" : [ "/sfx/humanoid/human_chatter_female1.ogg" ]
+    }
+  },  
+  
+  
+  
+  "scripts" : [ "/scripts/chattyObject.lua" ],
+  "scriptDelta" : 20,
+  "mouthPosition" : [0.0, 0.2],
+
+  "chatOptions" : [
+    "I really love this bustling city!",
+    "What did you want to tell me?",
+    "I hope it'll be another clear night tonight.",	
+	"There are several restaurants nearby with amazing food.",
+    "I can't even remember the last time I had a beer."
+  ]
+}

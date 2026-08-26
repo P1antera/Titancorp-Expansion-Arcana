@@ -1,0 +1,71 @@
+{
+  "id" : "at_ext_contract4_1",
+  "prerequisites" : [ "at_ext_contract4" ],
+  "title" : "^cyan;[Junior]^yellow;Special contract^reset;",
+  "text" : 
+  "To all of our contractors:
+  Here is a little Food supplies quest:
+======================
+^yellow;[Raw steak x5]
+[Raw poultry x5]
+[potato x5]
+[milk x3]^reset;
+======================
+payment will be sent to you after we receive the listed cargo.",
+  
+  
+  "completionText" : "Well done! The ^yellow;credits^reset; have been transferred to your account!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    [ "arcana_currency_credit", 420 ]
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "turnInDescription" : "Deliver all ^green;cargo^reset; to the ^yellow;Trade Terminal^reset;.",
+    "requireTurnIn" : true,
+    "conditions" : [
+      {
+        "type" : "gatherItem",
+        "itemName" : "alienmeat",
+        "count" : 5,
+        "consume" : true
+      },
+	        {
+        "type" : "gatherItem",
+        "itemName" : "rawpoultry",
+        "count" : 5,
+        "consume" : true
+      },
+	  	        {
+        "type" : "gatherItem",
+        "itemName" : "potato",
+        "count" : 5,
+        "consume" : true
+      },
+	  	        {
+        "type" : "gatherItem",
+        "itemName" : "milk",
+        "count" : 3,
+        "consume" : true
+      }
+    ]
+  }
+}

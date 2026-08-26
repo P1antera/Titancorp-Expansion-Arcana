@@ -1,0 +1,43 @@
+{
+  "id" : "at_ext_vault",
+  "prerequisites" : [  ],
+  "mainQuest" : true,
+  
+  "title" : "^yellow;Register your account today! ^reset;",
+  "text" : "With a digital account, you can access your Currency Storage anytime, anywhere via a little pad, and complete transfers quickly and efficiently!",
+  "completionText" : "Registration Complete!",
+  "canBeAbandoned" : false,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    [ "at_ext_vault", 1 ]
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "turnInDescription" : "Visit the ^yellow;ship^reset; by using the ^yellow;Pad^reset;.",
+    "requireTurnIn" : true,
+    "conditions" : [
+	  {
+        "type" : "gatherItem",
+        "itemName" : "money",
+        "count" : 1,
+        "consume" : false
+      }
+    ]
+  }
+}

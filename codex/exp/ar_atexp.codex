@@ -1,0 +1,17 @@
+{
+  "id" : "ar_atexp",
+
+  "title" : "Automation Recipes",
+  "description" : "A manual for automation recipes extension mod.",
+  "icon" : "ar_atexp.png",
+  "contentPages" :
+  [
+"
+^red;The recipe manual has been updated. Please obtain a new one in ^yellow;Creditshop!
+"
+  ],
+    "itemConfig" : {
+    "rarity" : "rare",
+    "price" : 0
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id" : "at_ext_coupon",
+  "prerequisites" : [ "at_ext_d7" ],
+  "mainQuest" : true,
+  
+  "title" : "^yellow;New Equipment!^reset;",
+  "text" : "The latest batch of standard-issue rifles has completed production. As an outstanding mercenary, you are also eligible to use them. Go pick one that suits you!",
+  "completionText" : "You can use this coupon to redeem new equipment at the Section 8 terminal in the Titancolony!",
+  "canBeAbandoned" : false,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    [ "at_ext_coupon", 1 ]
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "turnInDescription" : "Claim the ^yellow;Equipment coupon^reset;",
+    "requireTurnIn" : true,
+    "conditions" : [
+	  {
+        "type" : "gatherItem",
+        "itemName" : "money",
+        "count" : 1,
+        "consume" : false
+      }
+    ]
+  }
+}

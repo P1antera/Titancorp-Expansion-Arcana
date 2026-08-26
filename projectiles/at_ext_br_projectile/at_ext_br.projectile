@@ -1,0 +1,68 @@
+{
+  "projectileName" : "at_ext_br",
+  "physics" : "at_ext_bulletfall_br",
+  
+  "timeToLive" : 3,
+  "bounces" : 0,
+  "speed" : 100,
+  
+  "image" : "body.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  
+  "fullbright" : true,
+  "lightColor" : [255, 132, 0],
+  //"emitters" : [ "arcana_particle_ember_cyan_2" ],
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/at_ext_bulletimpact_br.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "arcana_bulletimpact",
+      "fuzzAngle" : 365,
+      "inheritDamageFactor" : 0.0,
+      "angleAdjust" : 35
+    },
+    {
+      "action" : "projectile",
+      "type" : "arcana_bulletimpact",
+      "fuzzAngle" : 365,
+      "inheritDamageFactor" : 0.0,
+      "angleAdjust" : 35
+    }
+  ],
+  
+  "periodicActions" : [
+   {
+  "rotate" : false,
+  "time" : 0,
+  
+  "repeat" : false,
+  "action" : "projectile",
+  "inheritDamageFactor" : 0,
+  "autoFlipAdjust" : true,
+  "type" : "at_ext_case_trigger_br",
+  "angleAdjust" : 180,
+  "fuzzAngle" :0
+  }    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+  ],
+  
+  "damageKind" : "plasma"
+ 
+}

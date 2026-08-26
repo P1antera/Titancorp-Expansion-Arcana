@@ -1,0 +1,16 @@
+{
+  "itemName" : "at_ext_teabag2",
+  "price" : 750,
+  "rarity" : "rare",
+  "tooltipKind" : "at_ext_teabag",
+  "category" : "tradingCard",
+  "inventoryIcon" : "at_ext_teabag2.png",
+  "description" : "A tea bag, primarily containing Dustrium. Long-term consumption side effects remain unclear. When health drops below 50%, ^yellow;+15protection^reset; for 60 seconds after drinking.",
+  "shortdescription" : "Dustrium teabag",
+  "itemTags" : [ "mwhaddon_teaIngredient" ],
+  "radioMessagesOnPickup" : [ "mwhaddon_radiomessage_pickup_teaIngredient" ],
+  "collectablesOnPickup" : { "mwhaddon_collection_material_teaIngredient" : "at_ext_teabag2" },
+  "tooltipFields" : {
+    "subtitle" : "^#cef498;Tea Ingredient^reset;"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "input" : [
+	{ "item" : "orion_crafting_orionTechCard", "count" : 1 }
+  ],
+  "output" : { "item" : "arcana_currency_credit", "count" : 50 },
+  "duration" : 0.4,
+  "groups"  : [ "arcana_titancorp_crafting_1", "arcana_titancorp_crafting_1_credit" ]
+}

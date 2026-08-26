@@ -1,0 +1,14 @@
+{
+  "frameGrid" : {
+    "size" : [30, 12],
+    "dimensions" : [4, 1],
+    "names" : [
+      ["default.1","cooling.1","cooling.2","cooling.3"]
+    ]
+  },
+  "aliases" : {
+	  "default" : "default.1",
+    "overheat" : "cooling.2"
+
+}
+}

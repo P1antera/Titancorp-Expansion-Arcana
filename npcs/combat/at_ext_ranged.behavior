@@ -1,0 +1,859 @@
+{
+  "name": "at_ext_rangedcombat",
+  "description": "",
+  "scripts": [
+    "/scripts/behavior.lua",
+    "/scripts/actions/world.lua",
+    "/scripts/actions/npc.lua",
+    "/scripts/actions/at_ext_guardFire.lua",
+    "/scripts/actions/at_ext_npcCrouch.lua",
+    "/scripts/actions/at_ext_guardSpecial.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/behavior/bdata.lua",
+    "/scripts/actions/entity.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/position.lua"
+  ],
+  "parameters": {
+    "rangedAimTime": 0,
+    "rangedWindupTime": 0.05,
+    "rangedMinFireTime": 0.5,
+    "rangedMaxFireTime": 1,
+    "arrowSpeed": 62.5
+  },
+  "root": {
+    "title": "parallel",
+    "type": "composite",
+    "name": "parallel",
+    "parameters": {
+      "fail": {"value": -1},
+      "success": {"value": -1}
+    },
+    "children": [
+      {
+        "title": "selector",
+        "type": "composite",
+        "name": "selector",
+        "parameters": {},
+        "children": [
+          {
+            "title": "groupResource",
+            "type": "action",
+            "name": "groupResource",
+            "parameters": {
+              "groupId": {"value": "combat"},
+              "name": {"value": "movePosition"}
+            },
+            "output": {
+              "position": "rangedPosition"
+            }
+          },
+          {
+            "title": "entityPosition",
+            "type": "action",
+            "name": "entityPosition",
+            "parameters": {
+              "entity": {"key": "target"}
+            },
+            "output": {
+              "position": "rangedPosition"
+            }
+          }
+        ]
+      },
+      {
+        "title": "dynamic",
+        "type": "composite",
+        "name": "dynamic",
+        "parameters": {},
+        "children": [
+          {
+            "title": "failer",
+            "type": "decorator",
+            "name": "failer",
+            "parameters": {},
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "sequence",
+                  "type": "composite",
+                  "name": "sequence",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "groupResource",
+                      "type": "action",
+                      "name": "groupResource",
+                      "parameters": {
+                        "groupId": {"value": "combat"},
+                        "name": {"value": "minRange"}
+                      },
+                      "output": {
+                        "number": "minRange"
+                      }
+                    },
+                    {
+                      "title": "inverter",
+                      "type": "decorator",
+                      "name": "inverter",
+                      "parameters": {},
+                      "child": {
+                        "title": "entityInRange",
+                        "type": "action",
+                        "name": "entityInRange",
+                        "parameters": {
+                          "entity": {"key": "target"},
+                          "position": {"key": "self"},
+                          "range": {"value": 3}
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "title": "sequence",
+                  "type": "composite",
+                  "name": "sequence",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "groupResource",
+                      "type": "action",
+                      "name": "groupResource",
+                      "parameters": {
+                        "groupId": {"value": "combat"},
+                        "name": {"value": "maxRange"}
+                      },
+                      "output": {
+                        "number": "maxRange"
+                      }
+                    },
+                    {
+                      "title": "entityInRange",
+                      "type": "action",
+                      "name": "entityInRange",
+                      "parameters": {
+                        "entity": {"key": "target"},
+                        "position": {"key": "self"},
+                        "range": {"key": "maxRange"}
+                      }
+                    }
+                  ]
+                },
+                {
+                  "title": "canFire",
+                  "type": "action",
+                  "name": "canFire",
+                  "parameters": {}
+                },
+                {
+                  "title": "selector",
+                  "type": "composite",
+                  "name": "selector",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "sequence",
+                      "type": "composite",
+                      "name": "sequence",
+                      "parameters": {},
+                      "children": [
+                        {
+                          "title": "primaryWeaponTag",
+                          "type": "action",
+                          "name": "primaryWeaponTag",
+                          "parameters": {
+                            "tag": {"value": "bow"}
+                          }
+                        },
+                        {
+                          "title": "parallel",
+                          "type": "composite",
+                          "name": "parallel",
+                          "parameters": {
+                            "fail": {"value": -1},
+                            "success": {"value": -1}
+                          },
+                          "children": [
+                            {
+                              "title": "primaryFire",
+                              "type": "action",
+                              "name": "primaryFire",
+                              "parameters": {}
+                            },
+                            {
+                              "title": "sequence",
+                              "type": "composite",
+                              "name": "sequence",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "projectileGravityMultiplier",
+                                  "type": "action",
+                                  "name": "projectileGravityMultiplier",
+                                  "parameters": {
+                                    "projectileName": {"value": "woodenarrow"}
+                                  },
+                                  "output": {
+                                    "gravityMultiplier": "arrowGravity"
+                                  }
+                                },
+                                {
+                                  "title": "setVector",
+                                  "type": "action",
+                                  "name": "setVector",
+                                  "parameters": {
+                                    "vector": {"value": ["facingDirection", 0]}
+                                  },
+                                  "output": {
+                                    "vector": "aimOffset"
+                                  }
+                                },
+                                {
+                                  "title": "parallel",
+                                  "type": "composite",
+                                  "name": "parallel",
+                                  "parameters": {
+                                    "fail": {"value": 1},
+                                    "success": {"value": -1}
+                                  },
+                                  "children": [
+                                    {
+                                      "title": "entityInSight",
+                                      "type": "action",
+                                      "name": "entityInSight",
+                                      "parameters": {
+                                        "entity": {"key": "target"}
+                                      }
+                                    },
+                                    {
+                                      "title": "entityPosition",
+                                      "type": "action",
+                                      "name": "entityPosition",
+                                      "parameters": {
+                                        "entity": {"key": "target"}
+                                      },
+                                      "output": {
+                                        "position": "targetPosition"
+                                      }
+                                    },
+                                    {
+                                      "title": "succeeder",
+                                      "type": "decorator",
+                                      "name": "succeeder",
+                                      "parameters": {},
+                                      "child": {
+                                        "title": "sequence",
+                                        "type": "composite",
+                                        "name": "sequence",
+                                        "parameters": {},
+                                        "children": [
+                                          {
+                                            "title": "projectileAimVector",
+                                            "type": "action",
+                                            "name": "projectileAimVector",
+                                            "parameters": {
+                                              "collisionCheck": {"value": false},
+                                              "fromPosition": {"key": "self"},
+                                              "gravityMultiplier": {"key": "arrowGravity"},
+                                              "speed": {"key": "<arrowSpeed>"},
+                                              "toPosition": {"key": "targetPosition"},
+                                              "useHighArc": {"value": false}
+                                            },
+                                            "output": {
+                                              "aimVector": "aimVector"
+                                            }
+                                          },
+                                          {
+                                            "title": "vecMultiply",
+                                            "type": "action",
+                                            "name": "vecMultiply",
+                                            "parameters": {
+                                              "first": {"key": "aimVector"},
+                                              "second": {"value": [10, 10]}
+                                            },
+                                            "output": {
+                                              "vector": "aimOffset"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "title": "setAimPosition",
+                                      "type": "action",
+                                      "name": "setAimPosition",
+                                      "parameters": {
+                                        "offset": {"key": "aimOffset"},
+                                        "position": {"key": "self"}
+                                      }
+                                    },
+                                    {
+                                      "title": "timer",
+                                      "type": "action",
+                                      "name": "timer",
+                                      "parameters": {
+                                        "time": {"value": 1}
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "title": "timer",
+                          "type": "action",
+                          "name": "timer",
+                          "parameters": {
+                            "time": {"value": 0.2}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "title": "parallel",
+                      "type": "composite",
+                      "name": "parallel",
+                      "parameters": {
+                        "fail": {"value": 1},
+                        "success": {"value": -1}
+                      },
+                      "children": [
+                        {
+                          "title": "sequence",
+                          "type": "composite",
+                          "name": "sequence",
+                          "parameters": {},
+                          "children": [
+                            {
+                              "title": "parallel",
+                              "type": "composite",
+                              "name": "parallel",
+                              "parameters": {
+                                "fail": {"value": 1},
+                                "success": {"value": -1}
+                              },
+                              "children": [
+                                {
+                                  "title": "entityInSight",
+                                  "type": "action",
+                                  "name": "entityInSight",
+                                  "parameters": {
+                                    "entity": {"key": "target"}
+                                  }
+                                },
+                                {
+                                  "title": "faceEntity",
+                                  "type": "action",
+                                  "name": "faceEntity",
+                                  "parameters": {
+                                    "entity": {"key": "target"}
+                                  }
+                                },
+                                {
+                                  "title": "entityPosition",
+                                  "type": "action",
+                                  "name": "entityPosition",
+                                  "parameters": {
+                                    "entity": {"key": "target"}
+                                  },
+                                  "output": {
+                                    "position": "targetPosition"
+                                  }
+                                },
+                                {
+                                  "title": "offsetPosition",
+                                  "type": "action",
+                                  "name": "offsetPosition",
+                                  "parameters": {
+                                    "offset": {"value": [0, 0]},
+                                    "position": {"key": "targetPosition"}
+                                  },
+                                  "output": {
+                                    "position": "aimPosition"
+                                  }
+                                },
+                                {
+                                  "title": "setAimPosition",
+                                  "type": "action",
+                                  "name": "setAimPosition",
+                                  "parameters": {
+                                    "position": {"key": "aimPosition"}
+                                  }
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": "<rangedAimTime>"}
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": "<rangedWindupTime>"}
+                              }
+                            },
+                            {
+                              "title": "parallel",
+                              "type": "composite",
+                              "name": "parallel",
+                              "parameters": {
+                                "fail": {"value": -1},
+                                "success": {"value": -1}
+                              },
+                              "children": [
+                                {
+                                  "title": "atExtControlledGuardFire",
+                                  "type": "action",
+                                  "name": "atExtControlledGuardFire",
+                                  "parameters": {
+                                    "burstRange": {"value": 80},
+                                    "entity": {"key": "target"},
+                                    "fireTime": {"value": 0.15},
+                                    "interval": {"value": 1.5}
+                                  }
+                                },
+                                {
+                                  "title": "Random Special Attack",
+                                  "type": "decorator",
+                                  "name": "succeeder",
+                                  "parameters": {},
+                                  "child": {
+                                    "title": "atExtRandomAltFire",
+                                    "type": "action",
+                                    "name": "atExtRandomAltFire",
+                                    "parameters": {
+                                      "chance": {"value": 0.5},
+                                      "cooldown": {"value": 10},
+                                      "entity": {"key": "target"},
+                                      "holdTime": {"value": 0.6},
+                                      "maxRange": {"value": 120},
+                                      "minEnergyPercentage": {"value": 0.05},
+                                      "minRange": {"value": 0},
+                                      "retryInterval": {"value": 1}
+                                    }
+                                  }
+                                },
+                                {
+                                  "title": "Advance While Firing",
+                                  "type": "decorator",
+                                  "name": "succeeder",
+                                  "parameters": {},
+                                  "child": {
+                                    "title": "atExtAdvanceWhileFiring",
+                                    "type": "action",
+                                    "name": "atExtAdvanceWhileFiring",
+                                    "parameters": {
+                                      "chance": {"value": 0.5},
+                                      "cooldown": {"value": 5},
+                                      "duration": {"value": 5},
+                                      "entity": {"key": "target"},
+                                      "maxRange": {"value": 120},
+                                      "retryInterval": {"value": 1},
+                                      "run": {"value": false},
+                                      "stopRange": {"value": 25}
+                                    }
+                                  }
+                                },
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "timer",
+                                      "type": "action",
+                                      "name": "timer",
+                                      "parameters": {
+                                        "time": {"value": "<rangedMinFireTime>"}
+                                      }
+                                    },
+                                    {
+                                      "title": "dynamic",
+                                      "type": "composite",
+                                      "name": "dynamic",
+                                      "parameters": {},
+                                      "children": [
+                                        {
+                                          "title": "dynamic",
+                                          "type": "composite",
+                                          "name": "dynamic",
+                                          "parameters": {},
+                                          "children": [
+                                            {
+                                              "title": "inverter",
+                                              "type": "decorator",
+                                              "name": "inverter",
+                                              "parameters": {},
+                                              "child": {
+                                                "title": "entityInSight",
+                                                "type": "action",
+                                                "name": "entityInSight",
+                                                "parameters": {
+                                                  "entity": {"key": "target"}
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "title": "inverter",
+                                              "type": "decorator",
+                                              "name": "inverter",
+                                              "parameters": {},
+                                              "child": {
+                                                "title": "canFire",
+                                                "type": "action",
+                                                "name": "canFire",
+                                                "parameters": {}
+                                              }
+                                            },
+                                            {
+                                              "title": "timer",
+                                              "type": "action",
+                                              "name": "timer",
+                                              "parameters": {
+                                                "time": {"value": "<rangedMaxFireTime>"}
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "title": "runner",
+                                          "type": "action",
+                                          "name": "runner",
+                                          "parameters": {}
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "title": "setAimPosition",
+                          "type": "action",
+                          "name": "setAimPosition",
+                          "parameters": {
+                            "position": {"key": "aimPosition"}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "title": "selector",
+            "type": "composite",
+            "name": "selector",
+            "parameters": {},
+            "children": [
+              {
+                "title": "Block Movement While Crouched",
+                "type": "decorator",
+                "name": "inverter",
+                "parameters": {},
+                "child": {
+                  "title": "atExtMovementAllowed",
+                  "type": "action",
+                  "name": "atExtMovementAllowed",
+                  "parameters": {}
+                }
+              },
+              {
+                "title": "Lost Sight Pursuit",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "inverter",
+                    "type": "decorator",
+                    "name": "inverter",
+                    "parameters": {},
+                    "child": {
+                      "title": "entityInSight",
+                      "type": "action",
+                      "name": "entityInSight",
+                      "parameters": {
+                        "entity": {"key": "target"}
+                      }
+                    }
+                  },
+                  {
+                    "title": "entityPosition",
+                    "type": "action",
+                    "name": "entityPosition",
+                    "parameters": {
+                      "entity": {"key": "target"}
+                    },
+                    "output": {
+                      "position": "pursuitPosition"
+                    }
+                  },
+                  {
+                    "title": "parallel",
+                    "type": "composite",
+                    "name": "parallel",
+                    "parameters": {
+                      "fail": {"value": 1},
+                      "success": {"value": -1}
+                    },
+                    "children": [
+                      {
+                        "title": "atExtMaintainMovementAllowed",
+                        "type": "action",
+                        "name": "atExtMaintainMovementAllowed",
+                        "parameters": {}
+                      },
+                      {
+                        "title": "moveToPosition",
+                        "type": "action",
+                        "name": "moveToPosition",
+                        "parameters": {
+                          "avoidLiquid": {"value": true},
+                          "groundPosition": {"value": true},
+                          "maxGround": {"value": 5},
+                          "minGround": {"value": -20},
+                          "position": {"key": "pursuitPosition"},
+                          "run": {"value": true}
+                        },
+                        "output": {
+                          "pathfinding": "pursuitPathing"
+                        }
+                      },
+                      {
+                        "title": "Maintain Lost Sight",
+                        "type": "action",
+                        "name": "atExtMaintainLostSight",
+                        "parameters": {
+                          "entity": {"key": "target"}
+                        }
+                      },
+                      {
+                        "title": "runner",
+                        "type": "action",
+                        "name": "runner",
+                        "parameters": {}
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "inverter",
+                    "type": "decorator",
+                    "name": "inverter",
+                    "parameters": {},
+                    "child": {
+                      "title": "canFire",
+                      "type": "action",
+                      "name": "canFire",
+                      "parameters": {}
+                    }
+                  },
+                  {
+                    "title": "hasMeleeSheathed",
+                    "type": "action",
+                    "name": "hasMeleeSheathed",
+                    "parameters": {}
+                  },
+                  {
+                    "title": "entityInSight",
+                    "type": "action",
+                    "name": "entityInSight",
+                    "parameters": {
+                      "entity": {"key": "target"}
+                    }
+                  },
+                  {
+                    "title": "swapItemSlots",
+                    "type": "action",
+                    "name": "swapItemSlots",
+                    "parameters": {}
+                  },
+                  {
+                    "title": "halt",
+                    "type": "action",
+                    "name": "halt",
+                    "parameters": {}
+                  }
+                ]
+              },
+              {
+                "title": "Backpedal Close Target",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "inverter",
+                    "type": "decorator",
+                    "name": "inverter",
+                    "parameters": {},
+                    "child": {
+                      "title": "canFire",
+                      "type": "action",
+                      "name": "canFire",
+                      "parameters": {}
+                    }
+                  },
+                  {
+                    "title": "atExtBackpedalFromTarget",
+                    "type": "action",
+                    "name": "atExtBackpedalFromTarget",
+                    "parameters": {
+                      "entity": {"key": "target"},
+                      "retryDelay": {"value": 1},
+                      "run": {"value": false},
+                      "startRange": {"value": 65},
+                      "stuckTimeout": {"value": 3},
+                      "stopRange": {"value": 20}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Hold Retreat Position",
+                "type": "action",
+                "name": "atExtHoldRetreatPosition",
+                "parameters": {
+                  "entity": {"key": "target"},
+                  "startRange": {"value": 65},
+                  "maxRange": {"value": 120}
+                }
+              },
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": 1},
+                  "success": {"value": -1}
+                },
+                "children": [
+                  {
+                    "title": "atExtMaintainMovementAllowed",
+                    "type": "action",
+                    "name": "atExtMaintainMovementAllowed",
+                    "parameters": {}
+                  },
+                  {
+                    "title": "moveToPosition",
+                    "type": "action",
+                    "name": "moveToPosition",
+                    "parameters": {
+                      "avoidLiquid": {"value": true},
+                      "groundPosition": {"value": false},
+                      "maxGround": {"value": 5},
+                      "minGround": {"value": -10},
+                      "position": {"key": "rangedPosition"},
+                      "run": {"value": true}
+                    },
+                    "output": {
+                      "pathfinding": "rangedPathing"
+                    }
+                  },
+                  {
+                    "title": "succeeder",
+                    "type": "decorator",
+                    "name": "succeeder",
+                    "parameters": {},
+                    "child": {
+                      "title": "sequence",
+                      "type": "composite",
+                      "name": "sequence",
+                      "parameters": {},
+                      "children": [
+                        {
+                          "title": "groupResource",
+                          "type": "action",
+                          "name": "groupResource",
+                          "parameters": {
+                            "groupId": {"value": "combat"},
+                            "name": {"value": "minRange"}
+                          },
+                          "output": {
+                            "number": "minRange"
+                          }
+                        },
+                        {
+                          "title": "inverter",
+                          "type": "decorator",
+                          "name": "inverter",
+                          "parameters": {},
+                          "child": {
+                            "title": "entityInRange",
+                            "type": "action",
+                            "name": "entityInRange",
+                            "parameters": {
+                              "entity": {"key": "target"},
+                              "position": {"key": "self"},
+                              "range": {"key": "minRange"}
+                            }
+                          }
+                        },
+                        {
+                          "title": "faceEntity",
+                          "type": "action",
+                          "name": "faceEntity",
+                          "parameters": {
+                            "entity": {"key": "target"}
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "title": "runner",
+                    "type": "action",
+                    "name": "runner",
+                    "parameters": {}
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Ranged Fire Monitor",
+        "type": "action",
+        "name": "atExtRangedFireMonitor",
+        "parameters": {
+          "entity": {"key": "target"}
+        }
+      },
+      {
+        "title": "runner",
+        "type": "action",
+        "name": "runner",
+        "parameters": {}
+      }
+    ]
+  }
+}

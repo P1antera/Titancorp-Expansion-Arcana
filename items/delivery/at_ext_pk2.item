@@ -1,0 +1,11 @@
+{
+  "itemName" : "at_ext_pk2",
+  "rarity" : "common",
+  "category" : "quest",
+  "tooltipKind" : "at_ext_qitem",
+  "largeImage" : "at_ext_pk2_lg.png",
+  "inventoryIcon" : "at_ext_pk2.png",
+  "description" : "^orange;I shouldn't open a package that needs to be delivered.",
+  "shortdescription" : "^yellow;[Quest]^reset;Package",
+  "price" : 0
+}

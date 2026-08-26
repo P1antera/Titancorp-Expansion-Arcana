@@ -1,0 +1,34 @@
+{
+  "itemName" : "at_ext_shipcontroller3",
+  "level" : 8,
+  "price" : 0,
+  "rarity" : "Legendary",
+  "category" : "tool",
+  "description" : "^green;Deploy/Store^reset; an Titancorp light aircraft. ^yellow;armed with missiles, ammo:60^reset;\n^green;[altfire]: activate shield^reset;",
+  "shortdescription" : "^orange;''Steelbreaker''^yellow;[missile]^reset;",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["at_ext_shipcontroller2.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "at_ext_vehicle",
+  "largeImage" : "at_ext_ship.png",
+
+  "respawnTime" : 1.0,
+
+  //=============Item specifc bits.
+  "vehicleType" : "at_ext_ship3",
+  "vehicleBoundingBox" : [-5, -5, 5, 5],
+  "vehicleImage" : "/items/active/vehiclecontroller/at_ext_ship.png",
+
+  "animationParts" : {
+    "casing" : "at_ext_shipcontroller3.png"
+  },
+
+  "inventoryIcon" : "at_ext_shipcontroller3.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/at_ext_shipcontroller3.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/at_ext_shipcontroller3.png:full"
+}

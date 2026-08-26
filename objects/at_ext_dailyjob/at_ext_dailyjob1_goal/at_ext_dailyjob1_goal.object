@@ -1,0 +1,28 @@
+{
+  "objectName" : "at_ext_dailyjob1_goal",
+  "colonyTags" : [],
+  "rarity" : "Common",
+  "description" : "A graffiti message.",
+  "shortdescription" : "MarkMark",
+  "race" : "generic",
+  "category" : "decorative",
+  "printable" : false,
+
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "at_ext_dailyjob1_goal.png:<color>",
+      "direction" : "right",
+
+      "imagePosition" : [-0, -0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+
+  "smashOnBreak" : true
+}

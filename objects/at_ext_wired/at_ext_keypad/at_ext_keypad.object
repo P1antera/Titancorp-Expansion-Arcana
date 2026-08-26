@@ -1,0 +1,39 @@
+{
+  "objectName" : "at_ext_keypad",
+"colonyTags" : ["electronic","wired"],
+  "printable" : false,
+  "rarity" : "Common",
+  "description" : "A numeric security keypad that requires a specific combination.",
+  "shortdescription" : "Numeric Keypad",
+  "race" : "generic",
+
+
+
+  "inventoryIcon" : "at_ext_keypadicon.png",
+  "orientations" : [
+    {
+      "image" : "at_ext_keypad.png",
+      "imagePosition" : [-8, -8],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ],
+
+      "direction" : "right"
+    }
+  ],
+
+  "health" : 5,
+  "rooting" : true,
+
+  "outputNodes" : [ [0, 0] ],
+
+  "scripts" : ["keypad.lua"],
+  "scriptDelta" : 30,
+
+  "interactData" : {
+    "baseConfig" : "/interface/scripted/at_ext_keypad/at_ext_keypadgui.config"
+  },
+
+  "combinationLength" : 4,
+  "combination" : null
+}

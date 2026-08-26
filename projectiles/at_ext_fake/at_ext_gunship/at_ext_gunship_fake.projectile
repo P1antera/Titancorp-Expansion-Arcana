@@ -1,0 +1,31 @@
+{
+  "projectileName" : "at_ext_gunship_fake",
+  "physics" : "laser",
+  
+  "timeToLive" : 5,
+  "bounces" : 0,
+  "speed" : 80,
+  
+  "image" : "body.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 2,
+  
+  "fullbright" : true,
+  //"lightColor" : [61, 187, 234],
+  //"emitters" : [ "iceplasma" ],
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [
+
+  ],
+  "persistentAudio" : "/sfx/at_ext_ship/gunshipfake_afterburn.ogg", 
+  "periodicActions" : [
+
+
+  ],
+  
+  "damageType" : "NoDamage",
+  "damageKind" : "nodamage"
+ 
+}

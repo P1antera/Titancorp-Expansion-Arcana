@@ -1,0 +1,10 @@
+{
+  "name" : "shadomebody",
+  "category" : "shadome",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "shadomebody.png",
+    "fullbright" : "shadomebodyfullbright.png"
+  }
+}

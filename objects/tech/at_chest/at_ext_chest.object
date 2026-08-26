@@ -1,0 +1,54 @@
+{
+  "objectName" : "at_ext_chest",
+  "colonyTags" : ["storage"],
+  "rarity" : "Legendary",
+  "tooltipKind" : "at_ext_item",
+  "race" : "generic",
+  "health" : 1.5,
+ "largeImage" : "at_ext_chest_lg.png",
+  "category" : "storage",
+  "price" : 200,
+  "printable" : false,
+  "description" : "''place it, open it.''\nA supply box that contains some goodies.",
+  "shortdescription" : "Titancorp material box",
+
+  "inventoryIcon" : "icon.png",
+
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "at_ext_chest.png:default", "fullbright" : true }, { "image" : "fullbright.png:default" } ],
+      "imagePosition" : [-8, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "at_ext_chest.png:default", "fullbright" : true }, { "image" : "fullbright.png:default" } ],
+      "imagePosition" : [-8, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  
+  "smashable" : true,
+  "smashSounds" : [ "/sfx/objects/capsule_break1.ogg", "/sfx/objects/capsule_break2.ogg", "/sfx/objects/capsule_break3.ogg" ],
+  "smashParticles" : [ { "count" : 2, "particle" : "capsuleshard1" }, { "count" : 2, "particle" : "capsuleshard2" } ],
+
+  "animation" : "animation.animation",
+  "animationPosition" : [-8, 0],
+
+  "scripts" : ["/objects/scripts/treasureburst.lua"],
+  "scriptDelta" : 0,
+
+  "burstTreasurePool" : "at_ext_lootbox1",
+  "burstItemVelocityRange" : [15, 30],
+  "burstAngleVariance" : 0.5,
+  "burstOffset" : [0.5, 0],
+  "burstIntangibleTimeRange" : [0.25, 0.5]
+}

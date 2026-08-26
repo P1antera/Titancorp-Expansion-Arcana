@@ -1,0 +1,70 @@
+{
+  "projectileName" : "at_ext_smart",
+  "physics" : "laser",
+  
+  "timeToLive" : 3,
+  "bounces" : 0,
+  "speed" : 124,
+  
+  "image" : "body.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  
+  "fullbright" : true,
+  "lightColor" : [255, 190, 164],
+  
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/at_ext_bulletimpact.config"
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/heavybulletexplosion/heavybulletexplosion.config"
+    },
+	    {
+      "action" : "projectile",
+      "type" : "arcana_bulletimpact",
+      "fuzzAngle" : 365,
+      "inheritDamageFactor" : 0.0,
+      "angleAdjust" : 35
+    },
+    {
+      "action" : "projectile",
+      "type" : "arcana_bulletimpact",
+      "fuzzAngle" : 365,
+      "inheritDamageFactor" : 0.0,
+      "angleAdjust" : 35
+    }
+  ],
+  
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/at_ext_smart/trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.3,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+  
+  "scripts" : [ "homingprojectile.lua" ],
+  "homingDistance" : 20,
+  "rotationRate" : 5,
+  "trackingLimit" : 50,
+  
+  "damageKind" : "electricplasmabullet"
+ 
+}

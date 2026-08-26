@@ -1,0 +1,98 @@
+{
+  "projectileName" : "at_ext_sg1",
+  "physics" : "at_ext_bulletfall_br",
+  
+  "timeToLive" : 0.08,
+  "bounces" : 0,
+  "speed" : 112,
+  "power" : 100,
+  "image" : "body.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  
+  "fullbright" : true,
+  "lightColor" : [255, 164, 122],
+  //"emitters" : [ "fireplasma" ],
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [   
+    {
+  "rotate" : false,
+  "time" : 0,
+  "repeat" : false,
+  "action" : "projectile",
+  "inheritDamageFactor" : 1,
+  "autoFlipAdjust" : true,
+  "type" : "at_ext_sg1_2",
+  "angleAdjust" : 5,
+  "fuzzAngle" :3
+  },
+    {
+  "rotate" : false,
+  "time" : 0,
+  "repeat" : false,
+  "action" : "projectile",
+  "inheritDamageFactor" : 1,
+  "autoFlipAdjust" : true,
+  "type" : "at_ext_sg1_2",
+  "angleAdjust" : -5,
+  "fuzzAngle" :3
+  }, 
+    {
+  "rotate" : false,
+  "time" : 0,
+  "repeat" : false,
+  "action" : "projectile",
+  "inheritDamageFactor" : 1,
+  "autoFlipAdjust" : true,
+  "type" : "at_ext_sg1_2",
+  "angleAdjust" : 10,
+  "fuzzAngle" :3
+  },   
+    {
+  "rotate" : false,
+  "time" : 0,
+  "repeat" : false,
+  "action" : "projectile",
+  "inheritDamageFactor" : 1,
+  "autoFlipAdjust" : true,
+  "type" : "at_ext_sg1_2",
+  "angleAdjust" : -10,
+  "fuzzAngle" :3
+  }, 
+    {
+  "rotate" : false,
+  "time" : 0,
+  "repeat" : false,
+  "action" : "projectile",
+  "inheritDamageFactor" : 1,
+  "autoFlipAdjust" : true,
+  "type" : "at_ext_sg1_2",
+  "angleAdjust" : 0,
+  "fuzzAngle" :3
+  },   
+  {
+      "action" : "config",
+      "file" : "/projectiles/explosions/at_ext_sg1/at_ext_sg1.config"
+    }
+  ],
+  
+  "periodicActions" : [
+    {
+  "rotate" : false,
+  "time" : 0,
+  
+  "repeat" : false,
+  "action" : "projectile",
+  "inheritDamageFactor" : 0,
+  "autoFlipAdjust" : true,
+  "type" : "at_ext_sg1_case_trigger",
+  "angleAdjust" : 175,
+  "fuzzAngle" :0
+  }
+  ],
+  
+  "damageKind" : "fireplasmabullet"
+ 
+}

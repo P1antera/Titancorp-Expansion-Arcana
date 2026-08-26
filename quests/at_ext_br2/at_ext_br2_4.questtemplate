@@ -1,0 +1,67 @@
+{
+  "id" : "at_ext_br2_4",
+  "prerequisites" : [ "at_ext_br2_3" ],
+  "mainQuest" : false,
+  
+  "title" : "^#57bbec;''Excelsior'' III: ^reset; Core Components",
+  "text" : "This is the key part of the entire weapon, it will determine the weapon's overall performance... only the best materials will do!",
+  "completionText" : "Wonderful! Come to me when you're ready for the next step.",
+  "canBeAbandoned" : false,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        }
+    },
+    "turnInDescription" : "Give the materials to ^yellow;Scientist.^reset;",
+    "requireTurnIn" : true,
+    "conditions" : [
+	  {
+        "type" : "gatherItem",
+        "itemName" : "orion_crafting_enhancedBattery",
+        "count" : 1,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "wire",
+        "count" : 3,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "arcana_bar_thoriumBar",
+        "count" : 20,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "orion_crafting_ursaplate",
+        "count" : 2,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "workshop_crafting_GS8TechChip",
+        "count" : 1,
+        "consume" : true
+      }
+    ]
+  }
+}

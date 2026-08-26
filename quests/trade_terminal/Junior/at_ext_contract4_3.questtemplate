@@ -1,0 +1,52 @@
+{
+  "id" : "at_ext_contract4_3",
+
+  "prerequisites" : [ "at_ext_contract4" ],
+  "title" : "^cyan;[Junior]^yellow;Special contract^reset;",
+  "text" : "This is an easy ^yellow;delivery^reset; task, all you need to do is deliver the listed items to the designated person. You'll be paid once delivery is completed.
+  
+  manifest:
+===============================  
+  ^yellow;[package x1]^reset;
+===============================",
+
+  "failureText" : "^red;Delivery failed!^reset; You lost the package!",
+  "completionText" : "Thanks,The ^yellow;credits^reset; have been transferred to your account!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    [ "arcana_currency_credit", 200 ]
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/at_ext_contract.lua",
+  "scriptConfig" : {
+    "package" : "at_ext_package",
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "turnInDescription" : "Deliver the ^green;package^reset; to the ^yellow;Jezper^reset; in ^yellow;Novastation.",
+    "requireTurnIn" : true,
+	//"giveItems" : "pkList",
+    "conditions" : [
+      {
+        "type" : "atDelivery",
+        "itemName" : "at_ext_package",
+        "count" : 1,
+        "consume" : true
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "itemName" : "at_ext_drink",
+  "price" : 0,
+  "rarity" : "Common",
+  "category" : "food",
+  "inventoryIcon" : "at_ext_drink.png",
+  "description" : "An energy drink designed to quickly replenish the body's required energy.",
+  "shortdescription" : "Energy Drink",
+  "maxStack" : 999,
+  "tooltipKind" : "at_ext_item",
+  "largeImage" : "at_ext_drink.png",
+  "effects" : [ [
+    {
+      "effect" : "healingwater",
+      "duration" : 50
+    },
+    {
+      "effect" : "energyregen",
+      "duration" : 10
+    },
+    {
+      "effect" : "maxenergyscalingboost",
+      "duration" : 300
+    }
+  ] ],
+  "blockingEffects" : [
+    
+  ],
+  "emote" : "",
+  "emitters" : [ "drinkinghealing" ]
+}

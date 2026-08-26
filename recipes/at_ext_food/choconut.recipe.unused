@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 24 }
+  ],
+  "output" : {
+    "item" : "choconut",
+    "count" : 1
+  },
+  "groups" : ["at_ext_food" ]
+}

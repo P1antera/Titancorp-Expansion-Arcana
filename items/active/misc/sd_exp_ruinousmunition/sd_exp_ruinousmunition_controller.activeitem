@@ -1,0 +1,96 @@
+{
+  "animation": "recondrone_controller.animation",
+  "animationDelta": 5,
+  "animationParts": {
+    "controller": "sd_exp_ruinousmunition_controller.png",
+    "fullbright" : "sd_exp_ruinousmunition_controllerfullbright.png"
+  },
+  "boundingBox": [
+    -1,
+    -1,
+    1,
+    1
+  ],
+  "category": "^yellow;Attacking Drone T2",
+  "description": "A loitering munition based on anti-gravity technology, equipped with a dangerous ruinous fusion warhead.
+  ^green;[Primary]Spawn/Despawn,[Alt]Arm the warhead.^reset;",
+  "inventoryIcon": "sd_exp_ruinousmunition_controller.png",
+  "itemName": "sd_exp_ruinousmunition_controller",
+  "itemTags": [],
+  "level": 7,
+  "maxStack": 1,
+    "handPosition" : [-2, 0],
+  "controllerConfig" : {
+    "stances" : {
+        "idle" : {
+          "frontArmFrame" : "run.2",
+          "allowRotate" : false,
+          "weaponRotation" : -20,
+          "allowFlip" : true,
+          "armRotation" : -25,
+          "weaponOffset" : [-2, -0.2],
+          "twoHanded" : true,
+          "backArmFrame" : "run.5"
+        }
+      },
+    "droneParam" : {
+      "droneConfig" : {
+        "moveConfig" : {
+            "controlForce" : 250,
+            "speed" : 60,
+            "minTriggerDistance" : 2,
+            "maxSpeedDistance" : 14
+          },
+        "abilityClass" : "Fire",
+        "controlType" : "followMouse",
+        "abilityConfig" : {
+          "inaccuracy" : 0,
+          "projectileCount" : 1,
+          "muzzleOffset" : [0, 0],
+          "onGround" : false,
+          "burstTime" : 0.25,
+          "burstCount" : 5,
+          "projectileParam" : {
+			        "timeToLive" : 0,
+              "processing" : "?scale=0",
+              "renderLayer" : "ForegroundEntity+10"
+          },
+          "animationConfig" : {
+            "fireSound" : "fire",
+            "fireAnimation" : {
+              "stateType" : "body",
+              "state" : "fire",
+              "time" : 0.4
+            },
+            "windupAnimation" : {
+              "stateType" : "body",
+              "state" : "firewindup",
+              "time" : 0.6
+            },
+            "winddownAnimation" : {
+              "stateType" : "body",
+              "state" : "firewinddown",
+              "time" : 0.4
+
+            },
+            "turretGroup" : "body",
+            "rotationCenter" : [0, 0]
+          },
+          "fireType" : "single",
+          "projectileType" : "standardbullet"
+        },
+        "abilityScript" : "/droneAbility/fire/fire.lua"
+      }
+    },
+    "droneType":"ruinousmunition",
+    "rightClickCooldown" :1
+  },
+  "price": 0,
+  "rarity": "Legendary",
+  "scripts": [
+    "/scripts/droneControllerBase.lua" //通用控制器脚本，
+  ],
+  "shortdescription": "Ruinous Fusion Warhead Launcher",
+  "tooltipKind": "arcana_base_item",
+  "twoHanded": true
+}

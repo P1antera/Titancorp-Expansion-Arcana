@@ -1,0 +1,197 @@
+{
+  "type" : "loiteringmunition",
+
+  "categories" : [ "loiteringmunition" ],
+  "parts" : [ "body" ],
+  "animation" : "loitering_munition.animation",
+  "reversed" : true,
+  "dropPools" : [],
+  "damageTeam" : { "type" : "friendly", "team" : 0},
+  
+  "baseParameters" : {
+	"clientEntityMode" : "ClientMasterAllowed",
+	
+    "scripts" : [
+      "/monsters/monster.lua", //原版monster脚本
+      "/scripts/droneBase.lua"//通用无人机脚本，一定要写在monster下面
+    ],
+	
+  "droneConfig":{
+    "abilityScript":"/droneAbility/fire/fire.lua",
+    "abilityClass":"Fire",
+    "controlType":"folloMouse",
+    "moveConfig" : {
+            "controlForce" : 125,
+            "speed" : 30,
+            "minTriggerDistance" : 2,
+            "maxSpeedDistance" : 14
+          },
+    "abilityConfig":{
+      "projectileType":"dragonfirelarge",
+      "fireType":"burst",
+      "burstCount":10,
+      "burstTime":2,
+      "projectileParam":{},
+      "animationConfig":{
+            "fireSound" : "fire",
+            "turretGroup" : "",
+            "rotationCenter" : [0, -0.5]
+      }
+    }
+  },
+
+	"behavior" : "monster",
+
+    "behaviorConfig" : {
+      "damageOnTouch" : false,
+
+      "targetQueryRange" : 20,
+      "targetOnDamage" : true,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 50,
+      "targetOutOfSightTime" : 5.0,
+
+      "swoopVelocity" : 30,
+
+      "foundTargetActions" : [ ],
+
+      "fleeActions" : [ ],
+
+      "hostileActions" : [ ],
+
+      "periodicActions" : [ ],
+
+      "approachActions" : [
+      ],
+
+      "followActions" : [
+
+      ],
+
+      "wanderActions" : [
+      ],
+
+      "concurrentActions" : [ ],
+
+      "concurrentHostileActions" : [ ]
+    },
+
+	
+    "metaBoundBox" : [-2.5, -2.5, 2.5, 2.5],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "gravityEnabled" : false,
+      "collisionPoly" : [ [0.625, 0.9375], [0.9, 0.4375], [0.9, -0.4375], [0.625, -0.9375], [-0.625, -0.9375], [-0.9, -0.4375], [-0.9, 0.4375], [-0.625, 0.9375] ],
+	  "ignorePlatformCollision" : true,
+	  
+      "mass" : 1.0,
+      "flySpeed" : 300,
+      "airFriction" : 0.25,
+      "airForce" : 25.0
+    },
+
+    "bodyMaterialKind" : "robotic",
+
+    "knockoutTime" : 0.1,
+    "knockoutEffect" : "blink",
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+
+    "touchDamage" : {
+      "poly" : [ [0.625, 0.9375], [0.9, 0.4375], [0.9, -0.4375], [0.625, -0.9375], [-0.625, -0.9375], [-0.9, -0.4375], [-0.9, 0.4375], [-0.625, 0.9375] ],
+      "damage" : 10,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "lash",
+      "knockback" : 20,
+      "statusEffects" : [ "electrified" ]
+    },
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 1,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.0
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 0
+        },
+		"grit" : {
+          "baseValue" : 0.0
+        },
+        "maxHealth" : {
+          "baseValue" : 300
+        },
+        "protection" : {
+          "baseValue" : 0.0
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        },
+        "physicalResistance" : {
+          "baseValue" : 0.0
+        },
+        "fireResistance" : {
+          "baseValue" : 0.0
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+        "iceResistance" : {
+          "baseValue" : 0.0
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+        "electricResistance" : {
+          "baseValue" : 0.0
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+        "poisonResistance" : {
+          "baseValue" : 0.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 0.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+    "capturable" : true,
+    "captureHealthFraction" : 0.5,
+    "nametagColor" : [64, 200, 255]
+  }
+}

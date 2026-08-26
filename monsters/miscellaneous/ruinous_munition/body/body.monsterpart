@@ -1,0 +1,10 @@
+{
+  "name" : "ruinousmunition",
+  "category" : "ruinousmunition",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "fullbright" : "fullbright.png"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name" : "at_ext_teabag1",
+  "defaultDuration" : 40,
+
+  "scripts" : [
+    "at_ext_teabag1.lua"
+  ],
+
+  "label" : "The Blessing of the Jungle",
+  "icon" : "/interface/statuses/at_ext_teabag1.png"
+}

@@ -1,0 +1,133 @@
+{
+  "objectName" : "at_ext_mining2",
+  "colonyTags" : ["factorypaint"],
+  "rarity" : "Rare",
+  "description" : "^white;An automatic extractor that slowly produces ores. ^orange;Can be wired to other machines.^reset;",
+  "shortdescription" : "^yellow;[TC]^reset;Ore Extractor",
+  "subtitle" : "Turn ores into pixels",
+  "race" : "generic",
+  "category" : "crafting",
+  "price" : 160,
+  "objectType" : "container",
+  "printable" : false,
+  "health" : 1.5,
+
+  //"lightColor" : [179, 149, 107],
+
+  "flickerPeriod" : 0.5,
+  "flickerMinIntensity" : 0.9,
+  "flickerMaxIntensity" : 1,
+  "flickerPeriodVariance" : 0.075,
+  "flickerIntensityVariance" : 0.025,
+  
+  "scripts" : [ "script.lua" ],
+  "scriptDelta" : 2,
+  
+  "inputNodes" : [ [0, 0] ],
+  "outputNodes" : [ [1, 0] ],
+  
+  "animation" : "animation.animation",
+  "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "switchState" : {
+          "states" : {
+            "on" : {
+              "frames" : 7,
+              "cycle" : 0.4,
+			  "mode" : "loop"
+            }
+          }
+        }
+	  }
+    },
+    "sounds" : {
+      "on" : [ "/sfx/objects/console_generic_switchon.ogg" ],
+	  "onloop" : [ "/sfx/objects/terraformer_active_loop.ogg" ],
+      "off" : [ "/sfx/objects/console_generic_switchoff.ogg" ]
+    }
+  },
+  "animationParts" : {
+    "bg" : "1.png",
+    "fg" : "1_fb.png"
+  },
+
+  "inventoryIcon" : "1_icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "1.png:<color>.<frame>", "fullbright" : true }, { "image" : "1_fb.png:<color>.<frame>" } ],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "1.png:<color>.<frame>", "fullbright" : true }, { "image" : "1_fb.png:<color>.<frame>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  
+  "placementImage" : "1.png:default.0",
+  "placementImagePosition" : [0, 0],
+
+  "soundEffect" : "",
+  "soundEffectRangeMultiplier" : 0.5,
+
+  "openSounds" : [ "/sfx/objects/campfire_use.ogg" ],
+  "slotCount" : 3,
+  "uiConfig" : "/interface/arcana/arcana_auto/at_ext_mining2.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600,
+  
+  "resources" : 
+{
+	"tungstenore" : {"name" : "tungstenore", "count" : 2},
+	"titaniumore" : {"name" : "titaniumore", "count" : 2},
+	"durasteelbar" : {"name" : "durasteelore", "count" : 2},
+	"aegisaltore" : {"name" : "aegisaltore", "count" : 2},
+	"feroziumore" : {"name" : "feroziumore", "count" : 2},
+	"violiumore" : {"name" : "violiumore", "count" : 2},
+	"moon" : {"name" : "solidfuel", "count" : 5},
+	
+	
+	"common" : {"name" : "ironore", "count" : 2},
+    "common2" : {"name" : "copperore", "count" : 2},
+	"common3" : {"name" : "goldore", "count" : 2},
+	
+    "arcane" :{ "name" : "arcana_ore_arcaniumOre", "count" : 2 },
+	"arcane2" :{ "name" : "arcana_ore_atlaGoldOre", "count" : 2 },
+	"arcane3" :{ "name" : "arcana_ore_borealiteOre", "count" : 2 },
+	    		 
+    "illuminated" :{ "name" : "arcana_ore_holosiumFragment", "count" : 2 },
+	"illuminated2" :{ "name" : "arcana_ore_necroiumFragment", "count" : 2 },
+	"illuminated3" :{ "name" : "arcana_ore_morphosisShard", "count" : 2 },
+	"illuminated4" :{ "name" : "arcana_ore_animaOre", "count" : 2 }
+	    
+},
+  
+  
+  
+  
+  
+  
+  
+  "maxPower" : 20,
+  "powerUseAmount" : 20,
+  "voltage" : 30,
+  "craftingTime" : 15.0,
+  "outputRate" : 4,
+  "directives" : ""
+
+}

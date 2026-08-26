@@ -1,0 +1,21 @@
+{
+  "itemName" : "at_ext_shippad",
+  "shortdescription" : "^orange;Titanship transponder^reset;",
+  "description" : "Use this to aboard your Titan ship.If you lose it, you can buy a new one in the ^#9e6b55;Magician's Table^reset;, ^red;but you'd better not lose it!",
+  "price" : 0,
+  "tooltipKind" : "at_ext_item",
+  "pickupQuestTemplates" : ["at_ext_shippad"],
+ 
+  "rarity" : "essential",
+  "category" : "tool",
+  "itemTags" : [],
+  "inventoryIcon" : "shippad.png",
+  "largeImage" : "shippad_lg.png",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "animation" : "animation.animation",
+  "animationParts" : {
+    "body" : "shippad.png"
+  },
+  "scripts" : ["at_ext_shippad.lua"]
+}

@@ -1,0 +1,55 @@
+{
+  "id" : "at_ext_d10_item",
+  "prerequisites" : [  ],
+  "mainQuest" : false,
+  
+  "title" : "^yellow;[Item List]^reset;",
+  "text" : "Well done, you've completed the first step. The following items need to be recovered:\n========================\nSecurity Access Card - ^green;acquired^reset;\nEncrypted Data Hard Drive - ^yellow;VIP Room No.1^reset;\nBox No.0241 - ^yellow;Cargo Extraction Terminal No.2^reset;\n========================",
+  "completionText" : "Good job,The ^yellow;credits^reset; have been transferred to your account!",
+  "canBeAbandoned" : false,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    [ "arcana_currency_credit", 6000 ] , [ "at_ext_coupon", 1 ]
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "turnInDescription" : "Deliver all ^green;items^reset; to the ^yellow;Laptop^reset;.",
+    "requireTurnIn" : true,
+    "conditions" : [
+	  {
+        "type" : "gatherItem",
+        "itemName" : "at_ext_keycard_d10",
+        "count" : 1,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "at_ext_pk4",
+        "count" : 1,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "at_ext_hdd",
+        "count" : 1,
+        "consume" : true
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "projectileName" : "blackteabag",
+  "physics" : "grenade",
+  
+  "timeToLive" : 0.5,
+  "bounces" : 0,
+  "speed" : 38,
+  
+  "image" : "blackteabag.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  
+  "fullbright" : true,
+  "lightColor" : [105, 67, 30],
+  "emitters" : ["arcana_particle_ember_yellow","arcana_particle_ember_red"],
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/luyedrone/blacktea/blackteabagexplode.config"
+    }
+  ],
+  
+  "periodicActions" : [
+    {
+      "time" : 0.005,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/luyedrone/blacktea/blackteatrail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.25,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    }
+  ],
+  
+  "damageKind" : "default"
+ 
+}

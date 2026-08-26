@@ -1,0 +1,10 @@
+{
+  "name" : "gs8welder",
+  "category" : "gs8welder",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "fullbright" : "fullbright.png"
+  }
+}

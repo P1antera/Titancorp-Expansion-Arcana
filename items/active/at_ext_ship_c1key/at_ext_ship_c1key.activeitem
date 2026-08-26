@@ -1,0 +1,18 @@
+{
+  "itemName" : "at_ext_ship_c1key",
+  "shortdescription" : "''key''",
+  "description" : "...",
+  "price" : 0,
+  "tooltipKind" : "at_ext_item",
+  "pickupQuestTemplates" : ["at_ext_ship_c1controller"],
+  "scripts" : ["at_ext_ship_c1key.lua"],
+  "rarity" : "essential",
+  "category" : "tool",
+  "itemTags" : [],
+  "inventoryIcon" : "icon.png",
+  "largeImage" : "icon.png",
+  "twoHanded" : true,
+  "maxStack" : 1
+
+
+}

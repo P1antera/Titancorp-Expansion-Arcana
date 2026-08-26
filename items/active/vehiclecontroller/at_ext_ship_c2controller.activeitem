@@ -1,0 +1,34 @@
+{
+  "itemName" : "at_ext_ship_c2controller",
+  "level" : 8,
+  "price" : 0,
+  "rarity" : "essential",
+  "category" : "tool",
+  "description" : "A special custom edition of Titancorp's compact aircraft, featuring a shark-inspired streamlined design for enhanced maneuverability.\n^yellow;Contributor: KanseKwer^reset;",
+  "shortdescription" : "^#9e230e;''Crimson''^reset;",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["at_ext_ship_c2controller.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "at_ext_vehicle",
+  "largeImage" : "at_ext_ship_c2.png",
+
+  "respawnTime" : 1.0,
+
+  //=============Item specifc bits.
+  "vehicleType" : "at_ext_ship_c2",
+  "vehicleBoundingBox" : [-5, -5, 5, 5],
+  "vehicleImage" : "/items/active/vehiclecontroller/at_ext_ship_c2.png",
+
+  "animationParts" : {
+    "casing" : "at_ext_ship_c2controller.png"
+  },
+
+  "inventoryIcon" : "at_ext_ship_c2controller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/at_ext_ship_c2controller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/at_ext_ship_c2controller.png:full"
+}

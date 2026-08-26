@@ -1,0 +1,91 @@
+{
+  "id" : "at_ext_d5",
+  "mainQuest" : true,
+  "canBeAbandoned" : true,
+  "prerequisites" : ["at_ext_d4"],
+  "title" : "^red;[Hard]^yellow;Special mission^reset;",
+  "text" : "We've received intelligence that Orion is testing a new technology. To facilitate this, they have constructed a secret outpost in a remote location for classified experiments. If this technology is successfully developed, it will be integrated into Orion’s military weaponry, posing a significant security threat to us. The prototype blueprint is stored within that outpost. Therefore, we need a contractor to infiltrate the facility under an ''unknown identity'', steal the technology, and ensure this potential threat is eliminated before it become a threat to us.",
+  "completionText" : "Great, We will begin analyzing this blueprint. ^yellow;Payment^reset; have been sent to you!",
+  "moneyRange" : [0, 0],
+  "rewards" : [
+  [ ["arcana_currency_credit", 3000]]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/at_ext_mptg.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+
+    "descriptions" : {
+
+      "enterInstance" : "Go to your ^orange;Titan ship^reset; and talk with the ^yellow;Pilot.^reset;",
+      "turnIn" : "Return to ^orange;Titancorp Laptop^reset;."
+    },
+	
+
+    "warpEntityUid" : "at_ext_pilot",
+
+    "warpAction" : "instanceworld:at_ext_d5",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:at_ext_d5",
+	
+   
+    "targets" : [
+	  {
+      
+        "targetEntityUid" : "at_ext_d5_goal1",
+        "description" : "Retrieve ^yellow;equipment^reset;",
+        "indicator" : true,
+        "targetTrigger" : "interact",
+        "track" : true
+      },
+	  {
+        "targetEntityUid" : "at_ext_d5_goal2",
+        "description" : "Find the ^yellow;blueprint^reset;",
+        "indicator" : true,
+        "targetTrigger" : "proximity",
+		"proximityRange" : 6,
+        "track" : false
+      },
+	  {
+      
+        "targetEntityUid" : "at_ext_d5_goal3",
+        "description" : "Evacuate using the teleporter",
+        "indicator" : true,
+        "targetTrigger" : "interact",
+        "track" : true
+      }
+    ],
+	
+    "checkpoints" : [
+
+
+	  {
+        "checkpointUid" : "at_ext_d5_cp1"
+        
+      },
+	  	 {
+        "checkpointUid" : "at_ext_d5_goal2"
+        
+      }
+	  
+
+	
+      
+    ],	
+
+    //交付任务的uid
+    "turnInEntityUid" : "at_ext_lptp"
+  }
+}

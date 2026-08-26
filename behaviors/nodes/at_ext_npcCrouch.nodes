@@ -1,0 +1,66 @@
+{
+  "atExtCrouchOnHit": {
+    "type": "action",
+    "name": "atExtCrouchOnHit",
+    "title": "atExtCrouchOnHit",
+    "properties": {
+      "chance": {"type": "number", "value": 0.5},
+      "duration": {"type": "number", "value": 0.6}
+    },
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_npcCrouch.lua",
+    "output": {}
+  },
+  "atExtTryCrouch": {
+    "type": "action",
+    "name": "atExtTryCrouch",
+    "title": "atExtTryCrouch",
+    "properties": {
+      "chance": {"type": "number", "value": 0.5},
+      "duration": {"type": "number", "value": 0.6}
+    },
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_npcCrouch.lua",
+    "output": {}
+  },
+  "atExtCombatCrouchTick": {
+    "type": "action",
+    "name": "atExtCombatCrouchTick",
+    "title": "atExtCombatCrouchTick",
+    "properties": {
+      "chance": {"type": "number", "value": 0.5},
+      "duration": {"type": "number", "value": 0.6},
+      "interval": {"type": "number", "value": 2}
+    },
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_npcCrouch.lua",
+    "output": {}
+  },
+  "atExtMaintainCrouch": {
+    "type": "action",
+    "name": "atExtMaintainCrouch",
+    "title": "atExtMaintainCrouch",
+    "properties": {},
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_npcCrouch.lua",
+    "output": {}
+  },
+  "atExtMovementAllowed": {
+    "type": "action",
+    "name": "atExtMovementAllowed",
+    "title": "atExtMovementAllowed",
+    "properties": {},
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_npcCrouch.lua",
+    "output": {}
+  },
+  "atExtMaintainMovementAllowed": {
+    "type": "action",
+    "name": "atExtMaintainMovementAllowed",
+    "title": "atExtMaintainMovementAllowed",
+    "properties": {},
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_npcCrouch.lua",
+    "output": {}
+  }
+}

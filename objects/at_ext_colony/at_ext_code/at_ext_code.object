@@ -1,0 +1,28 @@
+{
+  "objectName" : "at_ext_code",
+  "colonyTags" : ["human","humanprison"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 0,
+  "printable" : false,
+
+  "description" : "''2123''",
+  "shortdescription" : "code",
+  "race" : "human",
+
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "at_ext_code.png:<color>",
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+
+  "smashOnBreak" : true
+}

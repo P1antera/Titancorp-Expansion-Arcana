@@ -1,0 +1,62 @@
+{
+  "projectileName" : "at_ext_shipmissile",
+  "physics" : "laser",
+    "piercing" : false,
+  "timeToLive" : 3,
+  "bounces" : 0,
+
+  "speed" : 100,
+
+
+  "power" : 100.0,
+  "image" : "body.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 4,
+  "renderLayer" : "foregroundEntity",
+  "fullbright" : true,
+  "lightColor" : [250, 178, 128],
+  "pointLight" : true,
+  
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/at_ext_shipmissile.config"
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/regularexplosion2.config"
+    }
+  ],
+
+
+
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/at_ext_ship/at_ext_missile/trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.3,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+  
+  "scripts" : [ "homingprojectile.lua" ],
+  "homingDistance" : 200,
+  "rotationRate" : 10,
+  "trackingLimit" : 200,
+  "homingDelay" : 0.5,
+  "damageKind" : "default"
+ 
+}

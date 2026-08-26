@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 1000 }
+  ],
+  "output" : {
+    "item" : "mechblueprint3",
+    "count" : 1
+  },
+  "duration" : 0.1,
+  "groups" : ["at_ext_supply","at_ext_supply2" ]
+}

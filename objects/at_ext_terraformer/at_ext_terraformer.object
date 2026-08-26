@@ -1,0 +1,59 @@
+{
+  "objectName" : "at_ext_terraformer",
+  "colonyTags" : [],
+  "rarity" : "Legendary",
+  "description" : "Transforms a planet's climate into a bizarrely mutated alien ecosystem.",
+  "shortdescription" : "^orange;TC^reset; Terraformer",
+  "race" : "ancient",
+  "category" : "terraformer",
+  "price" : 0,
+  "printable" : false,
+
+  "inventoryIcon" : "at_ext_terraformer.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "at_ext_terraformer_fb.png:inactive", "fullbright" : true }, { "image" : "at_ext_terraformer_base.png:inactive" } ],
+      "imagePosition" : [-16, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "at_ext_terraformer_fb.png:inactive", "fullbright" : true }, { "image" : "at_ext_terraformer_base.png:inactive" } ],
+      "imagePosition" : [-16, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "health" : 8,
+  "rooting" : true,
+
+  "animation" : "at_ext_terraformer.animation",
+  "animationPosition" : [-16, 0],
+  "animationParts" : {
+    "base" : "at_ext_terraformer_base.png",
+    "baseFullbright" : "at_ext_terraformer_fb.png",
+    "beam" : "beam/at_ext_terraformer_fire.png"
+  },
+
+  "scripts" : ["/objects/at_ext_terraformer/at_ext_terraformer.lua"],
+  "scriptDelta" : 10,
+
+  "terraformOffset" : [-15, 0],
+
+  "minPregenerateTime" : 5,
+  "basePregenerateTime" : 10,
+  "pregenerateTimePerTile" : 0.1,
+
+  "planetTypeChangeThreshold" : 0.5,
+
+  "terraformBiome" : "at_ext",
+  "terraformPlanetType" : "at_ext"
+}

@@ -1,0 +1,287 @@
+{
+  
+              "power" : 0,
+              "knockback" : 0,
+              "piercing" : false,
+              "actionOnReap" : [{
+                              "count" : 2,
+                              "action" : "loop",
+                              "body" : [{
+                                  "angle" : 90,
+                                  "fuzzAngle" : 60,
+                                  "type" : "flamethrower",
+                                  "action" : "projectile",
+                                  "config" : {
+                                    "piercing" : true,
+                                    "hydrophobic" : false,
+                                    "damagePoly" : [[-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6]],
+                                    "physics" : "grenade",
+                                    "speed" : 40,
+                                    "power" : 20,
+                                    "statusEffects" : ["burning", "melting", "vulnerability", "biomeheat"],
+                                    "emitters" : ["flames"],
+                                    "timeToLive" : 2,
+                                    "movementSettings" : {
+                                      "gravityMultiplier" : 1.75
+                                    },
+                                    "damageKind" : "fire",
+                                    "lightColor" : [235, 126, 2],
+                                    "periodicActions" : [{
+                                        "rotate" : true,
+                                        "time" : 0.05,
+                                        "specification" : {
+                                          "image" : "/animations/volcanopoof/volcanopoof.png?setcolor=c6c6c6?multiply=c6c6c677",
+                                          "layer" : "front",
+                                          "timeToLive" : 1,
+                                          "destructionAction" : "fade",
+                                          "variance" : {
+                                            "destructionTime" : 1,
+                                            "position" : [7, 7],
+                                            "timeToLive" : 0.75,
+                                            "size" : 1
+                                          },
+                                          "type" : "textured",
+                                          "destructionTime" : 1,
+                                          "light" : [53, 53, 53],
+                                          "size" : 0.5
+                                        },
+                                        "repeat" : true,
+                                        "action" : "particle"
+                                      }, {
+                                        "inheritDamageFactor" : 0.5,
+                                        "inheritSpeedFactor" : 0.1,
+                                        "action" : "projectile",
+                                        "fuzzAngle" : 180,
+                                        "type" : "flamethrower",
+                                        "time" : 0.09,
+                                        "config" : {
+                                          "statusEffects" : ["burning", "melting", "biomeheat"],
+                                          "speed" : 120,
+                                          "timeToLive" : 1
+                                        }
+                                      }, {
+                                        "inheritDamageFactor" : 0.5,
+                                        "inheritSpeedFactor" : 0.1,
+                                        "action" : "projectile",
+                                        "fuzzAngle" : 180,
+                                        "type" : "flamethrower",
+                                        "time" : 0.09,
+                                        "config" : {
+                                          "statusEffects" : ["burning", "melting", "biomeheat"],
+                                          "speed" : 100,
+                                          "timeToLive" : 0.5
+                                        }
+                                      }],
+                                    "bounces" : 8
+                                  }
+                                }]
+                            }, {
+                              "count" : 5,
+                              "action" : "loop",
+                              "body" : [{
+                                  "options" : ["/sfx/cinematics/opengate/opengate_blast.ogg"],
+                                  "pitch" : 0.6,
+                                  "volume" : 0.7,
+                                  "action" : "sound"
+                                }, {
+                                  "options" : ["/sfx/cinematics/protectorate/stage_blast1.ogg"],
+                                  "pitch" : 0.7,
+                                  "volume" : 0.6,
+                                  "action" : "sound"
+                                }, {
+                                  "options" : ["/sfx/cinematics/protectorate/stage_blast3.ogg"],
+                                  "pitch" : 0.8,
+                                  "volume" : 0.4,
+                                  "action" : "sound"
+                                }, {
+                                  "options" : ["/sfx/gun/ar5.ogg", "/sfx/gun/ar4.ogg", "/sfx/gun/ar3.ogg", "/sfx/gun/ar2.ogg", "/sfx/gun/ar1.ogg"],
+                                  "pitch" : 0.5,
+                                  "volume" : 0.4,
+                                  "action" : "sound"
+                                }, {
+                                  "options" : ["/sfx/gun/fireworkgun_blast1.ogg"],
+                                  "pitch" : 0.4,
+                                  "action" : "sound"
+                                }, {
+                                  "options" : ["/sfx/gun/shotgun2.ogg"],
+                                  "pitch" : 0.6,
+                                  "volume" : 1,
+                                  "action" : "sound"
+                                }]
+                            }, {
+                              "count" : 10,
+                              "action" : "loop",
+                              "body" : [{
+                                  "piercing" : true,
+                                  "action" : "projectile",
+                                  "angle" : 90,
+                                  "fuzzAngle" : 25,
+                                  "type" : "standardbullet",
+                                  "config" : {
+                                    "processing" : "?scale=0",
+                                    "timeToLive" : 0.5,
+                                    "movementSettings" : {
+                                      "maxMovementPerStep" : 0.01,
+                                      "gravityMultiplier" : 0.7,
+                                      "bounceFactor" : 1,
+                                      "collisionPoly" : [[0.15, 0.07], [-0.75, 0.07], [-0.75, -0.07], [0.15, -0.07]],
+                                      "airFriction" : 0.5,
+                                      "groundFriction" : 100,
+                                      "liquidFriction" : 4.75,
+                                      "collisionEnabled" : false
+                                    },
+                                    "actionOnReap" : [{
+                                        "options" : ["/sfx/gun/impact_stone1.ogg"],
+                                        "volume" : 0,
+                                        "action" : "sound"
+                                      }],
+                                    "periodicActions" : [{
+                                        "rotate" : true,
+                                        "time" : 0.05,
+                                        "specification" : {
+                                          "layer" : "front",
+                                          "timeToLive" : 1,
+                                          "destructionAction" : "shrink",
+                                          "animation" : "/animations/fog/fog.animation?brightness=-60",
+                                          "variance" : {
+                                            "destructionTime" : 1,
+                                            "position" : [7, 7],
+                                            "timeToLive" : 0.75,
+                                            "size" : 1.5
+                                          },
+                                          "type" : "animated",
+                                          "destructionTime" : 1,
+                                          "light" : [53, 53, 53],
+                                          "size" : 1
+                                        },
+                                        "repeat" : true,
+                                        "action" : "particle"
+                                      }],
+                                    "speed" : 50
+                                  }
+                                }, {
+                                  "fuzzAngle" : 360,
+                                  "type" : "regularexplosion",
+                                  "action" : "projectile",
+                                  "config" : {
+                                    "piercing" : true,
+                                    "processing" : "?scalenearest=0",
+                                    "hydrophobic" : true,
+                                    "power" : 30,
+                                    "speed" : 50,
+                                    "knockback" : 80,
+                                    "timeToLive" : 0.1,
+                                    "movementSettings" : {
+                                      "bounceFactor" : 1
+                                    },
+                                    "damageType" : "ignoresdef",
+                                    "damageKind" : "hidden",
+                                    "actionOnReap" : [{
+                                        "count" : 6,
+                                        "action" : "loop",
+                                        "body" : [{
+                                            "specification" : {
+                                              "color" : [150, 100, 0, 255],
+                                              "initialVelocity" : [0, 30],
+                                              "approach" : [0, 30],
+                                              "finalVelocity" : [0, -50],
+                                              "layer" : "middle",
+                                              "timeToLive" : 3.6,
+                                              "fullbright" : true,
+                                              "variance" : {
+                                                "initialVelocity" : [7, 7],
+                                                "timeToLive" : 3,
+                                                "size" : 3
+                                              },
+                                              "type" : "ember",
+                                              "light" : [80, 80, 20],
+                                              "size" : 0.8
+                                            },
+                                            "action" : "particle"
+                                          }]
+                                      }],
+                                    "persistentAudio" : "",
+                                    "periodicActions" : [{
+                                        "time" : 0.07,
+                                        "specification" : {
+                                          "initialVelocity" : [0.25, 0.5],
+                                          "layer" : "front",
+                                          "timeToLive" : 1.5,
+                                          "destructionAction" : "shrink",
+                                          "animation" : "/animations/fog/fog.animation?brightness=-60",
+                                          "variance" : {
+                                            "initialVelocity" : [0.5, 1],
+                                            "destructionTime" : 3,
+                                            "position" : [7, 7],
+                                            "timeToLive" : 0.75,
+                                            "size" : 0.5
+                                          },
+                                          "type" : "animated",
+                                          "destructionTime" : 3,
+                                          "light" : [53, 53, 53],
+                                          "size" : 1
+                                        },
+                                        "action" : "particle",
+                                        "rotate" : true
+                                      }, {
+                                        "time" : 0.07,
+                                        "specification" : {
+                                          "initialVelocity" : [0.25, 0.5],
+                                          "layer" : "front",
+                                          "timeToLive" : 1.5,
+                                          "destructionAction" : "shrink",
+                                          "animation" : "/animations/fog/fog.animation?brightness=-60",
+                                          "variance" : {
+                                            "initialVelocity" : [0.5, 1],
+                                            "destructionTime" : 3,
+                                            "position" : [7, 7],
+                                            "timeToLive" : 0.5,
+                                            "size" : 1
+                                          },
+                                          "type" : "animated",
+                                          "destructionTime" : 3,
+                                          "light" : [53, 53, 53],
+                                          "size" : 0.5
+                                        },
+                                        "action" : "particle",
+                                        "rotate" : true
+                                      }, {
+                                        "time" : 0.03,
+                                        "specification" : {
+                                          "image" : "/celestial/system/red_sun.png?setcolor=ff7621",
+                                          "layer" : "middle",
+                                          "timeToLive" : 0,
+                                          "destructionAction" : "fade",
+                                          "fullbright" : true,
+                                          "variance" : {
+                                            "initialVelocity" : [3, 3],
+                                            "destructionTime" : 0.1,
+                                            "position" : [3, 3],
+                                            "timeToLive" : 0.05,
+                                            "size" : 0.1
+                                          },
+                                          "type" : "textured",
+                                          "destructionTime" : 0.1,
+                                          "light" : [255, 118, 33],
+                                          "size" : 0.04
+                                        },
+                                        "action" : "particle",
+                                        "rotate" : true
+                                      }],
+                                    "bounces" : -1
+                                  }
+                                }]
+                            }],
+              "projectileType" : "standardbullet",
+              "speed" : 70,
+              "timeToLive" : 0,
+  "projectileName" : "loitering_munition_projectile",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 0.1,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+  //note:we're using client-side ways making this projectile,sry to expansion modders,but im really fucking lazy!!! - SUZL 
+}

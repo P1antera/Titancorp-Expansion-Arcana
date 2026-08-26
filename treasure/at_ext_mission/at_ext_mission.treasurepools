@@ -1,0 +1,167 @@
+{
+	
+	"at_ext_d1" : [
+        [0, {
+            "fill" : [
+                {"item" : [ "grapplinghook", 1]},
+                {"item" : [ "redstim", 1]},
+                {"item" : [ "cannedfood", 1]}
+            ]
+        }]
+    ],
+	
+		"at_ext_d1_goal" : [
+        [0, {
+            "fill" : [
+                {"item" : [ "arcana_currency_credit", 10]},
+                {"item" : [ "redstim", 1]},
+                {"item" : [ "cannedfood", 1]}
+            ]
+        }]
+    ],
+	
+	
+	"at_ext_d2" : [
+        [0, {
+            "fill" : [
+                {"item" : [ "medkit", 5]},
+                {"item" : [ "redstim", 2]},
+                {"item" : [ "cannedfood", 1]}
+            ]
+        }]
+    ],
+	
+	
+		"at_ext_d3" : [
+        [0, {
+            "fill" : [
+                {"item" : [ "nanowrap", 50]},
+                {"item" : [ "redstim", 10]},
+				{"item" : [ "at_ext_rf3", 1]},
+                {"item" : [ "cannedfood", 5]}
+            ]
+        }]
+    ],
+	
+			"at_ext_d4" : [
+        [0, {
+            "fill" : [
+                {"item" : [ "nanowrap", 50]},
+                {"item" : [ "redstim", 10]},
+				
+                {"item" : [ "cannedfood", 5]}
+            ]
+        }]
+    ],
+
+			"at_ext_d5" : [
+        [0, {
+            "fill" : [
+                {"item" : [ "nanowrap", 80]},
+                {"item" : [ "redstim", 10]},
+
+				
+                {"item" : [ "cannedfood", 5]}
+            ]
+        }]
+    ],
+
+
+			"at_ext_d7" : [
+        [0, {
+            "fill" : [
+                {"item" : [ "at_ext_drink", 3]},
+                {"item" : [ "at_ext_ebar", 2]},
+				{"item" : [ "at_ext_rl", 1]}
+            ]
+        }]
+    ],
+
+			"at_ext_d9" : [
+        [0, {
+            "fill" : [
+                {"item" : [ "arcana_nanopack", 20]},
+                {"item" : [ "redstim", 20]},
+				
+                {"item" : [ "cannedfood", 5]}
+            ]
+        }]
+    ],
+
+			"at_ext_d8" : [
+        [0, {
+            "fill" : [
+                {"item" : [ "arcana_nanopack", 30]},
+                {"item" : [ "at_ext_drink", 1]},
+				
+                {"item" : [ "at_ext_ebar", 1]}
+            ]
+        }]
+    ],
+			"at_ext_d8_end" : [
+        [0, {
+            "fill" : [
+                {"pool" : "LargeDungeonReward"},
+                {"pool" : "apexcityChestTreasure"},	
+
+                {"item" : [ "arcana_bar_refinedAspirite", 5]},
+                {"item" : [ "arcana_bar_refinedImmorite", 5]},
+                {"item" : [ "arcana_bar_refinedNoxion", 5]},
+                {"item" : [ "orion_crafting_enhancedBattery", 2]},
+                {"item" : [ "arcana_evoNanopack", 2]},
+                {"item" : [ "workshop_crafting_motor", 3]},
+                {"item" : [ "arcana_lootbox_legendaryTreasure", 1]},
+                {"item" : [ "prisiliteore", 3]},
+                //{"item" : [ "arcana_essence_tripolarEssence", 1]},
+                {"item" : [ "uraniumrod", 5]},
+
+
+                {"item" : [ "arcana_misc_slipstreamComposite", 1]},
+                {"item" : [ "plutoniumrod", 5]}
+            ]
+        }]
+    ]
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

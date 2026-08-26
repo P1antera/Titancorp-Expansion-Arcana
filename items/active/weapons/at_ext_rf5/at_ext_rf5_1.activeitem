@@ -1,0 +1,167 @@
+{
+  "itemName" : "at_ext_rf5_1",
+  "price" : 10,
+  "maxStack" : 1,
+  
+  "rarity" : "Legendary",
+  "description" : "The latest mass-produced rifle from Section 8, available in multiple variants.",
+  "shortdescription" : "Forgeline-^red;471^reset;",
+  "tooltipKind" : "at_ext_gun",
+  "category" : "assaultRifle",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","assaultrifle","titancorp","upgradeableWeapon"],
+  "level" : 8,
+  "largeImage" : "at_ext_rf5_1_lg.png",
+  "inventoryIcon" : "at_ext_rf5_1_icon.png",
+  
+  "animation" : "/items/active/weapons/ranged/at_ext_gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "at_ext_rf5_1.png",
+	"fullbright" : "fullbright.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/active/weapons/at_ext_rf5/muzzleflash.png"
+  },
+  "animationCustom" : {
+   
+    "animatedParts" : {
+    "stateTypes" : {
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+	"frames" : 1,
+	"mode":"end"	  
+		  },
+          "fire" : {
+            "frames" : 4,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      }
+    },
+	  
+	  "parts" : {
+
+      "fullbright" : {
+        "properties" : {
+		   "offset" : [1.0, 0.2],
+            "image" : null
+        },
+        "partStates" : {
+          "firing" : {
+            "off" : {
+            "properties" : {
+            "image" : "<partImage>:default.4"
+              }
+			},
+			"fire" : {
+              "properties" : {
+                "image" : "<partImage>:default.<frame>"
+              }
+            }
+          }
+        }
+      },
+
+      "middle" : {
+        "properties" : {
+            "image" : null
+        },
+        "partStates" : {
+          "firing" : {
+            "off" : {
+            "properties" : {
+            "image" : "<partImage>:default.4"
+              }
+			},
+			"fire" : {
+              "properties" : {
+                "image" : "<partImage>:default.<frame>"
+              }
+            }
+          }
+        }
+      },
+        "muzzleFlash" : {
+          "properties" : {
+            "offset" : [0.3, -0.1]
+		  }
+        }
+	  }
+	},
+	    "particleEmitters" : {
+      "muzzleFlash" : {
+        "burstCount" : 2,
+        "particles" : [
+          { "particle" : "rocketbarrelpuff" }
+        ]
+      }
+    },
+    "sounds" : {
+      "fire" : ["/sfx/at_ext_rf5_1.ogg"]
+    }
+  },
+
+  "baseOffset" : [1.0, 0.2],
+  "muzzleOffset" : [2.6, 0.22],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "fire",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.1,
+    "baseDps" : 35,
+    "energyUsage" : 80.0,
+    "inaccuracy" : 0.02,
+
+    "projectileCount" : 1,
+    "fireType" : "auto",
+
+    "projectileType" : "at_ext_rf5",
+    "projectileParameters" : {
+	  "speed" : 112,
+      "knockback" : 3
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 2,
+        "weaponOffset" : [-0.4, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "weaponOffset" : [-0.2, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "altAbilityType" : "grenadelauncher",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

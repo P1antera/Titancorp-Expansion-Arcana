@@ -1,0 +1,52 @@
+{
+  "id" : "at_ext_d10",
+  //"mainQuest" : true,
+  "prerequisites" : [ "at_ext_d8" ],
+  "title" : "^yellow;Special mission",
+  "text" : "One of our research space stations has been hit by an unidentified plague, and a large number of personnel are now infected. We need you to head there and retrieve some critical items. ^yellow;There are still many civilians who have not been evacuated, but your primary objective is to ensure the safety of the critical items.^reset;",
+  "completionText" : "Mission Completed!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0,0],
+  "rewards" : [
+    [
+
+    ]
+    ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "descriptions" : {
+      "enterInstance" : "Go to your ^orange;Titan ship^reset; and talk with the ^yellow;Pilot.^reset;",
+      "findGoal" : "Find the security access card and restore power to the Western District.",
+      "turnIn" : "Continue searching or return to the ship for evacuation."
+    },
+	
+    "warpEntityUid" : "at_ext_pilot",
+    "warpAction" : "instanceworld:at_ext_d10",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:at_ext_d10",
+	
+    "goalTrigger" : "interact",
+
+	
+    "goalEntityUid" : "at_ext_d10_goal",
+	"interactEntityUid" : "at_ext_d10_goal",	
+    "indicateGoal" : true,
+    "trackGoalEntity" : false,
+	
+    "turnInEntityUid" : "at_ext_lptp"
+  }
+}

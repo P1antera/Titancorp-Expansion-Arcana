@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 2 }
+  ],
+  "output" : {
+    "item" : "flare",
+    "count" : 1
+  },
+   "duration" : 0.1,
+  "groups" : ["at_ext_shop_main" ]
+}

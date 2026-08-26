@@ -1,0 +1,67 @@
+{
+  "objectName" : "at_ext_pilot_nmission",
+  "colonyTags" : ["misc"],
+  "rarity" : "Legendary",
+  "description" : "A Titancorp Pilot.",
+  "shortdescription" : "Titancorp Pilot",
+  "race" : "generic",
+  "category" : "furniture",
+  "price" : 0,
+
+  "offeredQuests" : [
+  "at_ext_hab_0"
+  ],
+
+  "turnInQuests" : [
+    "at_ext_shippad"
+  ],
+
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "at_ext_pilot.png:<color>.<frame>","fullbright" : true }, { "image" : "at_ext_pilot_fb.png:<color>.<frame>" } ],
+	  "direction" : "left",
+	  "flipImages" : true,
+      "imagePosition" : [-8, 0],
+      "frames" : 16,
+      "animationCycle" : 6.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    },
+	{
+      "imageLayers" : [ { "image" : "at_ext_pilot.png:<color>.<frame>","fullbright" : true }, { "image" : "at_ext_pilot_fb.png:<color>.<frame>" } ],
+	  "direction" : "right",
+      "imagePosition" : [-8, 0],
+      "frames" : 16,
+      "animationCycle" : 6.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+  
+  "animation" : "at_ext_pilot.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "talk" : [ "/sfx/humanoid/human_chatter_female1.ogg" ]
+    }
+  },  
+  
+  
+  
+  "scripts" : [ "/scripts/chattyObject.lua" ],
+  "scriptDelta" : 20,
+  "mouthPosition" : [0.0, 0.2],
+
+  "chatOptions" : [
+    "Hi, I'm Awa, your pilot!",
+    "Wherever you want!",
+	
+	"You're looking good!",
+    "(^▽^)"
+  ]
+}

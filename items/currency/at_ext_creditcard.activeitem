@@ -1,0 +1,25 @@
+{
+  "itemName" : "at_ext_creditcard",
+  "rarity" : "Legendary",
+  "maxStack" : 100,
+  "tooltipKind" : "at_ext_item",
+  "category" : "currency",
+  "animation" : "at_ext_creditcard.animation",
+  "inventoryIcon" : "at_ext_creditcard.png",
+  "largeImage" : "at_ext_creditcard.png",
+  "scripts" : ["at_ext_creditcard.lua"],
+  "animationCustom" : {},
+  "twoHanded" : true,
+
+  "fireTime" : 2.0,
+  "fireOffset" : [1.0, 0.0],
+
+  "description" : "A translucent blue card storing digital currency worth 20,000 credits. \n^green;Redeemable for 20,000 credits upon use.^reset;",
+  "shortdescription" : "^blue;Credit card^reset;",
+  
+  "treasure" : {
+    "pool" : "at_ext_creditcard",
+    "level" : 1
+  }
+  
+}

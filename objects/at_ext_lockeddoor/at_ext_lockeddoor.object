@@ -1,0 +1,58 @@
+{
+  "objectName" : "at_ext_lockeddoor",
+  "colonyTags" : ["titancorp","door"],
+  "rarity" : "Rare",
+
+  "category" : "door",
+  "price" : 120,
+  "description" : "A simple metal door.",
+  "shortdescription" : "Titancorp Door",
+  "race" : "generic",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "body.png:default",
+      "imagePosition" : [0, 0],
+      "renderLayer" : "Object+5",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom", "top" ]
+    }
+  ],
+
+  "scripts" : [ "arcana_lua_lockedDoor.lua" ],
+  "scriptDelta" : 5,
+  
+  "inactiveInteractAction" : "ScriptPane",
+  "inactiveInteractData" : {
+	"baseConfig" : "/interface/scripted/arcana_lockedDoor/arcana_lockedDoor.config",
+	"paneLayoutOverride" : {},
+	"itemImagePath" : "/items/at_ext_crates/at_ext_ct4.png",
+	"activateItem" : "at_ext_ct4",
+	"requiredCount" : 4
+  },
+
+
+
+  "animation" : "animation.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "open" : {
+        "pool" : [ "/sfx/objects/apexcooldoor_open.ogg" ],
+        "rangeMultiplier" : 0.5
+      },
+      "close" : {
+        "pool" : [ "/sfx/objects/apexcooldoor_close.ogg" ],
+        "rangeMultiplier" : 0.5
+      }
+    }
+  },
+  "animationParts" : {
+    "door" : "body.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "inputNodes" : [ [0, 0] ],
+  "outputNodes" : [ [1, 0] ]
+}

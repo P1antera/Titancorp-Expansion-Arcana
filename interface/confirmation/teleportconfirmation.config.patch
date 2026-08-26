@@ -1,0 +1,310 @@
+[
+	{
+		"op" : "add",
+		"path" : "/at_ext_dailyjob1",
+		"value" : {
+    		"paneLayout" : "/interface/windowconfig/portraitconfirmation.config:paneLayout",
+    		"icon" : "/interface/warping/icon.png",
+    		"title" : "Teleport Confirmation",
+    		"subtitle" : "^yellow;Deploy to Sewer sector.",
+    		"message" : "Search for clues!\n^red;Threat level : 1^reset;",
+    		"okCaption" : "Deploy to area!",
+    		"cancelCaption" : "Not now",
+    		"images" : {
+      			"portrait" : [
+        			{"image" : "/quests/at_ext_quest.png"}
+      			]
+    		},
+    		"labels" : {
+      			"name" : "Forgex"
+    		}
+  		}	
+	},
+
+
+	{	
+		"op" : "add",
+		"path" : "/at_ext_d1",
+		"value" : {
+    		"paneLayout" : "/interface/windowconfig/portraitconfirmation.config:paneLayout",
+    		"icon" : "/interface/warping/icon.png",
+    		"title" : "Teleport Confirmation",
+    		"subtitle" : "^yellow;Search the shipwreck and secure the cargo",
+    		"message" : "You need to search this area, find the wreckage of the spacecraft, locate the ^yellow;cargo^reset;, and then leave everything to us!^red;Require mech!",
+    		"okCaption" : "Deploy to area!",
+    		"cancelCaption" : "Not now",
+    		"images" : {
+      			"portrait" : [
+        			{"image" : "/quests/at_ext_quest.png"}
+      			]
+    		},
+    		"labels" : {
+      			"name" : "Titancorp"
+    		}
+  		}	
+	},
+	
+
+	{	
+		"op" : "add",
+		"path" : "/at_ext_d2",
+		"value" : {
+    		"paneLayout" : "/interface/windowconfig/portraitconfirmation.config:paneLayout",
+    		"icon" : "/interface/warping/icon.png",
+    		"title" : "Teleport Confirmation",
+    		"subtitle" : "^yellow;Deploy to the ^red;occupied area",
+    		"message" : "You need to clear this area, once you confirm that the area is safe, activate the beacon and let us know!\n^red;Threat level:5",
+    		"okCaption" : "Deploy!",
+    		"cancelCaption" : "Not now",
+    		"images" : {
+      			"portrait" : [
+        			{"image" : "/quests/at_ext_quest.png"}
+      			]
+    		},
+    		"labels" : {
+      			"name" : "Titancorp"
+    		}
+  		}	
+	},
+
+	{	
+		"op" : "add",
+		"path" : "/at_ext_d3",
+		"value" : {
+    		"paneLayout" : "/interface/windowconfig/portraitconfirmation.config:paneLayout",
+    		"icon" : "/interface/warping/icon.png",
+    		"title" : "Teleport Confirmation",
+    		"subtitle" : "^yellow;Deploy to the ^red;Target's Location",
+    		"message" : "You need to eliminate all hostile and retake the ^yellow;ship^reset;\n^red;Threat level:7\n^red;Require mech!",
+    		"okCaption" : "Deploy!",
+    		"cancelCaption" : "Not now",
+    		"images" : {
+      			"portrait" : [
+        			{"image" : "/quests/at_ext_quest.png"}
+      			]
+    		},
+    		"labels" : {
+      			"name" : "Titancorp"
+    		}
+  		}	
+	},
+
+	{	
+		"op" : "add",
+		"path" : "/at_ext_d4",
+		"value" : {
+    		"paneLayout" : "/interface/windowconfig/portraitconfirmation.config:paneLayout",
+    		"icon" : "/interface/warping/icon.png",
+    		"title" : "Teleport Confirmation",
+    		"subtitle" : "^yellow;Deploy to the ^red;Mining Facility",
+    		"message" : "You need to retrieve the ^yellow;security record and experiment data^reset;\n^red;Threat level:8",
+    		"okCaption" : "Deploy!",
+    		"cancelCaption" : "Not now",
+    		"images" : {
+      			"portrait" : [
+        			{"image" : "/quests/at_ext_quest.png"}
+      			]
+    		},
+    		"labels" : {
+      			"name" : "Titancorp"
+    		}
+  		}	
+	},
+	{	
+		"op" : "add",
+		"path" : "/at_ext_d5",
+		"value" : {
+    		"paneLayout" : "/interface/windowconfig/portraitconfirmation.config:paneLayout",
+    		"icon" : "/interface/warping/icon.png",
+    		"title" : "Teleport Confirmation",
+    		"subtitle" : "^yellow;Deploy to the site^reset;",
+    		"message" : "You need to find the ^yellow;Prototype Blueprint^reset;.^red;\nNo backup will be provided!\nThreat level:8^reset;",
+    		"okCaption" : "Deploy!",
+    		"cancelCaption" : "Not now",
+    		"images" : {
+      			"portrait" : [
+        			{"image" : "/quests/at_ext_quest.png"}
+      			]
+    		},
+    		"labels" : {
+      			"name" : "Titancorp"
+    		}
+  		}	
+	},
+	{	
+		"op" : "add",
+		"path" : "/at_ext_rl2",
+		"value" : {
+    		"paneLayout" : "/interface/windowconfig/portraitconfirmation.config:paneLayout",
+    		"icon" : "/interface/warping/icon.png",
+    		"title" : "Teleport Confirmation",
+    		"subtitle" : "^yellow;Go to the Titancolony^reset;",
+    		"message" : "Find the sender.",
+    		"okCaption" : "Go!",
+    		"cancelCaption" : "Not now",
+    		"images" : {
+      			"portrait" : [
+        			{"image" : "/quests/at_ext_quest.png"}
+      			]
+    		},
+    		"labels" : {
+      			"name" : "Titancorp"
+    		}
+  		}	
+	},
+	{	
+		"op" : "add",
+		"path" : "/at_ext_br2",
+		"value" : {
+    		"paneLayout" : "/interface/windowconfig/portraitconfirmation.config:paneLayout",
+    		"icon" : "/interface/warping/icon.png",
+    		"title" : "Teleport Confirmation",
+    		"subtitle" : "^yellow;Go to the Titancolony^reset;",
+    		"message" : "",
+    		"okCaption" : "Go!",
+    		"cancelCaption" : "Not now",
+    		"images" : {
+      			"portrait" : [
+        			{"image" : "/quests/at_ext_quest.png"}
+      			]
+    		},
+    		"labels" : {
+      			"name" : "Titancorp"
+    		}
+  		}	
+	},
+	{	
+		"op" : "add",
+		"path" : "/at_ext_d6",
+		"value" : {
+    		"paneLayout" : "/interface/windowconfig/portraitconfirmation.config:paneLayout",
+    		"icon" : "/interface/warping/icon.png",
+    		"title" : "Teleport Confirmation",
+    		"subtitle" : "^yellow;Deploy to the site^reset;",
+    		"message" : "You need to find the ^yellow;lost cargos^reset;.^red;\nThreat level:8^reset;",
+    		"okCaption" : "Deploy!",
+    		"cancelCaption" : "Not now",
+    		"images" : {
+      			"portrait" : [
+        			{"image" : "/quests/at_ext_quest.png"}
+      			]
+    		},
+    		"labels" : {
+      			"name" : "Titancorp"
+    		}
+  		}	
+	},
+
+	{	
+		"op" : "add",
+		"path" : "/at_ext_d7",
+		"value" : {
+    		"paneLayout" : "/interface/windowconfig/portraitconfirmation.config:paneLayout",
+    		"icon" : "/interface/warping/icon.png",
+    		"title" : "Teleport Confirmation",
+    		"subtitle" : "^yellow;Deploy to the site^reset;",
+    		"message" : "You need to test the prototype weapon at the designated location.",
+    		"okCaption" : "Deploy!",
+    		"cancelCaption" : "Not now",
+    		"images" : {
+      			"portrait" : [
+        			{"image" : "/quests/at_ext_quest.png"}
+      			]
+    		},
+    		"labels" : {
+      			"name" : "Titancorp"
+    		}
+  		}	
+	},
+
+	{	
+		"op" : "add",
+		"path" : "/at_ext_d8",
+		"value" : {
+    		"paneLayout" : "/interface/windowconfig/portraitconfirmation.config:paneLayout",
+    		"icon" : "/interface/warping/icon.png",
+    		"title" : "Teleport Confirmation",
+    		"subtitle" : "^yellow;Deploy to the site^reset;",
+    		"message" : "You need to Ensure the safety of the client and their assets.\n^red;Threat level:9",
+    		"okCaption" : "Deploy!",
+    		"cancelCaption" : "Not now",
+    		"images" : {
+      			"portrait" : [
+        			{"image" : "/quests/at_ext_quest.png"}
+      			]
+    		},
+    		"labels" : {
+      			"name" : "Titancorp"
+    		}
+  		}	
+	},
+
+	{	
+		"op" : "add",
+		"path" : "/at_ext_d9",
+		"value" : {
+    		"paneLayout" : "/interface/windowconfig/portraitconfirmation.config:paneLayout",
+    		"icon" : "/interface/warping/icon.png",
+    		"title" : "Teleport Confirmation",
+    		"subtitle" : "^yellow;Deploy to the site^reset;",
+    		"message" : "You need to investigate the signal source at the area.\n^red;Threat level:9",
+    		"okCaption" : "Deploy!",
+    		"cancelCaption" : "Not now",
+    		"images" : {
+      			"portrait" : [
+        			{"image" : "/quests/at_ext_quest.png"}
+      			]
+    		},
+    		"labels" : {
+      			"name" : "Titancorp"
+    		}
+  		}	
+	},
+
+	{	
+		"op" : "add",
+		"path" : "/at_ext_d10",
+		"value" : {
+    		"paneLayout" : "/interface/windowconfig/portraitconfirmation.config:paneLayout",
+    		"icon" : "/interface/warping/icon.png",
+    		"title" : "Teleport Confirmation",
+    		"subtitle" : "^yellow;Deploy to the site^reset;",
+    		"message" : "Search, Engage, Evacuate.\n^red;Threat level:9",
+    		"okCaption" : "Deploy!",
+    		"cancelCaption" : "Not now",
+    		"images" : {
+      			"portrait" : [
+        			{"image" : "/quests/at_ext_quest.png"}
+      			]
+    		},
+    		"labels" : {
+      			"name" : "Titancorp"
+    		}
+  		}	
+	},
+	{	
+		"op" : "add",
+		"path" : "/at_ext_d11",
+		"value" : {
+    		"paneLayout" : "/interface/windowconfig/portraitconfirmation.config:paneLayout",
+    		"icon" : "/interface/warping/icon.png",
+    		"title" : "Teleport Confirmation",
+    		"subtitle" : "^yellow;Deploy to the site^reset;",
+    		"message" : "\n^red;Threat level:8",
+    		"okCaption" : "Deploy!",
+    		"cancelCaption" : "Not now",
+    		"images" : {
+      			"portrait" : [
+        			{"image" : "/quests/at_ext_unknown2.png"}
+      			]
+    		},
+    		"labels" : {
+      			"name" : "Unknown"
+    		}
+  		}	
+	}
+
+
+
+
+]

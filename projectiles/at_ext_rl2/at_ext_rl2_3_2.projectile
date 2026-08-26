@@ -1,0 +1,31 @@
+{
+  "projectileName" : "at_ext_rl2_3_2",
+  "physics" : "laser",
+  "piercing" : false,
+  "timeToLive" : 0.01,
+  "speed" : 100,
+  "knockback" : 0,
+  "power" : 800,
+  
+  "movementSettings" : {
+  "bounceFactor" : 0
+  },
+  "image" : "assetmissing.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "damageTeam" : { "type" : "indiscriminate" },
+  //"damageType" : "NoDamage",
+  "damageKind" : "plasma",
+  "actionOnTimeout" :
+  [    
+{
+  "action" : "projectile",
+  "inheritDamageFactor" : 1,
+  "autoFlipAdjust" : true,
+  "type" : "at_ext_rl2_3_expl",
+  "angleAdjust" : 0,
+  "fuzzAngle" :0
+  }
+]
+
+}

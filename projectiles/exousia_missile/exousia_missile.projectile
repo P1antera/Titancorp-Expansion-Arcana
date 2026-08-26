@@ -1,0 +1,45 @@
+{
+  "projectileName" : "exousia_missile",
+  "image" : "body.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [244, 89, 72],
+  "pointLight" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/doomgrenadeexplosion/doomgrenadeexplosion.config"
+    }
+  ],
+    "periodicActions" : [
+    {
+      "time" : 0.005,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/exousia_missile/trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    }
+  ],
+  "emitters" : [ "arcana_particle_ember_red" ],
+  "power" : 10.0,
+  "speed" : 20.0,
+  "timeToLive" : 10.0,
+  "acceleration" : 50,
+  "physics" : "rocket",
+  "damageKind" : "default",
+
+  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
+  "scriptDelta" : 3,
+  "rotationRate" : 500,
+  "trackingLimit" : 400.0
+}

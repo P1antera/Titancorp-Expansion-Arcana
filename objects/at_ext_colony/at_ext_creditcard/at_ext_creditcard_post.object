@@ -1,0 +1,24 @@
+{
+  "objectName" : "at_ext_creditcard_post",
+  "colonyTags" : ["misc", "titancorp", "science"],
+  "rarity" : "Rare",
+  "description" : "A credit card poster.",
+  "shortdescription" : "Poster",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 0,
+   
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "body.png:<color>",
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "objectName" : "sd_exp_droneshop",
+  "colonyTags" : ["crafting"],
+  "rarity" : "Legendary",
+  "price" : 1000,
+  "interactAction" : "OpenCraftingInterface",
+  "interactData" : {
+    "config" : "/interface/sd_exp_crafting/sd_exp_shop/sd_exp_shop.config",
+    "filter" : [ "sd_exp_droneshop" ]
+  },
+  "printable" : false,
+  "description" : "Buy drones from Orion Cybernetics!",
+  "shortdescription" : "^blue;Orion Cybernetics Drone Shop^white;",
+  "race" : "generic",
+  "category" : "crafting",
+
+  "apexDescription" : "I guess there's an OSR-DEMOL inside the large crate.",
+  "avianDescription" : "Why don't they sell drones made of avolite?",
+  "floranDescription" : "Floran can buy dronesssss here!",
+  "glitchDescription" : "Pleased. This shop also provides upgrade and recharge. Very handy.",
+  "humanDescription" : "I can buy and upgrade drones here!",
+  "hylotlDescription" : "No lethia drones?Come on!",
+  "novakidDescription" : "A shop for all fly'n fellas related.",
+
+  "inventoryIcon" : "droneshopicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "droneshop.png:<color>",
+      "flipImages" : true,
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

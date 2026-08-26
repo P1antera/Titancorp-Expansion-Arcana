@@ -1,0 +1,11 @@
+{
+  "name" : "at_ext_turret",
+  "category" : "at_ext_turret",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "turretfullbright" : "turretfullbright.png",
+    "turret" : "turret.png"
+  }
+}

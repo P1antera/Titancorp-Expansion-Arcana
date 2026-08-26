@@ -1,0 +1,56 @@
+{
+  "objectName": "at_ext_cardreader",
+  "colonyTags": ["titancorp"],
+  "printable": false,
+  "rarity": "Common",
+  "description": "Requires keycard for access",
+  "shortdescription": "Keycard Reader",
+  "race": "human",
+  "category": "wire",
+  "price": 0,
+  
+  "inventoryIcon": "icon.png",
+  "orientations": [
+    {
+      "imageLayers" : [ { "image" : "at_ext_cardreader.png:default.off", "fullbright" : false }, { "image" : "at_ext_cardreader_fb.png:default.off", "fullbright" : true } ],
+      //"image": "at_ext_cardreader.png",
+	  "direction" : "left",
+	  "flipImages" : true,
+      "imagePosition": [0, 0],
+      "fullbright": true,
+      "spaceScan": 0.1,
+      "anchors": ["background"]
+    },
+    {
+      "imageLayers" : [ { "image" : "at_ext_cardreader.png:default.off", "fullbright" : false }, { "image" : "at_ext_cardreader_fb.png:default.off", "fullbright" : true } ],
+      //"image": "at_ext_cardreader.png",
+	  "direction" : "right",
+
+      "imagePosition": [0, 0],
+      "fullbright": true,
+      "spaceScan": 0.1,
+      "anchors": ["background"]
+    }
+  ],
+  
+  "scripts": ["/objects/wired/at_ext_cardreader/at_ext_cardreader.lua"],
+  "scriptDelta": 10,
+  
+  "requiredItem": "at_ext_keycard_d10",
+  "consumeItem": false,
+  
+  "animation": "/objects/wired/at_ext_cardreader/at_ext_cardreader.animation",
+  "animationCustom": {
+    "sounds": {
+      "unlock": ["/sfx/dailysupply/at_ext_supplygranted.ogg"],
+      "denied": ["/sfx/dailysupply/at_ext_supplydenied.ogg"]
+    }
+  },
+  
+  "animationParts": {
+    "switch": "at_ext_cardreader.png",
+    "fullbright": "at_ext_cardreader_fb.png"
+  },
+  
+  "outputNodes": [[0, 0]]
+}

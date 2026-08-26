@@ -1,0 +1,47 @@
+{
+  "projectileName" : "at_ext_bomb_shard2",
+  "physics" : "at_ext_bombshard",
+  "piercing" : true,
+  "timeToLive" : 0.1,
+  "speed" : 30,
+  "knockback" : 0,
+    "power" : 100.0,
+  
+  "movementSettings" : {
+  "bounceFactor" : 0
+  },
+  "image" : "assetmissing.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  //"damageType" : "default",
+  "damageKind" : "default",
+    "periodicActions" : [
+            {
+              "time" : 0.05,
+             //"repeat" : true,
+              "action" : "particle",
+               "rotate" : true,
+              "specification" : {
+                "type" : "animated",
+                "animation" : "/animations/at_ext_dust/at_ext_dust1.animation",
+                //"approach" : [20, 20],
+                "timeToLive" : 5.5,
+				        "fade": 0.5,
+                "finalVelocity" : [0, 0],
+                "initialVelocity" : [1, 0],
+                "ignoreWind" : false,
+                "collidesForeground" : true,
+                "collidesLiquid" : true,
+				        "size": 1.5,
+                "variance" : {
+                "initialVelocity" : [1, 0],
+                "finalVelocity" : [0, 0],
+				        "size": 1,
+                "timeToLive" : 5,
+                "rotation" : 360
+                }
+              }
+            }
+  ]
+
+}

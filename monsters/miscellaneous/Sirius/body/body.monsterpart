@@ -1,0 +1,10 @@
+{
+  "name" : "Sirius",
+  "category" : "Sirius",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "fullbright" : "fullbright.png"
+  }
+}

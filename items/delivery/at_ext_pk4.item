@@ -1,0 +1,11 @@
+{
+  "itemName" : "at_ext_pk4",
+  "rarity" : "common",
+  "category" : "quest",
+  "tooltipKind" : "at_ext_qitem",
+  "largeImage" : "at_ext_pk4_lg.png",
+  "inventoryIcon" : "at_ext_pk4.png",
+  "description" : "A crate filled with a certain compound.The key information has been obscured.",
+  "shortdescription" : "^yellow;[box #0241]^reset;",
+  "price" : 0
+}

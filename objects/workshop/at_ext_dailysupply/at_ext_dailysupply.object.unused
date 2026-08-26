@@ -1,0 +1,63 @@
+{
+  "objectName" : "at_ext_dailysupply",
+  "colonyTags" : ["crafting"],
+  "rarity" : "Legendary",
+  "category" : "crafting",
+  "description" : "Offers supply everyday!",
+  "shortdescription" : "Daily supply terminal",
+  "race" : "generic",
+  "printable" : false,
+  "tooltipKind": "at_ext_item",
+  "largeImage" : "at_ext_dailysupply_lg.png",
+  "animation" : "/objects/workshop/at_ext_dailysupply/at_ext_dailysupply.animation",
+  "tooltipFields": {
+    "subtitle": "test"
+  },
+  "price" : 0,
+  "lightColor" : [179, 149, 107],
+
+  "flickerPeriod" : 0.3,
+  "flickerMinIntensity" : 0.95,
+  "flickerMaxIntensity" : 1,
+  "flickerPeriodVariance" : 0.075,
+  "flickerIntensityVariance" : 0.025,
+  // Masking Fullbright Transparency Values: 0% brightness on lights, 75% brightness on posters in window, 70% on window
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "at_ext_dailysupply.png:<color>.<frame>", "fullbright" : true }, { "image" : "at_ext_dailysupplylit.png:<color>.<frame>" } ],
+      "imagePosition" : [0, 0],
+
+      "direction" : "right",
+
+      "lightPosition" : [0, 2],
+      "frames" : 1,
+      "animationCycle" : 1,
+
+
+      "spaceScan" : 0.1,
+
+      "anchors" : [ "background" ]
+    }
+  ],
+
+
+
+  "scripts" : [ "at_ext_dailysupply.lua" ],
+  "scriptDelta" : 10,
+
+  "rotationTime" : 100,
+  "selectCount" : 2,
+  "inventoryPool" : [
+    "clawglove",
+    "fireboomerang",
+    "hardchakram",
+    "iceboomerang",
+    "lunarang",
+    "neochakram",
+    "sawchakram",
+    "stunglove",
+    "vinefist"
+  ]
+}

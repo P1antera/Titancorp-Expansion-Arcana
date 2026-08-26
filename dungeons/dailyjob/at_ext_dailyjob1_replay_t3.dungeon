@@ -1,0 +1,326 @@
+{
+  "metadata" : {
+    "name" : "at_ext_dailyjob1_replay_t3",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "at_ext_dailyjob1_start_rply", "at_ext_dailyjob1_start_rply2"],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 500,
+    "protected" : true
+  },  
+  "parts" : [
+//                   Start
+    {
+      "name" : "at_ext_dailyjob1_start_rply",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "maxSpawnCount", [1] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", ["at_ext_dailyjob1_start_rply2" ] ]
+      ],
+      "def" : [ "tmx", [ "at_ext_dailyjob1_start_rply.json" ] ],
+      "chance" : 1000
+    },
+    {
+      "name" : "at_ext_dailyjob1_start_rply2",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "maxSpawnCount", [1] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", ["at_ext_dailyjob1_start_rply" ] ]
+      ],
+      "def" : [ "tmx", [ "at_ext_dailyjob1_start_rply2.json" ] ],
+      "chance" : 1000
+    },
+//                    end
+    {
+      "name" : "at_ext_dailyjob1_end_rply",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "maxSpawnCount", [1] ],
+        [ "doNotConnectToPart", [ "at_ext_dailyjob1_start_rply", "at_ext_dailyjob1_start_rply2" ] ],
+        [ "doNotCombineWith", [  ] ]
+      ],
+      "def" : [ "tmx", [ "at_ext_dailyjob1_end_rply.json" ] ],
+      "chance" : 500
+    },
+//        end cap
+    {
+      "name" : "at_ext_dailyjob1_Lend",
+      "rules" : [
+        [ "maxSpawnCount", [99] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_Lend.json"] ],
+      "chance" : 1
+    },
+    {
+      "name" : "at_ext_dailyjob1_Lend2",
+      "rules" : [
+        [ "maxSpawnCount", [99] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_Lend2.json"] ],
+      "chance" : 1
+    },
+    {
+      "name" : "at_ext_dailyjob1_Botmend",
+      "rules" : [
+        [ "maxSpawnCount", [99] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_Botmend.json"] ],
+      "chance" : 1
+    },
+    {
+      "name" : "at_ext_dailyjob1_Topend",
+      "rules" : [
+        [ "maxSpawnCount", [99] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_Topend.json"] ],
+      "chance" : 1
+    },
+    {
+      "name" : "at_ext_dailyjob1_Rend",
+      "rules" : [
+        [ "maxSpawnCount", [99] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_Rend.json"] ],
+      "chance" : 1
+    },
+    {
+      "name" : "at_ext_dailyjob1_Rend2",
+      "rules" : [
+        [ "maxSpawnCount", [99] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_Rend2.json"] ],
+      "chance" : 1
+    },
+
+//              rooms
+    {
+      "name" : "at_ext_dailyjob1_TCroom",
+      "rules" : [
+        [ "maxSpawnCount", [1] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_TCroom.json"] ],
+      "chance" : 750
+    },
+    {
+      "name" : "at_ext_dailyjob1_TCroom2",
+      "rules" : [
+        [ "maxSpawnCount", [1] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_TCroom2.json"] ],
+      "chance" : 750
+    },
+    {
+      "name" : "at_ext_dailyjob1_c1room",
+      "rules" : [
+        [ "maxSpawnCount", [2] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_c1room.json"] ],
+      "chance" : 1000
+    },
+    {
+      "name" : "at_ext_dailyjob1_c1room2",
+      "rules" : [
+        [ "maxSpawnCount", [2] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_c1room2.json"] ],
+      "chance" : 1000
+    },
+    {
+      "name" : "at_ext_dailyjob1_hstroom",
+      "rules" : [
+        [ "maxSpawnCount", [2] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_hstroom.json"] ],
+      "chance" : 1000
+    },
+    {
+      "name" : "at_ext_dailyjob1_hstroom2",
+      "rules" : [
+        [ "maxSpawnCount", [2] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_hstroom2.json"] ],
+      "chance" : 1000
+    },
+    {
+      "name" : "at_ext_dailyjob1_hstroom3",
+      "rules" : [
+        [ "maxSpawnCount", [2] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_hstroom3.json"] ],
+      "chance" : 1000
+    },
+    {
+      "name" : "at_ext_dailyjob1_largeroom",
+      "rules" : [
+        [ "maxSpawnCount", [2] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_largeroom.json"] ],
+      "chance" : 1000
+    },
+    {
+      "name" : "at_ext_dailyjob1_largeroom2",
+      "rules" : [
+        [ "maxSpawnCount", [2] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_largeroom2.json"] ],
+      "chance" : 1000
+    },
+    {
+      "name" : "at_ext_dailyjob1_largeroom3",
+      "rules" : [
+        [ "maxSpawnCount", [2] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_largeroom3.json"] ],
+      "chance" : 1000
+    },
+//              connector
+    {
+      "name" : "at_ext_dailyjob1_connect1",
+      "rules" : [
+        [ "maxSpawnCount", [2] ],
+        [ "doNotConnectToPart", [ "at_ext_dailyjob1_connect1" ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_connect1.json"] ],
+      "chance" : 1000
+    },
+    {
+      "name" : "at_ext_dailyjob1_connect2",
+      "rules" : [
+        [ "maxSpawnCount", [2] ],
+        [ "doNotConnectToPart", ["at_ext_dailyjob1_connect2" ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_connect2.json"] ],
+      "chance" : 1000
+    },
+    {
+      "name" : "at_ext_dailyjob1_connect3",
+      "rules" : [
+        [ "maxSpawnCount", [2] ],
+        [ "doNotConnectToPart", ["at_ext_dailyjob1_connect3" ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_connect3.json"] ],
+      "chance" : 1000
+    },
+    {
+      "name" : "at_ext_dailyjob1_connect4",
+      "rules" : [
+        [ "maxSpawnCount", [1] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_connect4.json"] ],
+      "chance" : 1500
+    },
+    {
+      "name" : "at_ext_dailyjob1_connect4_hst",
+      "rules" : [
+        [ "maxSpawnCount", [1] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_connect4_hst.json"] ],
+      "chance" : 1500
+    },
+    {
+      "name" : "at_ext_dailyjob1_connect5",
+      "rules" : [
+        [ "maxSpawnCount", [2] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_connect5.json"] ],
+      "chance" : 1500
+    },
+    {
+      "name" : "at_ext_dailyjob1_connect6",
+      "rules" : [
+        [ "maxSpawnCount", [2] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_connect6.json"] ],
+      "chance" : 1500
+    },
+    {
+      "name" : "at_ext_dailyjob1_connect7",
+      "rules" : [
+        [ "maxSpawnCount", [1] ],
+        [ "doNotConnectToPart", [  ] ],
+        [ "doNotCombineWith", [  ] ]
+
+      ],
+      "def" : [ "tmx", ["at_ext_dailyjob1_connect7.json"] ],
+      "chance" : 900
+    }
+
+
+
+
+
+
+
+
+] 
+}

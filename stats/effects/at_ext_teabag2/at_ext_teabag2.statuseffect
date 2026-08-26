@@ -1,0 +1,11 @@
+{
+  "name" : "at_ext_teabag2",
+  "defaultDuration" : 60,
+
+  "scripts" : [
+    "at_ext_teabag2.lua"
+  ],
+
+  "label" : "When health drops below 50%,+15protection",
+  "icon" : "/interface/statuses/at_ext_teabag2.png"
+}

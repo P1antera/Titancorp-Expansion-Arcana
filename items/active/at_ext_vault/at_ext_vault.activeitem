@@ -1,0 +1,24 @@
+{
+  "itemName": "at_ext_vault",
+  "shortdescription": "^orange;Digital Bank^reset;",
+  "description": "^green;Use to open Digital Bank^reset;\nDeposit/Withdraw Anytime, Anywhere!",
+  "price": 0,
+  "tooltipKind": "at_ext_item",
+  "rarity": "essential",
+  "category": "tool",
+  "itemTags": [],
+  "inventoryIcon": "at_ext_vault.png",
+  "largeImage": "at_ext_vault_lg.png",
+  "twoHanded": true,
+  "maxStack": 1,
+  "animation": "animation.animation",
+  "animationParts": {
+    "body": "at_ext_vault.png"
+  },
+  "scripts": ["at_ext_vault.lua"],
+  "interactAction": "OpenInterface",
+  "interactData": {
+    "paneConfig": "/interface/scripted/at_ext_vault/at_ext_vault_interface.config"
+  },
+  "storageItem": "arcana_currency_credit" 
+}

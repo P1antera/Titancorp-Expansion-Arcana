@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 1120 }
+  ],
+  "output" : {
+    "item" : "at_syntek_rifle_t6",
+    "count" : 1
+  },
+  "groups" : ["arcana_syntek_crafting_1", "arcana_syntek" ]
+}

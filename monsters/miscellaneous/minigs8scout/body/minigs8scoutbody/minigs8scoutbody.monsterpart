@@ -1,0 +1,11 @@
+{
+  "name" : "minigs8scoutbody",
+  "category" : "minigs8scout",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "minigs8scoutbody.png",
+    "fullbright" : "minigs8scoutbodyfullbright.png"
+
+  }
+}

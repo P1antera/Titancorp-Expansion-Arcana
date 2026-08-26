@@ -1,0 +1,61 @@
+{
+  "id" : "at_ext_br2_3",
+  "prerequisites" : [ "at_ext_br2_2" ],
+  "mainQuest" : false,
+  
+  "title" : "^#57bbec;''Excelsior'' II: ^reset;Optical Components",
+  "text" : "Next up, I need some materials to build the optical components. This part will probably need a few high-purity crystals, but I'm sure that's no big deal for you.",
+  "completionText" : "Wonderful! Come to me when you're ready for the next step.",
+  "canBeAbandoned" : false,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        }
+    },
+    "turnInDescription" : "Give the materials to ^yellow;Scientist.^reset;",
+    "requireTurnIn" : true,
+    "conditions" : [
+	  {
+        "type" : "gatherItem",
+        "itemName" : "crystal",
+        "count" : 5,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "glass",
+        "count" : 5,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "diamond",
+        "count" : 2,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "manipulatormodule",
+        "count" : 5,
+        "consume" : true
+      }
+    ]
+  }
+}

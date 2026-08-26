@@ -1,0 +1,638 @@
+{
+
+  
+    "at_ext_ship" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "Welcome aboard!"
+  },
+     "at_ext_hq0" : {
+    "type" : "mission",
+	"senderName" : "Titancorp",
+	"portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "You have been granted to use this asteroid base, and you are now authorized to ^yellow;Construct^reset; at will. ^red;Please note: All changes will be permanent!^reset;"
+  },
+
+  
+  
+  
+  
+  
+  
+  "at_ext_d1_01" : {
+    "type" : "mission",
+	"senderName" : "Titancorp",
+	"portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "This's it, We received the last message from that ship in this area, the beacon is activated, You can search towards the beacon direction."
+  },
+  
+   "at_ext_d1_02" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "There are some useful supplies in the crate, you can take them all!"
+  },  
+    "at_ext_d1_goal" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "You are approaching the wreck site. But it seems like you're not the only one here. Take them down and go check on Cargo's situation!"
+  },
+     "at_ext_d1_goal2" : {
+    "type" : "mission",
+	"senderName" : "Titancorp",
+	"portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "Good, you found the crate. Check it, then feel free to leave."
+  },
+  
+  
+   "at_ext_d2_01" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "There are some useful supplies in the crate. Stay safe!"
+  },
+   "at_ext_d2_02" : {
+    "type" : "mission",
+	"senderName" : "Titancorp",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "You are approaching enemy occupied territory, proceed with caution!"
+  },
+   "at_ext_d2_03" : {
+    "type" : "mission",
+	"senderName" : "Titancorp",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "Seems the door can only be unlocked remotely. Look around and find the terminal."
+  },   
+  
+    "at_ext_d2_goal" : {
+    "type" : "mission",
+	"senderName" : "Titancorp",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "Well done! Now there's only one thing left: go to the top of this building and set up the beacon, then feel free to leave this area."
+  },
+  
+     "at_ext_d3_01" : {
+    "type" : "mission",
+	"senderName" : "Titancorp",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "The target ship is located below. Your primary goal is  ^red;eliminate all enemies^reset; inside the ship and ensure the safety of ^green;survivors^reset;."
+  },
+     "at_ext_d3_02" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "There are some useful supplies in the crate. ^yellow;I have prepared an ^cyan;experimental rifle^yellow; for you."
+  },
+  
+    "at_ext_d4_01" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "There are some useful supplies in the crate."
+  },
+    "at_ext_d4_02" : {
+	"type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "^yellow;You might need some time to open this security door."
+  },
+    "at_ext_d4_03" : {
+    "type" : "mission",
+	"senderName" : "Titancorp soldier",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "They're coming,^yellow; Grab that sniper rifle!"
+  },
+    "at_ext_d4_04" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "Be aware, ^red;large amount of unknown life signals detected behind the door!"
+  },
+    "at_ext_d4_05" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "^red;You’ve alerted them, run!"
+  },
+  
+  
+  
+      "at_ext_d5_01" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "Alright, the night has fallen—it's time for action."
+  },
+      "at_ext_d5_02" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "Your equipment package has been airdropped, it's not far ahead of you."
+  },
+      "at_ext_d5_03" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "The drop pod seems to have caught their attention... Expect ^red;heavy enemy resistance^reset; ahead."
+  },
+      "at_ext_d5_03_orion" : {
+    "type" : "mission",
+	"senderName" : "Orion",
+	"portraitImage" : "/quests/at_ext_orion.png",
+    "text" : "We've got company! Get ready for a fight!"
+  },
+      "at_ext_d5_04" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "This is it. According to the intel, the prototype blueprint is inside the vault on the ^yellow;top floor^reset; of this building."
+  },
+      "at_ext_d5_05" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "Alright, I've successfully received a backup of the prototype blueprint. Now you need to escape from there before the swarming enemies surround you!"
+  },
+      "at_ext_d5_06" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "Orion reinforcements detected! You're one step away from success, use the terminal to open the vault door."
+  },
+      "at_ext_d5_07" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "The teleporter has been deployed just ahead, hurry up!"
+  },  
+      "at_ext_d5_08" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "They really built an outpost in such a desolate place..."
+  },
+      "at_ext_d5_09" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "They lost your trail. Use the teleporter to evacuate now—the drop pod will self-destruct after your departure!"
+  },
+  
+  
+  
+      "at_ext_d6_01" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "We have arrived. Due to the planet's unique atmosphere, the spacecraft cannot remain on the surface for long time. Therefore, I can only send you down in this way."
+  },
+      "at_ext_d6_02" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "^red;Inhaling the atmosphere here will lead to poisoning^reset;, so I will continuously airdrop supply pods from orbit. These pods contain ^green;stims of neutralizing the toxins^reset;."
+  },  
+      "at_ext_d6_ec" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "^yellow;Once you have recovered all the cargo, use the nearby teleporter to evacuate.^reset;"
+  },
+  
+      "at_ext_d6_03" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "You have located one of the cargos. It appears that they are preparing to dismantle the ship."
+  },
+  
+      "at_ext_d6_04" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "You have found a cargo container, and according to the tracking, one of the cargos is locked inside. The code to the container is...... ^yellow;4763!^reset;"
+  },
+
+      "at_ext_d6_05" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "You found a cargo container, But it seems they have forcibly opened it......."
+  },
+  
+      "at_ext_d6_06" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "This could be one of their outposts, where signals from ^yellow;2 cargos^reset; have been detected."
+  },
+
+
+    "at_ext_d7_01" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "Alright, an ion storm is raging outside, We need to conduct a simple test of the prototype weapon under this condition."
+  },
+    "at_ext_d7_02" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "The prototype weapon is placed inside that crate. Take it and head to the testing site!"
+  },
+    "at_ext_d7_03" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "Everything seems to be going smoothly, the weapon is functioning."
+  },
+    "at_ext_d7_04" : {
+    "type" : "mission",
+	"senderName" : "Titancorp soldier",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "It's Anarkyons, they're here!"
+  },
+    "at_ext_d7_05" : {
+    "type" : "mission",
+	"senderName" : "Titancorp soldier",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Eliminate them! Don't let the prototype weapon fall into their hands!"
+  },
+    "at_ext_d7_06" : {
+    "type" : "mission",
+	"senderName" : "Titancorp soldier",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Engaging!"
+  },
+    "at_ext_d7_07" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "I've taken off urgently. Keep moving east, I'll come to pick you up!"
+  },
+    "at_ext_d7_ec" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "I'm not far ahead. Our troops have held them off, we can take this chance to evacuate!"
+  },
+  
+  
+   "at_ext_d9_01" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "We've arrived. The signal source is within this area. Let's commence the search immediately!"
+  },
+   "at_ext_d9_02" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "Although this city has already been abandoned, we've still detected a large amount of hostile activity in this area. Proceed with caution!"
+  },
+   "at_ext_d9_03" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "The signal strength is increasing, it must be nearby."
+  },
+   "at_ext_d9_end" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "The beacon has been located, but the room is completely empty... This is really strange. I've already reported the situation to Command. You can evacuate at any time now."
+  },
+
+
+    "at_ext_d8_start" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "You have arrived at the mission area. ^yellow;Proceed according to the client's instructions!^reset;"
+  },
+    "at_ext_d8_start2" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Those damn bastards keep trying to steal my research, so I had to call some reinforcements. I told them ''I needed your best mercenary''---and they sent you. Don't disappoint me."
+  },
+    "at_ext_d8_00_1" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Alright, first you'll need to dive underwater and head to the ^green;extraction site to check the scanner's status^reset;. I've already installed floodlights down there, just follow them and you'll locate the scanner quickly."
+  },
+    "at_ext_d8_00_2" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Looks clear. ^green;Pull the switch on the scanning probe to activate it.^reset;"
+  },
+    "at_ext_d8_00_end" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Good, I'm getting signals already. Return now and we can start preparing the scanning operation."
+  },
+    "at_ext_d8_01_start" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "This is the server room. ^green;I'll need you to stay here and cool the servers while I run Analysis, just press that button on the wall.^reset;"
+  },
+    "at_ext_d8_01_start2" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Keep moving forward, and you'll see the mainframe. ^green;You must ensure its safety, if it's destroyed, everything's over.^reset;"
+  },
+    "at_ext_d8_01_start3" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "^green;Alright, once you're ready, pull the switch above the mainframe.^reset;"
+  },
+    "at_ext_d8_01_1" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Analysis program initiated, but I'm detecting massive transport signals---those bastards are incoming! ^green;Prepare to engage and protect the mainframe!^reset;"
+  },
+    "at_ext_d8_01_serveroverheat" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "^green;One server is overheating! Cool it down, now!^reset;"
+  },
+    "at_ext_d8_01_serveroverheat2" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "^green;One server is overheating! Cool it down, now!^reset;"
+  },
+    "at_ext_d8_01_serveroverheat3" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "^green;One server is overheating! Cool it down, now!^reset;"
+  },
+    "at_ext_d8_01_serveroverheat4" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "^green;One server is overheating! Cool it down, now!^reset;"
+  },
+    "at_ext_d8_01_serveroverheat5" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "^green;multiple servers are overheating! Cool them down, now!^reset;"
+  },
+    "at_ext_d8_01_failed" : {
+    "type" : "mission",
+	  "senderName" : "Awa the pilot",
+	  "portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "Mainframe is destoryed, ^red;mission failed. Retreat now!^reset;"
+  },
+    "at_ext_d8_01_success" : {
+    "type" : "mission",
+	  "senderName" : "Scientist",
+	  "portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "^green;Analysis complete. Head to the second floor now. I need to transmit this data.^reset;"
+  },
+    "at_ext_d8_02_1" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "^green;There's a terminal at the far end of the room to initiate the upload protocol.^reset;"
+  },
+    "at_ext_d8_02_2" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Nothing happened? Wait, it's them! They've breached the relay station!"
+  },
+    "at_ext_d8_02_3" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Get to the small dock east of the research building now! ^green;I need you to take a boat to the eastern relay station^reset;, we can't let it fall into their hands!"
+  },
+    "at_ext_d8_03_1" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Here we are. Check the power supply, once it's restored, I'll establish communications ASAP!"
+  },
+    "at_ext_d8_03_2" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Data transmission initiated, hold the line!"
+  },
+    "at_ext_d8_subobj" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "By the way, there's a biolab right ^yellow;below the waters where you are now^reset;. It'd be great if you could swing by and help me with something while you're at it.^green;If you can help me, I can offer you some extra reward.^reset;"
+  },
+    "at_ext_d8_subobj2" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "You've found the biolab. ^green;Now just head to the second floor and enter 8999 on the keypad installed on the wall.^reset;"
+  },
+    "at_ext_d8_subobj3" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Awesome, thank you for helping me! Now proceed to the relay station."
+  },
+  "at_ext_d8_subobj_end" : {
+  "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "And...thanks for making the trip to the biolab. The extra reward I promised is on the table."
+  },
+    "at_ext_d8_end" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Mission accomplished, excellent work! Your reputation is well-earned. Return to the lab. I'll be waiting."
+  },
+    "at_ext_d8_end2" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Perfect. ^green;That wall-mounted storage hold stuff I don't need, take whatever you want.^reset;"
+  },
+    "at_ext_d8_end3" : {
+    "type" : "mission",
+	"senderName" : "Scientist",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Having you as my personal assistant would save so much trouble... You may use this teleporter to leave."
+  },
+
+
+
+
+    "at_ext_d10_start" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "We arrived at the operation site. Proceed with caution."
+  },
+    "at_ext_d10_start2" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "These infected individuals... I suggest you keep your distance from them."
+  },
+    "at_ext_d10_01" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "Partial power outage in the Western District, but fortunately, it only caused the lighting system to go offline."
+  },
+    "at_ext_d10_keycard" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "^green;The security access card^reset; should be on one of the desks in these dorm rooms.^reset; Search carefully."
+  },
+    "at_ext_d10_02" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "Great. The power system has been fully restored."
+  },
+    "at_ext_d10_03" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "Below is the storage area. The cargo extraction zone should be located deep within the storage area."
+  },
+    "at_ext_d10_04" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "You’ve found the extraction area. ^green;What we need should be retrievable from Terminal 2. ^red;Note that the extraction process may make significant noise.^reset;"
+  },
+    "at_ext_d10_extc" : {
+    "type" : "mission",
+	"senderName" : "System",
+	"portraitImage" : "/quests/at_ext_sys.png:<frame>",
+    "text" : "Request accepted. The extraction process has been initiated."
+  },
+    "at_ext_d10_extc2" : {
+    "type" : "mission",
+	"senderName" : "System",
+	"portraitImage" : "/quests/at_ext_sys.png:<frame>",
+    "text" : "Extraction completed."
+  },
+    "at_ext_d10_05" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "Moving forward should lead to the VIP room."
+  },
+    "at_ext_d10_06" : {
+    "type" : "mission",
+	"senderName" : "Awa the pilot",
+	"portraitImage" : "/quests/at_ext_awa.png",
+    "text" : "The hard drive should be in this room. Search every corner carefully."
+  },
+    "at_ext_d11_01" : {
+    "type" : "mission",
+	"senderName" : "Unknown",
+	"portraitImage" : "/quests/at_ext_unknown.png",
+    "text" : "Looks like no one's found this safehouse yet. I left some supplies on the table for you. Don't forget to take them."
+  },
+    "at_ext_d11_02" : {
+    "type" : "mission",
+	"senderName" : "Unknown",
+	"portraitImage" : "/quests/at_ext_unknown.png",
+    "text" : "^yellow;Your objectives are all written down on the paper.^reset;"
+  },
+    "at_ext_d11_03" : {
+    "type" : "mission",
+	"senderName" : "Unknown",
+	"portraitImage" : "/quests/at_ext_unknown.png",
+    "text" : "The civilians in this area were evacuated a long time ago, so don't expect anyone here to go easy on you."
+  },
+    "at_ext_d11_04" : {
+    "type" : "mission",
+	"senderName" : "Unknown",
+	"portraitImage" : "/quests/at_ext_unknown.png",
+    "text" : "Looks like every entrance and exit in this building has been blocked. You'll have to find another way through."
+  },
+    "at_ext_d11_05" : {
+    "type" : "mission",
+	"senderName" : "Unknown",
+	"portraitImage" : "/quests/at_ext_unknown.png",
+    "text" : "Seems you've found an ^yellow;Exousia medical camp^reset;. The medical device mentioned in the intel might still be somewhere here."
+  },
+    "at_ext_d11_06" : {
+    "type" : "mission",
+	"senderName" : "Unknown",
+	"portraitImage" : "/quests/at_ext_unknown.png",
+    "text" : "Someone seems to have dug a tunnel here. You should probably take a look inside."
+  },
+    "at_ext_d11_07" : {
+    "type" : "mission",
+	"senderName" : "Unknown",
+	"portraitImage" : "/quests/at_ext_unknown.png",
+    "text" : "This should be the ^yellow;underground weapons testing range^reset; mentioned in the intel. Reliable sources say an experimental weapon was left behind before they could move it."
+  },
+    "at_ext_d11_08" : {
+    "type" : "mission",
+	"senderName" : "Unknown",
+	"portraitImage" : "/quests/at_ext_unknown.png",
+    "text" : "This is one of ^yellow;Exousia's drone command centers^reset;. You might be able to get your hands on a drone control module here."
+  },
+    "at_ext_d11_09" : {
+    "type" : "mission",
+	"senderName" : "Unknown",
+	"portraitImage" : "/quests/at_ext_unknown.png",
+    "text" : "There's a priceless diamond in the building ahead, but Exousia forces have already taken over the place. Watch your step."
+  },
+    "at_ext_d11_10" : {
+    "type" : "mission",
+	"senderName" : "Unknown",
+	"portraitImage" : "/quests/at_ext_unknown.png",
+    "text" : "There seems to be a teleporter inside that ship up ahead. You can use it to get out."
+  },
+    "at_ext_d11_11" : {
+    "type" : "mission",
+	"senderName" : "Unknown",
+	"portraitImage" : "/quests/at_ext_unknown.png",
+    "text" : "This building is our main target. Find Horizon's server and access the terminal."
+  },
+    "at_ext_d11_12" : {
+    "type" : "mission",
+	"senderName" : "Unknown",
+	"portraitImage" : "/quests/at_ext_unknown.png",
+    "text" : "That's everything. Horizon left a teleporter in this building. Use it to get out."
+  }
+
+
+
+
+//[█    %]
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}

@@ -1,0 +1,40 @@
+{
+  "itemName" : "at_ext_greentea",
+  "rarity" : "Rare",
+  "category" : "preparedFood",
+  "inventoryIcon" : "at_ext_greentea_icon.png",
+  "tooltipKind" : "at_ext_food",
+  "largeImage" : "at_ext_greentea_icon.png",
+  "description" : "Canned green tea with a crisp, refreshing taste.\n^yellow;Grants the [Verdant Can Tea] effect when consumed.^reset;",
+  "shortdescription" : "^green;Verdant Can Tea^reset;",
+  "maxStack" : 99,
+
+  "price" : 0,
+
+  "twoHanded" : true,
+  "itemTags" : [ "at_ext_food" ],
+
+  "animation" : "at_ext_greentea.animation",
+  "animationParts" : {
+    "drink" : "at_ext_greentea.png"
+  },
+
+  "scripts" : [ "at_ext_greentea.lua" ],
+  "scriptDelta" : 1,
+
+  "idleArmAngle" : -0.5,
+  "idleDrinkAngle" : -0.1,
+  "raiseArmAngle" : 0,
+  "raiseDrinkAngle" : 0.0,
+  "drinkArmAngle" : 0.4,
+  "drinkDrinkAngle" : 1.7,
+  "raiseTime" : 1,
+  "drinkTime" : 4.0,
+  "recapTime" : 1,
+  "firstEffectName" : "at_ext_greentea_1",
+  "firstEffectDuration" : 60,
+  "secondEffectName" : "at_ext_greentea_2",
+  "secondEffectDuration" : 60,
+  "thirdEffectName" : "at_ext_greentea_3",
+  "thirdEffectDuration" : 180
+}

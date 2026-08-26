@@ -1,0 +1,42 @@
+{
+  "objectName" : "at_ext_cafe",
+  "colonyTags" : ["misc"],
+  "rarity" : "Legendary",
+  "description" : "...",
+  "shortdescription" : "...",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 0,
+  
+ 
+    "interactAction" : "OpenCraftingInterface",
+  "interactData" : {
+    "config" : "/interface/arcana/arcana_crafting_trading/at_ext_cafe.config",
+	"filter" : ["at_ext_cafe"]
+  },
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "at_ext_cafe.png:<color>" }],
+	  "direction" : "left",
+	  "flipImages" : true,
+      "imagePosition" : [0, 0],
+
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    },
+	{
+      "imageLayers" : [ { "image" : "at_ext_cafe.png:<color>" } ],
+	  "direction" : "right",
+      "imagePosition" : [0, 0],
+
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

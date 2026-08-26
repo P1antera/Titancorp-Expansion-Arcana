@@ -1,0 +1,8 @@
+{
+  "input" : [
+	{ "item" : "arcana_currency_credit", "count" : 100 }
+  ],
+  "output" : { "item" : "at_ext_lptp", "count" : 1 },
+  "duration" : 0.4,
+  "groups"  : [ "arcana_titancorp_crafting_1", "arcana_titancorp_crafting_1_machine" ]
+}

@@ -1,0 +1,95 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "terminalState" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 12,
+            "cycle" : 2,
+            "mode" : "loop"
+          },
+          "notready" : {
+            "frames" : 1,
+            "cycle" : 3.0,
+            "mode" : "transition",
+            "transition": "idle"
+          },
+          "releasing" : {
+            "frames" : 6,
+            "cycle" : 2,
+            "mode" : "transition",
+            "transition": "idle"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "terminal" : {
+        "properties" : {
+          //"centered" : true,
+         "fullbright" : true,
+         "zLevel" : 0
+       },
+
+        "partStates" : {
+          "terminalState" : {
+            "idle" : {
+              "properties" : {
+                "image" : "at_ext_dailysupply.png:idle.<frame>"
+              }
+            },
+            "releasing" : {
+              "properties" : {
+                "image" : "at_ext_dailysupply.png:releasing.<frame>"
+              }
+            },
+            "notready" : {
+              "properties" : {
+                "image" : "at_ext_dailysupply.png:notready.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "fullbright" : {
+        "properties" : {
+          //"centered" : true,
+         "zLevel" : 1,
+         "fullbright" : false
+       },
+
+        "partStates" : {
+          "terminalState" : {
+            "idle" : {
+              "properties" : {
+                "image" : "at_ext_dailysupplylit.png:idle.<frame>"
+              }
+            },
+            "releasing" : {
+              "properties" : {
+                "image" : "at_ext_dailysupplylit.png:releasing.<frame>"
+              }
+            },
+            "notready" : {
+              "properties" : {
+                "image" : "at_ext_dailysupplylit.png:notready.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "sounds" : {
+  "supplygranted" : [ "/sfx/dailysupply/at_ext_supplygranted.ogg" ],
+  "supplydenied" : [ "/sfx/dailysupply/at_ext_supplydenied.ogg" ]
+  }
+
+
+        
+          // fizz
+
+}

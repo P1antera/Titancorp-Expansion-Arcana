@@ -1,0 +1,18 @@
+{
+  "verticalOrigin" : -15,
+  
+  "layers" : [
+	
+    {
+      "kind" : "at_ext_black",
+      "nohueshift" : true,
+			"unlit": true,
+      "lightMapped" : false,
+			"fadePercent": 0.0,
+      "parallax" : 1.0,
+      "repeatY" : true
+    }	
+	
+	
+  ]
+}

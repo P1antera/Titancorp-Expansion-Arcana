@@ -1,0 +1,46 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "item" : {
+        "default" : "visible",
+        "states" : {
+          "visible" : {},
+          "hidden" : {}
+        }
+      }
+    },
+
+    "parts" : {
+      "medicalItem" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "transformationGroups" : [ "item" ]
+        },
+
+        "partStates" : {
+          "item" : {
+            "visible" : {
+              "properties" : {
+                "image" : "<partImage>"
+              }
+            },
+            "hidden" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "item" : {}
+  },
+
+  "sounds" : {
+    "use" : [ "/sfx/statuseffects/powerup.ogg" ]
+  }
+}

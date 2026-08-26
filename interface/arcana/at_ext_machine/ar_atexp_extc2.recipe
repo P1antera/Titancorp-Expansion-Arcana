@@ -1,0 +1,13 @@
+{
+  "input" : [
+	{ "item" : "workshop_crafting_motor", "count" : 2 },
+	{ "item" : "workshop_crafting_GS8TechChip", "count" : 8 },
+	{ "item" : "workshop_crafting_dustriumWire", "count" : 2 },
+	{ "item" : "workshop_crafting_dustriumPanel", "count" : 10 },
+	{ "item" : "workshop_crafting_dustriumPlate", "count" : 8 },
+	{ "item" : "at_ext_extractor", "count" : 1 }
+  ],
+  "output" : { "item" : "at_ext_extractor2", "count" : 1 },
+  "duration" : 0.4,
+  "groups"  : [ "arcana_titancorp_crafting_1", "arcana_titancorp_crafting_1_machine" ]
+}

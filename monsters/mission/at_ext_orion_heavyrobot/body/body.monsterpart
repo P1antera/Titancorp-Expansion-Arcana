@@ -1,0 +1,10 @@
+{
+  "name" : "at_ext_orion_heavyrobot",
+  "category" : "at_ext_orion_heavyrobot",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+	"fullbright" : "fullbright.png"
+  }
+}

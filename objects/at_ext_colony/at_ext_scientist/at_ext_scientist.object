@@ -1,0 +1,80 @@
+{
+  "objectName" : "at_ext_scientist",
+  "colonyTags" : ["apex"],
+  "rarity" : "Common",
+  "category" : "other",
+  "description" : "A scientist.",
+  "shortdescription" : "A Scientist",
+  "race" : "generic",
+
+  "scannable" : false,
+  "printable" : false,
+
+  "inventoryIcon" : "techlabscientisticon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "at_ext_scientist.png:<color>.<frame>", "fullbright" : true }, { "image" : "at_ext_scientistlit.png:<color>.<frame>" } ],
+      "imagePosition" : [-12, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "frames" : 75,
+      "animationCycle" : 7.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "at_ext_scientist.png:<color>.<frame>", "fullbright" : true }, { "image" : "at_ext_scientistlit.png:<color>.<frame>" } ],
+      "imagePosition" : [-8, 0],
+
+      "direction" : "right",
+
+      "frames" : 75,
+      "animationCycle" : 7.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "offeredQuests" : [
+"at_ext_rl2_2",
+"at_ext_rl2_3",
+"at_ext_rl2_4",
+"at_ext_rl2_5",
+"at_ext_rl2_6",
+"at_ext_rl2_7",
+"at_ext_br2_2",
+"at_ext_br2_3",
+"at_ext_br2_4",
+"at_ext_br2_5",
+"at_ext_br2_6"
+  ],
+  "turnInQuests" : [
+"at_ext_rl2_1",
+"at_ext_rl2_2",
+"at_ext_rl2_3",
+"at_ext_rl2_4",
+"at_ext_rl2_5",
+"at_ext_rl2_6",
+"at_ext_rl2_7",
+"at_ext_br2_1",
+"at_ext_br2_2",
+"at_ext_br2_3",
+"at_ext_br2_4",
+"at_ext_br2_5",
+"at_ext_br2_6"
+  ],
+
+//  "scripts" : ["/scripts/chattyObject.lua"],
+//  "scriptDelta" : 60,
+
+  "uniqueId" : "at_ext_scientist"
+
+//  "chatOptions" : [
+//    "Excuse me, but I'm rather busy now.",
+//    "We're at the forefront of tech development."
+//  ]
+}

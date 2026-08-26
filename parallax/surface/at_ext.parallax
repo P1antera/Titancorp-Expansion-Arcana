@@ -1,0 +1,484 @@
+{
+  "verticalOrigin" : -15,
+  
+  "layers" : [
+
+
+    {
+      "kind" : "at_ext_giantgas",
+      "baseCount" : 1,
+      "offset" : [150, 550],
+      "parallax" : 200,
+      "nohueshift" : true,
+      "minSpeed" : 0,
+      "maxSpeed" : 0,
+      "fadePercent" : 1,
+      "timeOfDayCorrelation" : "nightCloudVisible",
+      "unlit" : true
+    },
+    {
+      "kind" : "at_ext_giantgas",
+      "baseCount" : 1,
+      "offset" : [150, 550],
+      "parallax" : 200,
+      "nohueshift" : true,
+      "minSpeed" : 0,
+      "maxSpeed" : 0,
+      "fadePercent" : 1,
+      "timeOfDayCorrelation" : "dayCloudVisible"
+    },
+    {
+      "kind" : "at_ext_cloud",
+      "offset" : [0, 425],
+      "parallax" : 2.89,
+      "minSpeed" : 3000,
+      "maxSpeed" : 5000,
+      "fadePercent" : 0.0
+	  //"unlit" : true
+    },
+    {
+      "kind" : "at_ext_sky_cloud",
+      "baseCount" : 1,
+      "offset" : [0, -230],
+      "parallax" : 4.15,
+      "minSpeed" : 0,
+      "maxSpeed" : 0,
+            "timeOfDayCorrelation" : "dayCloudVisible",
+      "fadePercent" : 0
+    },
+    {
+      "kind" : "at_ext_sky_cloud",
+      "baseCount" : 1,
+      "offset" : [0, -320],
+      "parallax" : 3.8,
+      "minSpeed" : 0,
+      "maxSpeed" : 0,
+            "timeOfDayCorrelation" : "dayCloudVisible",
+      "fadePercent" : 0
+    },
+    {
+      "kind" : "at_ext_sky_cloud",
+      "baseCount" : 1,
+      "offset" : [0, -380],
+      "parallax" : 3.5,
+      "minSpeed" : 0,
+      "maxSpeed" : 0,
+            "timeOfDayCorrelation" : "dayCloudVisible",
+      "fadePercent" : 0
+    },
+
+
+    {
+      "kind" : "at_ext_godrays",
+      "offset" : [10, 20],
+
+      "parallax" : [4.7, 5],
+      "minSpeed" : 0,
+      "maxSpeed" : 0,
+      "fadePercent" : 0.1,
+      "timeOfDayCorrelation" : "dayCloudVisible",
+      "unlit" : true
+    },	
+    {
+      "kind" : "at_ext_godrays",
+      "offset" : [20, 40],
+      "fadePercent" : 0.1,
+      "parallax" : [4, 4.6],
+      "minSpeed" : 0,
+      "maxSpeed" : 0,
+      "timeOfDayCorrelation" : "dayCloudVisible",
+      "unlit" : true
+    },	
+    {
+      "kind" : "at_ext_godrays",
+      "offset" : [0, 50],
+      "fadePercent" : 0.1,
+      "parallax" : [3.7, 5],
+      "minSpeed" : 0,
+      "maxSpeed" : 0,
+      "timeOfDayCorrelation" : "dayCloudVisible",
+      "unlit" : true
+    },	
+    {
+      "kind" : "at_ext_godrays",
+      "offset" : [30, 20],
+      "fadePercent" : 0.1,
+      "parallax" : [3.6, 3.7],
+      "minSpeed" : 0,
+      "maxSpeed" : 0,
+      "timeOfDayCorrelation" : "dayCloudVisible",
+      "unlit" : true
+    },
+
+
+    {
+      "kind" : "at_ext_sky_cloud",
+      "baseCount" : 1,
+      "offset" : [0, 280],
+      "parallax" : 14,
+      "minSpeed" : 0,
+      "maxSpeed" : 0,
+      "fadePercent" : 0
+    },	
+    {
+      "kind" : "at_ext_sky_cloud",
+      "baseCount" : 1,
+      "offset" : [0, 280],
+      "parallax" : 10,
+      "minSpeed" : 0,
+      "maxSpeed" : 0,
+      "fadePercent" : 0
+    },
+    {
+      "kind" : "at_ext_sky_cloud",
+      "baseCount" : 1,
+      "offset" : [0, 290],
+      "parallax" : 9,
+      "minSpeed" : 0,
+      "maxSpeed" : 0,
+      "fadePercent" : 0
+    },
+	
+	
+	
+	
+	
+    {
+      "kind" : "arcana_automated_aridfront",
+      "offset" : [0, 460],
+      "parallax" : 2.9,
+      "fadePercent" : 0.04,
+	  "noRandomOffset" : true,
+      "directives" : "?saturation=-0?brightness=10"
+    },
+    {
+      "kind" : "at_ext_aridfront_lit",
+      "offset" : [0, 460],
+      "parallax" : 2.9,
+      "fadePercent" : 0.04,
+	  "noRandomOffset" : true,
+	  "unlit" : true,
+	  "timeOfDayCorrelation" : "nightVisible",
+      "directives" : "?saturation=-0?brightness=10"
+    },
+
+
+    {
+      "kind" : "at_ext_cloud2",
+      "offset" : [0, 330],
+      "parallax" : 3.9,
+      "minSpeed" : 2000,
+      "maxSpeed" : 3000,
+      "fadePercent" : 0.0,
+	  "unlit" : true
+    },
+
+
+    {
+      "kind" : "at_ext_cityscape4",
+      "offset" : [0, 130],
+      "parallax" : 4.2,
+	  "noRandomOffset" : true,
+      "fadePercent" : 0.5
+    },
+
+    {
+      "kind" : "at_ext_cityscape4_2",
+      "offset" : [0, 130],
+      "parallax" : 4.1,
+	  "noRandomOffset" : true,
+      "fadePercent" : 0.5
+    },	
+    {
+      "kind" : "at_ext_cityscape4_2_lit",
+      "offset" : [0, 130],
+      "parallax" : 4.1,
+	  "noRandomOffset" : true,
+	  "unlit" : true,
+      "fadePercent" : 0.5
+    },
+	
+    {
+      "kind" : "at_ext_cityscape4_1",
+      "offset" : [0, 170],
+      "parallax" : 4,
+	  "noRandomOffset" : true,
+      "fadePercent" : 0.5
+    },
+    {
+      "kind" : "at_ext_cityscape4_1_lit",
+      "offset" : [0, 170],
+      "parallax" : 4,
+	  "noRandomOffset" : true,
+	  "unlit" : true,
+      "fadePercent" : 0.5
+    },
+    {
+      "kind" : "at_ext_cs4_lit",
+      "offset" : [0, 120],
+      "parallax" : 3.91,
+	  "noRandomOffset" : true,
+      "fadePercent" : 0,
+	  "timeOfDayCorrelation" : "nightVisible",
+	  "unlit" : true
+    },
+    {
+      "kind" : "at_ext_cityscape4_lit",
+      "offset" : [0, 130],
+      "parallax" : 4.2,
+      "fadePercent" : 0.2,
+	  "noRandomOffset" : true,
+	  
+	  "unlit" : true
+    },
+    {
+      "kind" : "arcana_automated_cityscape7",
+      "offset" : [0, 140],
+      "parallax" : 2.91,
+	  "noRandomOffset" : true,
+      "fadePercent" : 0.04
+    },
+    {
+      "kind" : "at_ext_cityscape7_lit",
+      "offset" : [0, 140],
+      "parallax" : 2.91,
+      "fadePercent" : 0.04,
+	  "noRandomOffset" : true,
+	 
+	  "unlit" : true
+    },
+
+    {
+      "kind" : "arcana_automated_cityscape1",
+      "offset" : [0, 150],
+      "parallax" : 2.92,
+      "fadePercent" : 0.02,
+	  "noRandomOffset" : true
+    },
+    {
+      "kind" : "arcana_vermilion_cityscape1_lit",
+      "offset" : [0, 150],
+      "parallax" : 2.92,
+      "fadePercent" : 0.02,
+	  "noRandomOffset" : true,
+	  
+	  "unlit" : true
+    },
+
+    {
+      "kind" : "arcana_automated_cityscape2",
+      "offset" : [0, 140],
+      "parallax" : 3.35,
+	  "noRandomOffset" : true,
+      "fadePercent" : 0.06
+    },
+    {
+      "kind" : "at_ext_cityscape2_lit",
+      "offset" : [0, 140],
+      "parallax" : 3.35,
+      "fadePercent" : 0.06,
+	  "noRandomOffset" : true,
+	 
+	  "unlit" : true
+    },
+    {
+      "kind" : "arcana_automated_cityscape3",
+      "offset" : [0, 140],
+      "parallax" : 3.25,
+	  "noRandomOffset" : true,
+      "fadePercent" : 0.06
+    },
+	{
+      "kind" : "at_ext_cityscape3_lit",
+      "offset" : [0, 140],
+      "parallax" : 3.25,
+      "fadePercent" : 0.06,
+	  "noRandomOffset" : true,
+	  
+	  "unlit" : true
+    },
+	{
+      "kind" : "cityships",
+      "offset" : [0, 180],
+      "parallax" : 6.999,
+      "minSpeed" : 21000,
+      "maxSpeed" : 24000,
+      "fadePercent" : 0.10
+    },
+    {
+      "kind" : "arcana_cityships",
+      "offset" : [0, 180],
+      "parallax" : 8.999,
+      "minSpeed" : 19000,
+      "maxSpeed" : 21000,
+      "fadePercent" : 0.10
+    },
+    {
+      "kind" : "at_ext_ship",
+      "offset" : [0, 150],
+	  "noRandomOffset" : true,
+      "parallax" : 6.999,
+      "minSpeed" : 40000,
+      "maxSpeed" : 40000,
+	  "fadePercent" : 0.10
+    },
+    {
+      "kind" : "at_ext_ship_lit",
+      "offset" : [0, 150],
+	  "noRandomOffset" : true,
+	  "unlit" : true,
+      "parallax" : 6.999,
+      "minSpeed" : 40000,
+      "maxSpeed" : 40000,
+	  
+	  "fadePercent" : 0.10
+    },
+    {
+      "kind" : "at_ext_ship2",
+      "offset" : [0, 160],
+	  "noRandomOffset" : true,
+      "parallax" : 3.5,
+      "minSpeed" : 70000,
+      "maxSpeed" : 70000
+    },
+    {
+      "kind" : "at_ext_ship2_lit",
+      "offset" : [0, 160],
+	  "noRandomOffset" : true,
+	  "unlit" : true,
+      "parallax" : 3.5,
+      "minSpeed" : 70000,
+      "maxSpeed" : 70000
+    },
+
+//Cars
+    {
+      "kind" : "at_ext_car",
+      "offset" : [0, -900],
+	  "noRandomOffset" : true,
+      "parallax" : 1,
+      "minSpeed" : 700000,
+      "maxSpeed" : 700000,
+	  "fadePercent" : 0
+    },
+    {
+      "kind" : "at_ext_car_lit",
+      "offset" : [0, -900],
+	  "noRandomOffset" : true,
+	  "unlit" : true,
+      "parallax" : 1,
+      "minSpeed" : 700000,
+      "maxSpeed" : 700000,
+	   "fadePercent" : 0
+    },
+	    {
+      "kind" : "at_ext_car4",
+      "offset" : [0, -900],
+	  "noRandomOffset" : true,
+      "parallax" : 1,
+      "minSpeed" : -700000,
+      "maxSpeed" : -700000,
+	  "fadePercent" : 0
+    },
+    {
+      "kind" : "at_ext_car_lit4",
+      "offset" : [0, -900],
+	  "noRandomOffset" : true,
+	  "unlit" : true,
+      "parallax" : 1,
+      "minSpeed" : -700000,
+      "maxSpeed" : -700000,
+	   "fadePercent" : 0
+    },
+	
+    {
+      "kind" : "at_ext_car2",
+      "offset" : [0, -200],
+	  "noRandomOffset" : true,
+      "parallax" : 1,
+      "minSpeed" : -400000,
+      "maxSpeed" : -400000,
+	  "fadePercent" : 0
+    },
+    {
+      "kind" : "at_ext_car_lit2",
+      "offset" : [0, -200],
+	  "noRandomOffset" : true,
+	  "unlit" : true,
+      "parallax" : 1,
+      "minSpeed" : -400000,
+      "maxSpeed" : -400000,
+	   "fadePercent" : 0
+    },
+    {
+      "kind" : "at_ext_car3",
+      "offset" : [0, -500],
+	  "noRandomOffset" : true,
+      "parallax" : 1,
+      "minSpeed" : -600000,
+      "maxSpeed" : -600000,
+	  "fadePercent" : 0
+    },
+    {
+      "kind" : "at_ext_car_lit3",
+      "offset" : [0, -500],
+	  "noRandomOffset" : true,
+	  "unlit" : true,
+      "parallax" : 1,
+      "minSpeed" : -600000,
+      "maxSpeed" : -600000,
+	   "fadePercent" : 0
+    },
+
+
+
+
+    {
+      "kind" : "at_ext_ship_yellow",
+      "offset" : [0, 150],
+	  "noRandomOffset" : true,
+      "parallax" : 2.7,
+      "minSpeed" : 30000,
+      "maxSpeed" : 30000,
+	  "fadePercent" : 0.02
+    },
+    {
+      "kind" : "at_ext_ship_yellow_lit",
+      "offset" : [0, 150],
+	  "noRandomOffset" : true,
+	  "unlit" : true,
+      "parallax" : 2.7,
+      "minSpeed" : 30000,
+      "maxSpeed" : 30000,
+	   "fadePercent" : 0.02
+    },
+    {
+      "kind" : "at_ext_ship_yellow2",
+      "offset" : [0, 140],
+	  "noRandomOffset" : true,
+      "parallax" : 2.5,
+      "minSpeed" : 40000,
+      "maxSpeed" : 40000
+    },
+    {
+      "kind" : "at_ext_ship_yellow2_lit",
+      "offset" : [0, 140],
+	  "noRandomOffset" : true,
+	  "unlit" : true,
+      "parallax" : 2.5,
+      "minSpeed" : 40000,
+      "maxSpeed" : 40000
+    },
+
+
+    {
+      "kind" : "clouds1",
+      "baseCount" : 2,
+      "offset" : [0, 40],
+      "parallax" : 6,
+      "minSpeed" : 5000,
+      "maxSpeed" : 10000,
+      "fadePercent" : 0.04
+    }
+  ]
+}

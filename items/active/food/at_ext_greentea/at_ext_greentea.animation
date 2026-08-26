@@ -1,0 +1,72 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "drinkState" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "raise" : {
+            "frames" : 1
+          },
+          "drink" : {
+            "frames" : 1
+          },
+          "recap" : {
+            "frames" : 1
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "drink" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "image" : "<partImage>:idle",
+          "offset" : [0, 0.25],
+          "transformationGroups" : [ "drink" ]
+        },
+        "partStates" : {
+          "drinkState" : {
+            "idle" : {
+              "properties" : {
+                "offset" : [-0.3, 0.5],
+                "image" : "<partImage>:idle"
+              }
+            },
+            "raise" : {
+              "properties" : {
+                "offset" : [-0.4, -0.4],
+                "image" : "<partImage>:idle"
+              }
+            },
+            "drink" : {
+              "properties" : {
+                "offset" : [0.1, 0],
+                "zLevel" : 10,
+                "image" : "<partImage>:idle"
+              }
+            },
+            "recap" : {
+              "properties" : {
+                "offset" : [-0.3, 0.5],
+                "image" : "<partImage>:idle"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "drink" : {}
+  },
+
+  "sounds" : {
+    "drink" : [ "/sfx/at_ext_drink/at_ext_candrink.ogg" ]
+  }
+}

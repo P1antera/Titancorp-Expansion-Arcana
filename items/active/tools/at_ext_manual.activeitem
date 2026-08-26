@@ -1,0 +1,20 @@
+{
+  "itemName" : "at_ext_manual_En",
+  "shortdescription" : "^orange;Automation Manual 2.0^reset;",
+  "description" : "Specifications of ^orange;Titancorp Expansion^reset; mod.",
+  "price" : 0,
+  "tooltipKind" : "at_ext_item",
+  "rarity" : "essential",
+  "category" : "tool",
+  "itemTags" : [],
+  "inventoryIcon" : "at_ext_manual_En.png",
+  "largeImage" : "at_ext_manual_En_lg.png",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "animation" : "animation.animation",
+  "animationParts" : {
+    "body" : "at_ext_manual_En.png"
+  },
+  "scripts" : ["at_ext_En.lua"],
+  "radioMessagesOnPickup" : [ "at_ext_manual1" ]
+}

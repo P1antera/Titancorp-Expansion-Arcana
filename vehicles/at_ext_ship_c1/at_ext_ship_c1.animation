@@ -1,0 +1,250 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "bottomthrust" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+          },
+          "idle" : {
+            "frames" : 2,
+            "cycle" : 0.3,
+            "mode" : "loop"
+          },
+          "on" : {
+            "frames" : 4,
+            "cycle" : 0.2,
+            "mode" : "loop"
+          }
+        }
+      },
+      "thrust" : {
+        "default" : "off",
+        "states" : {
+
+          "off" : {
+          },
+          "idle" : {
+            "frames" : 2,
+            "cycle" : 0.3,
+            "mode" : "loop"
+          },
+          "on" : {
+            "frames" : 4,
+            "cycle" : 0.2,
+            "mode" : "loop"
+          }
+        }
+      },
+      "ship" : {
+        "default" : "landed",
+        "states" : {
+          "invisible" : {},
+          "landed" : {
+            "frames" : 1,
+            //"cycle" : 0.1,
+            "mode" : "end"
+          },
+          "landing" : {
+            "frames" : 3,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "landed"
+          },
+          "flying" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "loop"
+          },
+          "up" : {
+            "frames" : 3,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "flying"
+          }
+        }
+      }
+
+
+
+
+
+    },
+
+    "parts" : {
+      "background" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : -1,
+          "transformationGroups" : ["rotation"],
+          "image" : "background.png"
+        }
+      },
+      "bottomthrust" : {
+        "properties" : {
+          "offset" : [0, -2.75],
+          "light" : [255, 190, 127],
+          "centered" : true,
+          "zLevel" : -1,
+          "fullbright" : true,
+          "transformationGroups" : ["rotation"]
+        },
+        "partStates" : {
+          "bottomthrust" : {
+            "off" : {
+              "properties" : {
+                "image" : "bottomthruster.png:off"
+              }
+            },
+            "on" : {
+              "properties" : {
+                "image" : "bottomthruster.png:on.<frame>"
+              }
+            },
+            "idle" : {
+              "properties" : {
+                "image" : "bottomthruster.png:idle.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "Thrust" : {
+        "properties" : {
+          "offset" : [-6.875, -0.5],
+          "light" : [255, 190, 127],
+          "centered" : true,
+          "zLevel" : -1,
+          "fullbright" : true,
+          "transformationGroups" : ["rotation"]
+        },
+        "partStates" : {
+          "thrust" : {
+            "off" : {
+              "properties" : {
+                "image" : "thruster.png:off"
+              }
+            },
+            "on" : {
+              "properties" : {
+                "image" : "thruster.png:on.<frame>"
+              }
+            },
+            "idle" : {
+              "properties" : {
+                "image" : "thruster.png:idle.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "ship" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 1,
+          "transformationGroups" : ["rotation"],
+          "image" : "at_ext_ship.png:landed",
+          "seatPosition" : [2.0, 0.5]
+        },
+        "partStates" : {
+          "ship" : {
+            "invisible" : {"properties" : {}},
+            "landed" : {
+              "properties" : {
+                "image" : "at_ext_ship.png:landed"
+              }
+            },
+            "landing" : {
+              "properties" : {
+                "image" : "at_ext_ship.png:landing.<frame>"
+              }
+            },
+            "up" : {
+              "properties" : {
+                "image" : "at_ext_ship.png:up.<frame>"
+              }
+            },
+            "flying" : {
+              "properties" : {
+                "image" : "at_ext_ship.png:flying.<frame>"
+              }
+            }
+          }
+        }
+      }
+
+
+
+
+    }
+  },
+  "globalTagDefaults" : {
+    "colour" : ""
+  },
+
+  "transformationGroups" : {
+    "rotation" : {
+      "interpolated" : true
+    }
+
+  },
+
+  "particleEmitters" : {
+    "ventralThrusterIdle" : {
+      "transformationGroups" : ["rotation"],
+      "emissionRate" : 0.0,
+      "offsetRegion" : [-0.5, -1.5, 0.5, -1.55],
+      "particles" : [ { "particle" : "hoverbikedownthrust"} ]
+    },
+
+    "healing" : {
+      "transformationGroups" : ["rotation"],
+      "emissionRate" : 1.0,
+      "burstCount"  : 5,
+      "offsetRegion" : [-5.0, -2.0, 5.0, 1],
+      "particles" : [
+        { "particle" : "at_ext_shipc1_heal" }
+      ]
+    },
+
+    "damageShards2" : {
+      "transformationGroups" : ["rotation"],
+      "emissionRate" : 1.0,
+      "burstCount"  : 5,
+      "offsetRegion" : [-5.0, -2.0, 5.0, 1],
+      "particles" : [
+        { "particle" : "at_ext_shipshard" }
+      ]
+    },
+    
+    "damageShards" : {
+      "transformationGroups" : ["rotation"],
+      "emissionRate" : 100.0,
+      "burstCount"  : 100,
+      "offsetRegion" : [-5.0, -2.0, 5.0, 1],
+      "particles" : [
+
+        { "particle" : "at_ext_shipshard2" }
+      ]
+    }
+  },
+
+ "lights" : {
+  },
+
+  "sounds" : {
+    "explode" : [
+      "/sfx/gun/grenadeblast_small_fire1.ogg",
+      "/sfx/gun/grenadeblast_small_fire2.ogg",
+      "/sfx/gun/grenadeblast_small_fire3.ogg"
+    ],
+
+    "engineStart" : [ "/sfx/at_ext_ship/startup_c1.ogg" ],
+    "engineLoop" : [ "/sfx/at_ext_ship/engineloop.ogg" ],
+    "shutDown" : [ "/sfx/at_ext_ship/shutdown_c1.ogg" ],
+    "afterBurn" : [ "/sfx/at_ext_ship/afterburn.ogg" ],
+
+    "returnvehicle" : [ "/sfx/tech/vehicle_disappear1.ogg" ],
+    "fire" : [ "/sfx/gun/rocket1.ogg" ]
+  }
+}

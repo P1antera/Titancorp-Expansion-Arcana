@@ -1,0 +1,22 @@
+{
+  "projectileName" : "at_ext_case",
+  "physics" : "grenade",
+  "piercing" : false,
+  "fullbright" : false,
+  "timeToLive" : 20,
+  "speed" : 10,
+  "renderLayer" : "ForegroundEntity+10",
+  "knockback" : 0,
+  "bounces" : 20,
+  "zlevel" : "1",
+  "movementSettings" : {
+  "bounceFactor" : 0.6,
+  "stopOnFirstBounce" : false
+  },
+  "image" : "at_ext_case.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "damageType" : "NoDamage",
+  "damageKind" : "nodamage"
+
+}

@@ -1,0 +1,38 @@
+{
+  "id" : "at_ext_tut3",
+  "prerequisites" : [ "at_ext_tut2" ],
+  "title" : "Titancorp: An invitation",
+  "text" : "You’ve received a set of coordinates, which seems to point to a ^yellow;Titancorp colony^reset;…",
+  "completionText" : "Welcome!",
+  "canBeAbandoned" : false,
+  "moneyRange" : [100, 100],
+
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+	"turnInDescription" : "Use the ^yellow;ship transponder^reset; to go the ^yellowTitancorp Colony^reset;.",
+    "requireTurnIn" : true,
+    "conditions" : [
+      {
+        "type" : "gatherItem",
+        "itemName" : "money",
+        "count" : 1,
+        "consume" : false
+      }
+    ]
+  }
+}

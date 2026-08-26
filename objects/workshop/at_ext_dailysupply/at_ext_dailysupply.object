@@ -1,0 +1,283 @@
+{
+  "objectName" : "at_ext_dailysupply",
+  "colonyTags" : ["crafting"],
+  "rarity" : "Essential",
+  "persistent" : true,
+  "globalCooldown" : true,
+  "cooldownScope" : "player",
+  "breakDropPool" : "at_ext_dailysupply",
+ 
+  "description" : "^green;Claim your supplies every 6 hours!^red;\nRefunds 13000 credits when destroyed.^reset;",
+  "shortdescription" : "^yellow;[TCexp]^reset;Supply Dispensing Terminal",
+  "race" : "generic",
+  "category" : "crafting",
+  "price" : 0,
+  
+  //"lightColor" : [100, 50, 120],
+
+   "scripts" : [ "at_ext_dailysupply.lua" ],
+  "scriptDelta" : 10,
+"animation" : "/objects/workshop/at_ext_dailysupply/at_ext_dailysupply.animation",
+
+
+
+
+  //"interactAction" : "",
+
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "at_ext_dailysupply.png:<color>.<frame>", "fullbright" : true }, { "image" : "at_ext_dailysupplylit.png:<color>.<frame>" } ],
+      "imagePosition" : [-22, -12],
+
+      "direction" : "right",
+
+      "lightPosition" : [0, 2],
+      "frames" : 1,
+     "animationCycle" : 0.4,
+
+
+      "spaceScan" : 0.1,
+
+      "anchors" : [ "background" ]
+    }
+  ],
+  "rotationTime" : 21600,
+  "selectCount" : 2,
+  "inventoryPool" : [
+
+
+
+
+
+
+
+//          healing   items                     
+{"name": "arcana_nanopack",  "count": 3  },
+{"name": "arcana_nanopack",  "count": 5  },
+{"name": "arcana_neoNanopack",  "count": 1  },
+{"name": "arcana_evoNanopack",  "count": 1  },
+{"name": "arcana_evoNanopack",  "count": 2  },
+{"name": "nanowrap",  "count": 10  },
+{"name": "medkit",  "count": 10  },
+{"name": "redstim",  "count": 3  },
+{"name": "solidfuel",  "count": 100  },
+
+//                 drones
+{"name": "sd_exp_anarkyonsdrone_controller",  "count": 1  },
+{"name": "sd_exp_astraldrone_controller",  "count": 1  },
+{"name": "sd_exp_aureadrone_controller",  "count": 1  },
+{"name": "sd_exp_exousiadrone_controller",  "count": 1  },
+{"name": "sd_exp_horizondrone_controller",  "count": 1  },
+{"name": "sd_exp_luyedrone_controller",  "count": 1  },
+{"name": "sd_exp_oriondrone_controller",  "count": 1  },
+{"name": "sd_exp_steelbladesdrone_controller",  "count": 1  },
+{"name": "sd_exp_titandrone_controller",  "count": 1  },
+{"name": "misc_soul_icon_controller",  "count": 1  },
+{"name": "sd_exp_avalidrone_controller",  "count": 1  },
+{"name": "sd_exp_lunardrone_controller",  "count": 1  },
+{"name": "sd_exp_scorpiodrone_controller",  "count": 1  },
+{"name": "at_ext_shipcontroller",  "count": 1  },
+
+//                bars                         
+{"name": "arcana_bar_morphosisBar",  "count": 1  },
+{"name": "arcana_bar_arcaniumBar",  "count": 2  },
+{"name": "arcana_bar_animaBar",  "count": 1  },
+{"name": "arcana_bar_atlaGoldBar",  "count": 2  },
+{"name": "arcana_bar_aureolaBar",  "count": 1  },
+{"name": "arcana_bar_azuriumBar",  "count": 1  },
+{"name": "arcana_bar_galvasteelBar",  "count": 3  },
+{"name": "arcana_bar_corrodiumBar",  "count": 1  },
+{"name": "arcana_bar_necroiumBar",  "count": 1  },
+
+{"name": "arcana_bar_refinedAspirite",  "count": 3  },
+{"name": "arcana_bar_refinedImmorite",  "count": 3  },
+{"name": "arcana_bar_refinedNoxion",  "count": 3  },
+{"name": "arcana_bar_thoriumBar",  "count": 1  },
+{"name": "arcana_bar_refinedNoxion",  "count": 3  },
+
+//               essence
+//{"name": "arcana_essence_aquaEssence",  "count": 2  },
+{"name": "arcana_essence_arcaneEssence",  "count": 2  },
+
+//{"name": "arcana_essence_windEssence",  "count": 2  },
+//{"name": "arcana_essence_vileEssence",  "count": 3  },
+{"name": "arcana_essence_electricEssence",  "count": 2  },
+//{"name": "arcana_essence_chrysoEssence",  "count": 2  },
+//{"name": "arcana_essence_azureEssence",  "count": 2  },
+{"name": "arcana_essence_fireEssence",  "count": 2  },
+{"name": "arcana_essence_iceEssence",  "count": 2  },
+//{"name": "arcana_essence_vermilionEssence",  "count": 1  },
+//{"name": "arcana_essence_terraEssence",  "count": 1  },
+{"name": "arcana_essence_poisonEssence",  "count": 1  },
+//{"name": "arcana_essence_lumenEssence",  "count": 2  },
+//{"name": "arcana_essence_lightEssence",  "count": 1  },
+
+//                    food
+{"name": "arcana_bluecheese",  "count": 1  },
+
+{"name": "arcana_bluedonut",  "count": 1  },
+{"name": "arcana_food_arcaneJuice",  "count": 1  },
+{"name": "arcana_food_atlantisRipple",  "count": 1  },
+{"name": "arcana_food_beer",  "count": 1  },
+{"name": "arcana_food_blackSesameRoll",  "count": 1  },
+{"name": "arcana_food_blackTea",  "count": 1  },
+{"name": "arcana_food_cannedCoffee",  "count": 1  },
+{"name": "arcana_food_fishSandwich",  "count": 1  },
+{"name": "arcana_food_flamingBao",  "count": 1  },
+{"name": "arcana_food_greenTea",  "count": 1  },
+{"name": "arcana_food_mangoTea",  "count": 1  },
+{"name": "arcana_food_metallicTea",  "count": 1  },
+{"name": "arcana_food_oolongTea",  "count": 1  },
+{"name": "arcana_food_roubao",  "count": 1  },
+{"name": "arcana_food_rushsoda",  "count": 1  },
+{"name": "arcana_food_timelessTea",  "count": 1  },
+{"name": "arcana_food_viridescentTea",  "count": 1  },
+{"name": "arcana_food_zhushiPlatter",  "count": 1  },
+{"name": "arcana_food_zinnofeurTea",  "count": 1  },
+{"name": "burntcake",  "count": 1  },
+{"name": "cannedfood",  "count": 3  },
+{"name": "cheese",  "count": 3  },
+{"name": "chocolate",  "count": 3  },
+
+//      Arcana         materials
+{"name": "arcana_misc_arkFragment",  "count": 1  },
+//{"name": "arcana_misc_ceruleanComponent",  "count": 1  },
+{"name": "arcana_misc_copperComponent",  "count": 1  },
+{"name": "arcana_misc_elementalHeart",  "count": 1  },
+//{"name": "arcana_misc_geodeComponent",  "count": 1  },
+
+{"name": "arcana_misc_nanoweave",  "count": 1  },
+{"name": "arcana_misc_pigmentPowder",  "count": 1  },
+{"name": "arcana_misc_raidenComponent",  "count": 1  },
+{"name": "arcana_misc_renatineCrystal",  "count": 1  },
+{"name": "arcana_misc_rufesciteComposite",  "count": 1  },
+{"name": "arcana_misc_slipstreamComposite",  "count": 1  },
+{"name": "arcana_misc_oceaniteComposite",  "count": 1  },
+{"name": "arcana_misc_enartzComposite",  "count": 1  },
+
+{"name": "arcana_misc_exoslateComposite",  "count": 1  },
+{"name": "arcana_misc_horizonDiscipleBadge",  "count": 1  },
+
+{"name": "elemental_crafting_anemoneWood",  "count": 2  },
+//{"name": "elemental_crafting_aquamarineStone",  "count": 2  },
+{"name": "elemental_crafting_ariostone",  "count": 2  },
+{"name": "elemental_crafting_dryPlate",  "count": 2  },
+{"name": "elemental_crafting_evernightCrystal",  "count": 1  },
+{"name": "elemental_crafting_florastone",  "count": 2  },
+{"name": "elemental_crafting_magifireCrystal",  "count": 1  },
+{"name": "elemental_crafting_pinkAquamarine",  "count": 1  },
+
+{"name": "orion_crafting_enhancedBattery",  "count": 1  },
+{"name": "orion_crafting_ursaplate",  "count": 1  },
+
+{"name": "workshop_crafting_dustriumPlate",  "count": 5  },
+//{"name": "workshop_crafting_dustriumSheet",  "count": 3  },
+{"name": "workshop_crafting_motor",  "count": 2  },
+//{"name": "workshop_crafting_plastic",  "count": 2  },
+{"name": "workshop_crafting_dustriumWire",  "count": 2  },
+
+//     equipment
+{"name": "scorpio_assaultrifle_rare",  "count": 1  },
+{"name": "at_syntek_rifle_t3",  "count": 1  },
+{"name": "at_syntek_rifle_t5",  "count": 1  },
+{"name": "at_syntek_rifle_t6",  "count": 1  },
+{"name": "at_syntek_rifle_t7",  "count": 1  },
+
+{"name": "workshop_pistol_2",  "count": 1  },
+{"name": "workshop_pistol_3",  "count": 1  },
+{"name": "workshop_sniperRifle_1",  "count": 1  },
+{"name": "workshop_pistol_1",  "count": 1  },
+{"name": "workshop_battleaxe_1",  "count": 1  },
+{"name": "workshop_assaultRifle_1",  "count": 1  },
+{"name": "misc_katana_neon",  "count": 1  },
+
+{"name": "scorpio_katana_rare",  "count": 1, "parameters" : {"level" : 4}  },
+{"name": "scorpio_katana_rare",  "count": 1, "parameters" : {"level" : 5}  },
+{"name": "scorpio_katana_rare",  "count": 1, "parameters" : {"level" : 6}  },
+{"name": "scorpio_katana_rare",  "count": 1, "parameters" : {"level" : 7}  },
+{"name": "scorpio_katana_rare",  "count": 1, "parameters" : {"level" : 8}  },
+{"name": "syntek_pistol_rare",  "count": 1, "parameters" : {"level" : 4}  },
+{"name": "syntek_pistol_rare",  "count": 1, "parameters" : {"level" : 5}  },
+{"name": "syntek_pistol_rare",  "count": 1, "parameters" : {"level" : 6}  },
+{"name": "syntek_pistol_rare",  "count": 1, "parameters" : {"level" : 7}  },
+{"name": "syntek_pistol_rare",  "count": 1, "parameters" : {"level" : 8}  },
+{"name": "syntek_katana_rare",  "count": 1, "parameters" : {"level" : 4}  },
+{"name": "syntek_katana_rare",  "count": 1, "parameters" : {"level" : 5}  },
+{"name": "syntek_katana_rare",  "count": 1, "parameters" : {"level" : 6}  },
+{"name": "syntek_katana_rare",  "count": 1, "parameters" : {"level" : 7}  },
+{"name": "syntek_katana_rare",  "count": 1, "parameters" : {"level" : 8}  },
+{"name": "misc_wand_tripleDecker",  "count": 1, "parameters" : {"level" : 5}  },
+{"name": "misc_wand_tripleDecker",  "count": 1, "parameters" : {"level" : 6}  },
+{"name": "misc_wand_tripleDecker",  "count": 1, "parameters" : {"level" : 7}  },
+{"name": "misc_wand_tripleDecker",  "count": 1, "parameters" : {"level" : 8}  },
+{"name": "workshop_assaultRifle_1",  "count": 1  },
+
+//       loot box
+{"name": "arcana_lootbox_legendaryTreasure",  "count": 1  },
+
+//              Vanilla     materials
+{"name": "battery",  "count": 2  },
+
+{"name": "canvas",  "count": 5  },
+{"name": "corefragmentore",  "count": 10  },
+{"name": "cotton",  "count": 20  },
+{"name": "crystal",  "count": 10  },
+{"name": "diamond",  "count": 5  },
+{"name": "durasteelbar",  "count": 10  },
+{"name": "copperbar",  "count": 10  },
+{"name": "goldbar",  "count": 5  },
+{"name": "ironbar",  "count": 10  },
+{"name": "prisilitestar",  "count": 5  },
+{"name": "processor",  "count": 2  },
+{"name": "refinedviolium",  "count": 5  },
+{"name": "refinedferozium",  "count": 5  },
+{"name": "refinedaegisalt",  "count": 5  },
+{"name": "silk",  "count": 10  },
+{"name": "siliconboard",  "count": 5  },
+{"name": "syntheticmaterial",  "count": 2  },
+{"name": "titaniumbar",  "count": 5  },
+{"name": "tungstenbar",  "count": 5  },
+{"name": "wire",  "count": 5  },
+
+{"name": "upgrademodule",  "count": 5  },
+{"name": "techcard",  "count": 5  },
+
+//            vehicle controllers
+{"name": "hoverbikecontrollergreen",  "count": 1  },
+{"name": "sportscarcontrollerred",  "count": 1  },
+{"name": "hoverbikecontrollerred",  "count": 1  },
+
+//            tools
+{"name": "redflashlight",  "count": 1  },
+{"name": "yellowflashlight",  "count": 1  },
+{"name": "greenflashlight",  "count": 1  },
+
+{"name": "arcana_laserminer_basicMiningLaser",  "count": 1  },
+{"name": "arcana_laserminer_energizedMiningLaser",  "count": 1  },
+{"name": "arcana_laserminer_prototypeMiningLaser",  "count": 1  },
+{"name": "arcana_laserminer_advancedMiningLaser",  "count": 1  },
+
+//         blueprints
+
+
+
+//                     money
+{"name": "arcana_currency_credit",  "count": 100  },
+{"name": "arcana_currency_credit",  "count": 1000  },
+{"name": "arcana_currency_credit",  "count": 2000  },
+{"name": "arcana_currency_credit",  "count": 80  },
+{"name": "arcana_currency_credit",  "count": 210  },
+{"name": "arcana_currency_credit",  "count": 150  },
+{"name": "arcana_currency_credit",  "count": 300  },
+{"name": "arcana_currency_hatcoupon",  "count": 1  },
+{"name": "arcana_currency_hatcoupon",  "count": 2  }
+
+
+
+
+
+
+  ]
+}

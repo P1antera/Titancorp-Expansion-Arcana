@@ -1,0 +1,55 @@
+{
+  "objectName" : "at_ext_supply",
+  "colonyTags" : ["crafting"],
+  "rarity" : "Legendary",
+  "description" : "A Section 8's trade terminal",
+  "shortdescription" : "...",
+  "race" : "generic",
+  "category" : "crafting",
+  "price" : 0,
+  
+  //"lightColor" : [100, 50, 120],
+
+   "scripts" : [ "at_ext_supply.lua" ],
+  "scriptDelta" : 20,
+   "chatRadius" : 20,
+  "chatCooldown" : 6,
+  "chatOptions" : [
+	"^yellow;Touch to start purchasing..... "
+  ],
+
+
+
+
+  "interactAction" : "OpenCraftingInterface",
+  "interactData" : {
+    "config" : "/interface/arcana/arcana_crafting_trading/at_ext_supply.config",
+	  "filter" : ["at_ext_supply"]
+  },
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+	  "imageLayers" : [ { "image" : "at_ext_supply.png:<color>" } ],
+      "direction" : "left",
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.2,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    },
+	{
+	  "imageLayers" : [ { "image" : "at_ext_supply.png:<color>" } ],
+      "direction" : "right",
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.2,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

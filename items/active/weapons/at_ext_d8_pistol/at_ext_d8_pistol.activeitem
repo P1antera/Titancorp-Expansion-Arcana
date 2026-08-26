@@ -1,0 +1,161 @@
+{
+  "itemName" : "at_ext_d8_pistol",
+  "price" : 0,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A prototype smart pistol crafted by the Doctor, exhibiting suboptimal stability during firing.",
+  "shortdescription" : "^#96f6ff;Falcon^reset;",
+  "tooltipKind" : "at_ext_gun",
+  "largeImage" : "at_ext_d8_pistol_lg.png",
+  "category" : "pistol",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","pistol","upgradeableWeapon"],
+  "level" : 8,
+
+  "inventoryIcon" : "at_ext_d8_pistol_lg.png",
+
+  "animation" : "/items/active/weapons/ranged/at_ext_gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "body.png",
+	"fullbright" : "fullbright.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/active/weapons/at_ext_d8_pistol/muzzleflash.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : {
+    "stateTypes" : {
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+	"frames" : 1,
+	"mode":"end"	  
+		  },
+          "fire" : {
+            "frames" : 4,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      }
+    },
+
+
+
+	  "parts" : {
+      "fullbright" : {
+        "properties" : {
+		   "offset" : [0.8, 0.6],
+            "image" : null
+        },
+        "partStates" : {
+          "firing" : {
+            "off" : {
+            "properties" : {
+            "image" : "<partImage>:default.4"
+              }
+			},
+			"fire" : {
+              "properties" : {
+                "image" : "<partImage>:default.<frame>"
+              }
+            }
+          }
+        }
+      },
+
+      "middle" : {
+        "properties" : {
+            "image" : null
+        },
+        "partStates" : {
+          "firing" : {
+            "off" : {
+            "properties" : {
+            "image" : "<partImage>:default.4"
+              }
+			},
+			"fire" : {
+              "properties" : {
+                "image" : "<partImage>:default.<frame>"
+              }
+            }
+          }
+        }
+      },
+
+	    "muzzleFlash" : {
+		  "properties" : {
+		    "offset" : [-0.125, -0.625]
+		  }
+		}
+	  }
+	},
+    "sounds" : {
+      "fire" : ["/sfx/at_ext_d8_pistol.ogg"]
+    }
+  },
+
+  "baseOffset" : [0.8, 0.6],
+  "muzzleOffset" : [1.7, 0.95],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.08,
+    "baseDps" : 25,
+    "energyUsage" : 160,
+    "inaccuracy" : 0.06,
+
+    "projectileCount" : 1,
+    "fireType" : "auto",
+
+    "projectileType" : "at_ext_d8_pistol",
+    "projectileParameters" : {
+      "knockback" : 4
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : -8,
+        "weaponRotation" : 8,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		"frontArmFrame" : "swim.3",
+        "backArmFrame" : "run.5"
+      },
+      "fire" : {
+        "duration" : 0.04,
+        "armRotation" : 2,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : false,
+		"frontArmFrame" : "swim.3",
+        "backArmFrame" : "run.5"
+      },
+      "cooldown" : {
+        "duration" : 0.04,
+        "armRotation" : 0,
+        "weaponRotation" : 2,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : false,
+		"frontArmFrame" : "swim.3",
+        "backArmFrame" : "run.5"
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

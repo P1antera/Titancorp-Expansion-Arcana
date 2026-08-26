@@ -1,0 +1,13 @@
+{
+  "name" : "at_ext_ice3_2",
+  "defaultDuration" : 180,
+  "scripts" : [
+    "at_ext_ice3_2.lua"
+  ],
+  "effectConfig" : {
+    "protection" : 5,
+    "maxHealth" : 20
+  },
+  "label" : "Ruby Grapefruit Fizz [+5 protection, +20 max health]",
+  "icon" : "/interface/statuses/at_ext_ice3_icon2.png"
+}

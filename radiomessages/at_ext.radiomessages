@@ -1,0 +1,64 @@
+{
+  "at_ext_manual1" : {
+    "type" : "tutorial",
+    "text" : "You have just obtained the ^yellow;Automation Recipe Manual^reset;, which you can use to refer to automation related recipes."
+  },
+    "at_ext_id" : {
+    "type" : "tutorial",
+	"senderName" : "Titan Corp",
+	"portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "You just received the formal ^yellow;contractor qualification^reset; from Titan Corp, keep up the good work!"
+  },
+  "at_ext_manual2" : {
+    "type" : "tutorial",
+    "text" : "你刚刚获得了^yellow;自动化配方手册^reset;,你可以用它来查阅自动化相关的配方."
+  },
+    "at_ext_stellara1" : {
+    "type" : "mission",
+	"senderName" : "Stellara",
+	"portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "Welcome! Just let me know what you're looking for."
+  },
+    "at_ext_stellara2" : {
+    "type" : "mission",
+	"senderName" : "Stellara",
+	"portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "Well, take a look and see if anything catches your eye. Just... don't ask where I got these."
+  },
+    "at_ext_stellara3" : {
+    "type" : "mission",
+	"senderName" : "Stellara",
+	"portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "Hey, feel free to look around, just keep your hands to yourself"
+  },
+    "at_ext_stellara4" : {
+    "type" : "mission",
+	"senderName" : "Stellara",
+	"portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "Hmm... I feel like I've seen you before. You must be here to buy something, right?"
+  },
+    "at_ext_stellara_leave1" : {
+    "type" : "mission",
+	"senderName" : "Stellara",
+	"portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "Farewell! Come again anytime."
+  },
+    "at_ext_stellara_leave2" : {
+    "type" : "mission",
+	"senderName" : "Stellara",
+	"portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "Heading out already? Don't be a stranger, come back anytime!"
+  },
+    "at_ext_stellara_leave3" : {
+    "type" : "mission",
+	"senderName" : "Stellara",
+	"portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "I update my stock from time to time, make sure to check back later!"
+  },
+    "at_ext_stellara_leave4" : {
+    "type" : "mission",
+	"senderName" : "Stellara",
+	"portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "Goodbye, Take care out there!"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "itemName" : "at_ext_habcontract",
+  "rarity" : "Legendary",
+  "maxStack" : 100,
+  "tooltipKind" : "at_ext_item",
+  "category" : "quest",
+  "inventoryIcon" : "at_ext_habcontract.png",
+  "largeImage" : "at_ext_habcontract.png",
+  "pickupQuestTemplates" : ["at_ext_hab_1"],  
+  
+  "description" : "Apartment Purchase Certificate",
+  "shortdescription" : "^yellow;Apartment contract^reset;"
+  
+}

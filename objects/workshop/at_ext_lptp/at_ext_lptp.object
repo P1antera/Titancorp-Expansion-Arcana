@@ -1,0 +1,121 @@
+{
+  "objectName" : "at_ext_lptp",
+  "colonyTags" : ["light"],
+  "rarity" : "Common",
+  "description" : "A mobile personal computer. Used for accepting ^yellow;contracts.",
+  "shortdescription" : "^orange;[T_ext]Titancorp Laptop",
+  "race" : "generic",
+  
+  
+  
+    "offeredQuests" : [
+  "at_ext_dailyjob_intro",
+	"at_ext_hab_0",
+  "at_ext_d1",
+	"at_ext_d2",
+	"at_ext_d3",
+    "at_ext_d4",
+    "at_ext_d5",
+    "at_ext_rl2_1",
+    "at_ext_d6",
+    "at_ext_d7",
+    "at_ext_d8",
+    "at_ext_br2_1",
+	"at_ext_d9",
+	"at_ext_d10",
+	"at_ext_d11",
+    "at_ext_coupon",
+    "at_ext_shipcontroller",	
+    "at_ext_d8_pistol",
+	"at_ext_pre"
+	
+	],
+	
+	
+	 "turnInQuests" : [
+	"at_ext_d1",
+	"at_ext_d2",
+	"at_ext_d3",
+	"at_ext_d4",
+	"at_ext_d5",
+    "at_ext_d6",
+    "at_ext_d7",
+    "at_ext_d8",
+	"at_ext_d9",
+	"at_ext_d10",
+	"at_ext_d11",
+	"at_ext_d10_item",
+	"at_ext_coupon",
+  "at_ext_shipcontroller",	
+    "at_ext_d8_pistol",
+	"at_ext_pre"
+	 ],
+
+  "category" : "light",
+  "price" : 100,
+  "lightColor" : [5, 5, 5],
+  "flickerDistance" : 0.2,
+  "flickerStrength" : 0.05,
+  "flickerTiming" : 4,
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "body.png:<color>.on",
+      "imagePosition" : [0, 0],
+	  "lightPosition" : [1, 1],
+
+      "direction" : "left",
+
+      "flipImages" : true,
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "body.png:<color>.on",
+      "imagePosition" : [0, 0],
+	  "lightPosition" : [1, 1],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "soundEffect" : "/sfx/objects/fluorescent_light_quiet.ogg",
+  "soundEffectRangeMultiplier" : 0.5,
+  
+  "animation" : "/objects/arcana_light_fullbright_animated.animation",
+  "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "light" : {
+          "states" : {
+            "on" : {
+              "frames" : 1,
+              "cycle" : 0.4,
+			  "mode" : "loop"
+            }
+          }
+        }
+	  }
+    },
+    "sounds" : {
+      "on" : [ "/sfx/objects/tinywallswitch.ogg" ],
+      "off" : [ "/sfx/objects/tinywallswitch.ogg" ]
+    }
+  },
+  "animationParts" : {
+    "bg" : "body.png",
+    "fg" : "fullbright.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+  
+  "interactive" : true,
+
+  "inputNodes" : [ [0, 0] ]
+}

@@ -1,0 +1,16 @@
+{
+  "atExtUseMedicalItem": {
+    "type": "action",
+    "name": "atExtUseMedicalItem",
+    "title": "atExtUseMedicalItem",
+    "properties": {
+      "healthThreshold": {"type": "number", "value": 0.5},
+      "cooldown": {"type": "number", "value": 10},
+      "visualUseTime": {"type": "number", "value": 0.6},
+      "category": {"type": "string", "value": "medicine"}
+    },
+    "category": "at_ext",
+    "script": "/scripts/actions/at_ext_guardHeal.lua",
+    "output": {}
+  }
+}

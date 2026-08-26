@@ -1,0 +1,10 @@
+{
+  "name" : "scorpiodjdronebody",
+  "category" : "scorpiodjdrone",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "scorpiodjdronebody.png",
+    "fullbright" : "scorpiodjdronebodyfullbright.png"
+  }
+}

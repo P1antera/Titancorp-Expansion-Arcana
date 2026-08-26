@@ -1,0 +1,138 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+            "frames" : 1,
+            "cycle" : 0.4,
+            "mode" : "loop"
+		  },
+          "charge" : {
+            "frames" : 5,
+            "cycle" : 1.15,
+            "mode" : "transition",
+            "transition" : "fullcharge",
+			"properties" : {
+              "persistentSound" : "/sfx/at_ext_rl2/at_ext_rl2_1.ogg"
+            }
+          },
+          "fullcharge" : {
+            "frames" : 4,
+            "cycle" : 1.2,
+            "mode" : "loop",
+			"properties" : {
+              "persistentSound" : "/sfx/at_ext_rl2/at_ext_rl2_2.ogg"
+            }
+          },
+          "fire" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "gun" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0.1, 0.2],
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "firing" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:off"
+              }
+            },
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charge.<frame>"
+              }
+            },
+            "fullcharge" : {
+              "properties" : {
+                "image" : "<partImage>:fullcharge.<frame>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire"
+              }
+            }
+          }
+        }
+      },
+      "muzzleFlash" : {
+        "properties" : {
+          "zLevel" : -1,
+          "centered" : true,
+          "offset" : [0.75, 0],
+          "fullbright" : true,
+          "transformationGroups" : ["muzzle"]
+        },
+
+        "partStates" : {
+          "firing" : {
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:<variant>.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "gunfullbright" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0.1, 0.2],
+          "transformationGroups" : ["weapon"],
+          "zLevel" : 1,
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "firing" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:off"
+              }
+            },
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charge.<frame>"
+              }
+            },
+            "fullcharge" : {
+              "properties" : {
+                "image" : "<partImage>:fullcharge.<frame>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire"
+              }
+            }
+          }
+        }
+      }
+
+    }
+  },
+
+  "transformationGroups" : {
+    "weapon" : {},
+    "muzzle" : {}
+  },
+
+  "sounds" : {
+    "fire" : ["/sfx/at_ext_rl2/at_ext_rl2_fire1.ogg"],
+	"fire2" : ["/sfx/at_ext_rl2/at_ext_rl2_fire.ogg"]
+  }
+}

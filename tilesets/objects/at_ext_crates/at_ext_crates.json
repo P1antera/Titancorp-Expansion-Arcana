@@ -1,0 +1,66 @@
+{
+    "margin":0,
+    "name":"at_ext_crates",
+    "properties":
+        {
+
+        },
+    "spacing":0,
+    "tilecount":5,
+    "tileheight":15,
+    "tilewidth":40,
+    "tileproperties" : {
+        "0":{
+         "\/\/shortdescription":"",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"at_ext_ct1_obj",
+         "tilesetDirection":"right"
+        },
+        "1":{
+         "\/\/shortdescription":"",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"at_ext_ct2_obj",
+         "tilesetDirection":"right"
+        },
+        "2":{
+         "\/\/shortdescription":"",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"at_ext_ct3_obj",
+         "tilesetDirection":"right"
+        },
+        "3":{
+         "\/\/shortdescription":"",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"at_ext_ct4_obj",
+         "tilesetDirection":"right"
+        },
+        "4":{
+         "\/\/shortdescription":"",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"at_ext_lockeddoor",
+         "tilesetDirection":"right"
+        }
+    },
+    "tiles" : {
+        "0":{
+         "image":"at_ext_ct1.png"
+        },
+        "1":{
+         "image":"at_ext_ct2.png"
+        },
+        "2":{
+         "image":"at_ext_ct3.png"
+        },
+        "3":{
+         "image":"at_ext_ct4.png"
+        },
+        "4":{
+         "image":"at_ext_lockeddoor.png"
+        }
+    }
+}

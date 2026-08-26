@@ -1,0 +1,17 @@
+{
+  "name" : "at_ext_swimboost",
+  "effectConfig" : {
+    "movementParameters" : {
+      "liquidImpedance" : 0,
+      "liquidForce" : -150,
+      "liquidJumpProfile" : {
+        "jumpSpeed" : 150.0
+      }
+    }
+  },
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "at_ext_swimboost.lua"
+  ]
+}

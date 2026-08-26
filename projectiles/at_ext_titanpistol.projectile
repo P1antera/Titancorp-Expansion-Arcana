@@ -1,0 +1,47 @@
+{
+  "projectileName" : "at_ext_titanpistol",
+  "physics" : "at_ext_bulletfall_pst",
+  
+  "timeToLive" : 4,
+  "bounces" : 0,
+  "speed" : 100,
+  
+  "image" : "at_ext_titanpistol.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  
+  "fullbright" : true,
+  "lightColor" : [120, 120, 40],
+  "emitters" : ["arcana_particle_yellow"],
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/arcana_explosion_fire_2/arcana_explosion_fire_2.config"
+    }
+  ],
+  
+  "periodicActions" : [
+    {
+      "time" : 0.005,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/activeitems/axe/workshop_axe_1_projectile_1/workshop_axe_1_projectile_1_trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.15,
+        "destructionAction" : "shrink",
+        "fullbright" : false
+      }
+    }
+  ],
+  
+  "damageKind" : "default"
+ 
+}

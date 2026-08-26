@@ -1,0 +1,60 @@
+{
+  "projectileName" : "at_ext_d8_pistol",
+  "physics" : "laser",
+  
+  "timeToLive" : 3,
+  "bounces" : 0,
+  "speed" : 100,
+   "scripts" : [ "homingprojectile.lua" ],
+  "scriptDelta" : 5,
+  "randomAmplitude": 0.4,    
+  "randomFrequency": 2.5,    
+  "sineAmplitude": 0.5,      
+  "sineFrequency": 1.8,      
+  "chaosFactor": 0.5,       
+  "distanceThreshold": 12,   
+
+  "homingDistance" : 25,
+  "rotationRate" : 5,
+  "trackingLimit" : 30, 
+
+  "image" : "body.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  
+  "fullbright" : true,
+  "lightColor" : [30, 60, 100],
+  "emitters" : [ "arcana_particle_ember_cyan" ],
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/arcana_explosion_bullet_blue/arcana_explosion_bullet_blue.config"
+    }
+  ],
+  
+  "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/at_ext_d8_pistol/trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+		"size" : 0.8,
+        "destructionTime" : 0.1,
+        "destructionAction" : "fade",
+        "fullbright" : true
+      }
+    }
+  ],
+  
+  "damageKind" : "arcana_azure"
+ 
+}

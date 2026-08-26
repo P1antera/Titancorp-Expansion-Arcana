@@ -1,0 +1,52 @@
+{
+  "id" : "at_ext_rl2_1",
+  "mainQuest" : false,
+  "prerequisites" : [ "at_ext_d5" ],
+  "title" : "^yellow;Incoming message^reset;",
+  "text" : "Hey, don't close this, this isn't spam! I know who you are and what you want. Meet me outside the cafe next to the weapon shop in Titancolony!",
+  "completionText" : "Nice to see you, here, let me show you something....",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0,0],
+  "rewards" : [
+    [
+     
+    ]
+    ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_unknown2.png"} ],
+          "title" : "Unknown"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        }
+    },
+    "descriptions" : {
+      "enterInstance" : "Go to ^orange;Titancolony^reset;.",
+      "findGoal" : "Find the ^orange;Sender^reset;.",
+      "turnIn" : "Talk with^orange;Scientist^reset;."
+    },
+	
+    "warpEntityUid" : "at_ext_pilot",
+    "warpAction" : "instanceworld:at_ext_colony",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:at_ext_rl2",
+	
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+	
+    "goalEntityUid" : "at_ext_scientist",
+	  //"interactEntityUid" : "at_ext_d1_goal",
+    "indicateGoal" : true,
+    "trackGoalEntity" : true,
+	
+    "turnInEntityUid" : "at_ext_scientist"
+  }
+}

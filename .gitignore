@@ -1,0 +1,12 @@
+# Local build products
+build/
+
+# Git metadata must not be packed with the mod assets
+.git/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+*.code-workspace
+Thumbs.db
+Desktop.ini

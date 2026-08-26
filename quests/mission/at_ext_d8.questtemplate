@@ -1,0 +1,52 @@
+{
+  "id" : "at_ext_d8",
+  //"mainQuest" : true,
+  "prerequisites" : [ "at_ext_d9" ],
+  "title" : "^red;[hard]^yellow;Special mission",
+  "text" : "A client is seeking a mercenary to assist with research-related tasks.\n============================\nPrimary objective: Ensure the safety of the client and their assets.\nJob requirements: Extensive combat experience.\n^yellow;You will operate according to the client's directives.^reset;\n============================",
+  "completionText" : "Pleasure working with you! I will send ^yellow;Credits^reset; to you right now!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0,0],
+  "rewards" : [
+    [
+      [ "arcana_currency_credit", 5000 ], [ "at_ext_coupon", 1 ]
+    ]
+    ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "descriptions" : {
+      "enterInstance" : "Go to your ^orange;Titan ship^reset; and talk with the ^yellow;Pilot.^reset;",
+      "findGoal" : "Finish the ^orange;mission^reset;.",
+      "turnIn" : "Return to ^orange;Titancorp Laptop^reset; and report."
+    },
+	
+    "warpEntityUid" : "at_ext_pilot",
+    "warpAction" : "instanceworld:at_ext_d8",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:at_ext_d8",
+	
+    "goalTrigger" : "interact",
+    //"proximityRange" :,
+	
+    "goalEntityUid" : "at_ext_d8_goal",
+	  "interactEntityUid" : "at_ext_d8_goal",
+    "indicateGoal" : true,
+    "trackGoalEntity" : false,
+	
+    "turnInEntityUid" : "at_ext_lptp"
+  }
+}

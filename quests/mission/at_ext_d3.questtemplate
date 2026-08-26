@@ -1,0 +1,95 @@
+{
+  "id" : "at_ext_d3",
+  "mainQuest" : true,
+  "canBeAbandoned" : true,
+  "prerequisites" : ["at_ext_d2"],
+  "title" : "^cyan;[Senior]^yellow;Special mission^reset;",
+  "text" : "A group of ^red;Anarkyons^reset; attacked one of our heavy freighter, according to reliable message, there are still many survivors on board. We need an experienced mercenary to go there, ^red;neutralize all enemies^reset;, and retake control of the ^yellow;ship",
+  "completionText" : "Thanks,The ^yellow;credits^reset; have been transferred to your account!",
+  "moneyRange" : [0, 0],
+  "rewards" : [
+  [
+  ["arcana_currency_credit", 1500]
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/at_ext_mptg.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+
+    "descriptions" : {
+
+      "enterInstance" : "Go to your ^orange;Titan ship^reset; and talk with the ^yellow;Pilot.^reset;",
+      "turnIn" : "Return to ^orange;Titancorp Laptop^reset; and report."
+    },
+	
+
+    "warpEntityUid" : "at_ext_pilot",
+
+    "warpAction" : "instanceworld:at_ext_d3",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:at_ext_d3",
+	
+   
+    "targets" : [
+      {
+      
+        "targetEntityUid" : "at_ext_d3_goal",
+        "description" : "Retrieve ^yellow;equipment",
+        "indicator" : true,
+        "targetTrigger" : "interact",
+        "track" : true
+      },
+	  {
+      
+        "targetEntityUid" : "at_ext_d3_goal1",
+        "description" : "Reactivate the ship's ^yellow;Powerplant",
+        "indicator" : true,
+        "targetTrigger" : "interact",
+        "track" : true
+      },
+      {
+        "targetEntityUid" : "at_ext_d3_goal2",
+        "description" : "Confirm the safety of ^green;survivors",
+        "targetTrigger" : "interact",
+		"indicator" : true,
+        "track" : true
+      },
+      {
+        "targetEntityUid" : "at_ext_d3_goal3",
+        "description" : "Go to the ^yellow;bridge^reset; and retake control of the ship",
+        "targetTrigger" : "interact",
+        "indicator" : true,
+        "track" : true
+      }
+    ],
+	
+    "checkpoints" : [
+
+	  {
+        "checkpointUid" : "at_ext_d3_cp1"
+        
+      },
+	  {
+        "checkpointUid" : "at_ext_d3_goal2"
+        
+      }
+      
+    ],	
+
+    //交付任务的uid
+    "turnInEntityUid" : "at_ext_lptp"
+  }
+}

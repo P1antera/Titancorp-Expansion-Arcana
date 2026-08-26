@@ -1,0 +1,33 @@
+{
+  "objectName" : "at_ext_radiosender_random",
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 0,
+  "printable" : false,
+  "scannable" : false,
+  "description" : "...",
+  "shortdescription" : "radiosender",
+  "race" : "human",
+  "inputNodes" : [ [-1, 0] ],
+  "scripts" : [ "at_ext_radiosender_random.lua" ],
+  "range" : 200, 
+  "radioMessages" : [
+  "at_ext_stellara1",
+  "at_ext_stellara2",
+  "at_ext_stellara3",
+  "at_ext_stellara4"
+],
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "at_ext_radiosender_random.png",
+      "imagePosition" : [-8, -8],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "fullbright" : true,
+      "spaceScan" : 0.1,
+      "anchors" : [ ]
+
+    }
+  ]
+}

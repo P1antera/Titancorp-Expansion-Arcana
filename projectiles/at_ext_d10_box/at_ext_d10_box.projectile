@@ -1,0 +1,36 @@
+{
+  "projectileName" : "at_ext_d10_box",
+  "physics" : "at_ext_droppod",
+ 
+  "timeToLive" : 4.0,
+  "image" : "at_ext_d10_box.png",
+  "speed" : 40,
+  "animationCycle" : 1,
+  "animationLoops" : true,
+  "frameNumber" : 1,
+  "power" : 0,
+  "fullbright" : false,
+  "damageKind" : "hidden",
+ "damagePoly" : [ [1, -0.5], [-1, -0.5], [-1, 0.5], [1, 0.5] ],
+  "orientationLocked" : true,
+
+ 
+  
+
+ 
+  "onlyHitTerrain" : true,
+  
+     "actionOnCollide" : [
+
+  ],
+
+  "actionOnReap" : [
+    {
+      "action" : "item",
+      "name" : "at_ext_pk4",
+      "count" : 1
+    }
+  ]
+  
+
+}

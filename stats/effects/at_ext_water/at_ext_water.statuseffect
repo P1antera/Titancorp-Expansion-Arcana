@@ -1,0 +1,12 @@
+{
+  "name" : "at_ext_water",
+  "defaultDuration" : 600,
+  "scripts" : [
+    "at_ext_water.lua"
+  ],
+  "effectConfig" : {
+    "healRate" : 1
+  },
+  "label" : "Clearwell Spring Water [+1 health per second]",
+  "icon" : "/interface/statuses/at_ext_water_icon.png"
+}

@@ -1,0 +1,10 @@
+{
+  "name" : "exampleMonster",
+  "category" : "exampleMonster",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "exampleMonster.png",
+    "fullbright" : "exampleMonsterfullbright.png"
+  }
+}

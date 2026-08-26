@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "at_ext_hq1",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "at_ext_hq1" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : false
+  },
+
+  "parts" : [
+    {
+      "name" : "at_ext_hq1",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "/dungeons/hq/at_ext_hq1.json" ]
+    }
+  ]
+}

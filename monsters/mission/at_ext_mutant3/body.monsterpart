@@ -1,0 +1,9 @@
+{
+  "name" : "body",
+  "category" : "at_ext_mutant3",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "at_ext_mutant3.png"
+  }
+}

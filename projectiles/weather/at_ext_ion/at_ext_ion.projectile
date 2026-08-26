@@ -1,0 +1,16 @@
+{
+  "projectileName" : "at_ext_ion",
+  "image" : "at_ext_ion.png",
+  //"animationCycle" : 0.4,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [177, 194, 255],
+  "actionOnReap" : [
+    
+  ],
+  "power" : 0.0,
+  "damageKind" : "default"
+  
+  
+}

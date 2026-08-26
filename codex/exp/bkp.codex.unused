@@ -1,0 +1,76 @@
+{
+  "id" : "ar_atexp",
+
+  "title" : "Automation Recipes",
+  "description" : "A manual for automation recipes extension mod.",
+  "icon" : "ar_atexp.png",
+  "contentPages" :
+  [
+"
+^green;Content^reset;
+^cyan;Foundry----2
+Assembler----3-5
+Lathe----6
+Resource extractor----7
+",  
+  
+"^cyan;Foundry:^reset;
+Ore to Bar:
+silver,platinum,gold,durasteel,copper,solarium,tungsten,titanium,aegisalt,violium,ferozium.
+^green;And all of Arcana's Ores.^reset;
+^#FF3C00;Recipes are same as the Original:^reset;
+===============================
+copperwire
+===============================
+",
+	
+"^cyan;Assembler:^reset;
+^yellow;coppercomponent^reset; = 1x:(copperbar,tungstenbar,copperwire)
+^yellow;geodecomponent^reset; = 1x:(atalgoldbar,arcaniumbar,coppercomponent)
+^yellow;ceruleancomponent^reset; = 1x:(morphosisBar,animaBar,geodeComponent)
+^yellow;raidenComponent^reset; = 1x:(hakenVerrostin,thoriumBar,ceruleanComponent).
+^yellow;verrostinComponent:^reset;same as Original.
+",
+"^yellow;orionTechCard^reset; = 1x:(ceruleanComponent, smallbattery, prisiliteore)
+^yellow;horizonTechCard^reset; = 1x:(geodeComponent, necroiumBar)6x: copperwire
+^yellow;oceanicTechCard^reset; = 1x:(raidenComponent, oceanite, azuriumBar)
+^yellow;verrostinTechCard^reset; = 1x:(ceruleanComponent, verrostinComponent)2x:smallbattery
+",
+"^#FF3C00;The recipes are same as Original:^reset;
+===============================
+battery
+enhancedbattery
+===============================
+",
+
+"^cyan;Lathe:^reset;
+stickofram=1x:(siliconboard,wire)
+^#FF3C00;Recipes are same as the Original:^reset;
+===============================
+ursaplate
+exoslateComposite
+rufesciteComposite
+slipstreamComposite
+enartzComposite
+siliconboard
+===============================
+",
+
+"^cyan;Resource extractor:^reset;
+Tiles can be extracted, producing many useful materials such as ores, essence, liquids, etc.
+Currently, only most Arcana tiles are supported.
+^#FF3C00;Extra recipes:^reset;
+===============================
+moonrock,moonstone,moondust.
+===============================
+",
+
+"
+^#9F3CCE;Thanks! you are welcome to tell me if you got a good idea! :D\n\n\n        ^#9F3CCE;----Plantera
+"
+  ],
+    "itemConfig" : {
+    "rarity" : "rare",
+    "price" : 100
+  }
+}

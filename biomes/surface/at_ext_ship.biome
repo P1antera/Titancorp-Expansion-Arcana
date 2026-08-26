@@ -1,0 +1,12 @@
+{
+  "name" : "at_ext_ship",
+  "friendlyName" : "TitanShip",
+
+  "parallax" : "/parallax/surface/at_ext_ship.parallax",
+
+  "spawnProfile" : {
+
+  },
+
+  "hueShiftOptions" : [0]
+}

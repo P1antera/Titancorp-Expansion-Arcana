@@ -1,0 +1,43 @@
+{
+  "id" : "at_ext_d8_pistol",
+  "prerequisites" : [ "at_ext_d8" ],
+  "mainQuest" : false,
+  
+  "title" : "^yellow;Special gift^reset;",
+  "text" : "Hey, thanks for helping me out. I've got a little gift here, hope you'll take it.",
+  "completionText" : "Here's a pistol I crafted myself. I believe it deserves a better owner----you.",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    [ "at_ext_d8_pistol", 1 ]
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Doctor"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Doctor"
+        }
+    },
+     "turnInDescription" : "Claim the ^yellow;Gift^reset;",   
+    "requireTurnIn" : true,
+    "conditions" : [
+	  {
+        "type" : "gatherItem",
+        "itemName" : "money",
+        "count" : 1,
+        "consume" : false
+      }
+    ]
+  }
+}

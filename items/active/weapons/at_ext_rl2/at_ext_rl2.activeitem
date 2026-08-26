@@ -1,0 +1,174 @@
+{
+  "itemName" : "at_ext_rl2",
+  "price" : 0,
+  "maxStack" : 1,
+  "rarity" : "Essential",
+  "description" : "^green;A powerful plasma cannon, with destructiveness increasing with charge time.\n^red;Warning: Overcharging causes severe energy instability.^reset;",
+  "shortdescription" : "^#fff2e2;''Platinum''plasma cannon^reset;",
+  "tooltipKind" : "at_ext_gun2",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 8,
+
+  "inventoryIcon" : "icon.png",
+  "largeImage" : "at_ext_rl2_lg.png",
+  "cursor" : "/cursors/arcana_cursor_neonGenesis.cursor",
+
+  "animation" : "at_ext_rl2.animation",
+  "animationParts" : {
+    "gun" : "body.png",
+    "gunfullbright" : "fullbright.png",
+	//"charge" : "charge.png",
+    "muzzleFlash" : "/items/active/weapons/at_ext_rl2/muzzleflash2.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : {
+	  "parts" : {
+	    "muzzleFlash" : {
+		  "properties" : {
+		    "offset" : [-0.25, -0.5]
+		  }
+		}
+	  }
+	}
+  },
+
+  "muzzleOffset" : [3, 1.125],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  //"primaryAbilityType" : "chargefire",
+  "primaryAbility" : {
+   "scripts" : ["/items/active/weapons/at_ext_rl2/at_ext_rl2.lua"], 
+    "class" : "ChargeFire",
+    "name" : "Charge Fire",
+    "fireTime" : 0.3,
+    "baseDps" : 200,
+    "energyUsage" : 400,
+  
+  
+  
+  
+  
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+		"weaponOffset" : [0.4, 0.35],
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+		"frontArmFrame" : "swim.3",
+        "backArmFrame" : "run.5"
+      },
+	   "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+		"weaponOffset" : [0.4, 0.35],
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+		"frontArmFrame" : "swim.3",
+        "backArmFrame" : "run.5"
+      },
+	    "fullcharge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+		"weaponOffset" : [0.4, 0.35],
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+		"frontArmFrame" : "swim.3",
+        "backArmFrame" : "run.5"
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 10,
+        "weaponRotation" : 10,
+        "twoHanded" : true,
+		"weaponOffset" : [0.4, 0.35],
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"frontArmFrame" : "swim.3",
+        "backArmFrame" : "run.5"
+      },
+      "cooldown" : {
+        "duration" : 0.05,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+		"weaponOffset" : [0.4, 0.35],
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"frontArmFrame" : "swim.3",
+        "backArmFrame" : "run.5"
+      }
+    },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 100,
+        "cooldown" : 0.1,
+        "projectileType" : "at_ext_rl2_1",
+        "projectileCount" : 1,
+        "inaccuracy" : 0,
+        "baseDamage" : 10,
+        "fireSound" : "fire"
+      },
+      {
+        "time" : 1.15,
+        "energyCost" : 200,
+        "cooldown" : 0.1,
+        "projectileType" : "at_ext_rl2_1",
+        "projectileCount" : 1,
+        "inaccuracy" : 0,
+        "baseDamage" : 30,
+        "fireSound" : "fire"
+      },
+      {
+        "time" : 2.15,
+        "energyCost" : 300,
+        "cooldown" : 0.1,
+        "projectileType" : "at_ext_rl2_2",
+        "projectileCount" : 1,
+        "inaccuracy" : 0,
+        "baseDamage" : 140,
+        "fireSound" : "fire2"
+      },
+      {
+        "time" : 2.35,
+        "energyCost" : 300,
+        "cooldown" : 1.5,
+        "projectileType" : "at_ext_rl2_3_1",
+        "projectileCount" : 1,
+        "inaccuracy" : 0,
+        "baseDamage" : 220,
+        "fireSound" : "fire2"
+      }
+    ]
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

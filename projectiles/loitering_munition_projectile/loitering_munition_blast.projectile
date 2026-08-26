@@ -1,0 +1,16 @@
+{
+  "projectileName" : "loitering_munition_blast",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "damageKindImage" : "icon.png",
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/fireexplosionknockback2.config"
+    },{
+      "action" : "projectile",
+      "type" : "loitering_munition_projectile"
+    }
+  ],
+  "damageKind" : "fireplasma",
+  "timeToLive" : 0
+}

@@ -1,0 +1,9 @@
+{
+  "frames" : "at_ext_plasmaexpl.png",
+  "variants" : 1,
+ // "loops" : 0,
+  "frameNumber" : 10,
+  "animationCycle" : 1,
+  //"mode" : "loopForever",
+  "offset" : [0, 0]
+}

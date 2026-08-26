@@ -1,0 +1,10 @@
+{
+  "name" : "at_ext_pilot_gunner",
+  "category" : "at_ext_pilot_gunner",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+	"fullbright" : "fullbright.png"
+  }
+}

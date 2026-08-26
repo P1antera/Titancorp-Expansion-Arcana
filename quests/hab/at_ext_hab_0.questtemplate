@@ -1,0 +1,44 @@
+{
+  "id" : "at_ext_hab_0",
+  "prerequisites" : [  ],
+  "mainQuest" : false,
+  
+  "title" : "^yellow;Purchase Apartment^reset;",
+  "text" : "Titancolony's housing agent informed me you've qualified for residential purchase in the colony. Go check it out!",
+  "completionText" : "Welcome! Let me know if you'd like to tour our show apartments!",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_awa2.png"} ],
+          "title" : "Pilot"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "turnInDescription" :  "Go to ^green;housing agency at ^yellow;Habitation area^green; in Titancolony.^reset;",  
+    "requireTurnIn" : true,
+
+    "conditions" : [
+	  {
+        "type" : "gatherItem",
+        "itemName" : "money",
+        "count" : 1,
+        "consume" : false
+      }
+    ]
+  }
+}

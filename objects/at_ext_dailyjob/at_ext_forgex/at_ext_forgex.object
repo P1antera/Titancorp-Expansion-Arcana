@@ -1,0 +1,56 @@
+{
+  "objectName" : "at_ext_forgex",
+  "colonyTags" : ["misc"],
+  "rarity" : "Legendary",
+  "description" : "Forgex.",
+  "shortdescription" : "Forgex",
+  "race" : "human",
+  "printable" : false,
+  "category" : "furniture",
+  "price" : 0,
+
+  "offeredQuests" : [
+ "at_ext_dailyjob1"
+  ],
+
+  "turnInQuests" : [
+  "at_ext_dailyjob_intro",
+ "at_ext_dailyjob1"
+  ],
+
+  "scripts" : [ "/objects/at_ext_dailyjob/at_ext_forgex/at_ext_forgex.lua" ],
+  "scriptDelta" : 20,
+  "chatRadius" : 10,
+  "chatCooldown" : 10,
+  "chatOptions" : 
+  [
+    "If you have time, consider patrolling the Undercity. We always need extra hands to clear out the outlaws elements there. The elevator behind me will take you down!"
+  ],
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "at_ext_forgex.png:<color>.<frame>","fullbright" : true }, { "image" : "at_ext_forgex_fb.png:<color>.<frame>" } ],
+	  "direction" : "left",
+	  "flipImages" : true,
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 6.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    },
+	{
+      "imageLayers" : [ { "image" : "at_ext_forgex.png:<color>.<frame>","fullbright" : true }, { "image" : "at_ext_forgex_fb.png:<color>.<frame>" } ],
+	  "direction" : "right",
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 6.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

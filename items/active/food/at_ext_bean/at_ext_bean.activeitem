@@ -1,0 +1,35 @@
+{
+  "itemName" : "at_ext_bean",
+  "rarity" : "Rare",
+  "category" : "preparedFood",
+  "inventoryIcon" : "at_ext_bean_icon.png",
+  "tooltipKind" : "at_ext_food",
+  "largeImage" : "at_ext_bean_icon.png", 
+  "description" : "100% natural mung bean juice, a refreshing drink for the heat of summer.\n^yellow;Grants the [Nanbei Mung Nectar] effect when consumed.^reset;",
+  "shortdescription" : "^green;Nanbei Mung Nectar^reset;",
+  "maxStack" : 99,
+  
+  "price" : 0,
+
+
+  "twoHanded" : true,
+  "itemTags" : [ "at_ext_food" ],
+
+  "animation" : "at_ext_bean.animation",
+  "animationParts" : {
+    "juice" : "at_ext_bean.png"
+  },
+
+  "scripts" : [ "at_ext_bean.lua" ],
+  "scriptDelta" : 1,
+
+  "idleArmAngle" : -0.5,
+  "idleJuiceAngle" : 0.0,
+  "drinkArmAngle" : 0,
+  "drinkJuiceAngle" : 0.0,
+  "raiseTime" : 1,
+  "drinkTime" : 3.0,
+  "emptyTime" : 1.0,
+  "effectName" : "at_ext_mungbeanjuice",
+  "effectDuration" : 1200
+}

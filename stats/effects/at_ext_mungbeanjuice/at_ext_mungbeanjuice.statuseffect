@@ -1,0 +1,15 @@
+{
+  "name" : "at_ext_mungbeanjuice",
+  "defaultDuration" : 1200,
+
+  "scripts" : [
+    "at_ext_mungbeanjuice.lua"
+  ],
+
+  "effectConfig" : {
+    "healRate" : 2
+  },
+
+  "label" : "Nanbei Mung Nectar [+2 health per second]",
+  "icon" : "/interface/statuses/at_ext_buff_icon.png"
+}

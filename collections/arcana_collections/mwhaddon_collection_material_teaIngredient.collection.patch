@@ -1,0 +1,18 @@
+[
+  {
+    "op" : "add",
+    "path" : "/collectables/at_ext_teabag1",
+    "value" : { 
+	"order" : 100, 
+	"item" : "at_ext_teabag1" 
+	}
+  },
+    {
+    "op" : "add",
+    "path" : "/collectables/at_ext_teabag2",
+    "value" : { 
+	"order" : 101, 
+	"item" : "at_ext_teabag2" 
+	}
+  }
+]

@@ -1,0 +1,36 @@
+{
+    "margin":0,
+    "name":"at_ext_tileset",
+    "properties":
+        {
+
+        },
+    "spacing":0,
+    "tilecount":2,
+    "tileheight":15,
+    "tilewidth":40,
+    "tileproperties" : {
+        "0":{
+         "\/\/shortdescription":"",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"at_ext_pilot",
+         "tilesetDirection":"right"
+        },
+        "1":{
+         "\/\/shortdescription":"",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"at_ext_pilot_nmission",
+         "tilesetDirection":"right"
+        }
+    },
+    "tiles" : {
+        "0":{
+         "image":"at_ext_pilot.png"
+        },
+        "1":{
+         "image":"at_ext_pilot.png"
+        }
+    }
+}

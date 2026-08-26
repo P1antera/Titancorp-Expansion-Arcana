@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 30 }
+  ],
+  "output" : {
+    "item" : "solidfuel",
+    "count" : 105
+  },
+   "duration" : 0.1,
+  "groups" : ["at_ext_shop_main" ]
+}

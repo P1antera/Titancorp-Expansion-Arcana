@@ -1,0 +1,99 @@
+{
+  "id" : "at_ext_d4",
+  "mainQuest" : true,
+  "canBeAbandoned" : true,
+  "prerequisites" : ["at_ext_d3"],
+  "title" : "^red;[Hard]^yellow;Special mission^reset;",
+  "text" : "One of our mining facilities has been struck by an unknown virus and many employees are infected. The area is now overrun by highly aggressive ^red;unidentified creatures^reset;. ^green;We've heard about your expertise in handling similar incidents, and we’re requesting your assistance to head there and recover the following items:\n^yellow;[security record], [experiment data].",
+  "completionText" : "Thanks, the data secured! ^yellow;Rewards^reset; have been sent to you!",
+  "moneyRange" : [0, 0],
+  "rewards" : [
+  [ ["arcana_armor_gearsS8E_chest", 1], ["at_ext_chest", 5],["arcana_armor_gearsS8E_legs", 1],["arcana_currency_credit", 1500]]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/at_ext_mptg.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        { 
+		  
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+
+    "descriptions" : {
+
+      "enterInstance" : "Go to your ^orange;Titan ship^reset; and talk with the ^yellow;Pilot.^reset;",
+      "turnIn" : "Return to ^orange;Titancorp Laptop^reset;."
+    },
+	
+
+    "warpEntityUid" : "at_ext_pilot",
+
+    "warpAction" : "instanceworld:at_ext_d4",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:at_ext_d4",
+	
+   
+    "targets" : [
+	  {
+        "targetEntityUid" : "at_ext_d4_goal1",
+        "description" : "Open the ^yellow;gate",
+        "indicator" : true,
+        "targetTrigger" : "proximity",
+		"proximityRange" : 4,
+        "track" : true
+      },
+	  {
+      
+        "targetEntityUid" : "at_ext_d4_goal2",
+        "description" : "Retrieve the ^yellow;Security record",
+        "indicator" : true,
+        "targetTrigger" : "interact",
+        "track" : true
+      },
+      {
+        "targetEntityUid" : "at_ext_d4_goal3",
+        "description" : "Retrieve the ^yellow;SSD",
+        "targetTrigger" : "interact",
+		"indicator" : true,
+        "track" : true
+      },
+      {
+        "targetEntityUid" : "at_ext_d4_goal4",
+        "description" : "Extract from the site",
+        "targetTrigger" : "proximity",
+		"proximityRange" : 10,
+        
+        "track" : true
+      }
+    ],
+	
+    "checkpoints" : [
+
+	  {
+        "checkpointUid" : "at_ext_d4_cp1"
+        
+      },
+
+	  {
+        "checkpointUid" : "at_ext_d4_goal2"
+        
+      },
+	  {
+        "checkpointUid" : "at_ext_d4_goal3"
+        
+      }
+      
+    ],	
+
+    //交付任务的uid
+    "turnInEntityUid" : "at_ext_lptp"
+  }
+}

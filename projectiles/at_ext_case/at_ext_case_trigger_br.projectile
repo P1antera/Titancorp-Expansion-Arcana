@@ -1,0 +1,28 @@
+{
+  "projectileName" : "at_ext_case_trigger_br",
+  "physics" : "laser",
+  "piercing" : false,
+  "timeToLive" : 0.01,
+  "speed" : 330,
+  "knockback" : 0,
+  
+  
+  "movementSettings" : {
+  "bounceFactor" : 0
+  },
+  "image" : "assetmissing.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "damageType" : "NoDamage",
+  "damageKind" : "nodamage",
+  "actionOnTimeout" :
+  [{
+  "action" : "projectile",
+  "inheritDamageFactor" : 0,
+  "autoFlipAdjust" : true,
+  "type" : "at_ext_case_br",
+  "angleAdjust" : 60,
+  "fuzzAngle" :7
+  }]
+
+}

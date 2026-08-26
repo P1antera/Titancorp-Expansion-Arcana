@@ -1,0 +1,140 @@
+{
+  "type" : "at_ext_ally_t1",
+  "baseType" : "villageguard",
+  
+  "dropPools" : [ "money" ],
+  "displayTitle" : "Titancorp soldier",
+
+
+  "scriptConfig" : {
+    "behavior" : "follower",
+
+    "dialog" : {
+      "follower" : {
+        "attack" : {
+          "default" : {
+            "default" : [
+              "Contact!.",
+              "You are dead!"
+            ]
+          }
+        },
+        "killedTarget" : {
+          "default" : {
+            "default" : [
+              "Enemies eliminated.",
+              "Let's move on."
+            ]
+          }
+        },
+        "join" : {
+          "default" : {
+            "default" : [
+              "I'll follow you.",
+              "Need help?"
+            ]
+          }
+        },
+        "returnFromCombat" : {
+          "default" : {
+            "default" : [
+              "Enemies eliminated.",
+              "Let's move on.",
+              "Now that was a fight!"
+            ]
+          }
+        },
+        "wait" : {
+          "default" : {
+            "default" : [
+              "Holding the position.",
+			  "Roger, moving."
+            ]
+          }
+        },
+        "returnFromWait" : {
+          "default" : {
+            "default" : [
+              "Hey, You're back!"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "movementParameters" : {
+    "mass" : 1.0,
+    "walkSpeed" : 10,
+    "runSpeed" : 20.0
+  },
+
+
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "arcana_armor_gearsS8E_head", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "chest" : [
+              { "name" : "arcana_armor_gearsS8E_chest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "arcana_armor_gearsS8E_legs", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "primary" : [
+              "at_ext_rf"
+            ],
+            "alt" : [
+              "workshop_axe_3"
+            ]
+          },
+          {
+            "chest" : [
+              { "name" : "arcana_armor_gearsS8E_chest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "arcana_armor_gearsS8E_legs", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "primary" : [
+              "at_ext_rf"
+            ],
+            "alt" : [
+              "workshop_axe_3"
+            ]
+          }
+        ]
+	  ]
+    ]
+  },
+  
+  "statusControllerSettings" : {    
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 100.0
+      },
+      "maxEnergy" : {
+        "baseValue" : 40.0
+      },
+      "powerMultiplier" : {
+        "baseValue" : 1.0
+      },
+      "protection" : {
+        "baseValue" : 0.2
+      },
+      "fireStatusImmunity" : {
+        "baseValue" : 0.5
+      },
+      "iceStatusImmunity" : {
+        "baseValue" : 0.5
+      },
+      "electricStatusImmunity" : {
+        "baseValue" : 0.3
+      },
+      "poisonStatusImmunity" : {
+        "baseValue" : 0.5
+      }
+    }
+  }
+}

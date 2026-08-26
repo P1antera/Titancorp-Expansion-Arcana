@@ -1,0 +1,78 @@
+{
+  "animation": "recondrone_controller.animation",
+  "animationDelta": 5,
+  "animationParts": {
+    "controller": "sd_exp_Tier1_titan_icon.png",
+    "fullbright" : "sd_exp_Tier1_titan_iconfullbright.png"
+  },
+  "boundingBox": [
+    -1,
+    -1,
+    1,
+    1
+  ],
+  "category": "^yellow;Attacking Drone T1",
+  "description": "A robot manufactured by the Workshop.
+  ^green;[Primary]Spawn/Despawn，[Alt]Fire.^reset;
+  This one can ^orange;auto attack^reset;",
+  "inventoryIcon": "sd_exp_Tier1_titan_icon.png",
+  "itemName": "sd_exp_t1titandrone_controller",
+  "itemTags": [],
+  "level": 7,
+  "maxStack": 1,
+  "controllerConfig" : {
+    "droneParam" : {
+      "droneConfig" : {
+        "abilityClass" : "Fire",
+        "controlType" : "wasd",
+        "abilityConfig" : {
+          "inaccuracy" : 0.03,
+          "projectileCount" : 1,
+          "muzzleOffset" : [0, 0],
+          "onGround" : false,
+          "burstTime" : 1,
+          "burstCount" : 1,
+          "projectileParam" : {
+            	"renderLayer" : "ForegroundEntity+10",
+			        "power" : 30,
+              "speed" : 100
+          },
+          "animationConfig" : {
+            "fireSound" : "fire",
+            "fireAnimation" : {
+              "stateType" : "body",
+              "state" : "fire",
+              "time" : 0.2
+            },
+            "windupAnimation" : {
+              "stateType" : "body",
+              "state" : "firewindup",
+              "time" : 0.4
+            },
+            "winddownAnimation" : {
+              "stateType" : "body",
+              "state" : "firewinddown",
+              "time" : 0.4
+
+            },
+            "turretGroup" : "",
+            "rotationCenter" : [0.8, -1.7]
+          },
+          "fireType" : "single",
+          "projectileType" : "workshop_pistol_1_projectile_1"
+        },
+        "abilityScript" : "/droneAbility/fire/fire.lua"
+      }
+    },
+    "droneType":"gs8welder",
+    "rightClickCooldown" :0.01
+  },
+  "price": 0,
+  "rarity": "Legendary",
+  "scripts": [
+    "/scripts/droneControllerBase.lua" //通用控制器脚本，
+  ],
+  "shortdescription": "GS8 Welder Controller",
+  "tooltipKind": "arcana_base_item",
+  "twoHanded": true
+}

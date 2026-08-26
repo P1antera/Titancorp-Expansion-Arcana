@@ -1,0 +1,17 @@
+{
+  "id" : "at_ext_d11_obj",
+
+  "title" : "Objectives",
+  "description" : "Use to read",
+  "icon" : "at_ext_d11_obj.png",
+  "contentPages" :
+  [
+"
+^yellow;==Main Objective==^reset;\nHorizon server data\n^yellow;==Optional==^reset;\nRed Diamond\nMedical device\nExousia drone control unit\nExousia experimental rifle
+"
+  ],
+    "itemConfig" : {
+    "rarity" : "rare",
+    "price" : 0
+  }
+}

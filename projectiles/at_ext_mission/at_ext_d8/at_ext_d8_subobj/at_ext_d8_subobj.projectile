@@ -1,0 +1,47 @@
+{
+  "projectileName" : "at_ext_d8_subobj",
+  "physics" : "laser",
+ 
+  "timeToLive" : 0.1,
+  "image" : "at_ext_d8_subobj.png",
+  "speed" : 10,
+  "animationCycle" : 1,
+  "animationLoops" : true,
+  "frameNumber" : 1,
+  "power" : 0,
+  "fullbright" : true,
+  "damageKind" : "hidden",
+ "damagePoly" : [ [8, -0.2], [8.5, -0.2], [8.5, 0.2], [8, 0.2] ],
+  "orientationLocked" : true,
+
+ 
+  
+
+ 
+  "onlyHitTerrain" : true,
+  
+     "actionOnCollide" : [
+
+  ],
+  
+  "actionOnTimeout" : [
+    {
+      "action" : "item",
+      "name" : "arcana_misc_elementalHeart",
+      "count" : 1
+    },
+    {
+      "action" : "item",
+      "name" : "arcana_misc_raidenComponent",
+      "count" : 1
+    },
+	{
+      "action" : "item",
+      "name" : "arcana_bar_nullatusBar",
+      "count" : 1
+    }
+
+  ]
+  
+
+}

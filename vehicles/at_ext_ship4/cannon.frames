@@ -1,0 +1,16 @@
+{
+  "frameGrid" : {
+    "size" : [21, 12],
+    "dimensions" : [7, 1],
+    "names" : [
+      [ "closed", "close.1", "opened", "load.1", "loaded", "fire.1", "fire.2" ]
+    ]
+  },
+  "aliases" : {
+      "close.2" : "closed",
+      "open.1" : "close.1",
+      "open.2" : "opened",
+
+      "load.2" : "loaded"
+  }
+}

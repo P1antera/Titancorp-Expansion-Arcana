@@ -1,0 +1,26 @@
+{
+    "at_ext_hab1_preview1" : {
+    "type" : "mission",
+	"senderName" : "Agency",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Economy Apartment - Meet your daily needs at minimal cost. Purchase includes ^green;basic furniture, with full interior customization qualification.^reset;"
+  },
+    "at_ext_hab2_preview1" : {
+    "type" : "mission",
+	"senderName" : "Agency",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Exquisite space, refined living, this residence is crafted for accomplished individuals like you. ^green;Purchase includes premium furnitures, with full interior customization qualification.^reset;"
+  },
+    "at_ext_hab2_1preview" : {
+    "type" : "mission",
+	"senderName" : "Agency",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Exquisite space, refined living, this residence is crafted for accomplished individuals like you. ^green;Purchase includes premium furnitures, with full interior customization qualification.^reset;"
+  },
+    "at_ext_hab3_1preview" : {
+    "type" : "mission",
+	"senderName" : "Agency",
+	"portraitImage" : "/quests/chat/at_ext_d4_pt.png:<frame>",
+    "text" : "Located in the low-density residential district of Ironveil, this house is the perfect place to rest and recover after a thrilling journey through the universe. ^green;Purchase includes basic furnitures, you will also get permission to develop and use the land.^reset;"
+  }
+}

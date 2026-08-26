@@ -1,0 +1,77 @@
+{
+  "title" : {
+    "type" : "label",
+    "position" : [11, 267],
+    "hAnchor" : "left",
+	"fontSize" : 7.2,
+    "value" : ""
+  },
+  "subTitle" : {
+    "type" : "label",
+    "position" : [11, 259],
+    "hAnchor" : "left",
+	"fontSize" : 7.2,
+    "color" : [178, 178, 178],
+    "value" : ""
+  },
+  "background" : {
+    "type" : "background",
+    "fileHeader" : "/interface/tooltips/at_ext_header.png",
+    "fileBody" : "/interface/tooltips/at_ext_vehiclebody.png",
+    "fileFooter" : "/interface/tooltips/at_ext_footer_item.png"
+  },
+  "header" : {
+    "type" : "image",
+    "position" : [0, 258],
+    "file" : "/interface/tooltips/at_ext_header.png"
+  },
+  "levelTitleLabel" : {
+    "type" : "label",
+	"fontSize" : 7.2,
+    "position" : [13, 188],
+    "hAnchor" : "left",
+    "value" : "^yellow;TCexp^reset;"
+  },
+
+
+  "largeImage" : {
+    "type" : "image",
+    "position" : [80, 157],
+    "file" : "",
+    "centered" : true,
+    "maxSize" : [80, 80],
+    "minSize" : [16, 16]
+  },
+  "descriptionLabel" : {
+    "type" : "label",
+	"fontSize" : 7.2,
+	"color" : [160, 160, 160],
+    "position" : [11, 110],
+    "wrapWidth" : 140,
+    "hAnchor" : "left",
+    "vAnchor" : "top"
+  },
+
+
+
+  "rarityLabel" : {
+    "type" : "label",
+	"fontSize" : 7.2,
+    "position" : [11, 43],
+    "hAnchor" : "left",
+    "centered" : true,
+    "wrapWidth" : 126
+  },
+  "moneyIcon" : {
+    "type" : "image",
+    "position" : [115, 43],
+    "file" : "/interface/money.png"
+  },
+  "priceLabel" : {
+    "type" : "label",
+	"fontSize" : 7.2,
+    "position" : [128, 43],
+    "hAnchor" : "left",
+    "value" : "tree"
+  }
+}

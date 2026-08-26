@@ -1,0 +1,44 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "mark" : {
+        "default" : "inactive",
+        "states" : {
+          "inactive" : {},
+          "active" : {}
+        }
+      }
+    },
+
+    "parts" : {
+      "controller" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+          "offset" : [0.15, 0.2],
+		  "image" : "<partImage>"
+        }
+      },      "fullbright" : {
+        "properties" : {
+          "zLevel" : 2,
+          "fullbright" : true,
+          "centered" : true,
+          "offset" : [0.15, 0.2],
+		  "image" : "<partImage>"
+        }
+      }
+    }
+  },
+
+  "sounds" : {
+    "aimTeleport" : [""],
+    "placeOk" : [""],
+    "placeBad" : ["/sfx/interface/clickon_error.ogg"],
+	
+	"activate" : ["/sfx/objects/ancientconsole_on.ogg"],
+	"deactivate" : ["/sfx/objects/ancientconsole_off.ogg"],
+	"speedUp" : ["/sfx/objects/apexconsole1on.ogg"],
+	"speedDown" : ["/sfx/objects/apexconsole1off.ogg"],
+	"ping" : ["/sfx/objects/screen5.ogg"]
+  }
+}

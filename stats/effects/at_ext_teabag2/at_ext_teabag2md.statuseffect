@@ -1,0 +1,8 @@
+{
+  "name" : "at_ext_teabag2md",
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "at_ext_teabag2md.lua"
+  ]
+}

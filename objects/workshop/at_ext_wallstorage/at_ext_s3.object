@@ -1,0 +1,42 @@
+{
+  "objectName" : "at_ext_s3",
+  "colonyTags" : ["titancorp","storage"],
+  "printable" : false,
+  "rarity" : "Common",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  "category" : "storage",
+  "description" : "A storage that installed on wall.^yellow;Installed input and output channel.",
+  "shortdescription" : "^yellow;[TC]^reset;Wall-mounted storage",
+  "race" : "generic",
+  
+  "price" : 0,
+  //"lightColor" : [61, 88, 102],
+
+  "inventoryIcon" : "at_ext_s3_icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "at_ext_s3.png:<color>.<frame>", "fullbright" : true }, { "image" : "at_ext_s3_fb.png:<color>.<frame>" } ],
+      "imagePosition" : [-16, -8],
+      "frames" : 15,
+      "animationCycle" : 3.0,
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+  "openSounds" : [ "/sfx/objects/chest_small_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/chest_small_close.ogg" ],
+  "slotCount" : 64,
+  "uiConfig" : "/interface/chests/at_ext_64slots.config",
+  "frameCooldown" : 11,
+  "autoCloseCooldown" : 3600,
+  
+  "scripts" : [ "script.lua" ],
+  "scriptDelta" : 5,
+  "craftingTime" : 1.0,
+  "outputRate" : 10,  
+  
+  "inputNodes" : [ [-2, -1] ],
+  "outputNodes" : [ [1, 1] ],
+  "directives" : ""
+}

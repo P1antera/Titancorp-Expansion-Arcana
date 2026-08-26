@@ -1,0 +1,120 @@
+{
+  "projectileName" : "at_ext_bomb_fakeship",
+  "image" : "at_ext_bomb_fire.png",
+  "animationCycle" : 0.25,
+  "physics" : "at_ext_bulletfall_rf",
+  "frameNumber" : 1,
+  "pointLight" : false,
+  "damageTeam" : { "type" : "indiscriminate" },
+  "speed" : 50,
+  "damagePoly" : [ [-6, 0], [-6, -6], [0, -6], [6, -6], [6, 0], [6, 6], [0, 6], [-6, 6] ],
+  
+    "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/at_ext_ship/at_ext_bomb/trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.3,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+  
+  
+  
+  
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/arcana_explosion_plasma_1_yellow/arcana_explosion_plasma_1_yellow.config"
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+    },
+
+    {
+      "action" : "projectile",
+      "type" : "at_ext_bomb_shard3",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.1,
+      "angleAdjust" : -193
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_bomb_shard3",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.1,
+      "angleAdjust" : 143
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_bomb_shard3",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.1,
+      "angleAdjust" : -220
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_bomb_shard3",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.1,
+      "angleAdjust" : -240
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_bomb_shard3",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.1,
+      "angleAdjust" : -165
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_bomb_shard3",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.1,
+      "angleAdjust" : 182
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_bomb_shard",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.1,
+      "angleAdjust" : 100
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_bomb_shard",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.1,
+      "angleAdjust" : -100
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_bomb_shard",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.1,
+      "angleAdjust" : -92
+    },
+    {
+      "action" : "projectile",
+      "type" : "at_ext_bomb_shard",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.1,
+      "angleAdjust" : 92
+    }
+  ],
+  "power" : 300.0,
+  "damageKind" : "fire"
+}
+
+

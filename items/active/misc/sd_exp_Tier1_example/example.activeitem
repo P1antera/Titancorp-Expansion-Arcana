@@ -1,0 +1,71 @@
+{
+  "animation": "recondrone_controller.animation",
+  "animationDelta": 5,
+  "animationParts": {
+    "controller": "sd_exp_example_icon.png",
+    "fullbright" : "sd_exp_example_iconfullbright.png"
+  },
+  "boundingBox": [
+    -1,
+    -1,
+    1,
+    1
+  ],
+  "category": "^green;DEBUG",
+  "description": "You shouldn't get this item.",
+  "inventoryIcon": "sd_exp_example_icon.png",
+  "itemName": "example_controller",
+  "itemTags": [],
+  "level": 1,
+  "maxStack": 1,
+  "controllerConfig" : {
+    "droneParam" : {
+      "droneConfig" : {
+        "abilityClass" : "Fire",
+        "controlType" : "wasd",
+        "abilityConfig" : {
+          "inaccuracy" : 0.01,
+          "projectileCount" : 2,
+          "muzzleOffset" : [1, 0],
+          "burstTime" : 0.1,
+          "burstCount" : 20,
+          "projectileParam" : {
+          },
+          "animationConfig" : {
+            "fireSound" : "fire",
+            "turretGroup" : "",
+            "rotationCenter" : [0, -0.5],
+            "windupAnimation":{
+              "stateType":"",
+              "state":"",
+              "time":0
+            },
+            "fireAnimation":{
+              "stateType":"",
+              "state":"",
+              "time":1
+            },
+            "winddownAnimation":{
+              "stateType":"",
+              "state":"",
+              "time":1
+            }
+          },
+          "fireType" : "burst",
+          "projectileType" : "bullet-2"
+        },
+        "abilityScript" : "/droneAbility/fire/fire.lua"
+      }
+    },
+    "droneType":"exampleMonster",
+    "rightClickCooldown" : 0
+  },
+  "price": 0,
+  "rarity": "Legendary",
+  "scripts": [
+    "/scripts/droneControllerBase.lua" //通用控制器脚本，
+  ],
+  "shortdescription": "^green;Perfectly Generic Drone Controller^reset;",
+  "tooltipKind": "arcana_base_item",
+  "twoHanded": true
+}

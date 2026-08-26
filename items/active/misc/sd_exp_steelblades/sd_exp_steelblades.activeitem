@@ -1,0 +1,41 @@
+{
+    "animation": "recondrone_controller.animation",
+    "animationDelta": 5,
+    "animationParts": {
+        "controller": "sd_exp_steelblades_icon.png",
+        "fullbright" : "sd_exp_steelblades_iconfullbright.png"
+    },
+    "animationScripts": ["/items/active/misc/recondrone_controller/detector.lua"],
+    "boundingBox": [-1, -1, 1, 1],
+    "category": "^#DBC5A6;Reconnaissance Tool",
+    "description": "Common scanners on the wilderness.Made by the Steelblade.
+    ^green;[Primary]Spawn/Despawn,[Alt]emit a terrain-detecting ping.Can be used to detect entities.^reset;
+    ^#8A6A55;Rob^reset;^#FFB536;Co^reset; ^#BF9F81;IndustriesTM^reset;",
+    
+    "inventoryIcon": "sd_exp_steelblades_icon.png",
+    "itemName": "sd_exp_steelbladesdrone_controller",
+    "itemTags": [],
+    "level": 1,
+    "maxStack": 1,
+    "pingBandWidth": 8,
+    "pingCooldown": 0.5,
+    "pingDetectConfig": {
+        "colors": {
+            "empty": [0, 180, 0, 255],
+            "hostile": [255, 0, 0, 255],
+            "neutral": [255, 255, 0, 255],
+            "solid": [120, 160, 120, 50]
+        },
+        "image": "/items/active/unsorted/oredetector/detectnoise.png:<variant>",
+        "type": "entity",
+        "variants": 4
+    },
+    "pingDuration": 3.0,
+    "pingRange": 50,
+    "price": 0,
+    "rarity": "Legendary",
+    "scripts": ["sd_exp_steelblades.lua"],
+    "shortdescription": "Steelblades Eyebot Controller",
+    "tooltipKind": "arcana_base_item",
+    "twoHanded": true
+}

@@ -1,0 +1,33 @@
+{
+  "projectileName" : "at_ext_d8_rf_deploy2",
+  "physics" : "laser",
+  "bounces" : 0,
+  "timeToLive" : 0.1,
+  "image" : "at_ext_d8_rf_deploy.png",
+  "speed" : 0,
+  "animationCycle" : 1.0,
+  "animationLoops" : true,
+  "frameNumber" : 1,
+  "power" : 0,
+  "fullbright" : true,
+  "damageKind" : "hidden",
+  "piercing" : false,
+  "orientationLocked" : true,
+  
+  "supportsProcessing" : true,
+  
+  "movementSettings" : {
+  "collisionEnabled" : false
+  },
+  "renderLayer" : "foregroundEntity",
+  "onlyHitTerrain" : true,
+  
+  "actionOnReap" : [
+
+  ],
+  
+  "scripts" : ["/scripts/projectiles/arcana_npcprojectile.lua"],
+  "scriptDelta" : 10,
+  "npcType" : "at_ext_d8_apexscout",
+  "npcSpawnOffset" : [2, 2]
+}

@@ -1,0 +1,79 @@
+{
+  "id" : "mwh_quest_instanceTest",
+  "mainQuest" : false,
+  "canBeAbandoned" : true,
+  "prerequisites" : [ ],
+  "title" : "测试任务标题",
+  "text" : "测试任务描述",
+  "completionText" : "任务完成",
+  "moneyRange" : [0, 0],
+  "rewards" : [
+  [
+	]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/mwh_instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "default" : "questGiver"
+    },
+
+    "descriptions" : {
+      //进入副本时的任务提示
+      "enterInstance" : "请互动并进入副本",
+      //交付任务的任务提示
+      "turnIn" : "请交付任务"
+    },
+	
+    //执行传送的对象的uid
+    "warpEntityUid" : "mwhaddon_npc_exousia_generalFalke",
+    //执行传送的行为
+    //判断玩家是否在副本内是看最后一个target的uid是否存在
+    "warpAction" : "instanceworld:mwh_test_mission",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:mwh_test_mission",
+	
+    //所有的目标 依次执行 不能跳 前面的完成才开始判定后一个
+    "targets" : [
+      {
+        //目标UID
+        "targetEntityUid" : "mwh_testUID_1",
+        //此目标激活时任务提示
+        "description" : "寻找目标1",
+
+        //触发的方式 proximity靠近了就触发 interact互动了才触发
+        "targetTrigger" : "proximity",
+        //如果触发方式是靠近 则多少格以内
+        "proximityRange" : 10,
+
+        //[可选]若为true 该目标激活时会有指针指向
+        "track" : true,
+        //[可选]若为true 该目标激活时目标上方会有一个蓝色箭头指引
+        "indicator" : true
+      },
+      {
+        "targetEntityUid" : "mwh_testUID_2",
+        "description" : "寻找目标2",
+        "targetTrigger" : "interact",
+        "indicator" : false
+      },
+      {
+        "targetEntityUid" : "mwh_testUID_3",
+        "description" : "寻找目标3",
+        "targetTrigger" : "proximity",
+        "proximityRange" : 10,
+        "track" : true
+      }
+    ],
+
+    "checkpoints" : [
+      {
+        "checkpointUid" : "mwh_testUID_checkpoint",
+        "index" : 2
+      }
+    ],
+
+    //交付任务的uid
+    "turnInEntityUid" : "mwhaddon_npc_exousia_generalFalke"
+  }
+}

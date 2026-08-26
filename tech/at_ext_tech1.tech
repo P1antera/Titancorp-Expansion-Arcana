@@ -1,0 +1,17 @@
+{
+  "name" : "at_ext_tech1",
+  "type" : "legs",
+
+  "scripts" : ["at_ext_tech1.lua"],
+  "animator" : "at_ext_tech1.animation",
+
+  "description" : "Gives you three smaller jumps you can use in the air!",
+  "shortDescription" : "^blue;Jump",
+  "rarity" : "Legendary",
+  "icon" : "/tech/multijump.png",
+
+  "chipCost" : 8,
+
+  "multiJumpCount" : 3,
+  "multiJumpModifier" : 0.65
+}

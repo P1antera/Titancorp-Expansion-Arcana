@@ -1,0 +1,25 @@
+{
+  "projectileName" : "ruinous_munition_explosion",
+  "image" : "ruinous_munition_explosion.png",
+  "animationCycle" : 0.33,
+  "frameNumber" : 6,
+  "speed" : 0,
+  "lightColor" : [183, 52, 175],
+  "pointLight" : true,
+  "statusEffects" : [ ],
+  "damagePoly" : [ [-50, 0], [-35, -35], [0, -50], [35, -35], [50, 0], [35, 35], [0, 50], [-35, 35] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "damageKind" : "arcana_abyss",
+  "knockback" : 30,
+  "periodicActions" : [
+    {
+      "time" : 0.05,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/gun/grenadeblast_fire1.ogg", "/sfx/gun/grenadeblast_fire2.ogg", "/sfx/gun/grenadeblast_fire3.ogg" ]
+    }
+  ]
+}

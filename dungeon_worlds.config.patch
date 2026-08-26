@@ -1,0 +1,557 @@
+[
+	
+
+//==================================================地牢==========================================================
+
+{
+    "op" : "add",
+    "path" : "/at_ext_dailyjob1",
+    "value" : {
+    "primaryDungeon" : "at_ext_dailyjob1",
+    "threatLevel" : 1,
+    "gravity" : 80,
+    "worldSize" : [6000, 6000],
+    "dungeonBaseHeight" : 1200,
+    "dungeonSurfaceHeight" : 810,
+    "ambientLightLevel" : [10, 10, 10],
+    "ambientNoises" : "/sfx/environmental/space_loop4.ogg",
+    "worldEdgeForceRegions" : "TopAndBottom",
+    "biome" : "at_ext_black"
+	}
+  }, 
+{
+    "op" : "add",
+    "path" : "/at_ext_dailyjob1_replay",
+    "value" : {
+    "primaryDungeon" : "at_ext_dailyjob1_replay",
+    "threatLevel" : 1,
+    "gravity" : 80,
+    "worldSize" : [6000, 6000],
+    "dungeonBaseHeight" : 1200,
+    "dungeonSurfaceHeight" : 810,
+    "ambientLightLevel" : [10, 10, 10],
+    "ambientNoises" : "/sfx/environmental/space_loop4.ogg",
+    "worldEdgeForceRegions" : "TopAndBottom",
+    "biome" : "at_ext_black"
+	}
+  }, 
+{
+    "op" : "add",
+    "path" : "/at_ext_dailyjob1_replay_t3",
+    "value" : {
+    "primaryDungeon" : "at_ext_dailyjob1_replay_t3",
+    "threatLevel" : 3,
+    "gravity" : 80,
+    "worldSize" : [7000, 7000],
+    "dungeonBaseHeight" : 1200,
+    "dungeonSurfaceHeight" : 810,
+    "ambientLightLevel" : [10, 10, 10],
+    "ambientNoises" : "/sfx/environmental/space_loop4.ogg",
+    "worldEdgeForceRegions" : "TopAndBottom",
+    "biome" : "at_ext_black"
+	}
+  }, 
+
+	{
+		"op" : "add",
+		"path" : "/at_ext_d1",
+		"value" : {
+			"primaryDungeon" : "at_ext_d1",
+    		"threatLevel" : 3,
+    		"gravity" : 80,
+    		"worldSize" : [2000, 150],
+			"airless" : true,
+    		"dungeonBaseHeight" : 150,
+    		"dungeonSurfaceHeight" : 100,
+    		"ambientLightLevel" : [32, 32, 32],
+    		"ambientNoises" : "/sfx/environmental/space_loop4.ogg",
+    		"musicTrack" : "/music/space-explorer.ogg",
+    		"biome": "space",
+			"worldEdgeForceRegions" : "TopAndBottom",
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+
+	{
+		"op" : "add",
+		"path" : "/at_ext_d2",
+		"value" : {
+			"primaryDungeon" : "at_ext_d2",
+    		"threatLevel" : 5,
+    		"gravity" : 80,
+    		"worldSize" : [1100, 400],
+			"weatherPool" : [
+				[1.0, "storm"]
+			],			
+    		"dungeonBaseHeight" : 400,
+    		"dungeonSurfaceHeight" : 150,
+    		"ambientLightLevel" : [32, 32, 32],
+    		"ambientNoises" : "/sfx/environmental/forest_night.ogg",
+    		"musicTrack" : "/music/dead-or-alive.ogg",
+    		"biome": "arcana_automated",
+			
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+	
+		{
+		"op" : "add",
+		"path" : "/at_ext_d3",
+		"value" : {
+			"primaryDungeon" : "at_ext_d3",
+    		"threatLevel" : 7,
+    		"gravity" : 80,
+    		"worldSize" : [1000, 1000],
+			"airless" : false,
+    		"dungeonBaseHeight" : 1000,
+    		"dungeonSurfaceHeight" : 1000,
+    		"ambientLightLevel" : [10, 10, 10],
+    		"ambientNoises" : "/sfx/environmental/space_loop4.ogg",
+    		"musicTrack" : "/music/crystal-battle1-loop.ogg",
+    		"biome": "space",
+			"worldEdgeForceRegions" : "TopAndBottom",
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+
+	{
+		"op" : "add",
+		"path" : "/at_ext_d4",
+		"value" : {
+			"primaryDungeon" : "at_ext_d4",
+    		"threatLevel" : 7,
+    		"gravity" : 80,
+    		"worldSize" : [2100, 400],
+				"airless" : false,		
+    		"dungeonBaseHeight" : 400,
+    		"dungeonSurfaceHeight" : 190,
+    		"ambientLightLevel" : [32, 32, 32],
+    		"ambientNoises" : "",
+    		"musicTrack" : "/music/at_ext_bgm1.ogg",
+    		"biome": "moon",
+			
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+
+
+	{
+		"op" : "add",
+		"path" : "/at_ext_d5",
+		"value" : {
+			"primaryDungeon" : "at_ext_d5",
+    		"threatLevel" : 8,
+    		"gravity" : 80,
+    		"worldSize" : [4100, 400],
+			"weatherPool" : [
+				[1.0, "snowstorm"]
+			],
+				"airless" : false,		
+    		"dungeonBaseHeight" : 400,
+    		"dungeonSurfaceHeight" : 190,
+    		"ambientLightLevel" : [32, 32, 32],
+    		"ambientNoises" : "",
+    		"musicTrack" : "/music/Atsu.ogg",
+    		"biome": "snow",
+			
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+
+
+	{
+		"op" : "add",
+		"path" : "/at_ext_d6",
+		"value" : {
+			"primaryDungeon" : "at_ext_d6",
+    		"threatLevel" : 8,
+    		"gravity" : 80,
+    		"worldSize" : [3800, 400],
+			"weatherPool" : [
+				[0.9, "acidrain"]
+			],
+				"airless" : false,		
+    		"dungeonBaseHeight" : 400,
+    		"dungeonSurfaceHeight" : 120,
+    		"ambientLightLevel" : [200, 200, 200],
+    		"ambientNoises" : "",
+    		"musicTrack" : "",
+    		"biome": "arcana_verdant",
+			
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+
+	{
+		"op" : "add",
+		"path" : "/at_ext_d7",
+		"value" : {
+			"primaryDungeon" : "at_ext_d7",
+    		"threatLevel" : 8,
+    		"gravity" : 80,
+    		"worldSize" : [3800, 400],
+			"weatherPool" : [
+				[1.0, "at_ext_ionstorm"]
+			],
+				"airless" : false,		
+    		"dungeonBaseHeight" : 400,
+    		"dungeonSurfaceHeight" : 120,
+    		"ambientLightLevel" : [200, 200, 200],
+    		"ambientNoises" : "",
+    		"musicTrack" : "",
+    		"biome": "arcana_desolate",
+			
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+
+
+
+	{
+		"op" : "add",
+		"path" : "/at_ext_d8",
+		"value" : {
+			"primaryDungeon" : "at_ext_d8",
+    		"threatLevel" : 9,
+    		"gravity" : 80,
+    		"worldSize" : [2000, 1000],
+			"weatherPool" : [
+				[1.0, "at_ext_storm"]
+			],
+				"airless" : false,		
+    		"dungeonBaseHeight" : 800,
+    		"dungeonSurfaceHeight" : 609,
+    		"ambientLightLevel" : [128, 128, 128],
+    		"ambientNoises" : "",
+    		"musicTrack" : "",
+    		"biome": "oceanmission",		
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+
+
+	{
+		"op" : "add",
+		"path" : "/at_ext_d9",
+		"value" : {
+			"primaryDungeon" : "at_ext_d9",
+    		"threatLevel" : 9,
+    		"gravity" : 80,
+    		"worldSize" : [2700, 600],
+			"weatherPool" : [
+				[1.0, "storm"]
+			],			
+    		"dungeonBaseHeight" : 600,
+    		"dungeonSurfaceHeight" : 150,
+    		"ambientLightLevel" : [32, 32, 32],
+    		"ambientNoises" : "",
+    		"musicTrack" : "/music/at_ext_d5.ogg",
+    		"biome": "scorchedcity",
+			
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+	{
+		"op" : "add",
+		"path" : "/at_ext_d10",
+		"value" : {
+			"primaryDungeon" : "at_ext_d10",
+    		"threatLevel" : 9,
+    		"gravity" : 80,
+    		"worldSize" : [2700, 600],
+			"weatherPool" : [
+			],			
+    		"dungeonBaseHeight" : 600,
+    		"dungeonSurfaceHeight" : 150,
+    		"ambientLightLevel" : [32, 32, 32],
+    		"ambientNoises" : "",
+    		"musicTrack" : "",
+    		"biome": "space",
+			
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+	{
+		"op" : "add",
+		"path" : "/at_ext_d11",
+		"value" : {
+			"primaryDungeon" : "at_ext_d11",
+    		"threatLevel" : 8,
+    		"gravity" : 80,
+    		"worldSize" : [3800, 400],
+			"weatherPool" : [
+				
+			],
+				"airless" : false,		
+    		"dungeonBaseHeight" : 400,
+    		"dungeonSurfaceHeight" : 120,
+    		"ambientLightLevel" : [200, 200, 200],
+    		"ambientNoises" : "",
+    		"musicTrack" : "/music/at_ext_d11.ogg",
+    		"biome": "arcana_superstormExpanse",
+			
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+
+
+
+
+
+
+	
+		{
+		"op" : "add",
+		"path" : "/at_ext_ship",
+		"value" : {
+			"primaryDungeon" : "at_ext_ship",
+    		"threatLevel" : 0,
+    		"gravity" : 80,
+    		"worldSize" : [1000, 150],
+	  "weatherPool" : [
+		[1.0, "at_ext_shipFlying"]
+	  ],
+			"airless" : false,
+    		"dungeonBaseHeight" : 150,
+    		"dungeonSurfaceHeight" : 40,
+    		"ambientLightLevel" : [128, 128, 128],
+    		"ambientNoises" : "",
+    		"musicTrack" : "/music/planetarium.ogg",
+    		"biome": "at_ext_ship",
+			"worldEdgeForceRegions" : "TopAndBottom",
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+	
+	{
+		"op" : "add",
+		"path" : "/at_ext_colony",
+		"value" : {
+			"primaryDungeon" : "at_ext_colony",
+    		"threatLevel" : 1,
+    		"gravity" : 80,
+    		"worldSize" : [1530, 1000],
+	  "weatherPool" : [
+		[0.50, "clear"],
+		[0.25, "rain"],
+		[0.25, "drizzle"]
+	  ],			
+    		"dungeonBaseHeight" : 970,
+    		"dungeonSurfaceHeight" : 800,
+    		"ambientLightLevel" : [128, 128, 128],
+    		
+    		"musicTrack" : "",
+    		"biome": "at_ext",
+			"ambientNoises" : "/sfx/at_ext_city.ogg",
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+//                           HAB
+	{
+		"op" : "add",
+		"path" : "/at_ext_hab1",
+		"value" : {
+			"primaryDungeon" : "at_ext_hab1",
+    		"threatLevel" : 1,
+    		"gravity" : 80,
+    		"worldSize" : [1530, 1000],
+	  "weatherPool" : [
+		[0.850, "clear"],
+		[0.075, "rain"],
+		[0.075, "drizzle"]
+	  ],			
+    		"dungeonBaseHeight" : 970,
+    		"dungeonSurfaceHeight" : 720,
+    		"ambientLightLevel" : [128, 128, 128],
+    		
+    		"musicTrack" : "/music/by-the-fireplace.ogg",
+    		"biome": "at_ext_hab",
+			"ambientNoises" : "/sfx/at_ext_city.ogg",
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+	{
+		"op" : "add",
+		"path" : "/at_ext_hab1_preview",
+		"value" : {
+			"primaryDungeon" : "at_ext_hab1_preview",
+    		"threatLevel" : 1,
+    		"gravity" : 80,
+    		"worldSize" : [1530, 1000],
+	  "weatherPool" : [
+		[0.850, "clear"],
+		[0.075, "rain"],
+		[0.075, "drizzle"]
+	  ],			
+    		"dungeonBaseHeight" : 970,
+    		"dungeonSurfaceHeight" : 720,
+    		"ambientLightLevel" : [128, 128, 128],
+    		
+    		"musicTrack" : "/music/by-the-fireplace.ogg",
+    		"biome": "at_ext_hab",
+			"ambientNoises" : "/sfx/at_ext_city.ogg",
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+	{
+		"op" : "add",
+		"path" : "/at_ext_hab2",
+		"value" : {
+			"primaryDungeon" : "at_ext_hab2",
+    		"threatLevel" : 1,
+    		"gravity" : 80,
+    		"worldSize" : [1530, 1000],
+	  "weatherPool" : [
+		[0.850, "clear"],
+		[0.075, "rain"],
+		[0.075, "drizzle"]
+	  ],			
+    		"dungeonBaseHeight" : 970,
+    		"dungeonSurfaceHeight" : 720,
+    		"ambientLightLevel" : [128, 128, 128],
+    		
+    		"musicTrack" : "/music/by-the-fireplace.ogg",
+    		"biome": "at_ext_hab",
+			"ambientNoises" : "/sfx/at_ext_city.ogg",
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+	{
+		"op" : "add",
+		"path" : "/at_ext_hab2_preview",
+		"value" : {
+			"primaryDungeon" : "at_ext_hab2_preview",
+    		"threatLevel" : 1,
+    		"gravity" : 80,
+    		"worldSize" : [1530, 1000],
+	  "weatherPool" : [
+		[0.850, "clear"],
+		[0.075, "rain"],
+		[0.075, "drizzle"]
+	  ],			
+    		"dungeonBaseHeight" : 970,
+    		"dungeonSurfaceHeight" : 720,
+    		"ambientLightLevel" : [128, 128, 128],
+    		
+    		"musicTrack" : "/music/by-the-fireplace.ogg",
+    		"biome": "at_ext_hab",
+			"ambientNoises" : "/sfx/at_ext_city.ogg",
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+
+	{
+		"op" : "add",
+		"path" : "/at_ext_hab2_1",
+		"value" : {
+			"primaryDungeon" : "at_ext_hab2_1",
+    		"threatLevel" : 1,
+    		"gravity" : 80,
+    		"worldSize" : [1530, 1000],
+	  "weatherPool" : [
+		[0.850, "clear"],
+		[0.075, "rain"],
+		[0.075, "drizzle"]
+	  ],			
+    		"dungeonBaseHeight" : 970,
+    		"dungeonSurfaceHeight" : 720,
+    		"ambientLightLevel" : [128, 128, 128],
+    		
+    		"musicTrack" : "/music/by-the-fireplace.ogg",
+    		"biome": "at_ext_hab",
+			"ambientNoises" : "/sfx/at_ext_city.ogg",
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+	{
+		"op" : "add",
+		"path" : "/at_ext_hab2_1_preview",
+		"value" : {
+			"primaryDungeon" : "at_ext_hab2_1_preview",
+    		"threatLevel" : 1,
+    		"gravity" : 80,
+    		"worldSize" : [1530, 1000],
+	  "weatherPool" : [
+		[0.850, "clear"],
+		[0.075, "rain"],
+		[0.075, "drizzle"]
+	  ],			
+    		"dungeonBaseHeight" : 970,
+    		"dungeonSurfaceHeight" : 720,
+    		"ambientLightLevel" : [128, 128, 128],
+    		
+    		"musicTrack" : "/music/by-the-fireplace.ogg",
+    		"biome": "at_ext_hab",
+			"ambientNoises" : "/sfx/at_ext_city.ogg",
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+	{
+		"op" : "add",
+		"path" : "/at_ext_hab3_1_preview",
+		"value" : {
+			"primaryDungeon" : "at_ext_hab3_1_preview",
+    		"threatLevel" : 6,
+    		"gravity" : 80,
+    		"worldSize" : [1530, 1000],
+	  "weatherPool" : [
+		[0.850, "clear"],
+		[0.075, "rain"],
+		[0.075, "drizzle"]
+	  ],			
+    		"dungeonBaseHeight" : 970,
+    		"dungeonSurfaceHeight" : 720,
+    		"ambientLightLevel" : [128, 128, 128],
+    		
+    		"musicTrack" : "/music/by-the-fireplace.ogg",
+    		"biome": "at_ext_hab",
+			"ambientNoises" : "/sfx/at_ext_city.ogg",
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+	{
+		"op" : "add",
+		"path" : "/at_ext_hab3_1",
+		"value" : {
+			"primaryDungeon" : "at_ext_hab3_1",
+    		"threatLevel" : 6,
+    		"gravity" : 80,
+    		"worldSize" : [1530, 1000],
+	  "weatherPool" : [
+		[0.850, "clear"],
+		[0.075, "rain"],
+		[0.075, "drizzle"]
+	  ],			
+    		"dungeonBaseHeight" : 970,
+    		"dungeonSurfaceHeight" : 720,
+    		"ambientLightLevel" : [128, 128, 128],
+    		
+    		"musicTrack" : "/music/by-the-fireplace.ogg",
+    		"biome": "at_ext_hab",
+			"ambientNoises" : "/sfx/at_ext_city.ogg",
+    		"environmentStatusEffects" : ["dontstarve"]
+		}
+	},
+	
+//                            HQ
+	{
+		"op" : "add",
+		"path" : "/at_ext_hq2",
+		"value" : {
+			"primaryDungeon" : "at_ext_hq2",
+    		"threatLevel" : 0,
+    		"gravity" : 80,
+    		"worldSize" : [1000, 150],
+			"airless" : false,
+    		"dungeonBaseHeight" : 150,
+    		"dungeonSurfaceHeight" : 100,
+    		"ambientLightLevel" : [32, 32, 32],
+    		"ambientNoises" : "",
+    		"musicTrack" : "/music/by-the-fireplace.ogg",
+    		"biome": "space",
+			"worldEdgeForceRegions" : "TopAndBottom",
+    		"environmentStatusEffects" : ["wellfed"]
+		}
+	}
+
+]

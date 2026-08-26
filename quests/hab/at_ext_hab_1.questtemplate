@@ -1,0 +1,44 @@
+{
+  "id" : "at_ext_hab_1",
+  "prerequisites" : [ "at_ext_hab_0" ],
+  "mainQuest" : false,
+  
+  "title" : "^yellow;Go to your apartment^reset;",
+  "text" : "Apartment purchased! Use the teleporter near the ^yellow;housing agency^reset; to access your new home.",
+  "completionText" : "Welcome!",
+  "canBeAbandoned" : false,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+    
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Titan Corp"
+        }
+    },
+    "turnInDescription" :  "Go to ^green;teleporter near housing agency.^reset;",  
+    "requireTurnIn" : true,
+
+    "conditions" : [
+	  {
+        "type" : "gatherItem",
+        "itemName" : "money",
+        "count" : 1,
+        "consume" : false
+      }
+    ]
+  }
+}

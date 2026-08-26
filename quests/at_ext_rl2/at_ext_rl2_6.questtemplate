@@ -1,0 +1,61 @@
+{
+  "id" : "at_ext_rl2_6",
+  "prerequisites" : [ "at_ext_rl2_5" ],
+  "mainQuest" : false,
+  
+  "title" : "^#ff1aa6;''Let the weapon's fury ignite your own'' V^reset;",
+  "text" : "I'm working on a weapon prototype here but running low on materials. Think you could help me round up some parts when you're free?",
+  "completionText" : "Fantastic! I'll speed up the process!",
+  "canBeAbandoned" : false,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        }
+    },
+    "turnInDescription" : "Give the materials to ^yellow;Scientist.^reset;",
+    "requireTurnIn" : true,
+    "conditions" : [
+	  {
+        "type" : "gatherItem",
+        "itemName" : "arcana_bar_galvasteelBar",
+        "count" : 5,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "workshop_crafting_dustriumPlate",
+        "count" : 3,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "arcana_bar_thoriumBar",
+        "count" : 5,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "arcana_essence_electricEssence",
+        "count" : 10,
+        "consume" : true
+      }
+    ]
+  }
+}

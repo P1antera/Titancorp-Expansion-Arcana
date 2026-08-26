@@ -1,0 +1,10 @@
+{
+  "name" : "blockyhead",
+  "category" : "blockyhead",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "blockyheadbody.png",
+    "fullbright" : "blockyheadbodyfullbright.png"
+  }
+}

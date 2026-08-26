@@ -1,0 +1,12 @@
+{
+  "itemName" : "at_ext_dj_loot_uncm4",
+  "price" : 0,
+  "rarity" : "Uncommon",
+  "tooltipKind" : "at_ext_loots",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "at_ext_dj_loot_uncm4.png",
+  "largeImage" : "at_ext_dj_loot_uncm4.png",
+  "description" : "A damaged mining laser, still holds some recycling value.\n^green;Can be sold at the trade terminal!^reset;",
+  "shortdescription" : "Damaged mining laser",
+  "itemTags" : [ "at_ext_loots" ]
+}

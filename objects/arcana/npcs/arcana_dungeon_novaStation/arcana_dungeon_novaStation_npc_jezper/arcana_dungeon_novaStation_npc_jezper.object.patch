@@ -1,0 +1,37 @@
+[
+  {
+    "op": "add",
+    "value": "at_ext_contract4_3",
+    "path": "/turnInQuests/-"
+  },
+  {
+    "op": "add",
+    "value": "at_ext_tut",
+    "path": "/offeredQuests/-"
+  },
+  {
+    "op": "add",
+    "value": "at_ext_tut",
+    "path": "/turnInQuests/-"
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]

@@ -1,0 +1,13 @@
+{
+  "frameGrid" : {
+    "size" : [30, 12],
+    "dimensions" : [8, 1],
+    "names" : [
+      [ "charge.1", "charge.2", "charge.3", "charge.4", "fire.1", "fire.2", "charged.1", "charged.2"]
+    ]
+  },
+  "aliases" : {
+  "default" : "charge.1",
+	"off" : "charge.1"
+  }
+}

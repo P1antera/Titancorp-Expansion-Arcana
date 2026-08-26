@@ -1,0 +1,12 @@
+{
+  "itemName" : "at_ext_dj_loot_rr3",
+  "price" : 0,
+  "rarity" : "Rare",
+  "tooltipKind" : "at_ext_loots",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "at_ext_dj_loot_rr3.png",
+  "largeImage" : "at_ext_dj_loot_rr3.png",
+  "description" : "A bottle of blue solution, unknown specific composition.\n^green;Can be sold at the trade terminal!^reset;",
+  "shortdescription" : "Unknown Solution",
+  "itemTags" : [ "at_ext_loots" ]
+}

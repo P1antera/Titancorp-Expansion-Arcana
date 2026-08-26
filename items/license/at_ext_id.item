@@ -1,0 +1,16 @@
+{
+  "itemName" : "at_ext_id",
+  "rarity" : "Legendary",
+  "maxStack" : 1,
+  "tooltipKind" : "at_ext_item",
+  "category" : "quest",
+  "inventoryIcon" : "at_ext_id_icon.png",
+  "largeImage" : "at_ext_id_lg.png",
+  
+  
+  "description" : "^#00FFD8;Qualification of Titan Corp's Official Contractor.",
+  "shortdescription" : "^yellow;TC contractor ID",
+
+  "radioMessagesOnPickup" : ["at_ext_id"]
+  
+}

@@ -1,0 +1,14 @@
+{
+  "itemName" : "at_ext_emptybottle",
+  "rarity" : "Common",
+  "maxStack" : 99,
+  "tooltipKind" : "at_ext_item",
+  "category" : "quest",
+  "inventoryIcon" : "at_ext_emptybottle.png",
+  "largeImage" : "at_ext_emptybottle.png",
+  
+  
+  "description" : "Can be recycled at the Trade Terminal.",
+  "shortdescription" : "Empty Bottle"
+  
+}

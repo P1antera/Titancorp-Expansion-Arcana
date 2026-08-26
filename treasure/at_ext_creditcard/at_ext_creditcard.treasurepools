@@ -1,0 +1,17 @@
+
+{
+
+   
+  "at_ext_creditcard" : [
+    [0, {
+	  "fill" : [
+	    {"weight" : 1.0, "item" : ["arcana_currency_credit", 9999]},
+	    {"weight" : 1.0, "item" : ["arcana_currency_credit", 9999]},
+	    {"weight" : 1.0, "item" : ["arcana_currency_credit", 2]}
+      ]
+    }]
+  ]
+ 
+}
+
+

@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "arcana_currency_credit", "count" : 30 }
+  ],
+  "output" : {
+    "item" : "salvagetier4",
+    "count" : 10
+  },
+  "duration" : 0.1,
+  "groups" : ["at_ext_materialshop" ]
+}

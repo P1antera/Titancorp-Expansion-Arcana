@@ -1,0 +1,55 @@
+{
+  "id" : "at_ext_rl2_3",
+  "prerequisites" : [ "at_ext_rl2_2" ],
+  "mainQuest" : false,
+  
+  "title" : "^#ff1aa6;''Let the weapon's fury ignite your own'' II^reset;",
+  "text" : "Alright, now I need some disassembled weapons for research. I'm confident you can acquire them.",
+  "completionText" : "Got it! Come back when you're ready for the next phase.",
+  "canBeAbandoned" : false,
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [
+
+  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        },
+      "questComplete" : 
+        {
+          "portrait" : [ {"image" : "/quests/at_ext_quest.png"} ],
+          "title" : "Scientist"
+        }
+    },
+    "turnInDescription" : "Give the materials to ^yellow;Scientist.^reset;",
+    "requireTurnIn" : true,
+    "conditions" : [
+	  {
+        "type" : "gatherItem",
+        "itemName" : "orion_assaultRifle_1",
+        "count" : 1,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "workshop_sniperRifle_1",
+        "count" : 1,
+        "consume" : true
+      },
+	  {
+        "type" : "gatherItem",
+        "itemName" : "horizon_assaultRifle_1",
+        "count" : 1,
+        "consume" : true
+      }
+    ]
+  }
+}

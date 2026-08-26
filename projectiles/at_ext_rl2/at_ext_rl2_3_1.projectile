@@ -1,0 +1,28 @@
+{
+  "projectileName" : "at_ext_rl2_3_1",
+  "physics" : "laser",
+  "piercing" : false,
+  "timeToLive" : 0.01,
+  "speed" : 1,
+  "knockback" : 0,
+  
+  
+  "movementSettings" : {
+  "bounceFactor" : 0
+  },
+  "image" : "assetmissing.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "damageType" : "NoDamage",
+  "damageKind" : "nodamage",
+  "actionOnTimeout" :
+  [{
+  "action" : "projectile",
+  "inheritDamageFactor" : 0.6,
+  "autoFlipAdjust" : true,
+  "type" : "at_ext_rl2_3_2",
+  "angleAdjust" : 180,
+  "fuzzAngle" :0
+  }]
+
+}

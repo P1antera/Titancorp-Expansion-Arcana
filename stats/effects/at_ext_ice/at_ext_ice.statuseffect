@@ -1,0 +1,16 @@
+{
+  "name" : "at_ext_ice",
+  "defaultDuration" : 180,
+
+  "scripts" : [
+    "at_ext_ice.lua"
+  ],
+
+  "effectConfig" : {
+    "instantHealth" : 25,
+    "energyRegen" : 15
+  },
+
+  "label" : "Glacier Mint Fizz [+15 energy per second]",
+  "icon" : "/interface/statuses/at_ext_ice_icon.png"
+}

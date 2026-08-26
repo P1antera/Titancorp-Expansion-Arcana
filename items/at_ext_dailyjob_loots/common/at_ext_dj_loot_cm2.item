@@ -1,0 +1,12 @@
+{
+  "itemName" : "at_ext_dj_loot_cm2",
+  "price" : 0,
+  "rarity" : "Common",
+  "tooltipKind" : "at_ext_loots",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "at_ext_dj_loot_cm2.png",
+  "largeImage" : "at_ext_dj_loot_cm2.png",
+  "description" : "A canister of mutated slime samples, with research value.\n^green;Can be sold at the trade terminal!^reset;",
+  "shortdescription" : "Mutated Sample",
+  "itemTags" : [ "at_ext_loots" ]
+}

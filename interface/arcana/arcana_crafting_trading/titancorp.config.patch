@@ -1,0 +1,49 @@
+[
+    {
+        "op" : "replace",
+        "path" : "/paneLayout/background/fileBody",
+        "value" : "/interface/arcana/arcana_crafting_trading/at_ext_creditbody.png"
+        
+    },    
+    
+    {
+        "op" : "add",
+        "path" : "/paneLayout/categories/buttons/-",
+        "value" : {
+            "position" : [15, 121],
+            "baseImage" : "/interface/arcana/arcana_crafting_trading/at_ext1_off.png",
+            "baseImageChecked" : "/interface/arcana/arcana_crafting_trading/at_ext1_on.png",
+            "data" : {
+                "filter" : [ "arcana_titancorp_crafting_1_material" ]
+            }
+        }
+    },
+	
+	    {
+        "op" : "add",
+        "path" : "/paneLayout/categories/buttons/-",
+        "value" : {
+            "position" : [15, 73],
+            "baseImage" : "/interface/arcana/arcana_crafting_trading/at_ext3_off.png",
+            "baseImageChecked" : "/interface/arcana/arcana_crafting_trading/at_ext3_on.png",
+            "data" : {
+                "filter" : [ "arcana_titancorp_crafting_1_machine" ]
+            }
+        }
+    },
+	
+	    {
+        "op" : "add",
+        "path" : "/paneLayout/categories/buttons/-",
+        "value" : {
+            "position" : [15, 97],
+            "baseImage" : "/interface/arcana/arcana_crafting_trading/at_ext2_off.png",
+            "baseImageChecked" : "/interface/arcana/arcana_crafting_trading/at_ext2_on.png",
+            "data" : {
+                "filter" : [ "arcana_titancorp_crafting_1_weapon" ]
+            }
+        }
+    }
+	
+	
+]

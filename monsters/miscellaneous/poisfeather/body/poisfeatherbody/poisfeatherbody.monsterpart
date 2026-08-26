@@ -1,0 +1,10 @@
+{
+  "name" : "poisfeather",
+  "category" : "poisfeather",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "poisfeatherbody.png",
+    "fullbright" : "poisfeatherbodyfullbright.png"
+  }
+}

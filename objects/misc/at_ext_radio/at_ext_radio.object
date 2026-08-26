@@ -1,0 +1,86 @@
+{
+  "objectName" : "at_ext_radio",
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 0,
+  "printable" : false,
+
+  "description" : "A radio.",
+  "shortdescription" : "Radio",
+  "race" : "human",
+
+
+
+  "lightColor" : [0, 0, 0],
+
+  "inventoryIcon" : "at_ext_radioicon.png",
+  "orientations" : [
+    {
+      "image" : "at_ext_radio.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+      "lightPosition" : [-1, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : ["bottom"]
+
+    },
+    {
+      "image" : "at_ext_radio.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+
+      "direction" : "right",
+      "lightPosition" : [0, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : ["bottom"]
+    }
+  ],
+
+  "animation" : "at_ext_radio.animation",
+  "animationParts" : {
+    "bg" : "at_ext_radio.png",
+    "fg" : "at_ext_radiolit.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "on" : [ "/sfx/objects/speaker_toggle.ogg" ],
+      "off" : [ "/sfx/objects/speaker_toggle.ogg" ]
+    }
+  },
+  "animationPosition" : [0, 0],
+
+  "scripts" : [
+    "/objects/wired/light/light.lua",
+    "/scripts/npcToyObject.lua"
+  ],
+  "scriptDelta" : 60,
+
+  "inputNodes" : [ [0, 0] ],
+  "defaultLightState" : false,
+
+  "soundEffect" : "/music/at_ext_thtf.ogg",
+
+  "npcToy" : {
+    "influence" : [
+      "hylotlmusic",
+      "hylotlmusic",
+      "hylotlmusic",
+      "hylotlmusicFinished"
+    ],
+    "defaultReactions" : {
+      "hylotlmusic" : [
+        [1.0, "hylotldance"]
+      ],
+      "hylotlmusicFinished" : [
+        [1.0, "hylotldance"],
+        [1.0, "smile"],
+        [1.0, "laugh"]
+      ]
+    },
+    "randomStandXRange" : [-4, 4],
+    "maxNpcs" : 4
+  }
+}

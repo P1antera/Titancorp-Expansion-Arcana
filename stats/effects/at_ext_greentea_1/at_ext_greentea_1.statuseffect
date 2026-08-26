@@ -1,0 +1,13 @@
+{
+  "name" : "at_ext_greentea_1",
+  "defaultDuration" : 60,
+  "scripts" : [
+    "at_ext_greentea_1.lua"
+  ],
+  "effectConfig" : {
+    "speedModifier" : 1.05,
+    "groundMovementModifier" : 1.05
+  },
+  "label" : "Verdant Can Tea [+5% movement speed]",
+  "icon" : "/interface/statuses/at_ext_greentea_icon.png"
+}

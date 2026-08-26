@@ -1,0 +1,78 @@
+{
+  "animation": "recondrone_controller.animation",
+  "animationDelta": 5,
+  "animationParts": {
+    "controller": "sd_exp_Tier1_anarkyons_icon.png",
+    "fullbright" : "sd_exp_Tier1_anarkyons_iconfullbright.png"
+  },
+  "boundingBox": [
+    -1,
+    -1,
+    1,
+    1
+  ],
+  "category": "^yellow;Attacking Drone T1",
+  "description": "An Anarkyon drone, Can spray acid to the enemy.
+  ^green;[Primary]Spawn/Despawn，[Alt]Fire.^reset;",
+  "inventoryIcon": "sd_exp_Tier1_anarkyons_icon.png",
+  "itemName": "sd_exp_t1anarkyonsdrone_controller",
+  "itemTags": [],
+  "level": 7,
+  "maxStack": 1,
+  "controllerConfig" : {
+    "droneParam" : {
+      "droneConfig" : {
+        "abilityClass" : "Fire",
+        "controlType" : "wasd",
+        "abilityConfig" : {
+          "inaccuracy" : 0.1,
+          "projectileCount" : 2,
+          "muzzleOffset" : [0, 0],
+          "onGround" : false,
+          "burstTime" : 0.5,
+          "burstCount" : 20,
+          "projectileParam" : {
+            	"renderLayer" : "ForegroundEntity+10",
+              "piercing" : true,
+			        "power" : 6,
+              "speed" : 20
+          },
+          "animationConfig" : {
+            "fireSound" : "fire",
+            "fireAnimation" : {
+              "stateType" : "body",
+              "state" : "fire",
+              "time" : 0.2
+            },
+            "windupAnimation" : {
+              "stateType" : "body",
+              "state" : "firewindup",
+              "time" : 0.6
+            },
+            "winddownAnimation" : {
+              "stateType" : "body",
+              "state" : "firewinddown",
+              "time" : 0.4
+
+            },
+            "turretGroup" : "",
+            "rotationCenter" : [0.25, -1]
+          },
+          "fireType" : "burst",
+          "projectileType" : "arcana_projectile_flame_poison"
+        },
+        "abilityScript" : "/droneAbility/fire/fire.lua"
+      }
+    },
+    "droneType":"acidsprayer",
+    "rightClickCooldown" :1
+  },
+  "price": 0,
+  "rarity": "Legendary",
+  "scripts": [
+    "/scripts/droneControllerBase.lua" //通用控制器脚本，
+  ],
+  "shortdescription": "Acidsprayer Controller",
+  "tooltipKind": "arcana_base_item",
+  "twoHanded": true
+}

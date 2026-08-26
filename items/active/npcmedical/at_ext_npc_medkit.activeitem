@@ -1,0 +1,39 @@
+{
+  "itemName" : "at_ext_npc_medkit",
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "category" : "medicine",
+  "description" : "NPC medical item.",
+  "shortdescription" : "NPC Medkit",
+  "twoHanded" : false,
+  "itemTags" : [ "weapon", "ranged" ],
+
+  "inventoryIcon" : "/items/generic/other/medkit.png",
+  "animation" : "at_ext_npc_medical.animation",
+  "animationParts" : {
+    "medicalItem" : "/items/generic/other/medkit.png"
+  },
+  "scripts" : [ "at_ext_npc_medical.lua" ],
+  "scriptDelta" : 1,
+
+  "stances" : {
+    "idle" : {
+      "armRotation" : -20,
+      "animationState" : {
+        "item" : "visible"
+      },
+      "allowRotate" : true,
+      "allowFlip" : true
+    },
+    "use" : {
+      "duration" : 0.45,
+      "transitionFunction" : "finishUse",
+      "armRotation" : [ -20, 78, 62 ],
+      "animationState" : {
+        "item" : "visible"
+      },
+      "allowRotate" : false,
+      "allowFlip" : false
+    }
+  }
+}

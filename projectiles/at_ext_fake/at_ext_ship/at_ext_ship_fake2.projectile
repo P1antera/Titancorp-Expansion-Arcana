@@ -1,0 +1,45 @@
+{
+  "projectileName" : "at_ext_ship_fake2",
+  "physics" : "laser",
+  
+  "timeToLive" : 3,
+  "bounces" : 0,
+  "speed" : 95,
+  
+  "image" : "body2.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 2,
+  
+  "fullbright" : true,
+  "lightColor" : [61, 187, 234],
+  //"emitters" : [ "iceplasma" ],
+  
+  "supportsProcessing" : true,
+  
+  "actionOnReap" : [
+
+  ],
+  "persistentAudio" : "/sfx/at_ext_ship/afterburn2.ogg", 
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/at_ext_fake/at_ext_ship/trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.3,
+        "destructionAction" : "fade",
+        "fullbright" : true
+      }
+    }
+  ],
+  
+  "damageType" : "NoDamage",
+  "damageKind" : "nodamage"
+ 
+}
