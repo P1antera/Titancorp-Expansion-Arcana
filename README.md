@@ -6,7 +6,6 @@ Source project for **[Arcana] Titancorp Expansion / 泰坦重工拓展**, a Star
 
 - Starbound on Windows (the build script uses the installation's `win32/asset_packer.exe`)
 - The [Arcana](https://steamcommunity.com/sharedfiles/filedetails/?id=2359135864) mod
-- `MWHArcanaAddon`
 
 Install the required dependencies alongside this mod in your Starbound `mods` directory.
 
