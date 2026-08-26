@@ -4,26 +4,10 @@ Source project for **[Arcana] Titancorp Expansion / 泰坦重工拓展**, a Star
 
 ## Requirements
 
-- Starbound on Windows (the build script uses the installation's `win32/asset_packer.exe`)
+- Starbound on Windows
 - The [Arcana](https://steamcommunity.com/sharedfiles/filedetails/?id=2359135864) mod
 
 Install the required dependencies alongside this mod in your Starbound `mods` directory.
-
-## Build
-
-From this directory, run:
-
-```powershell
-./build.ps1
-```
-
-The package is written to `build/Titancorp-Expansion-Arcana.pak`. The script stages a clean copy of the source before packing, so Git metadata and prior build artifacts are never included in the `.pak`.
-
-To use another asset packer executable:
-
-```powershell
-./build.ps1 -AssetPacker 'C:\path\to\asset_packer.exe'
-```
 
 ## Development
 
