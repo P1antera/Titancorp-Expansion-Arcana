@@ -1,0 +1,7 @@
+[
+  {
+    "op" : "add",
+    "path" : "/genericScriptContexts/at_ext_mission_skipper",
+    "value" : "/scripts/player/at_ext_mission_skipper.lua"
+  }
+]

@@ -15,8 +15,9 @@
   ],
 
   "updateDelta" : 10,
-  "script" : "/quests/scripts/main.lua",
+  "script" : "/quests/scripts/at_ext_skippable_main.lua",
   "scriptConfig" : {
+    "atExtSkipId" : "at_ext_shippad",
     "portraits" : {
       "questStarted" : 
         {
