@@ -7,13 +7,24 @@ function init()
   self.consumptionTime = config.getParameter("consumptionTime", 1.0)
   self.consumptionTimer = self.consumptionTime
   self.craftingTime = root.assetJson(configPath).craftingTime or 1
-  self.cooldownTimer = self.craftingTime
+  self.cooldownTimer = 0
   self.outputRate = root.assetJson(configPath).outputRate or 1
   self.recipes = root.assetJson(configPath).recipes or nil
   self.powerUseAmount = config.getParameter("powerUseAmount", 0)
   power.set(0)
   self.isPowered = false
+  self.isWorking = false
+  self.isPaused = false
+  self.isOutputBlocked = false
+  self.pendingOutput = nil
   animator.setGlobalTag("directives", config.getParameter("directives", ""))
+
+  message.setHandler("getProgress", function()
+    if self.isWorking and self.craftingTime > 0 then
+      return math.max(0, math.min(1, 1 - (self.cooldownTimer / self.craftingTime)))
+    end
+    return 0
+  end)
 end
 
 
@@ -45,8 +56,19 @@ function output(state)
   end
 end
 
+function outputSlotCanFit(item)
+  local outputSlot = world.containerSize(entity.id()) - 1
+  local outputItem = world.containerItemAt(entity.id(), outputSlot)
+  if not outputItem then return true end
+  if outputItem.name ~= item.name then return false end
+
+  local maxStack = root.itemConfig(outputItem).config.maxStack or 1000
+  return outputItem.count + item.count <= maxStack
+end
+
 function automation()
-  if self.isPowered == false then return end
+  if self.isWorking then return end
+  self.isOutputBlocked = false
   local craftable = true
   local lastItem = world.containerItemAt(entity.id(), world.containerSize(entity.id()) - 1)
   
@@ -62,17 +84,33 @@ function automation()
 	
 	if craftable then
 	  if not lastItem or lastItem.name == recipe.output.name then
-	    world.containerPutItemsAt(entity.id(), recipe.output, world.containerSize(entity.id()) - 1)
+	    if not outputSlotCanFit(recipe.output) then
+	      self.isOutputBlocked = true
+	      animator.setAnimationState("switchState", "off")
+	      return
+	    end
+	    if power.get() < self.powerUseAmount then
+	      self.isPowered = false
+	      animator.setAnimationState("switchState", "off")
+	      return
+	    end
+
+	    power.remove(self.powerUseAmount)
+	    for k, input in pairs(recipe.input) do
+        world.containerConsume(entity.id(), input)
+      end
+
+	    self.isPowered = true
+	    self.isWorking = true
+	    self.isPaused = false
+	    self.pendingOutput = recipe.output
+	    self.cooldownTimer = self.craftingTime
+	    animator.setAnimationState("switchState", "on")
+	    return
 	  else
 	    animator.setAnimationState("switchState", "off")
 	    return
 	  end
-	  
-	  for k, input in pairs(recipe.input) do
-        world.containerConsume(entity.id(), input)
-      end
-	  animator.setAnimationState("switchState", "on")
-	  return
 	end
 	
   end
@@ -82,30 +120,62 @@ end
 
 function powerCheck()
   if power.get() >= self.powerUseAmount then 
-    power.remove(self.powerUseAmount)
-	animator.setAnimationState("switchState", "on")
+    if self.isWorking and self.cooldownTimer > 0 then
+      power.remove(self.powerUseAmount)
+    end
     self.isPowered = true
   else
-    animator.setAnimationState("switchState", "off")
     self.isPowered = false
-	return
+    if self.isWorking and self.cooldownTimer > 0 then
+      self.isPaused = true
+    end
+	animator.setAnimationState("switchState", "off")
   end
 end
 
 function update(dt)
-  if self.consumptionTimer > 0 then
-    self.consumptionTimer = math.max(0, self.consumptionTimer - dt)
-    if self.consumptionTimer == 0 then
-      powerCheck()
+  if self.isWorking then
+    -- A disconnected power cable pauses the current batch immediately.
+    if self.cooldownTimer > 0 and not object.isInputNodeConnected(0) then
+      self.isPowered = false
+      self.isPaused = true
+      animator.setAnimationState("switchState", "off")
+    elseif self.cooldownTimer > 0 and self.isPaused then
+      -- Resume the existing batch only. Its ingredients were consumed when it started.
+      if power.get() >= self.powerUseAmount then
+        power.remove(self.powerUseAmount)
+        self.isPowered = true
+        self.isPaused = false
+        self.consumptionTimer = self.consumptionTime
+        animator.setAnimationState("switchState", "on")
+      end
+    elseif self.cooldownTimer > 0 then
+      self.consumptionTimer = math.max(0, self.consumptionTimer - dt)
+      if self.consumptionTimer == 0 then
+        powerCheck()
 	  self.consumptionTimer = self.consumptionTime
+      end
+
+      if not self.isPaused then
+        self.cooldownTimer = math.max(0, self.cooldownTimer - dt)
+      end
+    end
+
+    if self.cooldownTimer == 0 then
+      if outputSlotCanFit(self.pendingOutput) then
+	    world.containerPutItemsAt(entity.id(), self.pendingOutput, world.containerSize(entity.id()) - 1)
+	    self.pendingOutput = nil
+	    self.isWorking = false
+	    self.isOutputBlocked = false
+	    output(true)
+      else
+	    self.isOutputBlocked = true
+	    animator.setAnimationState("switchState", "off")
+      end
     end
   end
-  if self.cooldownTimer > 0 then
-    self.cooldownTimer = math.max(0, self.cooldownTimer - dt)
-    if self.cooldownTimer == 0 then
-      automation()
-	  output(true)
-	  self.cooldownTimer = self.craftingTime
-    end
+
+  if not self.isWorking then
+	automation()
   end
 end
