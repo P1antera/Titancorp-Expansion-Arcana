@@ -1,0 +1,20 @@
+{
+  "kind" : "at_ext_fermenter_bubble",
+  "definition" : {
+    "type" : "ember",
+    "size" : 0.65,
+    "color" : [245, 245, 245, 255],
+    "fade" : 0.9,
+    "destructionAction" : "shrink",
+    "destructionTime" : 0.2,
+    "initialVelocity" : [0, 0.8],
+    "finalVelocity" : [0, 1.6],
+    "approach" : [0, 4],
+    "timeToLive" : 1.1,
+    "layer" : "back",
+    "variance" : {
+      "initialVelocity" : [0.35, 0.25],
+      "size" : 0.3
+    }
+  }
+}

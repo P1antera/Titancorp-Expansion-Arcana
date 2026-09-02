@@ -1,0 +1,35 @@
+{
+  "itemName" : "at_ext_beer",
+  "rarity" : "Uncommon",
+  "category" : "preparedFood",
+  "inventoryIcon" : "at_ext_beer_icon.png",
+  "tooltipKind" : "at_ext_food",
+  "largeImage" : "at_ext_beer_icon.png",
+  "description" : "Beer brewed with industrial equipment. Golden and crystal clear, with a refreshingly crisp taste.",
+  "shortdescription" : "^orange;Golden Tide Lager^reset;",
+  "maxStack" : 99,
+
+  "price" : 0,
+
+  "twoHanded" : true,
+  "itemTags" : [ "at_ext_food" ],
+
+  "animation" : "at_ext_beer.animation",
+  "animationParts" : {
+    "drink" : "at_ext_beer.png"
+  },
+
+  "scripts" : [ "at_ext_beer.lua" ],
+  "scriptDelta" : 1,
+
+  "idleArmAngle" : -0.5,
+  "idleDrinkAngle" : -0.1,
+  "raiseArmAngle" : 0,
+  "raiseDrinkAngle" : 0.0,
+  "drinkArmAngle" : 0.4,
+  "drinkDrinkAngle" : 1.7,
+  "raiseTime" : 1,
+  "drinkTime" : 4.0,
+  "recapTime" : 1.5,
+  "emptyBottleItem" : "at_ext_emptybottle"
+}

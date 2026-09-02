@@ -1,0 +1,71 @@
+{
+  "globalTagDefaults" : {
+    "directives" : ""
+  },
+
+  "animatedParts" : {
+    "stateTypes" : {
+      "brewState" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "stage1" : { "frames" : 2, "cycle" : 0.6, "mode" : "loop" },
+          "stage2" : { "frames" : 2, "cycle" : 0.6, "mode" : "loop" },
+          "stage3" : { "frames" : 2, "cycle" : 0.6, "mode" : "loop" },
+          "done" : {}
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "centered" : false,
+          "zLevel" : 1
+        },
+        "partStates" : {
+          "brewState" : {
+            "off" : { "properties" : { "image" : "<partImage>:off<directives>" } },
+            "stage1" : { "properties" : { "image" : "<partImage>:1.<frame><directives>" } },
+            "stage2" : { "properties" : { "image" : "<partImage>:2.<frame><directives>" } },
+            "stage3" : { "properties" : { "image" : "<partImage>:3.<frame><directives>" } },
+            "done" : { "properties" : { "image" : "<partImage>:done<directives>" } }
+          }
+        }
+      },
+      "fullbright" : {
+        "properties" : {
+          "centered" : false,
+          "zLevel" : 2,
+          "fullbright" : true
+        },
+        "partStates" : {
+          "brewState" : {
+            "off" : { "properties" : { "image" : "<partImage>:off<directives>" } },
+            "stage1" : { "properties" : { "image" : "<partImage>:1.<frame><directives>" } },
+            "stage2" : { "properties" : { "image" : "<partImage>:2.<frame><directives>" } },
+            "stage3" : { "properties" : { "image" : "<partImage>:3.<frame><directives>" } },
+            "done" : { "properties" : { "image" : "<partImage>:done<directives>" } }
+          }
+        }
+      }
+    }
+  },
+
+  "particleEmitters" : {
+    "bubbles" : {
+      "active" : false,
+      "emissionRate" : 3,
+      "offsetRegion" : [2.7, 2.25, 5.5, 2.75],
+      "particles" : [
+        { "particle" : "at_ext_fermenter_bubble" }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "brewloop" : [ "/sfx/objects/apexpod.ogg" ],
+    "on" : [],
+    "off" : []
+  }
+}

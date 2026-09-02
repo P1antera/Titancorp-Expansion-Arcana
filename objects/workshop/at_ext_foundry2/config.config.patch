@@ -88,21 +88,6 @@
 	
 	},
 
-{
-    "op": "add",
-    "path": "/recipes/arcana_bar_chromaBar",
-    "value":
- 
-	{
-      "input" : 
-	  [
-        { "name" : "arcana_ore_chromaOre", "count" : 4 }
-      ],
-      "output" : { "name" : "arcana_bar_chromaBar", "count" : 2 }
-	}
-	
-	},
-	
 	{
 	    "op": "add",
     "path": "/recipes/arcana_bar_corrodiumBar",

@@ -1,0 +1,77 @@
+{
+  "objectName" : "at_ext_fermenter",
+  "colonyTags" : ["factorypaint", "titancorp", "crafting"],
+  "rarity" : "Rare",
+  "description" : "^white;A fully automated, all-in-one fermentation system that lets you brew beer with ease! ^orange;Requires 20kW of Power.^reset;",
+  "shortdescription" : "^yellow;[TC]^reset;Fermentation Tank",
+  "race" : "generic",
+  "category" : "crafting",
+  "price" : 0,
+  "objectType" : "container",
+  "printable" : false,
+  "health" : 1.5,
+
+  "scripts" : ["at_ext_fermenter.lua"],
+  "scriptDelta" : 1,
+
+  "inputNodes" : [[0, 0]],
+
+  "animation" : "at_ext_fermenter.animation",
+  "animationParts" : {
+    "body" : "body.png",
+    "fullbright" : "fullbright.png"
+  },
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [
+        { "image" : "body.png:off" },
+        { "image" : "fullbright.png:off", "fullbright" : true }
+      ],
+      "direction" : "left",
+      "flipImages" : true,
+      "imagePosition" : [0, 0],
+      "renderLayer" : "Object+5",
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+      "anchors" : ["bottom"],
+      "collision" : "platform"
+    },
+    {
+      "imageLayers" : [
+        { "image" : "body.png:off" },
+        { "image" : "fullbright.png:off", "fullbright" : true }
+      ],
+      "direction" : "right",
+      "imagePosition" : [0, 0],
+      "renderLayer" : "Object+5",
+      "frames" : 1,
+      "animationCycle" : 0.5,
+      "spaceScan" : 0.1,
+      "anchors" : ["bottom"],
+      "collision" : "platform"
+    }
+  ],
+
+  "placementImage" : "body.png:off",
+  "placementImagePosition" : [0, 0],
+  "openSounds" : ["/sfx/objects/campfire_use.ogg"],
+  "sounds" : {
+    "brewloop" : ["/sfx/objects/apexpod.ogg"]
+  },
+
+  "slotCount" : 5,
+  "uiConfig" : "/interface/at_ext/fermenter/at_ext_fermenter.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600,
+  "itemAgeMultiplier" : 0.0,
+
+  "configPath" : "/objects/workshop/at_ext_fermenter/config.config",
+  "maxPower" : 30,
+  "powerUseAmount" : 20,
+  "voltage" : 45,
+  "consumptionTime" : 1.0,
+  "directives" : ""
+}
