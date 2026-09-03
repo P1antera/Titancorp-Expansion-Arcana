@@ -12,30 +12,41 @@ function init()
   self.totalDuration = self.stageDurations[1] + self.stageDurations[2] + self.stageDurations[3]
   self.powerUseAmount = config.getParameter("powerUseAmount", 20)
   self.consumptionTime = config.getParameter("consumptionTime", 1.0)
+  self.outputCapacity = config.getParameter("outputCapacity", 100)
 
   storage.phase = storage.phase or "off"
   storage.remainingTime = storage.remainingTime or 0
   storage.consumptionTimer = storage.consumptionTimer or self.consumptionTime
   storage.pendingOutput = storage.pendingOutput or nil
   storage.paused = storage.paused or false
+  storage.completedOutputs = storage.completedOutputs or {}
+  storage.capacityBlocked = storage.capacityBlocked or false
+
+  -- Migrate a batch that was finished under the previous single-output
+  -- implementation into the new completed-product inventory.
+  if storage.phase == "done" and storage.pendingOutput then
+    addCompletedOutput(storage.pendingOutput)
+    storage.pendingOutput = nil
+    storage.remainingTime = 0
+    storage.paused = false
+    storage.phase = "off"
+  end
 
   power.set(0)
   object.setInteractive(true)
   animator.setGlobalTag("directives", config.getParameter("directives", ""))
   updateVisuals()
 
-  message.setHandler("getProgress", function()
-    if storage.phase == "off" then return 0 end
-    if storage.phase == "done" then return 1 end
-    return math.max(0, math.min(1, 1 - (storage.remainingTime / self.totalDuration)))
+  message.setHandler("getFermenterStatus", function()
+    return {
+      progress = currentProgress(),
+      completed = completedOutputCount(),
+      capacity = self.outputCapacity
+    }
   end)
 
-  -- Container objects always open their pane on interaction.  The pane calls
-  -- this handler when it opens so a completed batch can be collected instead.
-  message.setHandler("collectOutputIfDone", function()
-    if storage.phase ~= "done" then return false end
-    collectOutput()
-    return true
+  message.setHandler("bottleCompletedOutputs", function()
+    return bottleStoredOutputs()
   end)
 end
 
@@ -50,6 +61,68 @@ function currentPhase()
     return "stage2"
   end
   return "stage3"
+end
+
+function currentProgress()
+  if storage.phase == "off" then return 0 end
+  return math.max(0, math.min(1, 1 - (storage.remainingTime / self.totalDuration)))
+end
+
+function valuesEqual(a, b)
+  if type(a) ~= type(b) then return false end
+  if type(a) ~= "table" then return a == b end
+
+  for key, value in pairs(a) do
+    if not valuesEqual(value, b[key]) then return false end
+  end
+  for key in pairs(b) do
+    if a[key] == nil then return false end
+  end
+  return true
+end
+
+function completedOutputCount()
+  local total = 0
+  for _, output in ipairs(storage.completedOutputs or {}) do
+    total = total + (output.count or 0)
+  end
+  return total
+end
+
+function canStoreOutput(output)
+  return output and completedOutputCount() + (output.count or 1) <= self.outputCapacity
+end
+
+function addCompletedOutput(output)
+  if not output then return end
+
+  local count = output.count or 1
+  local parameters = output.parameters or {}
+  for _, stored in ipairs(storage.completedOutputs) do
+    if stored.name == output.name and valuesEqual(stored.parameters or {}, parameters) then
+      stored.count = (stored.count or 0) + count
+      return
+    end
+  end
+
+  table.insert(storage.completedOutputs, {
+    name = output.name,
+    count = count,
+    parameters = parameters
+  })
+end
+
+function bottleStoredOutputs()
+  local bottledCount = completedOutputCount()
+  if bottledCount <= 0 then return 0 end
+
+  for _, output in ipairs(storage.completedOutputs) do
+    world.spawnItem(output.name, object.position(), output.count or 1, output.parameters or {})
+  end
+  storage.completedOutputs = {}
+  storage.capacityBlocked = false
+  updateVisuals()
+  return bottledCount
 end
 
 function canUsePower()
@@ -69,6 +142,7 @@ end
 
 function updateVisuals()
   local visualState = storage.phase
+  if storage.phase == "off" and storage.capacityBlocked then visualState = "done" end
   if storage.paused and isBrewing() then visualState = "off" end
   animator.setAnimationState("brewState", visualState)
   animator.setParticleEmitterActive("bubbles", isBrewing() and not storage.paused)
@@ -107,8 +181,9 @@ end
 function tryStartBatch()
   if storage.phase ~= "off" or not canUsePower() then return end
 
+  storage.capacityBlocked = false
   for _, recipe in pairs(self.recipes) do
-    if hasInputs(recipe) then
+    if hasInputs(recipe) and canStoreOutput(recipe.output) then
       power.remove(self.powerUseAmount)
       for _, input in ipairs(recipe.input or {}) do
         world.containerConsume(entity.id(), input)
@@ -118,11 +193,16 @@ function tryStartBatch()
       storage.remainingTime = self.totalDuration
       storage.consumptionTimer = self.consumptionTime
       storage.paused = false
+      storage.capacityBlocked = false
       storage.phase = "stage1"
       updateVisuals()
       return
+    elseif hasInputs(recipe) then
+      storage.capacityBlocked = true
     end
   end
+
+  if storage.capacityBlocked then updateVisuals() end
 end
 
 function pauseBatch()
@@ -142,9 +222,12 @@ function resumeBatch()
 end
 
 function finishBatch()
+  addCompletedOutput(storage.pendingOutput)
+  storage.pendingOutput = nil
   storage.remainingTime = 0
   storage.paused = false
-  storage.phase = "done"
+  storage.capacityBlocked = false
+  storage.phase = "off"
   updateVisuals()
 end
 
@@ -187,20 +270,6 @@ function updateBrewing(dt)
     storage.phase = phase
     updateVisuals()
   end
-end
-
-function collectOutput()
-  local output = storage.pendingOutput
-  if output then
-    world.spawnItem(output.name, object.position(), output.count or 1, output.parameters or {})
-  end
-
-  storage.pendingOutput = nil
-  storage.remainingTime = 0
-  storage.phase = "off"
-  storage.paused = false
-  storage.consumptionTimer = self.consumptionTime
-  updateVisuals()
 end
 
 function update(dt)

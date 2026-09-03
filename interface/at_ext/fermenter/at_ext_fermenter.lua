@@ -5,34 +5,43 @@ function init()
   self.descriptionLabel = "lblText"
   self.inputWidget = "scrollArea.inputList"
   self.progressWidget = "progress"
+  self.completedWidget = "completedText"
+  self.completedFormat = config.getParameter("completedFormat", "Brewed: %d/%d")
   self.entity = pane.containerEntityId()
-  self.collectPromise = world.sendEntityMessage(self.entity, "collectOutputIfDone")
 
   populateFields()
   populateList()
 end
 
 function update(dt)
-  if self.collectPromise then
-    if self.collectPromise:succeeded() and self.collectPromise:finished() then
-      local collected = self.collectPromise:result()
-      self.collectPromise = nil
-      if collected then
-        -- Keep the normal machine interface open after collecting a finished
-        -- batch so the player can immediately load or inspect the next one.
-        return
-      end
+  if self.bottlePromise then
+    if self.bottlePromise:finished() then
+      self.bottlePromise = nil
     end
     return
   end
 
-  if not self.promise then
-    self.promise = world.sendEntityMessage(self.entity, "getProgress")
+  if not self.statusPromise then
+    self.statusPromise = world.sendEntityMessage(self.entity, "getFermenterStatus")
   end
 
-  if self.promise:succeeded() and self.promise:finished() then
-    widget.setProgress(self.progressWidget, self.promise:result())
-    self.promise = nil
+  if self.statusPromise:finished() then
+    if self.statusPromise:succeeded() then
+      local status = self.statusPromise:result()
+      widget.setProgress(self.progressWidget, status.progress or 0)
+      widget.setText(self.completedWidget, string.format(
+        self.completedFormat,
+        status.completed or 0,
+        status.capacity or 100
+      ))
+    end
+    self.statusPromise = nil
+  end
+end
+
+function bottleCompletedOutputs()
+  if not self.bottlePromise then
+    self.bottlePromise = world.sendEntityMessage(self.entity, "bottleCompletedOutputs")
   end
 end
 

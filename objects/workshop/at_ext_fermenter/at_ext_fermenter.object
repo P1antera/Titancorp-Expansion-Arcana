@@ -71,6 +71,7 @@
   "configPath" : "/objects/workshop/at_ext_fermenter/config.config",
   "maxPower" : 30,
   "powerUseAmount" : 20,
+  "outputCapacity" : 120,
   "voltage" : 45,
   "consumptionTime" : 1.0,
   "directives" : ""
