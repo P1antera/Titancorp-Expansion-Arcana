@@ -3,7 +3,7 @@
   "colonyTags" : ["light"],
   "rarity" : "Common",
   "description" : "A mobile personal computer. Used for accepting ^yellow;contracts.",
-  "shortdescription" : "^orange;[T_ext]Titancorp Laptop",
+  "shortdescription" : "^orange;[TC]Titancorp Laptop",
   "race" : "generic",
   
   
@@ -14,6 +14,7 @@
   "at_ext_d1",
 	"at_ext_d2",
 	"at_ext_d3",
+    "at_ext_beeres_1",
     "at_ext_d4",
     "at_ext_d5",
     "at_ext_rl2_1",

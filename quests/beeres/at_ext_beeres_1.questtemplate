@@ -1,0 +1,41 @@
+{
+  "id" : "at_ext_beeres_1",
+  "mainQuest" : false,
+  "prerequisites" : [ "at_ext_d3" ],
+  "title" : "^yellow;Urgently Seeking a Beer Supplier^reset;",
+  "text" : "Interested parties should visit the TitanColony Nebula Lounge to discuss the opportunity.",
+  "completionText" : "Hello! Let's sit down and talk.",
+  "canBeAbandoned" : true,
+  "moneyRange" : [ 0, 0 ],
+  "rewards" : [
+    []
+  ],
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ { "image" : "/quests/at_ext_unknown2.png" } ],
+        "title" : "Unknown"
+      },
+      "questComplete" : {
+        "portrait" : [ { "image" : "/quests/at_ext_quest.png" } ],
+        "title" : "Beeres"
+      }
+    },
+    "descriptions" : {
+      "enterInstance" : "Go to ^orange;TitanColony^reset;.",
+      "findGoal" : "Find ^orange;Beeres^reset;.",
+      "turnIn" : "Talk with ^orange;Beeres^reset;."
+    },
+    "warpEntityUid" : "at_ext_pilot",
+    "warpAction" : "instanceworld:at_ext_colony",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:at_ext_rl2",
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+    "goalEntityUid" : "at_ext_beeres",
+    "indicateGoal" : true,
+    "trackGoalEntity" : true,
+    "turnInEntityUid" : "at_ext_beeres"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "particleEmitters" : {
+    "bubbles" : {
+      "enabled" : true,
+      "emissionRate" : 1.5,
+      "particles" : [
+        { "particle" : "at_ext_fermenter_bubble", "position" : [0, 2.2] }
+      ]
+    }
+  }
+}

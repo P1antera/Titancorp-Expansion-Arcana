@@ -1,0 +1,6 @@
+{
+  "name" : "at_ext_beer_1",
+  "defaultDuration" : 60,
+  "label" : "Intoxicated",
+  "icon" : "/interface/statuses/at_ext_beer_icon.png"
+}

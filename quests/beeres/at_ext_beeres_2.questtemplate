@@ -1,0 +1,40 @@
+{
+  "id" : "at_ext_beeres_2",
+  "mainQuest" : false,
+  "prerequisites" : [ "at_ext_beeres_1" ],
+  "title" : "^yellow;Partners^reset;",
+  "text" : "I've been looking for a beer supplier who can provide a steady supply. If you think you're up to the task, bring me 10 bottles of beer that you have produced first! I can provide the equipment, but you will need to find the ingredients yourself.",
+  "completionText" : "The quality is good. If you can bring me more in the future, I will gladly buy it all! If you need more fermenters, take a look at the credit shop.",
+  "canBeAbandoned" : false,
+  "moneyRange" : [ 0, 0 ],
+  "rewards" : [
+    []
+  ],
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "acceptItems" : [
+      { "name" : "at_ext_fermenter", "count" : 1 }
+    ],
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ { "image" : "/quests/at_ext_quest.png" } ],
+        "title" : "Beeres"
+      },
+      "questComplete" : {
+        "portrait" : [ { "image" : "/quests/at_ext_quest.png" } ],
+        "title" : "Beeres"
+      }
+    },
+    "turnInDescription" : "Give 10 bottles of ^yellow;beer^reset; to ^orange;Beeres^reset;.",
+    "requireTurnIn" : true,
+    "conditions" : [
+      {
+        "type" : "gatherItem",
+        "itemName" : "at_ext_beer",
+        "count" : 10,
+        "consume" : true
+      }
+    ]
+  }
+}

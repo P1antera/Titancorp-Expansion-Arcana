@@ -5,7 +5,7 @@
   "inventoryIcon" : "at_ext_beer_icon.png",
   "tooltipKind" : "at_ext_food",
   "largeImage" : "at_ext_beer_icon.png",
-  "description" : "Beer brewed with industrial equipment. Golden and crystal clear, with a refreshingly crisp taste.",
+  "description" : "Beer brewed with industrial equipment. Golden and crystal clear, with a refreshingly crisp taste.\n^yellow;Grants the [Intoxicated] effect when consumed.^reset;",
   "shortdescription" : "^orange;Golden Tide Lager^reset;",
   "maxStack" : 99,
 
@@ -31,5 +31,11 @@
   "raiseTime" : 1,
   "drinkTime" : 4.0,
   "recapTime" : 1.5,
+  "firstEffectName" : "at_ext_beer_1",
+  "firstEffectDuration" : 60,
+  "secondEffectName" : "at_ext_beer_2",
+  "secondEffectDuration" : 120,
+  "thirdEffectName" : "at_ext_beer_3",
+  "thirdEffectDuration" : 180,
   "emptyBottleItem" : "at_ext_emptybottle"
 }

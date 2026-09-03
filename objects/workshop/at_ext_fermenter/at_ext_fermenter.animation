@@ -21,7 +21,8 @@
       "body" : {
         "properties" : {
           "centered" : false,
-          "zLevel" : 1
+          "zLevel" : 1,
+          "fullbright" : true
         },
         "partStates" : {
           "brewState" : {
@@ -36,8 +37,7 @@
       "fullbright" : {
         "properties" : {
           "centered" : false,
-          "zLevel" : 2,
-          "fullbright" : true
+          "zLevel" : 2
         },
         "partStates" : {
           "brewState" : {

@@ -26,13 +26,13 @@
   "orientations" : [
     {
       "imageLayers" : [
-        { "image" : "body.png:off" },
-        { "image" : "fullbright.png:off", "fullbright" : true }
+        { "image" : "body.png:off", "fullbright" : true },
+        { "image" : "fullbright.png:off"}
       ],
       "direction" : "left",
       "flipImages" : true,
       "imagePosition" : [0, 0],
-      "renderLayer" : "Object+5",
+      //"renderLayer" : "Object+5",
       "frames" : 1,
       "animationCycle" : 0.5,
       "spaceScan" : 0.1,
@@ -41,12 +41,12 @@
     },
     {
       "imageLayers" : [
-        { "image" : "body.png:off" },
-        { "image" : "fullbright.png:off", "fullbright" : true }
+        { "image" : "body.png:off", "fullbright" : true },
+        { "image" : "fullbright.png:off" }
       ],
       "direction" : "right",
       "imagePosition" : [0, 0],
-      "renderLayer" : "Object+5",
+      //"renderLayer" : "Object+5",
       "frames" : 1,
       "animationCycle" : 0.5,
       "spaceScan" : 0.1,
@@ -55,7 +55,7 @@
     }
   ],
 
-  "placementImage" : "body.png:off",
+  "placementImage" : "fullbright.png:off",
   "placementImagePosition" : [0, 0],
   "openSounds" : ["/sfx/objects/campfire_use.ogg"],
   "sounds" : {

@@ -7,14 +7,15 @@
   "race" : "generic",
   "category" : "furniture",
   "price" : 0,
+  "uniqueId" : "at_ext_beeres",
   "printable" : false,
   "interactAction" : "OpenCraftingInterface",
   "interactData" : {
     "config" : "/interface/arcana/arcana_crafting_trading/at_ext_beeres.config",
     "filter" : [ "at_ext_beeres" ]
   },
-  "offeredQuests" : [],
-  "turnInQuests" : [],
+  "offeredQuests" : [ "at_ext_beeres_2" ],
+  "turnInQuests" : [ "at_ext_beeres_1", "at_ext_beeres_2" ],
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {

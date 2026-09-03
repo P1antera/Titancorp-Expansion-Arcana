@@ -1,0 +1,13 @@
+{
+  "name" : "at_ext_beer_2",
+  "defaultDuration" : 120,
+  "scripts" : [ "at_ext_beer_2.lua" ],
+  "animationConfig" : "at_ext_beer_2.animation",
+  "effectConfig" : {
+    "speedModifier" : 0.95,
+    "groundMovementModifier" : 0.95,
+    "emissionRate" : 1.5
+  },
+  "label" : "Intoxicated [-5% movement speed]",
+  "icon" : "/interface/statuses/at_ext_beer_icon2.png"
+}
