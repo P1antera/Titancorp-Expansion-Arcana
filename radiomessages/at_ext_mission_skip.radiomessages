@@ -1,0 +1,32 @@
+{
+  "at_ext_mission_skip_started" : {
+    "type" : "quest",
+    "senderName" : "Titancorp",
+    "portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "Mission skip started. Completing the Titancorp mission sequence..."
+  },
+  "at_ext_mission_skip_complete" : {
+    "type" : "quest",
+    "senderName" : "Titancorp",
+    "portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "Mission skip complete. All Titancorp main missions have been completed."
+  },
+  "at_ext_mission_skip_active_quest" : {
+    "type" : "quest",
+    "senderName" : "Titancorp",
+    "portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "Mission skip cancelled: one of the selected missions is already active. Complete or abandon it first."
+  },
+  "at_ext_mission_skip_failed" : {
+    "type" : "quest",
+    "senderName" : "Titancorp",
+    "portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "Mission skip cancelled: a mission could not be started. Check the Starbound log for mod errors."
+  },
+  "at_ext_mission_skip_admin_only" : {
+    "type" : "quest",
+    "senderName" : "Titancorp",
+    "portraitImage" : "/quests/at_ext_quest2.png:<frame>",
+    "text" : "Mission skip is restricted to administrators."
+  }
+}
