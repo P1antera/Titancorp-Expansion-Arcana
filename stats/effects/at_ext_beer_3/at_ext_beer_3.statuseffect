@@ -6,7 +6,8 @@
   "effectConfig" : {
     "speedModifier" : 0.9,
     "groundMovementModifier" : 0.9,
-    "emissionRate" : 4.5
+    "emissionRate" : 4.5,
+    "parentDirectives" : "fade=FFF0C0=0.08"
   },
   "label" : "Intoxicated [-10% movement speed]",
   "icon" : "/interface/statuses/at_ext_beer_icon3.png"
