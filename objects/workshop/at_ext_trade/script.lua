@@ -9,19 +9,19 @@ function init()
   self.powerUseAmount = config.getParameter("powerUseAmount", 0)
 
   self.weaponPrices = {
-    Common = {min = 5, max = 10},
-    Uncommon = {min = 30, max = 60},
-    Rare = {min = 80, max = 90},
-    Legendary = {min = 100, max = 130},
-    Essential = {min = 150, max = 200}
+    common = {min = 5, max = 10},
+    uncommon = {min = 30, max = 60},
+    rare = {min = 80, max = 90},
+    legendary = {min = 100, max = 130},
+    essential = {min = 150, max = 200}
   }
   
   self.armorPrices = {
-    Common = {min = 10, max = 30},
-    Uncommon = {min = 50, max = 75},
-    Rare = {min = 80, max = 100},
-    Legendary = {min = 200, max = 300},
-    Essential = {min = 400, max = 600}
+    common = {min = 10, max = 30},
+    uncommon = {min = 50, max = 75},
+    rare = {min = 80, max = 100},
+    legendary = {min = 200, max = 300},
+    essential = {min = 400, max = 600}
   }
 
   animator.setGlobalTag("directives", config.getParameter("directives", ""))
@@ -91,7 +91,7 @@ function getItemPrice(itemDescriptor)
   local itemConfig = root.itemConfig(itemDescriptor)
   if not itemConfig or not itemConfig.config then return nil end
   
-  local rarity = itemConfig.config.rarity or "Common"
+  local rarity = string.lower(itemConfig.config.rarity or "common")
   local priceConfig = nil
   
   if isWeapon(itemDescriptor) then
