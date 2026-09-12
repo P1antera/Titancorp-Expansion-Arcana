@@ -19,14 +19,13 @@ end
 
 
 function daycheck()
-local day = world.timeOfDay()
-    
-	if day <= 0.5 and world.underground(object.position()) == false then
-	  self.isPowered = true   
-	  return
-	end
-  
-  self.isPowered = false
+  if world.type() == "unknown" then
+    self.isPowered = false
+    return
+  end
+
+  local day = world.timeOfDay()
+  self.isPowered = day <= 0.5 and world.underground(object.position()) == false
 end
 
 function update(dt)
