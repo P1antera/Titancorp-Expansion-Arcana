@@ -112,7 +112,7 @@
                 {"item" : [ "workshop_crafting_motor", 3]},
                 {"item" : [ "arcana_lootbox_legendaryTreasure", 1]},
                 {"item" : [ "prisiliteore", 3]},
-                //{"item" : [ "arcana_essence_tripolarEssence", 1]},
+                {"item" : [ "arcana_essence_tripolarEssence", 1]},
                 {"item" : [ "uraniumrod", 5]},
 
 
