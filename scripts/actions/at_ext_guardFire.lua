@@ -156,6 +156,7 @@ function atExtBackpedalFromTarget(args, board, nodeId)
   local stuckTimer = stuckTimeout
   while stuckTimer > 0 do
     if args.entity == nil or not world.entityExists(args.entity) or atExtMovementBlockedByCrouch(board) then
+      board:setNumber("atExtRetreatHold", 0)
       return false
     end
 

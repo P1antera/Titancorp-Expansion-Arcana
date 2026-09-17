@@ -6,13 +6,13 @@
   "bounces" : 0,
   "speed" : 126,
   
-  "image" : "body.png",
+  "image" : "body2.png",
   "animationCycle" : 0.2,
   "frameNumber" : 1,
   
   "fullbright" : true,
   "lightColor" : [230, 70, 60],
-  "emitters" : [ "arcana_particle_ember_red" ],
+  //"emitters" : [ "arcana_particle_ember_red" ],
   
   "supportsProcessing" : true,
   
@@ -24,22 +24,7 @@
   ],
   
   "periodicActions" : [
-    {
-      "time" : 0.001,
-      "repeat" : true,
-      "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "textured",
-        "image" : "/projectiles/at_ext_rf6/trail.png",
-        "position" : [0, 0],
-        "layer" : "back",
-        "timeToLive" : 0.0,
-        "destructionTime" : 0.14,
-        "destructionAction" : "shrink",
-        "fullbright" : true
-      }
-    }
+
   ],
   
   "damageKind" : "plasma"

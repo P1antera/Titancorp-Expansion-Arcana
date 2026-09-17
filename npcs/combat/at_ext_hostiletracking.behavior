@@ -45,6 +45,7 @@
   "title": "Maintain Crouch",
   "type": "decorator",
   "name": "succeeder",
+  "parameters": {},
   "child": {
     "type": "action",
     "name": "atExtMaintainCrouch",
@@ -80,15 +81,6 @@
                         "type": "action",
                         "name": "wasDamaged",
                         "parameters": {}
-                      },
-                      {
-                        "title": "Crouch On Hit",
-                        "type": "action",
-                        "name": "atExtCrouchOnHit",
-                        "parameters": {
-                        "chance": { "value": 0.8 },
-                        "duration": { "value": 3 }
-                                      }         
                       },
                       {
                         "title": "entityInTypes",
@@ -129,6 +121,15 @@
                         "name": "isValidTarget",
                         "parameters": {
                           "entity": {"key": "damageSource"}
+                        }
+                      },
+                      {
+                        "title": "Crouch On Hit",
+                        "type": "action",
+                        "name": "atExtCrouchOnHit",
+                        "parameters": {
+                          "chance": {"value": 0.8},
+                          "duration": {"value": 3}
                         }
                       },
                       {
