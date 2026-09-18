@@ -124,12 +124,19 @@
                         }
                       },
                       {
-                        "title": "Crouch On Hit",
-                        "type": "action",
-                        "name": "atExtCrouchOnHit",
+                        "title": "Crouch On Hit (Optional)",
+                        "type": "decorator",
+                        "name": "succeeder",
                         "parameters": {
-                          "chance": {"value": 0.8},
-                          "duration": {"value": 3}
+                        },
+                        "child": {
+                          "title": "Crouch On Hit",
+                          "type": "action",
+                          "name": "atExtCrouchOnHit",
+                          "parameters": {
+                            "chance": {"value": 0.8},
+                            "duration": {"value": 3}
+                          }
                         }
                       },
                       {
