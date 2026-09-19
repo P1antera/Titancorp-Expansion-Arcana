@@ -53,5 +53,5 @@ end
 function questComplete()
   if not self.order or not player.consumeItem(self.item) then return end
   player.giveItem({ name = "arcana_currency_credit", count = self.order.reward })
-  player.setProperty(propertyKey, { cooldownExpiresAt = os.time() + config.getParameter("cooldownSeconds", 600) })
+  player.setProperty(propertyKey, { cooldownExpiresAt = os.time() + config.getParameter("cooldownSeconds", 86400) })
 end

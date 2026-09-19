@@ -10,7 +10,7 @@
   "updateDelta" : 5,
   "script" : "/quests/at_ext_foreman_supply.lua",
   "scriptConfig" : {
-    "cooldownSeconds" : 600,
+    "cooldownSeconds" : 86400,
     "orders" : [
       { "itemName" : "ironbar", "materialName" : "Iron Bars", "reward" : 1000 },
       { "itemName" : "tungstenbar", "materialName" : "Tungsten Bars", "reward" : 1200 },
