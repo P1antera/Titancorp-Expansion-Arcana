@@ -1,0 +1,41 @@
+{
+  "type" : "at_ext_foreman",
+  "baseType" : "base",
+  "levelVariance" : [3, 3],
+  "persistent" : true,
+  "damageTeamType" : "friendly",
+  "scripts" : [ "/npcs/bmain.lua" ],
+  "scriptConfig" : {
+    "offeredQuests" : [ "at_ext_foreman_supply" ],
+    "turnInQuests" : [ "at_ext_foreman_supply" ],
+    "behavior" : "at_ext_foreman",
+    "behaviorConfig" : {
+      "greetingChance" : 0.5,
+      "hostileDamageTeam" : { "type" : "enemy", "team" : 1 }
+    },
+    "questGenerator" : { "pools" : [], "enableParticipation" : false },
+    "reactions" : {
+      "spontaneous" : [ [5.0, "sleep", { "timeRange" : [0.7, 0.9] }], [1.0, "sit", { "timeRange" : [0.6, 0.2]}], [1.0, "wander"] ]
+    },
+    "dialog" : {
+      "hail" : { "default" : { "default" : [
+        "Construction in progress. Authorized personnel only.",
+        "Construction zone ahead. Please keep clear.",
+        "Please watch your step. This area is not open to the public.",
+        "Please use the detour. You're blocking the work crew.",
+        "Watch your footing. The materials nearby haven't been secured yet.",
+        "Construction isn't finished. Please wait beyond the safety line."
+      ] } },
+      "tenant" : { "grumbles" : { "tagCriteria" : "/dialog/grumble.config:tagCriteria", "enclosedArea" : "/dialog/grumble.config:enclosedArea", "otherDeed" : "/dialog/grumble.config:otherDeed", "severe" : "/dialog/grumble.config:severe", "final" : "/dialog/grumble.config:final" }, "arrivedHome" : { "beacon" : "/dialog/arrivedhome.config:beacon", "rent" : "/dialog/arrivedhome.config:rent" } },
+      "flee" : { "helpme" : "/dialog/flee.config:helpme", "safe" : "/dialog/flee.config:safe" },
+      "breakObject" : "/dialog/converse.config:breakObject",
+      "greeting" : "/dialog/converse.config:greeting",
+      "converse" : "/dialog/converse.config:converse",
+      "accuse" : "/dialog/thief.config:accuse",
+      "alert" : "/dialog/thief.config:alert"
+    }
+  },
+  "matchColorIndices" : true,
+  "items" : { "override" : [[0, [{ "head" : [{ "name" : "minerhead", "parameters" : { "colorIndex" : 0 } }], "chest" : [{ "name" : "minerchest", "parameters" : { "colorIndex" : 0 } }], "legs" : [{ "name" : "humantier2pants", "parameters" : { "colorIndex" : 1 } }] }]]] },
+  "statusControllerSettings" : { "stats" : { "maxHealth" : { "baseValue" : 50.0 }, "powerMultiplier" : { "baseValue" : 0.0 }, "protection" : { "baseValue" : 1.0 }, "healthRegen" : { "baseValue" : 0.0 } } }
+}

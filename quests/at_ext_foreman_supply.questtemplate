@@ -1,0 +1,28 @@
+{
+  "id" : "at_ext_foreman_supply",
+  "title" : "A Hand for the Worksite",
+  "text" : "The crew could use a hand keeping the worksite supplied. Speak with the foreman to see what is needed.",
+  "completionText" : "That helps more than you know. Your construction credit payment has been issued.",
+  "canBeAbandoned" : true,
+  "moneyRange" : [0, 0],
+  "rewards" : [],
+  "ephemeral" : true,
+  "updateDelta" : 5,
+  "script" : "/quests/at_ext_foreman_supply.lua",
+  "scriptConfig" : {
+    "cooldownSeconds" : 600,
+    "orders" : [
+      { "itemName" : "ironbar", "materialName" : "Iron Bars", "reward" : 1000 },
+      { "itemName" : "tungstenbar", "materialName" : "Tungsten Bars", "reward" : 1200 },
+      { "itemName" : "titaniumbar", "materialName" : "Titanium Bars", "reward" : 1500 }
+    ],
+    "texts" : {
+      "title" : "A Hand for the Worksite",
+      "text" : "We are a little short on ^orange;<materialName>^reset;. If you can spare ^green;80^reset; bars, it would keep this job moving.",
+      "objective" : "Collect <current>/<required> <materialName> for the worksite",
+      "turnIn" : "Bring the materials back to the ^yellow;Construction Foreman^reset;.",
+      "completion" : "That is exactly what we needed. This is your payment.",
+      "cooldown" : "Thanks again for the last delivery. Give the crew more seconds to sort it out, then check back with us."
+    }
+  }
+}

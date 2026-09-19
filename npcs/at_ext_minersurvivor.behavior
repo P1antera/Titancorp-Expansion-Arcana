@@ -1,0 +1,424 @@
+{
+  "name": "at_ext_minersurvivor",
+  "description": "Villager behavior with an automatic construction-site warning.",
+  "scripts": [
+    "/scripts/actions/query.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/dialog.lua",
+    "/scripts/actions/world.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/npc.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/behavior/bdata.lua"
+  ],
+  "parameters": {
+    "play": true
+  },
+  "root": {
+    "title": "Construction Worker",
+    "type": "composite",
+    "name": "dynamic",
+    "parameters": {},
+    "children": [
+      {
+        "title": "Tenant Baseline Behavior",
+        "type": "module",
+        "name": "Tenant Baseline Behavior",
+        "parameters": {}
+      },
+      {
+        "title": "flee",
+        "type": "module",
+        "name": "flee",
+        "parameters": {}
+      },
+      {
+        "title": "accuse",
+        "type": "module",
+        "name": "accuse",
+        "parameters": {}
+      },
+      {
+        "title": "Construction Warning",
+        "type": "decorator",
+        "name": "cooldown",
+        "parameters": {
+          "cooldown": {"value": 30},
+          "onFail": {"value": false},
+          "onSuccess": {"value": true}
+        },
+        "child": {
+          "title": "Warn Nearby Player",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "Find Nearest Player",
+              "type": "action",
+              "name": "queryEntity",
+              "parameters": {
+                "entityTypes": {"value": ["player"]},
+                "orderBy": {"value": "nearest"},
+                "position": {"key": "self"},
+                "range": {"value": 15},
+                "withoutEntity": {"key": "self"}
+              },
+              "output": {
+                "entity": "player"
+              }
+            },
+            {
+              "title": "Display Construction Warning",
+              "type": "action",
+              "name": "sayToEntity",
+              "parameters": {
+                "dialogType": {"value": "dialog.hail"},
+                "entity": {"key": "player"},
+                "tags": {"value": {}}
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": "converse",
+        "type": "module",
+        "name": "converse",
+        "parameters": {}
+      },
+      {
+        "title": "Finish Interrupted Cargo Delivery",
+        "type": "composite",
+        "name": "selector",
+        "parameters": {},
+        "children": [
+          {
+            "title": "Carry Cargo To Destination",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "Is Carrying Cargo",
+                "type": "action",
+                "name": "hasFlag",
+                "parameters": {
+                  "name": {"key": "cargoCarrying"}
+                }
+              },
+              {
+                "title": "Find Cargo Destination",
+                "type": "action",
+                "name": "loadUniqueEntity",
+                "parameters": {
+                  "uniqueId": {"value": "at_ext_minersurvivor_cargo_destination"}
+                },
+                "output": {
+                  "entity": "cargoDestination"
+                }
+              },
+              {
+                "title": "Get Cargo Destination Position",
+                "type": "action",
+                "name": "entityPosition",
+                "parameters": {
+                  "entity": {"key": "cargoDestination"}
+                },
+                "output": {
+                  "position": "cargoDestinationPosition"
+                }
+              },
+              {
+                "title": "Walk To Cargo Destination",
+                "type": "action",
+                "name": "moveToPosition",
+                "parameters": {
+                  "avoidLiquid": {"value": true},
+                  "groundPosition": {"value": true},
+                  "maxGround": {"value": 5},
+                  "minGround": {"value": -5},
+                  "position": {"key": "cargoDestinationPosition"},
+                  "run": {"value": false}
+                }
+              },
+              {
+                "title": "Pause To Drop Off Cargo",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 0.75}
+                }
+              },
+              {
+                "title": "Put Down Cargo",
+                "type": "action",
+                "name": "unequipSlot",
+                "parameters": {
+                  "slot": {"value": "primary"}
+                }
+              },
+              {
+                "title": "Clear Cargo Carrying State",
+                "type": "action",
+                "name": "unsetFlag",
+                "parameters": {
+                  "name": {"value": "cargoCarrying"}
+                }
+              }
+            ]
+          },
+          {
+            "title": "Discard Cargo If Delivery Cannot Resume",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "Is Carrying Cargo",
+                "type": "action",
+                "name": "hasFlag",
+                "parameters": {
+                  "name": {"key": "cargoCarrying"}
+                }
+              },
+              {
+                "title": "Put Down Unrecoverable Cargo",
+                "type": "action",
+                "name": "unequipSlot",
+                "parameters": {
+                  "slot": {"value": "primary"}
+                }
+              },
+              {
+                "title": "Clear Cargo Carrying State",
+                "type": "action",
+                "name": "unsetFlag",
+                "parameters": {
+                  "name": {"value": "cargoCarrying"}
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Cargo Transport",
+        "type": "decorator",
+        "name": "cooldown",
+        "parameters": {
+          "cooldown": {"value": 20},
+          "onFail": {"value": false},
+          "onSuccess": {"value": true}
+        },
+        "child": {
+          "title": "Transport Cargo Between Workstations",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "Choose To Transport Cargo",
+              "type": "action",
+              "name": "chance",
+              "parameters": {
+                "chance": {"value": 1.0}
+              }
+            },
+            {
+              "title": "Find Cargo Source",
+              "type": "action",
+              "name": "loadUniqueEntity",
+              "parameters": {
+                "uniqueId": {"value": "at_ext_minersurvivor_cargo_source"}
+              },
+              "output": {
+                "entity": "cargoSource"
+              }
+            },
+            {
+              "title": "Find Cargo Destination",
+              "type": "action",
+              "name": "loadUniqueEntity",
+              "parameters": {
+                "uniqueId": {"value": "at_ext_minersurvivor_cargo_destination"}
+              },
+              "output": {
+                "entity": "cargoDestination"
+              }
+            },
+            {
+              "title": "Get Cargo Source Position",
+              "type": "action",
+              "name": "entityPosition",
+              "parameters": {
+                "entity": {"key": "cargoSource"}
+              },
+              "output": {
+                "position": "cargoSourcePosition"
+              }
+            },
+            {
+              "title": "Get Cargo Destination Position",
+              "type": "action",
+              "name": "entityPosition",
+              "parameters": {
+                "entity": {"key": "cargoDestination"}
+              },
+              "output": {
+                "position": "cargoDestinationPosition"
+              }
+            },
+            {
+              "title": "Walk To Cargo Source",
+              "type": "action",
+              "name": "moveToPosition",
+              "parameters": {
+                "avoidLiquid": {"value": true},
+                "groundPosition": {"value": true},
+                "maxGround": {"value": 5},
+                "minGround": {"value": -5},
+                "position": {"key": "cargoSourcePosition"},
+                "run": {"value": false}
+              }
+            },
+            {
+              "title": "Pick Up Random Cargo Box",
+              "type": "composite",
+              "name": "selector",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "Pick Up Cargo Box One",
+                  "type": "composite",
+                  "name": "sequence",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "Choose Cargo Box One",
+                      "type": "action",
+                      "name": "chance",
+                      "parameters": {
+                        "chance": {"value": 0.5}
+                      }
+                    },
+                    {
+                      "title": "Equip Cargo Box One",
+                      "type": "action",
+                      "name": "setItemSlot",
+                      "parameters": {
+                        "itemName": {"value": "at_ext_npc_box1"},
+                        "slot": {"value": "primary"}
+                      }
+                    }
+                  ]
+                },
+                {
+                  "title": "Equip Cargo Box Two",
+                  "type": "action",
+                  "name": "setItemSlot",
+                  "parameters": {
+                    "itemName": {"value": "at_ext_npc_box2"},
+                    "slot": {"value": "primary"}
+                  }
+                }
+              ]
+            },
+            {
+              "title": "Pause To Pick Up Cargo",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"value": 0.75}
+              }
+            },
+            {
+              "title": "Remember That Cargo Is Being Carried",
+              "type": "action",
+              "name": "setFlag",
+              "parameters": {
+                "name": {"value": "cargoCarrying"}
+              }
+            },
+            {
+              "title": "Deliver Cargo Or Clean Up",
+              "type": "composite",
+              "name": "selector",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "Walk To Cargo Destination",
+                  "type": "composite",
+                  "name": "sequence",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "Walk To Cargo Destination",
+                      "type": "action",
+                      "name": "moveToPosition",
+                      "parameters": {
+                        "avoidLiquid": {"value": true},
+                        "groundPosition": {"value": true},
+                        "maxGround": {"value": 5},
+                        "minGround": {"value": -5},
+                        "position": {"key": "cargoDestinationPosition"},
+                        "run": {"value": false}
+                      }
+                    },
+                    {
+                      "title": "Pause To Drop Off Cargo",
+                      "type": "action",
+                      "name": "timer",
+                      "parameters": {
+                        "time": {"value": 0.75}
+                      }
+                    }
+                  ]
+                },
+                {
+                  "title": "Cargo Destination Unreachable",
+                  "type": "decorator",
+                  "name": "succeeder",
+                  "parameters": {},
+                  "child": {
+                  "title": "No Operation",
+                  "type": "action",
+                    "name": "chance",
+                    "parameters": {
+                      "chance": {"value": 0}
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "title": "Put Down Cargo",
+              "type": "action",
+              "name": "unequipSlot",
+              "parameters": {
+                "slot": {"value": "primary"}
+              }
+            },
+            {
+              "title": "Clear Cargo Carrying State",
+              "type": "action",
+              "name": "unsetFlag",
+              "parameters": {
+                "name": {"value": "cargoCarrying"}
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": "NPC Idle",
+        "type": "module",
+        "name": "NPC Idle",
+        "parameters": {
+          "play": {"value": "<play>"}
+        }
+      }
+    ]
+  }
+}

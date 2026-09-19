@@ -1,0 +1,17 @@
+{
+  "name": "at_ext_foreman",
+  "description": "Construction foreman behavior without cargo transport.",
+  "scripts": ["/scripts/actions/query.lua", "/scripts/behavior.lua", "/scripts/actions/dialog.lua", "/scripts/actions/world.lua", "/scripts/actions/movement.lua", "/scripts/actions/npc.lua", "/scripts/actions/time.lua"],
+  "parameters": { "play": true },
+  "root": { "title": "Construction Foreman", "type": "composite", "name": "dynamic", "parameters": {}, "children": [
+    { "title": "Tenant Baseline Behavior", "type": "module", "name": "Tenant Baseline Behavior", "parameters": {} },
+    { "title": "flee", "type": "module", "name": "flee", "parameters": {} },
+    { "title": "accuse", "type": "module", "name": "accuse", "parameters": {} },
+    { "title": "Construction Warning", "type": "decorator", "name": "cooldown", "parameters": { "cooldown": {"value": 30}, "onFail": {"value": false}, "onSuccess": {"value": true} }, "child": { "title": "Warn Nearby Player", "type": "composite", "name": "sequence", "parameters": {}, "children": [
+      { "title": "Find Nearest Player", "type": "action", "name": "queryEntity", "parameters": { "entityTypes": {"value": ["player"]}, "orderBy": {"value": "nearest"}, "position": {"key": "self"}, "range": {"value": 15}, "withoutEntity": {"key": "self"} }, "output": { "entity": "player" } },
+      { "title": "Display Construction Warning", "type": "action", "name": "sayToEntity", "parameters": { "dialogType": {"value": "dialog.hail"}, "entity": {"key": "player"}, "tags": {"value": {}} } }
+    ] } },
+    { "title": "converse", "type": "module", "name": "converse", "parameters": {} },
+    { "title": "NPC Idle", "type": "module", "name": "NPC Idle", "parameters": { "play": {"value": "<play>"} } }
+  ] }
+}

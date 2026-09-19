@@ -1,0 +1,13 @@
+{
+  "animatedParts" : {
+    "parts" : {
+      "box" : {
+        "properties" : {
+          "centered" : true,
+          "image" : "<partImage>",
+          "offset" : [0, 0]
+        }
+      }
+    }
+  }
+}

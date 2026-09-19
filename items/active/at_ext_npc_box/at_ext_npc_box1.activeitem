@@ -1,0 +1,17 @@
+{
+  "itemName" : "at_ext_npc_box1",
+  "price" : 0,
+  "maxStack" : 1,
+  "rarity" : "common",
+  "category" : "tool",
+  "description" : "A cargo box carried by Titan Corp construction workers. It has no player function.",
+  "shortdescription" : "Worker Cargo Box",
+  "twoHanded" : true,
+  "inventoryIcon" : "at_ext_npc_box1.png",
+  "animation" : "at_ext_npc_box.animation",
+  "animationParts" : {
+    "box" : "at_ext_npc_box1.png"
+  },
+  "animationCustom" : { },
+  "scripts" : [ ]
+}

@@ -8,7 +8,7 @@
   "damageTeamType" : "friendly",
 
   "scriptConfig" : {
-    "behavior" : "villager",
+    "behavior" : "at_ext_minersurvivor",
 
     "behaviorConfig" : {
       "greetingChance" : 0.5,
@@ -71,6 +71,18 @@
       "flee" : {
         "helpme" : "/dialog/flee.config:helpme",
         "safe" : "/dialog/flee.config:safe"
+      },
+      "hail" : {
+        "default" : {
+          "default" : [
+            "Construction in progress. Authorized personnel only.",
+            "Construction zone ahead. Please keep clear.",
+            "Please watch your step. This area is not open to the public.",
+            "Please use the detour. You're blocking the work crew.",
+            "Watch your footing. The materials nearby haven't been secured yet.",
+            "Construction isn't finished. Please wait beyond the safety line."
+          ]
+        }
       },
       "breakObject" : "/dialog/converse.config:breakObject",
       "greeting" : "/dialog/converse.config:greeting",
