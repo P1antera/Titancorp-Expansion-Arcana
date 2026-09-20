@@ -1,5 +1,7 @@
 local propertyKey = "at_ext_foremanSupplyOrder"
 
+require "/quests/scripts/portraits.lua"
+
 function init()
   self.state = player.getProperty(propertyKey) or {}
   self.remainingCooldown = (self.state.cooldownExpiresAt or 0) - os.time()
@@ -35,6 +37,7 @@ function init()
   quest.setTitle(texts.title)
   quest.setText(sb.replaceTags(texts.text, { materialName = self.order.materialName }))
   quest.setCompletionText(sb.replaceTags(texts.completion, { reward = self.order.reward }))
+  setPortraits()
 end
 
 function update()
@@ -51,6 +54,8 @@ function update()
 end
 
 function questComplete()
+  setPortraits()
+
   if not self.order or not player.consumeItem(self.item) then return end
   player.giveItem({ name = "arcana_currency_credit", count = self.order.reward })
   player.setProperty(propertyKey, { cooldownExpiresAt = os.time() + config.getParameter("cooldownSeconds", 86400) })

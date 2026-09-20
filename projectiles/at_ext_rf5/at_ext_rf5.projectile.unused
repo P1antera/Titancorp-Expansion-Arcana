@@ -1,10 +1,10 @@
 {
   "projectileName" : "at_ext_rf5",
-  "physics" : "at_ext_bulletfall_br",
+  "physics" : "laser",
   
   "timeToLive" : 3,
   "bounces" : 0,
-  "speed" : 112,
+  "speed" : 800,
   
   "image" : "body.png",
   "animationCycle" : 0.2,
@@ -19,36 +19,23 @@
   "actionOnReap" : [
     {
       "action" : "config",
-      "file" : "/projectiles/explosions/arcana_explosion_impact_fire/arcana_explosion_impact_fire.config"
+      "file" : "/projectiles/at_ext_bulletimpact_rf5_3.config"
     }
   ],
   
   "periodicActions" : [
     {
-  "rotate" : false,
-  "time" : 0,
-  
-  "repeat" : false,
-  "action" : "projectile",
-  "inheritDamageFactor" : 0,
-  "autoFlipAdjust" : true,
-  "type" : "at_ext_case_trigger_rf5",
-  "angleAdjust" : 181,
-  "fuzzAngle" :0
-  },     
-	   
-	{
-      "time" : 0.001,
+      "time" : 0.0001,
       "repeat" : true,
       "action" : "particle",
       "rotate" : true,
       "specification" : {
         "type" : "textured",
-        "image" : "/projectiles/activeitems/guns/generated/syntek_plasma_fire/trail.png",
-        "position" : [0, 0],
+        "image" : "/projectiles/at_ext_rf5/at_ext_rf5_trail.png",
+        "position" : [-5, 0],
         "layer" : "back",
         "timeToLive" : 0.0,
-        "destructionTime" : 0.3,
+        "destructionTime" : 2,
         "destructionAction" : "shrink",
         "fullbright" : true
       }

@@ -1,0 +1,53 @@
+require "/scripts/vec2.lua"
+
+function update()
+  localAnimator.clearDrawables()
+  localAnimator.clearLightSources()
+
+  local traces = animationConfig.animationParameter("rf5BeamTraces") or {}
+  for _, trace in ipairs(traces) do
+    drawTrace(trace)
+  end
+end
+
+function drawTrace(trace)
+  local fadeDuration = math.max(trace.fadeTime - trace.flashTime, 0.001)
+  local progress = math.max(0, (trace.age - trace.flashTime) / fadeDuration)
+  local factor = math.max(0, 1 - progress)
+  if factor == 0 then
+    return
+  end
+
+  local startPosition = trace.startPosition
+  local chainVector = world.distance(trace.endPosition, startPosition)
+  local chainLength = vec2.mag(chainVector)
+  if chainLength == 0 then
+    return
+  end
+
+  local chain = trace.chain
+  local segmentSize = chain.segmentSize
+  local segmentCount = math.floor(((chainLength + (chain.overdrawLength or 0)) / segmentSize) + 0.5)
+  segmentCount = math.floor(segmentCount * factor + 0.5)
+  if segmentCount == 0 then
+    return
+  end
+
+  local direction = vec2.norm(chainVector)
+  local angle = vec2.angle(chainVector)
+  local alpha = string.format("%02x", math.floor(factor * 255))
+  local scale = string.format("%.3f", factor)
+
+  for i = 1, segmentCount do
+    local position = vec2.add(startPosition, vec2.mul(direction, segmentSize * (i - 0.5)))
+    local image = chain.segmentImage .. "?multiply=ffffff" .. alpha .. ";scale=" .. scale .. "=" .. scale
+    localAnimator.addDrawable({
+      image = image,
+      centered = true,
+      mirrored = chainVector[1] < 0,
+      rotation = angle,
+      position = position,
+      fullbright = chain.fullbright or false
+    }, chain.renderLayer)
+  end
+end

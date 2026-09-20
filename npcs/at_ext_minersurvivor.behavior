@@ -1,6 +1,6 @@
 {
   "name": "at_ext_minersurvivor",
-  "description": "Villager behavior with an automatic construction-site warning.",
+  "description": "...",
   "scripts": [
     "/scripts/actions/query.lua",
     "/scripts/actions/math.lua",

@@ -1,0 +1,20 @@
+{
+  "projectileName" : "at_ext_rf5_beamimpact",
+  "physics" : "laser",
+  "piercing" : true,
+  "timeToLive" : 0.01,
+  "bounces" : 0,
+  "speed" : 0,
+
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "fullbright" : true,
+  "damageType" : "NoDamage",
+  "damageKind" : "nodamage",
+
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/at_ext_bulletimpact_rf5_3.config"
+    }
+  ]
+}
