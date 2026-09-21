@@ -1,6 +1,6 @@
 {
   "input" : [
-    { "item" : "arcana_currency_credit", "count" : 3000 },
+    { "item" : "arcana_currency_credit", "count" : 3600 },
 	{ "item" : "at_ext_coupon", "count" : 1 }
   ],
   "output" : {

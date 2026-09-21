@@ -4,7 +4,7 @@
   "maxStack" : 1,
   
   "rarity" : "Legendary",
-  "description" : "The latest mass-produced rifle from Section 8, available in multiple variants.",
+  "description" : "The latest generation of mass-produced rifle from Workshop Section 8. Inspired by a mining laser, this model can sustain high-energy beam fire for extended periods.",
   "shortdescription" : "Forgeline-^red;471^reset;",
   "tooltipKind" : "at_ext_gun",
   "category" : "assaultRifle",
@@ -101,7 +101,7 @@
       }
     },
     "sounds" : {
-      "fire" : ["/sfx/at_ext_rf5_1.ogg"]
+      "fire" : ["/sfx/at_ext_d8_pistol.ogg"]
     }
   },
   "animationScripts" : ["/items/active/effects/chain.lua"],
@@ -111,7 +111,7 @@
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
-  "elementalType" : "fire",
+  "elementalType" : "physical",
 
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/at_ext_rf5/at_ext_rf5_beamfire.lua"],
@@ -119,7 +119,7 @@
 
     "fireTime" : 0.1,
     "baseDps" : 35,
-    "energyUsage" : 80.0,
+    "energyUsage" : 150.0,
 
     "damageConfig" : {
       "damageSourceKind" : "fire",

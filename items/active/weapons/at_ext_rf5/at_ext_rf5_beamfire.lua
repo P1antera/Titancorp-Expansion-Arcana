@@ -32,7 +32,6 @@ end
 
 function Rf5BeamFire:fire()
   self.weapon:setStance(self.stances.fire)
-  animator.playSound("fire")
 
   -- GunFire consumes energyUsage * fireTime for each automatic shot.
   if status.overConsumeResource("energy", (self.energyUsage or 0) * self.fireTime) then
@@ -45,15 +44,10 @@ function Rf5BeamFire:fire()
       beamEnd = collidePoint
       beamLength = world.magnitude(beamStart, beamEnd)
 
-      world.spawnProjectile(
-        "at_ext_rf5_beamimpact",
-        collidePoint,
-        activeItem.ownerEntityId(),
-        {0, 0},
-        false
-      )
+      self:spawnImpact(collidePoint)
     end
 
+    self:spawnEntityImpacts(beamStart, beamEnd)
     self.weapon:setDamage(
       self.damageConfig,
       {self.weapon.muzzleOffset, {self.weapon.muzzleOffset[1] + beamLength, self.weapon.muzzleOffset[2]}},
@@ -66,6 +60,34 @@ function Rf5BeamFire:fire()
 
   self:reset()
   self:setState(self.cooldown)
+end
+
+function Rf5BeamFire:spawnEntityImpacts(beamStart, beamEnd)
+  local entities = world.entityLineQuery(beamStart, beamEnd, {
+    includedTypes = {"monster", "npc"},
+    withoutEntityId = activeItem.ownerEntityId()
+  })
+  local direction = vec2.norm(world.distance(beamEnd, beamStart))
+
+  for _, entityId in ipairs(entities) do
+    local entityPosition = world.entityPosition(entityId)
+    if entityPosition then
+      -- Place the impact on the beam line, closest to the entity's center.
+      local offset = world.distance(entityPosition, beamStart)
+      local distanceAlongBeam = offset[1] * direction[1] + offset[2] * direction[2]
+      self:spawnImpact(vec2.add(beamStart, vec2.mul(direction, distanceAlongBeam)))
+    end
+  end
+end
+
+function Rf5BeamFire:spawnImpact(position)
+  world.spawnProjectile(
+    "at_ext_rf5_beamimpact",
+    position,
+    activeItem.ownerEntityId(),
+    {0, 0},
+    false
+  )
 end
 
 function Rf5BeamFire:drawBeam(startPos, endPos, didCollide)
