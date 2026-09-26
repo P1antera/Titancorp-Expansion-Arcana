@@ -1,0 +1,33 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "foodState" : {
+        "default" : "full",
+        "states" : {
+          "full" : { "frames" : 1, "cycle" : 1.0 },
+          "bite1" : { "frames" : 1, "cycle" : 1.0 },
+          "bite2" : { "frames" : 1, "cycle" : 1.0 },
+          "bite3" : { "frames" : 1, "cycle" : 1.0 },
+          "empty" : { "frames" : 1, "cycle" : 1.0 }
+        }
+      }
+    },
+    "parts" : {
+      "food" : {
+        "properties" : { "centered" : false },
+        "partStates" : {
+          "foodState" : {
+            "full" : { "properties" : { "image" : "<partImage>:full" } },
+            "bite1" : { "properties" : { "image" : "<partImage>:bite1" } },
+            "bite2" : { "properties" : { "image" : "<partImage>:bite2" } },
+            "bite3" : { "properties" : { "image" : "<partImage>:bite3" } },
+            "empty" : { "properties" : { "image" : "<partImage>:empty" } }
+          }
+        }
+      }
+    }
+  },
+  "sounds" : {
+    "eat" : [ "/sfx/humanoid/eat1.ogg" ]
+  }
+}

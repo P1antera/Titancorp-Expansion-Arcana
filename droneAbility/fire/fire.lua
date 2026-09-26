@@ -79,7 +79,7 @@ function Fire:init(drone)
 end
 
 function Fire:update(dt, drone)
-    local differenceVector = vec2.sub(drone.targetPosition, self:getWorldTurretRotationCenter())
+    local differenceVector = world.distance(drone.targetPosition, self:getWorldTurretRotationCenter())
 
 
     if self.burstFire then
@@ -162,7 +162,7 @@ function Fire:rightClick(targetPosition, drone)
 end
 
 function Fire:fire(targetPosition, drone)
-    local differenceVector = vec2.sub(targetPosition, self:getWorldTurretRotationCenter())
+    local differenceVector = world.distance(targetPosition, self:getWorldTurretRotationCenter())
 
     ---@type FireAbilityConfig
     local abilityConfig = self.abilityConfig
@@ -197,7 +197,7 @@ function Fire:aimVector(targetPosition, inaccuracy)
 end
 
 function Fire:getFirePosition(drone)
-    local differenceVector = vec2.sub(drone.targetPosition, self:getWorldTurretRotationCenter())
+    local differenceVector = world.distance(drone.targetPosition, self:getWorldTurretRotationCenter())
     local rotateAngle = vec2.angle(differenceVector);
     rotateAngle = rotateAngle * mcontroller.facingDirection()
     local muzzleVec2 = vec2.rotate(self.muzzleOffset, rotateAngle)

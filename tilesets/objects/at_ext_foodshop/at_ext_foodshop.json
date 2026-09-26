@@ -1,0 +1,21 @@
+{
+  "margin" : 0,
+  "name" : "at_ext_foodshop",
+  "properties" : {},
+  "spacing" : 0,
+  "tilecount" : 1,
+  "tileheight" : 61,
+  "tilewidth" : 83,
+  "tileproperties" : {
+    "0" : {
+      "\/\/shortdescription" : "",
+      "imagePositionX" : "-40",
+      "imagePositionY" : "0",
+      "object" : "at_ext_icecreamtruck",
+      "tilesetDirection" : "right"
+    }
+  },
+  "tiles" : {
+    "0" : { "image" : "../../../objects/at_ext_food/Icecreams/recreationalvehicle/recreationalvehicle.png" }
+  }
+}

@@ -95,7 +95,7 @@ function update(dt)
     end
 
     if self.droneConfig.controlTypeIndex == ControlType.followMouse and self.targetPosition then
-        local differenceVector = vec2.sub(self.targetPosition, mcontroller.position())
+        local differenceVector = world.distance(self.targetPosition, mcontroller.position())
         local magDiff = vec2.mag(differenceVector)
         local velMag = self.moveConfig.speed
         local minTriggerDistance = self.moveConfig.minTriggerDistance
@@ -148,7 +148,7 @@ function update(dt)
         local controlForce = self.moveConfig.controlForce
         local speed = self.moveConfig.speed
         local targetVel = { 0, 0 }
-        local differenceVector = vec2.sub(self.targetPosition, mcontroller.position())
+        local differenceVector = world.distance(self.targetPosition, mcontroller.position())
         if self.isHover ~= "hover" then
             if self.playerControlArgs.up then
                 targetVel[2] = targetVel[2] + speed

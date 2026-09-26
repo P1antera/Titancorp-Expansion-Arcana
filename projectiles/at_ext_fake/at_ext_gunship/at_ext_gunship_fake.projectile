@@ -10,7 +10,7 @@
   "animationCycle" : 0.2,
   "frameNumber" : 2,
   
-  "fullbright" : true,
+  "fullbright" : false,
   //"lightColor" : [61, 187, 234],
   //"emitters" : [ "iceplasma" ],
   

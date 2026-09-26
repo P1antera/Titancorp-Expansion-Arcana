@@ -33,7 +33,7 @@ end
 function Rf5BeamFire:fire()
   self.weapon:setStance(self.stances.fire)
 
-  -- GunFire consumes energyUsage * fireTime for each automatic shot.
+
   if status.overConsumeResource("energy", (self.energyUsage or 0) * self.fireTime) then
     local beamStart = self:firePosition()
     local beamEnd = vec2.add(beamStart, vec2.mul(vec2.norm(self:aimVector(0)), self.beamLength))
@@ -72,7 +72,7 @@ function Rf5BeamFire:spawnEntityImpacts(beamStart, beamEnd)
   for _, entityId in ipairs(entities) do
     local entityPosition = world.entityPosition(entityId)
     if entityPosition then
-      -- Place the impact on the beam line, closest to the entity's center.
+
       local offset = world.distance(entityPosition, beamStart)
       local distanceAlongBeam = offset[1] * direction[1] + offset[2] * direction[2]
       self:spawnImpact(vec2.add(beamStart, vec2.mul(direction, distanceAlongBeam)))

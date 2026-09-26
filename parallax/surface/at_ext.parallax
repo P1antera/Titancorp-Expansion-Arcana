@@ -200,14 +200,14 @@
 	
     {
       "kind" : "at_ext_cityscape4_1",
-      "offset" : [0, 170],
+      "offset" : [0, 100],
       "parallax" : 4,
 	  "noRandomOffset" : true,
       "fadePercent" : 0.5
     },
     {
       "kind" : "at_ext_cityscape4_1_lit",
-      "offset" : [0, 170],
+      "offset" : [0, 100],
       "parallax" : 4,
 	  "noRandomOffset" : true,
 	  "unlit" : true,
@@ -231,72 +231,72 @@
 	  
 	  "unlit" : true
     },
-    {
-      "kind" : "arcana_automated_cityscape7",
-      "offset" : [0, 140],
-      "parallax" : 2.91,
-	  "noRandomOffset" : true,
-      "fadePercent" : 0.04
-    },
-    {
-      "kind" : "at_ext_cityscape7_lit",
-      "offset" : [0, 140],
-      "parallax" : 2.91,
-      "fadePercent" : 0.04,
-	  "noRandomOffset" : true,
+    // {
+    //   "kind" : "at_ext_cityscape7",
+    //   "offset" : [0, 140],
+    //   "parallax" : 2.91,
+	  // "noRandomOffset" : true,
+    //   "fadePercent" : 0.04
+    // },
+    // {
+    //   "kind" : "at_ext_cityscape7_lit",
+    //   "offset" : [0, 140],
+    //   "parallax" : 2.91,
+    //   "fadePercent" : 0.04,
+	  // "noRandomOffset" : true,
 	 
-	  "unlit" : true
-    },
+	  // "unlit" : true
+    // },
 
-    {
-      "kind" : "arcana_automated_cityscape1",
-      "offset" : [0, 150],
-      "parallax" : 2.92,
-      "fadePercent" : 0.02,
-	  "noRandomOffset" : true
-    },
-    {
-      "kind" : "arcana_vermilion_cityscape1_lit",
-      "offset" : [0, 150],
-      "parallax" : 2.92,
-      "fadePercent" : 0.02,
-	  "noRandomOffset" : true,
+  //   {
+  //     "kind" : "at_ext_cityscape1",
+  //     "offset" : [0, 150],
+  //     "parallax" : 2.92,
+  //     "fadePercent" : 0.02,
+	//   "noRandomOffset" : true
+  //   },
+  //   {
+  //     "kind" : "at_ext_cityscape1_lit",
+  //     "offset" : [0, 150],
+  //     "parallax" : 2.92,
+  //     "fadePercent" : 0.02,
+	//   "noRandomOffset" : true,
 	  
-	  "unlit" : true
-    },
+	//   "unlit" : true
+  //   },
 
-    {
-      "kind" : "arcana_automated_cityscape2",
-      "offset" : [0, 140],
-      "parallax" : 3.35,
-	  "noRandomOffset" : true,
-      "fadePercent" : 0.06
-    },
-    {
-      "kind" : "at_ext_cityscape2_lit",
-      "offset" : [0, 140],
-      "parallax" : 3.35,
-      "fadePercent" : 0.06,
-	  "noRandomOffset" : true,
+  //   {
+  //     "kind" : "at_ext_cityscape2",
+  //     "offset" : [0, 140],
+  //     "parallax" : 3.35,
+	//   "noRandomOffset" : true,
+  //     "fadePercent" : 0.06
+  //   },
+  //   {
+  //     "kind" : "at_ext_cityscape2_lit",
+  //     "offset" : [0, 140],
+  //     "parallax" : 3.35,
+  //     "fadePercent" : 0.06,
+	//   "noRandomOffset" : true,
 	 
-	  "unlit" : true
-    },
-    {
-      "kind" : "arcana_automated_cityscape3",
-      "offset" : [0, 140],
-      "parallax" : 3.25,
-	  "noRandomOffset" : true,
-      "fadePercent" : 0.06
-    },
-	{
-      "kind" : "at_ext_cityscape3_lit",
-      "offset" : [0, 140],
-      "parallax" : 3.25,
-      "fadePercent" : 0.06,
-	  "noRandomOffset" : true,
+	//   "unlit" : true
+  //   },
+  //   {
+  //     "kind" : "at_ext_cityscape3",
+  //     "offset" : [0, 140],
+  //     "parallax" : 3.25,
+	//   "noRandomOffset" : true,
+  //     "fadePercent" : 0.06
+  //   },
+	// {
+  //     "kind" : "at_ext_cityscape3_lit",
+  //     "offset" : [0, 140],
+  //     "parallax" : 3.25,
+  //     "fadePercent" : 0.06,
+	//   "noRandomOffset" : true,
 	  
-	  "unlit" : true
-    },
+	//   "unlit" : true
+  //   },
 	{
       "kind" : "cityships",
       "offset" : [0, 180],

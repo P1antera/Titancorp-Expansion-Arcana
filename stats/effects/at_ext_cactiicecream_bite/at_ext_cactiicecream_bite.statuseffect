@@ -1,0 +1,1 @@
+{ "name" : "at_ext_cactiicecream_bite", "defaultDuration" : 0.1, "scripts" : [ "at_ext_cactiicecream_bite.lua" ], "effectConfig" : { "foodValue" : 10 } }

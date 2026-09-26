@@ -1,0 +1,31 @@
+{
+  "margin" : 0,
+  "name" : "at_ext_icecreams",
+  "properties" : {},
+  "spacing" : 0,
+  "tilecount" : 9,
+  "tileheight" : 13,
+  "tilewidth" : 8,
+  "tileproperties" : {
+    "0" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_avesmingoicecream_deco", "tilesetDirection" : "right" },
+    "1" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_bananaicecream_deco", "tilesetDirection" : "right" },
+    "2" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_cactiicecream_deco", "tilesetDirection" : "right" },
+    "3" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_coconuticecream_deco", "tilesetDirection" : "right" },
+    "4" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_eggshooticecream_deco", "tilesetDirection" : "right" },
+    "5" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_snowcone_deco", "tilesetDirection" : "right" },
+    "6" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_strawberryicecream_deco", "tilesetDirection" : "right" },
+    "7" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_matchaicecream_deco", "tilesetDirection" : "right" },
+    "8" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_chocolateicecream_deco", "tilesetDirection" : "right" }
+  },
+  "tiles" : {
+    "0" : { "image" : "../../../objects/at_ext_food/Icecreams/avesmingoicecream/at_ext_avesmingoicecream_icon.png" },
+    "1" : { "image" : "../../../objects/at_ext_food/Icecreams/bananaicecream/at_ext_bananaicecream_icon.png" },
+    "2" : { "image" : "../../../objects/at_ext_food/Icecreams/cactiicecream/at_ext_cactiicecream_icon.png" },
+    "3" : { "image" : "../../../objects/at_ext_food/Icecreams/coconuticecream/at_ext_coconuticecream_icon.png" },
+    "4" : { "image" : "../../../objects/at_ext_food/Icecreams/eggshooticecream/at_ext_eggshooticecream_icon.png" },
+    "5" : { "image" : "../../../objects/at_ext_food/Icecreams/snowcone/at_ext_snowcone_icon.png" },
+    "6" : { "image" : "../../../objects/at_ext_food/Icecreams/strawberryicecream/at_ext_strawberryicecream_icon.png" },
+    "7" : { "image" : "../../../objects/at_ext_food/Icecreams/matchaicecream/at_ext_matchaicecream_icon.png" },
+    "8" : { "image" : "../../../objects/at_ext_food/Icecreams/chocolateicecream/at_ext_chocolateicecream_icon.png" }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "at_ext_avesmingoicecream_bite",
+  "defaultDuration" : 0.1,
+  "scripts" : [ "at_ext_avesmingoicecream_bite.lua" ],
+  "effectConfig" : {
+    "foodValue" : 11.25
+  }
+}

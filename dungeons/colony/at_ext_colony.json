@@ -2662,18 +2662,6 @@
                  "y":488
                 }, 
                 {
-                 "gid":1987,
-                 "height":32,
-                 "id":431,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":6488,
-                 "y":288
-                }, 
-                {
                  "gid":2024,
                  "height":32,
                  "id":432,
@@ -7111,18 +7099,6 @@
                  "visible":true,
                  "width":16,
                  "x":5912,
-                 "y":912
-                }, 
-                {
-                 "gid":1000,
-                 "height":8,
-                 "id":737,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":5992,
                  "y":912
                 }, 
                 {
@@ -18256,30 +18232,6 @@
                  "y":744
                 }, 
                 {
-                 "gid":2147488963,
-                 "height":40,
-                 "id":2034,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":48,
-                 "x":6352,
-                 "y":288
-                }, 
-                {
-                 "gid":2147488979,
-                 "height":40,
-                 "id":2037,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":48,
-                 "x":6400,
-                 "y":288
-                }, 
-                {
                  "gid":2129,
                  "height":32,
                  "id":2038,
@@ -18396,7 +18348,7 @@
                  "type":"",
                  "visible":true,
                  "width":14,
-                 "x":6464,
+                 "x":6032,
                  "y":288
                 }, 
                 {
@@ -19514,8 +19466,7 @@
                  "width":40,
                  "x":11496,
                  "y":1496
-                },
-            
+                }, 
                 {
                  "gid":734,
                  "height":8,
@@ -19563,7 +19514,8 @@
                  "width":16,
                  "x":11168,
                  "y":1344
-                }, 
+                },
+            
                 {
                  "gid":6687,
                  "height":24,
@@ -21303,6 +21255,66 @@
                  "width":48,
                  "x":8624,
                  "y":1056
+                }, 
+                {
+                 "gid":4656,
+                 "height":16,
+                 "id":2552,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":48,
+                 "x":6400,
+                 "y":288
+                }, 
+                {
+                 "gid":9334,
+                 "height":61,
+                 "id":2553,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":83,
+                 "x":6456,
+                 "y":288
+                }, 
+                {
+                 "gid":9339,
+                 "height":13,
+                 "id":2554,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":6432,
+                 "y":272
+                }, 
+                {
+                 "gid":9337,
+                 "height":13,
+                 "id":2555,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":6416,
+                 "y":272
+                }, 
+                {
+                 "gid":9336,
+                 "height":13,
+                 "id":2556,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":5992,
+                 "y":912
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -22677,7 +22689,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":2552,
+ "nextobjectid":2557,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
@@ -22974,6 +22986,14 @@
         {
          "firstgid":9325,
          "source":"..\/..\/..\/sva_arcana-1.4.2.2\/tilesets\/objects\/exousia_vehicles_objects\/exousia_vehicles_objects.json"
+        }, 
+        {
+         "firstgid":9334,
+         "source":"..\/..\/tilesets\/objects\/at_ext_foodshop\/at_ext_foodshop.json"
+        }, 
+        {
+         "firstgid":9335,
+         "source":"..\/..\/tilesets\/objects\/at_ext_food\/at_ext_icecreams.json"
         }],
  "tilewidth":8,
  "type":"map",
