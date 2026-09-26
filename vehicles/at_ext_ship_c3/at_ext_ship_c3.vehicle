@@ -1,0 +1,45 @@
+{
+  "name" : "at_ext_ship_c3",
+  "script" : "at_ext_ship_c3control.lua",
+  "boundBox" : [-5, -5, 5, 5],
+  "slaveControlTimeout" : 2.0,
+  "slaveControlHeartbeat" : 1.0,
+  "canBeHit" : true,
+  "animation" : "at_ext_ship_c3.animation",
+
+  "moveSpeed" : 80,
+  "airForce" : 150,
+  "aimlimit" : 360,
+  "minHeight" : 1,
+  "maxHeight" : 2000,
+  "explodeTime" : 0.5,
+  "explodeProjectile" : "mechexplosion",
+  "health" : 4000,
+  "protection" : 80,
+
+  "loungePositions" : {
+    "seat" : {
+      "part" : "ship",
+      "partAnchor" : "seatPosition",
+      "orientation" : "sit",
+      "statusEffects" : ["highprotection"],
+      "cameraFocus" : true,
+      "armorCosmeticOverrides" : { "head" : "mechpilothead" }
+    }
+  },
+
+  "movementSettings" : {
+    "collisionPoly" : [ [2.125, -3.0], [6.0, -1.25], [6.0, 0.0], [3.5, 2.0], [-3.5, 2.0], [-6.0, 0.0], [-6.0, -1.25], [-2.125, -3.0] ],
+    "mass" : 4,
+    "airFriction" : 0.1,
+    "ignorePlatformCollision" : true,
+    "gravityEnabled" : true,
+    "collisionEnabled" : true
+  },
+
+  "occupiedMovementSettings" : {
+    "mass" : 4,
+    "gravityEnabled" : false,
+    "collisionEnabled" : true
+  }
+}

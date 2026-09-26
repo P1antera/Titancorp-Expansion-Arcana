@@ -1,0 +1,30 @@
+{
+  "itemName" : "at_ext_ship_c3controller",
+  "level" : 8,
+  "price" : 0,
+  "rarity" : "essential",
+  "category" : "tool",
+  "description" : "An experimental attack aircraft extensively rebuilt on the Steelbreaker chassis. It abandons its shield system in favor of greater firepower and armor, and is equipped with a heavy machine gun and a swarm launcher.\n^green;[Left Click]: Cannon\n[Right Click]: Missiles^reset;",
+  "shortdescription" : "^orange;''Stingray''^reset;",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["at_ext_ship_c3controller.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "at_ext_vehicle",
+  "largeImage" : "at_ext_ship_c3.png",
+  "respawnTime" : 1.0,
+
+  "vehicleType" : "at_ext_ship_c3",
+  "vehicleBoundingBox" : [-5, -5, 5, 5],
+  "vehicleImage" : "/items/active/vehiclecontroller/at_ext_ship_c3.png",
+  "animationParts" : {
+    "casing" : "at_ext_ship_c3controller.png"
+  },
+  "inventoryIcon" : "at_ext_ship_c3controller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/at_ext_ship_c3controller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/at_ext_ship_c3controller.png:full"
+}

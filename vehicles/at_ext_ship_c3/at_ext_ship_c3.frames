@@ -1,0 +1,14 @@
+{
+  "frameGrid" : {
+    "size" : [112, 48],
+    "dimensions" : [5, 1],
+    "names" : [["up.1", "up.2", "up.3", "up.4", "flying.1"]]
+  },
+  "aliases" : {
+    "landing.1" : "up.4",
+    "landing.2" : "up.3",
+    "landing.3" : "up.2",
+    "landing.4" : "up.1",
+    "landed" : "up.1"
+  }
+}

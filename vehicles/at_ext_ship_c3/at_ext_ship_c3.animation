@@ -1,0 +1,164 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "bottomthrust" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "idle" : { "frames" : 2, "cycle" : 0.3, "mode" : "loop" },
+          "on" : { "frames" : 4, "cycle" : 0.2, "mode" : "loop" }
+        }
+      },
+      "thrust" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "idle" : { "frames" : 2, "cycle" : 0.3, "mode" : "loop" },
+          "on" : { "frames" : 4, "cycle" : 0.2, "mode" : "loop" }
+        }
+      },
+      "ship" : {
+        "default" : "landed",
+        "states" : {
+          "invisible" : {},
+          "landed" : { "frames" : 1, "mode" : "end" },
+          "landing" : { "frames" : 4, "cycle" : 0.4, "mode" : "transition", "transition" : "landed" },
+          "flying" : { "frames" : 1, "cycle" : 0.2, "mode" : "loop" },
+          "up" : { "frames" : 4, "cycle" : 0.4, "mode" : "transition", "transition" : "flying" }
+        }
+      },
+      "background" : {
+        "default" : "landed",
+        "states" : {
+          "invisible" : {},
+          "landed" : { "frames" : 1, "mode" : "end" },
+          "landing" : { "frames" : 4, "cycle" : 0.4, "mode" : "transition", "transition" : "landed" },
+          "flying" : { "frames" : 1, "cycle" : 0.2, "mode" : "loop" },
+          "up" : { "frames" : 4, "cycle" : 0.4, "mode" : "transition", "transition" : "flying" }
+        }
+      },
+      "shipFullbright" : {
+        "default" : "landed",
+        "states" : {
+          "invisible" : {},
+          "landed" : { "frames" : 1, "mode" : "end" },
+          "landing" : { "frames" : 4, "cycle" : 0.4, "mode" : "transition", "transition" : "landed" },
+          "flying" : { "frames" : 1, "cycle" : 0.2, "mode" : "loop" },
+          "up" : { "frames" : 4, "cycle" : 0.4, "mode" : "transition", "transition" : "flying" }
+        }
+      },
+      "frontcannon" : {
+        "default" : "closed",
+        "states" : {
+          "closed" : {},
+          "fire" : { "frames" : 2, "cycle" : 0.1, "mode" : "transition", "transition" : "closed" }
+        }
+      },
+      "frontcannonFullbright" : {
+        "default" : "closed",
+        "states" : {
+          "closed" : {},
+          "fire" : { "frames" : 2, "cycle" : 0.1, "mode" : "transition", "transition" : "closed" }
+        }
+      }
+    },
+    "parts" : {
+      "background" : {
+        "properties" : { "centered" : true, "zLevel" : -1, "transformationGroups" : ["rotation"], "image" : "background.png:landed" },
+        "partStates" : {
+          "background" : {
+            "invisible" : { "properties" : { "image" : "" } },
+            "landed" : { "properties" : { "image" : "background.png:landed" } },
+            "landing" : { "properties" : { "image" : "background.png:landing.<frame>" } },
+            "up" : { "properties" : { "image" : "background.png:up.<frame>" } },
+            "flying" : { "properties" : { "image" : "background.png:flying.<frame>" } }
+          }
+        }
+      },
+      "bottomthrust" : {
+        "properties" : { "offset" : [0, -2.75], "light" : [255, 190, 127], "centered" : true, "zLevel" : -1, "fullbright" : true, "transformationGroups" : ["rotation"] },
+        "partStates" : {
+          "bottomthrust" : {
+            "off" : { "properties" : { "image" : "bottomthruster.png:off" } },
+            "on" : { "properties" : { "image" : "bottomthruster.png:on.<frame>" } },
+            "idle" : { "properties" : { "image" : "bottomthruster.png:idle.<frame>" } }
+          }
+        }
+      },
+      "thrust" : {
+        "properties" : { "offset" : [-7.125, -0.5], "light" : [255, 190, 127], "centered" : true, "zLevel" : -1, "fullbright" : true, "transformationGroups" : ["rotation"] },
+        "partStates" : {
+          "thrust" : {
+            "off" : { "properties" : { "image" : "thruster.png:off" } },
+            "on" : { "properties" : { "image" : "thruster.png:on.<frame>" } },
+            "idle" : { "properties" : { "image" : "thruster.png:idle.<frame>" } }
+          }
+        }
+      },
+      "ship" : {
+        "properties" : { "centered" : true, "zLevel" : 1, "transformationGroups" : ["rotation"], "image" : "at_ext_ship_c3.png:landed", "seatPosition" : [2.0, 0.5] },
+        "partStates" : {
+          "ship" : {
+            "invisible" : { "properties" : { "image" : "" } },
+            "landed" : { "properties" : { "image" : "at_ext_ship_c3.png:landed" } },
+            "landing" : { "properties" : { "image" : "at_ext_ship_c3.png:landing.<frame>" } },
+            "up" : { "properties" : { "image" : "at_ext_ship_c3.png:up.<frame>" } },
+            "flying" : { "properties" : { "image" : "at_ext_ship_c3.png:flying.<frame>" } }
+          }
+        }
+      },
+      "shipFullbright" : {
+        "properties" : { "centered" : true, "zLevel" : 2, "fullbright" : true, "anchorPart" : "ship", "image" : "at_ext_ship_c3_fb.png:landed" },
+        "partStates" : {
+          "shipFullbright" : {
+            "invisible" : { "properties" : { "image" : "" } },
+            "landed" : { "properties" : { "image" : "at_ext_ship_c3_fb.png:landed" } },
+            "landing" : { "properties" : { "image" : "at_ext_ship_c3_fb.png:landing.<frame>" } },
+            "up" : { "properties" : { "image" : "at_ext_ship_c3_fb.png:up.<frame>" } },
+            "flying" : { "properties" : { "image" : "at_ext_ship_c3_fb.png:flying.<frame>" } }
+          }
+        }
+      },
+      "frontcannon" : {
+        "properties" : { "centered" : true, "zLevel" : 4, "rotationCenter" : [3.2, -0.625], "rotationGroup" : "guns", "offset" : [3.2, -0.625], "anchorPart" : "ship", "fireOffset" : [0.7, 0] },
+        "partStates" : {
+          "frontcannon" : {
+            "closed" : { "properties" : { "image" : "cannon.png:closed" } },
+            "fire" : { "properties" : { "image" : "cannon.png:fire.<frame>" } }
+          }
+        }
+      },
+      "frontcannonFullbright" : {
+        "properties" : { "centered" : true, "zLevel" : 5, "fullbright" : true, "anchorPart" : "frontcannon", "image" : "cannon_fb.png:closed" },
+        "partStates" : {
+          "frontcannonFullbright" : {
+            "closed" : { "properties" : { "image" : "cannon_fb.png:closed" } },
+            "fire" : { "properties" : { "image" : "cannon_fb.png:fire.<frame>" } }
+          }
+        }
+      }
+    }
+  },
+  "transformationGroups" : {
+    "rotation" : { "interpolated" : true }
+  },
+  "rotationGroups" : {
+    "guns" : { "angularVelocity" : 10.0 }
+  },
+  "particleEmitters" : {
+    "damageShards2" : { "transformationGroups" : ["rotation"], "emissionRate" : 1.0, "burstCount" : 5, "offsetRegion" : [-5.0, -2.0, 5.0, 1], "particles" : [{ "particle" : "at_ext_shipshard" }] },
+    "damageShards" : { "transformationGroups" : ["rotation"], "emissionRate" : 100.0, "burstCount" : 100, "offsetRegion" : [-5.0, -2.0, 5.0, 1], "particles" : [{ "particle" : "at_ext_shipshard2" }] },
+    "leftMissileMuzzleSmoke" : { "transformationGroups" : ["rotation"], "burstCount" : 4, "offsetRegion" : [0.375, -1.5, 0.375, -1.5], "particles" : [{ "particle" : { "type" : "animated", "animation" : "/animations/dust2/dust2.animation", "initialVelocity" : [4, 0], "finalVelocity" : [0, 0], "approach" : [7, 7], "destructionAction" : "shrink", "destructionTime" : 1.1, "fade" : 1, "size" : 1, "layer" : "front", "timeToLive" : 0.7, "variance" : { "initialVelocity" : [0.75, 3.5], "rotation" : 180 } } }] },
+    "rightMissileMuzzleSmoke" : { "transformationGroups" : ["rotation"], "burstCount" : 4, "offsetRegion" : [0.375, -1.5, 0.375, -1.5], "particles" : [{ "particle" : { "type" : "animated", "animation" : "/animations/dust2/dust2.animation", "initialVelocity" : [4, 0], "finalVelocity" : [0, 0], "approach" : [7, 7], "destructionAction" : "shrink", "destructionTime" : 1.1, "fade" : 1, "size" : 1, "layer" : "front", "timeToLive" : 0.7, "variance" : { "initialVelocity" : [0.75, 3.5], "rotation" : 180 } } }] }
+  },
+  "sounds" : {
+    "explode" : ["/sfx/gun/grenadeblast_small_fire1.ogg", "/sfx/gun/grenadeblast_small_fire2.ogg", "/sfx/gun/grenadeblast_small_fire3.ogg"],
+    "engineStart" : ["/sfx/at_ext_ship/startup.ogg"],
+    "engineLoop" : ["/sfx/at_ext_ship/engineloop.ogg"],
+    "shutDown" : ["/sfx/at_ext_ship/shutdown.ogg"],
+    "afterBurn" : ["/sfx/at_ext_ship/afterburn.ogg"],
+    "returnvehicle" : ["/sfx/tech/vehicle_disappear1.ogg"],
+    "cannonFire" : ["/sfx/at_ext_ship/fire_ship4.ogg"],
+    "missileFire" : ["/sfx/gun/rocket1.ogg"]
+  }
+}

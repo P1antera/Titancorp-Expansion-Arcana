@@ -1,0 +1,48 @@
+{
+  "projectileName" : "at_ext_ship_c3missile",
+  "physics" : "laser",
+  "piercing" : false,
+  "timeToLive" : 3,
+  "bounces" : 0,
+  "speed" : 100,
+  "power" : 100.0,
+  "image" : "missile.png",
+  "autoFlipAdjust" : true,
+  "renderLayer" : "foregroundEntity",
+  "fullbright" : true,
+  "lightColor" : [250, 178, 128],
+  "pointLight" : true,
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    { "action" : "config", "file" : "/projectiles/at_ext_ship/at_ext_ship_c3/at_ext_ship_c3missile_impact.config" }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.025,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/dust2/dust2.animation",
+        "position" : [-0.45, 0],
+        "initialVelocity" : [-2, 0],
+        "finalVelocity" : [0, 0],
+        "approach" : [50, 50],
+        "destructionAction" : "shrink",
+        "destructionTime" : 0.85,
+        "fade" : 1,
+        "size" : 1.1,
+        "layer" : "back",
+        "timeToLive" : 0.45,
+        "variance" : { "initialVelocity" : [2.0, 2.0], "rotation" : 180 }
+      }
+    }
+  ],
+  "scripts" : ["at_ext_ship_c3missile.lua"],
+  "homingDistance" : 100,
+  "rotationRate" : 4,
+  "trackingLimit" : 10,
+  "homingDelay" : 0.5,
+  "damageKind" : "default"
+}
