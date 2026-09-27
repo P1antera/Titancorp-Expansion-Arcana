@@ -1,0 +1,20 @@
+{
+  "projectileName" : "at_ext_ship_c3cannon",
+  "physics" : "laser",
+  "timeToLive" : 3,
+  "bounces" : 0,
+  "speed" : 124,
+  "power" : 200,
+  "image" : "at_ext_ship_c3cannon.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  "fullbright" : true,
+  "lightColor" : [255, 195, 164],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    { "action" : "config", "file" : "/projectiles/at_ext_ship/at_ext_ship_c3/at_ext_ship_c3cannon_impact.config" }
+  ],
+  "periodicActions" : [],
+  "statusEffects" : ["stun"],
+  "damageKind" : "default"
+}

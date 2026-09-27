@@ -205,9 +205,9 @@ function firePods()
       animator.setAnimationState("frontcannon", "fire")
       animator.setAnimationState("frontcannonFullbright", "fire")
       local fireOffset = animator.partPoint("frontcannon", "fireOffset")
-      world.spawnProjectile("at_ext_ship4", vec2.add(mcontroller.position(), fireOffset), entity.id(), aimVector(0.02), false)
+      world.spawnProjectile("at_ext_ship_c3cannon", vec2.add(mcontroller.position(), fireOffset), entity.id(), aimVector(0.02), false)
       animator.playSound("cannonFire")
-      util.wait(0.12)
+      util.wait(0.08)
     else
       coroutine.yield()
     end
