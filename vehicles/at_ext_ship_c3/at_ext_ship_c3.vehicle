@@ -10,6 +10,7 @@
   "moveSpeed" : 80,
   "airForce" : 150,
   "aimlimit" : 360,
+  "missileAimLimit" : 35,
   "minHeight" : 1,
   "maxHeight" : 2000,
   "explodeTime" : 0.5,
@@ -22,7 +23,7 @@
       "part" : "ship",
       "partAnchor" : "seatPosition",
       "orientation" : "sit",
-      "statusEffects" : ["highprotection"],
+      "statusEffects" : ["invulnerable"],
       "cameraFocus" : true,
       "armorCosmeticOverrides" : { "head" : "mechpilothead" }
     }

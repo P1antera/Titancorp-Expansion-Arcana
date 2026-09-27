@@ -21,6 +21,7 @@ function initShip()
   self.missileBurst = nil
   self.missileCooldown = 0
   self.aimLimit = config.getParameter("aimlimit") * math.pi / 180
+  self.missileAimLimit = config.getParameter("missileAimLimit", 90) * math.pi / 180
   self.aimAngle = 0
 
   animator.setAnimationState("thrust", "off")
@@ -187,6 +188,13 @@ function aimVector(inaccuracy)
   return vec2.rotate({1, 0}, self.aimAngle + sb.nrand(inaccuracy, 0))
 end
 
+function missileAimVector(inaccuracy, spread)
+  local forwardAngle = self.facingDirection > 0 and 0 or math.pi
+  local relativeAngle = util.angleDiff(forwardAngle, self.aimAngle) + (spread or 0) + sb.nrand(inaccuracy, 0)
+  relativeAngle = math.max(-self.missileAimLimit, math.min(relativeAngle, self.missileAimLimit))
+  return vec2.rotate({1, 0}, forwardAngle + relativeAngle)
+end
+
 function shipHeight()
   return self.height
 end
@@ -230,7 +238,7 @@ function fireMissileBurst()
     local launcherIndex = ((i - 1) % 2) + 1
     local localOffset = launchOffsets[launcherIndex]
     local fireOffset = vec2.rotate({localOffset[1] * self.facingDirection, localOffset[2]}, mcontroller.rotation())
-    world.spawnProjectile("at_ext_ship_c3missile", vec2.add(mcontroller.position(), fireOffset), entity.id(), vec2.rotate(aimVector(0.02), spread[i]), false)
+    world.spawnProjectile("at_ext_ship_c3missile", vec2.add(mcontroller.position(), fireOffset), entity.id(), missileAimVector(0.02, spread[i]), false)
     if launcherIndex == 1 then
       animator.burstParticleEmitter("leftMissileMuzzleSmoke")
     else
