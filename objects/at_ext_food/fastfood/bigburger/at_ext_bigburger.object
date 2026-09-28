@@ -4,7 +4,7 @@
     "cooking"
   ],
   "rarity": "Common",
-  "description": "Too much for one bite.\\n^green;Interact to eat.^reset;",
+  "description": "Too much for one bite.\n^green;Interact to eat.^reset;",
   "shortdescription": "Big Burger",
   "race": "generic",
   "category": "preparedFood",

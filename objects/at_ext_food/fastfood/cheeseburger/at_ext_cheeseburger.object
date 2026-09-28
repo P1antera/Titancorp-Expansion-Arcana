@@ -4,7 +4,7 @@
     "cooking"
   ],
   "rarity": "Common",
-  "description": "A juicy hamburger, topped with cheese.\\n^green;Interact to eat.^reset;",
+  "description": "A juicy hamburger, topped with cheese.\n^green;Interact to eat.^reset;",
   "shortdescription": "Cheeseburger",
   "race": "generic",
   "category": "preparedFood",

@@ -51,5 +51,10 @@
     0,
     0
   ],
+  "scripts": [
+    "/objects/at_ext_food/servedfood/at_ext_hotfooddeco.lua"
+  ],
+  "scriptDelta": 10,
+  "steamEmitter": "steam",
   "interactive": false
 }

@@ -1,0 +1,21 @@
+{
+  "margin" : 0,
+  "name" : "at_ext_fastfoodshop",
+  "properties" : {},
+  "spacing" : 0,
+  "tilecount" : 1,
+  "tileheight" : 65,
+  "tilewidth" : 51,
+  "tileproperties" : {
+    "0" : {
+      "\/\/shortdescription" : "",
+      "imagePositionX" : "-25",
+      "imagePositionY" : "0",
+      "object" : "at_ext_fastfoodshop",
+      "tilesetDirection" : "right"
+    }
+  },
+  "tiles" : {
+    "0" : { "image" : "../../../objects/at_ext_food/fastfood/fastfoodshop/at_ext_fastfoodshop.png" }
+  }
+}

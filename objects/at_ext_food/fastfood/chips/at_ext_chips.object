@@ -4,7 +4,7 @@
     "cooking"
   ],
   "rarity": "Common",
-  "description": "A crispy golden exterior protects the soft and fluffy potato within.\\n^green;Interact to eat.^reset;",
+  "description": "A crispy golden exterior protects the soft and fluffy potato within.\n^green;Interact to eat.^reset;",
   "shortdescription": "French Fries",
   "race": "generic",
   "category": "preparedFood",

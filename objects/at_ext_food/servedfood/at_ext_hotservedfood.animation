@@ -31,24 +31,24 @@
   },
   "particleEmitters" : {
     "steam" : {
-      "active" : true,
-      "emissionRate" : 1.5,
+      "active" : false,
+      "burstCount" : 1,
       "offsetRegion" : [ 0.15, 0.9, 0.85, 1.15 ],
+      "emissionRate" : 10.0,
       "particles" : [
         {
           "particle" : {
             "type" : "animated",
-            "animation" : "/animations/at_ext_rf6/at_ext_rf6_dust.animation",
-            "initialVelocity" : [ 0, 1.25 ],
-            "finalVelocity" : [ 0, 2.0 ],
+            "animation" : "/objects/at_ext_food/servedfood/at_ext_foodsteam.animation",
+            "initialVelocity" : [ 0, 1.5 ],
+            "finalVelocity" : [ 0, 3.0 ],
             "approach" : [ 0.3, 0.3 ],
-            "timeToLive" : 2.0,
-            "destructionTime" : 1,
+            "timeToLive" : 3.0,
             "fade" : 1.0,
             "size" : 0.75,
             "layer" : "front",
             "variance" : {
-              "initialVelocity" : [ 0.35, 0.35 ],
+              "initialVelocity" : [ 0.5, 0.5 ],
               "rotation" : 180
             }
           }

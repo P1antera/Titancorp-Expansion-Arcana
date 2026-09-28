@@ -17,7 +17,32 @@ function init()
   object.setConfigParameter("bitesRemaining", storage.bitesRemaining)
 
   object.setInteractive(true)
+  initSteamEmitter()
   updateVisual()
+end
+
+function randomSteamDelay()
+  return 1.2 + math.random() * 1.6
+end
+
+function initSteamEmitter()
+  self.steamEmitter = self.food.steamEmitter
+  if self.steamEmitter then
+    self.steamTimer = math.random() * 2.0
+    animator.setParticleEmitterActive(self.steamEmitter, false)
+  end
+end
+
+function update(dt)
+  if not self.steamEmitter or storage.bitesRemaining ~= self.bites then
+    return
+  end
+
+  self.steamTimer = self.steamTimer - dt
+  if self.steamTimer <= 0 then
+    animator.burstParticleEmitter(self.steamEmitter)
+    self.steamTimer = randomSteamDelay()
+  end
 end
 
 function updateVisual()
@@ -26,7 +51,7 @@ function updateVisual()
   animator.setAnimationState("foodState", self.frames[frameIndex])
 
   if self.food.steamEmitter then
-    animator.setParticleEmitterActive(self.food.steamEmitter, storage.bitesRemaining == self.bites)
+    animator.setParticleEmitterActive(self.food.steamEmitter, false)
   end
 end
 

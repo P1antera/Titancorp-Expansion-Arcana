@@ -4,7 +4,7 @@
     "cooking"
   ],
   "rarity": "Common",
-  "description": "A juicy hamburger.\\n^green;Interact to eat.^reset;",
+  "description": "A juicy hamburger.\n^green;Interact to eat.^reset;",
   "shortdescription": "Hamburger",
   "race": "generic",
   "category": "preparedFood",

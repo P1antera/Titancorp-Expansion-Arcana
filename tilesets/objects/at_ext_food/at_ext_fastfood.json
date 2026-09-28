@@ -1,0 +1,31 @@
+{
+  "margin" : 0,
+  "name" : "at_ext_fastfood",
+  "properties" : {},
+  "spacing" : 0,
+  "tilecount" : 9,
+  "tileheight" : 15,
+  "tilewidth" : 17,
+  "tileproperties" : {
+    "0" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_hamburger_deco", "tilesetDirection" : "right" },
+    "1" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_cheeseburger_deco", "tilesetDirection" : "right" },
+    "2" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_fishburger_deco", "tilesetDirection" : "right" },
+    "3" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_vegecheeseburger_deco", "tilesetDirection" : "right" },
+    "4" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_vegecrispyburger_deco", "tilesetDirection" : "right" },
+    "5" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_bigburger_deco", "tilesetDirection" : "right" },
+    "6" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_fishnchips_deco", "tilesetDirection" : "right" },
+    "7" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_chips_deco", "tilesetDirection" : "right" },
+    "8" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_fishfingers_deco", "tilesetDirection" : "right" }
+  },
+  "tiles" : {
+    "0" : { "image" : "../../../objects/at_ext_food/fastfood/hamburger/at_ext_hamburger_icon.png" },
+    "1" : { "image" : "../../../objects/at_ext_food/fastfood/cheeseburger/at_ext_cheeseburger_icon.png" },
+    "2" : { "image" : "../../../objects/at_ext_food/fastfood/fishburger/at_ext_fishburger_icon.png" },
+    "3" : { "image" : "../../../objects/at_ext_food/fastfood/vegecheeseburger/at_ext_vegecheeseburger_icon.png" },
+    "4" : { "image" : "../../../objects/at_ext_food/fastfood/vegecrispyburger/at_ext_vegecrispyburger_icon.png" },
+    "5" : { "image" : "../../../objects/at_ext_food/fastfood/bigburger/at_ext_bigburger_icon.png" },
+    "6" : { "image" : "../../../objects/at_ext_food/fastfood/fishnchips/at_ext_fishnchips_icon.png" },
+    "7" : { "image" : "../../../objects/at_ext_food/fastfood/chips/at_ext_chips_icon.png" },
+    "8" : { "image" : "../../../objects/at_ext_food/fastfood/fishfingers/at_ext_fishfingers_icon.png" }
+  }
+}
