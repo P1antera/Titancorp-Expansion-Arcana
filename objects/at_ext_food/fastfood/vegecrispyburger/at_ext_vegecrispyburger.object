@@ -1,0 +1,79 @@
+{
+  "objectName": "at_ext_vegecrispyburger",
+  "colonyTags": [
+    "cooking"
+  ],
+  "rarity": "Common",
+  "description": "Chicken, vegetables and carbs—surely that makes a healthy meal?\\n^green;Interact to eat.^reset;",
+  "shortdescription": "Veggie Crispy Chicken Burger",
+  "race": "generic",
+  "category": "preparedFood",
+  "price": 0,"retainObjectParametersInItem":true,
+  "inventoryIcon": "at_ext_vegecrispyburger_icon.png",
+  "placementImage": "at_ext_vegecrispyburger.png:full",
+  "placementImagePosition": [
+    0,
+    0
+  ],
+  "largeImage": "at_ext_vegecrispyburger.png:full",
+  "orientations": [
+    {
+      "image": "/assetmissing.png",
+      "direction": "left",
+      "flipImages": true,
+      "imagePosition": [
+        0,
+        0
+      ],
+      "spaceScan": 0.1,
+      "anchors": [
+        "bottom"
+      ],
+      "interactiveSpaces": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "image": "/assetmissing.png",
+      "direction": "right",
+      "imagePosition": [
+        0,
+        0
+      ],
+      "spaceScan": 0.1,
+      "anchors": [
+        "bottom"
+      ],
+      "interactiveSpaces": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "animation": "/objects/at_ext_food/servedfood/at_ext_hotservedfood.animation",
+  "animationParts": {
+    "food": "at_ext_vegecrispyburger.png"
+  },
+  "animationPosition": [
+    0,
+    0
+  ],
+  "scripts": [
+    "/objects/at_ext_food/servedfood/at_ext_servedfood.lua"
+  ],
+  "scriptDelta": 10,
+  "foodConfig": "/objects/at_ext_food/fastfood/vegecrispyburger/at_ext_vegecrispyburger.config"
+}

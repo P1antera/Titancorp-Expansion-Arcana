@@ -1,0 +1,58 @@
+{
+  "name" : "at_ext_ship_test",
+  "script" : "at_ext_shipcontrol2.lua",
+  "boundBox" : [-5, -5, 5, 5],
+  "slaveControlTimeout" : 2.0,
+  "slaveControlHeartbeat" : 1.0,
+  "canBeHit" : true,
+  //"persistent" : true,
+  "animation" : "at_ext_ship2.animation",
+  
+  "moveSpeed" : 100,
+  "airForce" : 300,
+
+  // Vector-thruster tuning values. Angles and rotation speed are in degrees.
+  "vectorThrusterRotationSpeed" : 720,
+  "vectorThrusterMinAngle" : -180,
+  "vectorThrusterMaxAngle" : 180,
+  "vectorThrusterHoverAngle" : 90,
+  "vectorThrusterAccelerationThreshold" : 0.25,
+  "vectorThrusterVelocityThreshold" : 0.25,
+ 
+  "minHeight" : 1,
+  "maxHeight" : 2000,
+
+  "explodeTime" : 0.5,
+  "explodeProjectile" : "mechexplosion",
+
+  "health" : 2500,
+  "protection" : 60,
+  
+  "loungePositions" : {
+    "seat" : {
+      "part" : "ship",
+      "partAnchor" : "seatPosition",
+      "orientation" : "sit",
+      "statusEffects" : ["invulnerable"],
+      "cameraFocus" : true,
+      "armorCosmeticOverrides" : {
+        "head" : "mechpilothead"
+      }
+    }
+  },
+
+  "movementSettings" : {
+    "collisionPoly" : [ [2.125, -3.0], [6.0, -1.25], [6.0, 0.0], [3.5, 2.0], [-3.5, 2.0], [-6.0, 0.0], [-6.0, -1.25], [-2.125, -3.0] ],
+    "mass" : 4,
+    "airFriction" : 0.1,
+    "ignorePlatformCollision" : true,
+    "gravityEnabled" : true,
+    "collisionEnabled" : true
+  },
+
+  "occupiedMovementSettings" : {
+    "mass" : 4,
+    "gravityEnabled" : false,
+    "collisionEnabled" : true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "input": [
+    {
+      "item": "arcana_currency_credit",
+      "count": 22
+    }
+  ],
+  "output": {
+    "item": "at_ext_fishburger",
+    "count": 1
+  },
+  "duration": 0.1,
+  "groups": [
+    "at_ext_foodshop_fastfood"
+  ]
+}

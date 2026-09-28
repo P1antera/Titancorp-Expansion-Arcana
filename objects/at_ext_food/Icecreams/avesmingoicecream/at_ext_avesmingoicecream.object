@@ -6,7 +6,7 @@
   "shortdescription" : "Avesmingo Ice Cream",
   "race" : "generic",
   "category" : "preparedFood",
-  "price" : 0,
+  "price" : 0,"retainObjectParametersInItem" : true,
   "inventoryIcon" : "at_ext_avesmingoicecream_icon.png",
   "placementImage" : "at_ext_avesmingoicecream.png:full",
   "placementImagePosition" : [ 0, 0 ],

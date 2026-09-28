@@ -4,7 +4,7 @@
   "timeToLive" : 3,
   "bounces" : 0,
   "speed" : 124,
-  "power" : 200,
+  "power" : 100,
   "image" : "at_ext_ship_c3cannon.png",
   "animationCycle" : 0.2,
   "frameNumber" : 1,

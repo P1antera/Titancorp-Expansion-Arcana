@@ -1,0 +1,15 @@
+{
+  "frameGrid" : {
+    "size" : [15, 10],
+    "dimensions" : [6, 1],
+    "names" : [
+      [ "idle.1", "idle.2", "3", "4", "5", "off" ]
+    ]
+  },
+  "aliases" : {
+	  "on.1" : "idle.2",
+	  "on.2" : "3",
+	  "on.3" : "4",
+	  "on.4" : "5"
+}
+}

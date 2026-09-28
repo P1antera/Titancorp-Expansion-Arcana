@@ -1,0 +1,33 @@
+{
+  "itemName" : "at_ext_ship_testcontroller",
+  "level" : 8,
+  "price" : 0,
+  "rarity" : "Legendary",
+  "category" : "tool",
+  "description" : "^green;Deploy/Store^reset; the vector-thruster test craft.",
+  "shortdescription" : "^orange;Vector Thruster Test Craft^reset;",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["at_ext_shipcontroller2.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "at_ext_vehicle",
+  "largeImage" : "at_ext_ship2.png",
+
+  "respawnTime" : 1.0,
+
+  "vehicleType" : "at_ext_ship_test",
+  "vehicleBoundingBox" : [-5, -5, 5, 5],
+  "vehicleImage" : "/items/active/vehiclecontroller/at_ext_ship2.png",
+
+  "animationParts" : {
+    "casing" : "at_ext_shipcontroller2.png"
+  },
+
+  "inventoryIcon" : "at_ext_shipcontroller2.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/at_ext_shipcontroller2.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/at_ext_shipcontroller2.png:full"
+}

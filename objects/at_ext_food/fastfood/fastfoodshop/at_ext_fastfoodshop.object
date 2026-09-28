@@ -1,0 +1,118 @@
+{
+  "objectName": "at_ext_fastfoodshop",
+  "colonyTags": [
+    "commerce",
+    "cooking"
+  ],
+  "rarity": "Uncommon",
+  "description": "A cheerful stop for hot food on the go.",
+  "shortdescription": "Galactic Fast Food",
+  "race": "generic",
+  "category": "decorative",
+  "price": 0,
+  "inventoryIcon": "at_ext_fastfoodshop.png",
+  "interactAction": "OpenCraftingInterface",
+  "interactData": {
+    "config": "/interface/arcana/arcana_crafting_trading/at_ext_foodshop.config",
+    "filter": [
+      "at_ext_foodshop_fastfood"
+    ],
+    "paneLayoutOverride": {
+      "lblTitle": {
+        "value": "^cyan;Galactic Fast Food^reset;"
+      },
+      "lblSlogan": {
+        "value": "Fast bites for every frontier."
+      }
+    }
+  },
+  "orientations": [
+    {
+      "image": "at_ext_fastfoodshop.png:default",
+      "direction": "left",
+      "flipImages": true,
+      "imagePosition": [
+        -25,
+        0
+      ],
+      "spaceScan": 0.1,
+      "anchors": [
+        "bottom"
+      ],
+      "collision": "platform",
+      "collisionSpaces": [
+        [
+          -3,
+          0
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "image": "at_ext_fastfoodshop.png:default",
+      "direction": "right",
+      "imagePosition": [
+        -25,
+        0
+      ],
+      "spaceScan": 0.1,
+      "anchors": [
+        "bottom"
+      ],
+      "collision": "platform",
+      "collisionSpaces": [
+        [
+          -3,
+          0
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    }
+  ]
+}

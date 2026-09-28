@@ -1,0 +1,22 @@
+{
+  "frameGrid": {
+    "size": [
+      13,
+      14
+    ],
+    "dimensions": [
+      6,
+      1
+    ],
+    "names": [
+      [
+        "full",
+        "bite1",
+        "bite2",
+        "bite3",
+        "bite4",
+        "empty"
+      ]
+    ]
+  }
+}

@@ -5,7 +5,7 @@
   "timeToLive" : 3,
   "bounces" : 0,
   "speed" : 80,
-  "power" : 100.0,
+  "power" : 40.0,
   "image" : "missile.png",
   "autoFlipAdjust" : true,
   "renderLayer" : "foregroundEntity",
@@ -43,6 +43,6 @@
   "homingDistance" : 100,
   "rotationRate" : 4,
   "trackingLimit" : 1.57,
-  "homingDelay" : 0.5,
+  "homingDelay" : 0.3,
   "damageKind" : "default"
 }

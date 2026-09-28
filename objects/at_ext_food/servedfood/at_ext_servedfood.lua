@@ -9,9 +9,12 @@ function init()
   self.frames = self.food.frames or {"full", "empty"}
   if #self.frames == 0 then self.frames = {"default"} end
 
-  storage.bitesRemaining = storage.bitesRemaining
-    and math.max(0, math.min(self.bites, storage.bitesRemaining))
-    or self.bites
+  local savedBites = storage.bitesRemaining
+  if savedBites == nil then
+    savedBites = config.getParameter("bitesRemaining", self.bites)
+  end
+  storage.bitesRemaining = math.max(0, math.min(self.bites, savedBites))
+  object.setConfigParameter("bitesRemaining", storage.bitesRemaining)
 
   object.setInteractive(true)
   updateVisual()
@@ -21,6 +24,10 @@ function updateVisual()
   local eaten = self.bites - storage.bitesRemaining
   local frameIndex = math.min(eaten + 1, #self.frames)
   animator.setAnimationState("foodState", self.frames[frameIndex])
+
+  if self.food.steamEmitter then
+    animator.setParticleEmitterActive(self.food.steamEmitter, storage.bitesRemaining == self.bites)
+  end
 end
 
 function feedPlayer(playerId)
@@ -43,5 +50,6 @@ function onInteraction(args)
 
   feedPlayer(args.sourceId)
   storage.bitesRemaining = storage.bitesRemaining - 1
+  object.setConfigParameter("bitesRemaining", storage.bitesRemaining)
   updateVisual()
 end
