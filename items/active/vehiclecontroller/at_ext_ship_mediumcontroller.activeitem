@@ -21,6 +21,6 @@
   "vehicleImage" : "/vehicles/at_ext_ship_medium/icon.png",
   "animationParts" : { "casing" : "at_ext_shipcontroller2.png" },
   "inventoryIcon" : "at_ext_shipcontroller2.png:full",
-  "emptyInventoryIcon" : "/items/active/vehiclecontroller/at_ext_shipcontroller2.png:empty",
-  "filledInventoryIcon" : "/items/active/vehiclecontroller/at_ext_shipcontroller2.png:full"
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/at_ext_shipcontroller_medium.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/at_ext_shipcontroller_medium.png:full"
 }
