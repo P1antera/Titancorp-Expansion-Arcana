@@ -109,11 +109,24 @@
     "engineMidRightRotation" : { "interpolated" : true },
     "engineRightRotation" : { "interpolated" : true }
   },
+  "lights" : {
+    "headlight" : {
+      "active" : false,
+      "beamLevel" : 4,
+      "beamAmbience" : 0.1,
+      "transformationGroups" : ["rotation"],
+      "position" : [7.0, -0.125],
+      "color" : [255, 244, 210],
+      "pointLight" : true,
+      "pointAngle" : 0,
+      "pointBeam" : 40
+    }
+  },
   "sounds" : {
     "engineStart" : [ "/sfx/at_ext_ship/startup.ogg" ],
     "engineLoop" : [ "/sfx/at_ext_ship/engineloop.ogg" ],
     "shutDown" : [ "/sfx/at_ext_ship/shutdown.ogg" ],
-    "afterBurn" : [ "/sfx/at_ext_ship/afterburn.ogg" ],
+    "afterBurn" : [ "/sfx/at_ext_ship/afterburn_medium.ogg" ],
     "explode" : [ "/sfx/gun/grenadeblast_small_fire1.ogg" ]
   }
 }

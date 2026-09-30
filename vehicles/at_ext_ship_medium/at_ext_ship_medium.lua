@@ -71,6 +71,7 @@ function updateMediumShip(dt, driver, moveDir)
       animator.playSound("engineStart")
       animator.playSound("engineLoop", -1)
       animator.setAnimationState("body", "up")
+      animator.setLightActive("headlight", true)
       self.started = true
     end
 
@@ -115,6 +116,7 @@ function updateMediumShip(dt, driver, moveDir)
     animator.setAnimationState("thruster", "off")
     if self.started then
       animator.setAnimationState("body", "landing")
+      animator.setLightActive("headlight", false)
       animator.stopAllSounds("engineLoop", -1)
       animator.playSound("shutDown")
       self.started = false
