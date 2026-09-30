@@ -1,0 +1,10 @@
+{
+  "name": "at_ext_chocolatebread_bite",
+  "defaultDuration": 0.1,
+  "scripts": [
+    "/stats/effects/at_ext_foodbite/at_ext_foodbite.lua"
+  ],
+  "effectConfig": {
+    "foodValue": 16.25
+  }
+}

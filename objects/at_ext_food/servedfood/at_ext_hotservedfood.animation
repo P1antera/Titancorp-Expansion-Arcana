@@ -56,5 +56,5 @@
       ]
     }
   },
-  "sounds" : { "eat" : [ "/sfx/humanoid/eat1.ogg" ] }
+  "sounds" : { "eat" : [ "/sfx/humanoid/eat3.ogg" ] }
 }

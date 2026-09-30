@@ -4,7 +4,7 @@
     "cooking"
   ],
   "rarity": "Common",
-  "description": "Cheese and meat alone can be a little rich—vegetables keep it balanced!\n^green;Interact to eat.^reset;",
+  "description": "Cheese and meat alone can be a little rich, vegetables keep it balanced!\n^green;Place and interact to eat.^reset;",
   "shortdescription": "Veggie Cheeseburger",
   "race": "generic",
   "category": "preparedFood",

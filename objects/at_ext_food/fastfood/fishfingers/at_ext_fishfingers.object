@@ -4,7 +4,7 @@
     "cooking"
   ],
   "rarity": "Common",
-  "description": "Tasty fried fish in stick form. Where's the custard?\n^green;Interact to eat.^reset;",
+  "description": "Tasty fried fish in stick form. Where's the custard?\n^green;Place and interact to eat.^reset;",
   "shortdescription": "Fish Fingers",
   "race": "generic",
   "category": "preparedFood",

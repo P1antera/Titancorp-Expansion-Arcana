@@ -4,7 +4,7 @@
     "cooking"
   ],
   "rarity": "Common",
-  "description": "Chicken, vegetables and carbs—surely that makes a healthy meal?\n^green;Interact to eat.^reset;",
+  "description": "Chicken, vegetables and carbs. Surely that makes a healthy meal?\n^green;Place and interact to eat.^reset;",
   "shortdescription": "Veggie Crispy Chicken Burger",
   "race": "generic",
   "category": "preparedFood",

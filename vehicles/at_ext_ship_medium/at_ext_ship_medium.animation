@@ -1,0 +1,119 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "default" : "landed",
+        "states" : {
+          "invisible" : {},
+          "landed" : { "frames" : 1, "mode" : "end" },
+          "landing" : { "frames" : 4, "cycle" : 0.5, "mode" : "transition", "transition" : "landed" },
+          "flying" : { "frames" : 1, "mode" : "end" },
+          "up" : { "frames" : 4, "cycle" : 0.5, "mode" : "transition", "transition" : "flying" }
+        }
+      },
+      "engine" : {
+        "default" : "off",
+        "states" : { "off" : {}, "on" : {} }
+      },
+      "thruster" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "idle" : { "frames" : 2, "cycle" : 0.3, "mode" : "loop" },
+          "thrust" : { "frames" : 3, "cycle" : 0.2, "mode" : "loop" }
+        }
+      }
+    },
+    "parts" : {
+      "background" : {
+        "properties" : { "centered" : true, "zLevel" : -1, "image" : "background.png", "seatPosition" : [8.25, -0.2], "transformationGroups" : ["rotation"] }
+      },
+      "body" : {
+        "properties" : { "centered" : true, "zLevel" : 0, "image" : "body.png:landed", "transformationGroups" : ["rotation"] },
+        "partStates" : {
+          "body" : {
+            "invisible" : { "properties" : { "image" : "" } },
+            "landed" : { "properties" : { "image" : "body.png:landed" } },
+            "landing" : { "properties" : { "image" : "body.png:landing.<frame>" } },
+            "up" : { "properties" : { "image" : "body.png:up.<frame>" } },
+            "flying" : { "properties" : { "image" : "body.png:flying" } }
+          }
+        }
+      },
+      "bodyFullbright" : {
+        "properties" : { "centered" : true, "zLevel" : 0.1, "fullbright" : true, "image" : "body_fb.png:landed", "transformationGroups" : ["rotation"] },
+        "partStates" : {
+          "body" : {
+            "invisible" : { "properties" : { "image" : "" } },
+            "landed" : { "properties" : { "image" : "body_fb.png:landed" } },
+            "landing" : { "properties" : { "image" : "body_fb.png:landing.<frame>" } },
+            "up" : { "properties" : { "image" : "body_fb.png:up.<frame>" } },
+            "flying" : { "properties" : { "image" : "body_fb.png:flying" } }
+          }
+        }
+      },
+      "engineLeft" : {
+        "properties" : { "offset" : [-8.75, 1.5], "centered" : true, "zLevel" : 1, "image" : "engine.png:off", "transformationGroups" : ["engineLeftRotation", "rotation"] },
+        "partStates" : { "engine" : { "off" : { "properties" : { "image" : "engine.png:off" } }, "on" : { "properties" : { "image" : "engine.png:on" } } } }
+      },
+      "engineLeftFullbright" : {
+        "properties" : { "offset" : [-8.75, 1.5], "centered" : true, "zLevel" : 1.1, "fullbright" : true, "image" : "engine_fb.png:off", "transformationGroups" : ["engineLeftRotation", "rotation"] },
+        "partStates" : { "engine" : { "off" : { "properties" : { "image" : "engine_fb.png:off" } }, "on" : { "properties" : { "image" : "engine_fb.png:on" } } } }
+      },
+      "engineMidLeft" : {
+        "properties" : { "offset" : [-2.25, 1.5], "centered" : true, "zLevel" : -2, "image" : "engine.png:off", "transformationGroups" : ["engineMidLeftRotation", "rotation"] },
+        "partStates" : { "engine" : { "off" : { "properties" : { "image" : "engine.png:off" } }, "on" : { "properties" : { "image" : "engine.png:on" } } } }
+      },
+      "engineMidLeftFullbright" : {
+        "properties" : { "offset" : [-2.25, 1.5], "centered" : true, "zLevel" : -1.9, "fullbright" : true, "image" : "engine_fb.png:off", "transformationGroups" : ["engineMidLeftRotation", "rotation"] },
+        "partStates" : { "engine" : { "off" : { "properties" : { "image" : "engine_fb.png:off" } }, "on" : { "properties" : { "image" : "engine_fb.png:on" } } } }
+      },
+      "engineMidRight" : {
+        "properties" : { "offset" : [-0.875, 0.125], "centered" : true, "zLevel" : 1, "image" : "engine.png:off", "transformationGroups" : ["engineMidRightRotation", "rotation"] },
+        "partStates" : { "engine" : { "off" : { "properties" : { "image" : "engine.png:off" } }, "on" : { "properties" : { "image" : "engine.png:on" } } } }
+      },
+      "engineMidRightFullbright" : {
+        "properties" : { "offset" : [-0.875, 0.125], "centered" : true, "zLevel" : 1.1, "fullbright" : true, "image" : "engine_fb.png:off", "transformationGroups" : ["engineMidRightRotation", "rotation"] },
+        "partStates" : { "engine" : { "off" : { "properties" : { "image" : "engine_fb.png:off" } }, "on" : { "properties" : { "image" : "engine_fb.png:on" } } } }
+      },
+      "engineRight" : {
+        "properties" : { "offset" : [6.625, 0.125], "centered" : true, "zLevel" : -2, "image" : "engine.png:off", "transformationGroups" : ["engineRightRotation", "rotation"] },
+        "partStates" : { "engine" : { "off" : { "properties" : { "image" : "engine.png:off" } }, "on" : { "properties" : { "image" : "engine.png:on" } } } }
+      },
+      "engineRightFullbright" : {
+        "properties" : { "offset" : [6.625, 0.125], "centered" : true, "zLevel" : -1.9, "fullbright" : true, "image" : "engine_fb.png:off", "transformationGroups" : ["engineRightRotation", "rotation"] },
+        "partStates" : { "engine" : { "off" : { "properties" : { "image" : "engine_fb.png:off" } }, "on" : { "properties" : { "image" : "engine_fb.png:on" } } } }
+      },
+      "thrusterLeft" : {
+        "properties" : { "offset" : [-8.75, 0.5], "centered" : true, "zLevel" : 1, "fullbright" : true, "image" : "", "transformationGroups" : ["engineLeftRotation", "rotation"] },
+        "partStates" : { "thruster" : { "off" : { "properties" : { "image" : "" } }, "idle" : { "properties" : { "image" : "thruster.png:idle.<frame>" } }, "thrust" : { "properties" : { "image" : "thruster.png:thrust.<frame>" } } } }
+      },
+      "thrusterMidLeft" : {
+        "properties" : { "offset" : [-2.25, 0.5], "centered" : true, "zLevel" : -2, "fullbright" : true, "image" : "", "transformationGroups" : ["engineMidLeftRotation", "rotation"] },
+        "partStates" : { "thruster" : { "off" : { "properties" : { "image" : "" } }, "idle" : { "properties" : { "image" : "thruster.png:idle.<frame>" } }, "thrust" : { "properties" : { "image" : "thruster.png:thrust.<frame>" } } } }
+      },
+      "thrusterMidRight" : {
+        "properties" : { "offset" : [-0.875, -0.875], "centered" : true, "zLevel" : 1, "fullbright" : true, "image" : "", "transformationGroups" : ["engineMidRightRotation", "rotation"] },
+        "partStates" : { "thruster" : { "off" : { "properties" : { "image" : "" } }, "idle" : { "properties" : { "image" : "thruster.png:idle.<frame>" } }, "thrust" : { "properties" : { "image" : "thruster.png:thrust.<frame>" } } } }
+      },
+      "thrusterRight" : {
+        "properties" : { "offset" : [6.625, -0.875], "centered" : true, "zLevel" : -2, "fullbright" : true, "image" : "", "transformationGroups" : ["engineRightRotation", "rotation"] },
+        "partStates" : { "thruster" : { "off" : { "properties" : { "image" : "" } }, "idle" : { "properties" : { "image" : "thruster.png:idle.<frame>" } }, "thrust" : { "properties" : { "image" : "thruster.png:thrust.<frame>" } } } }
+      }
+    }
+  },
+  "transformationGroups" : {
+    "rotation" : { "interpolated" : true },
+    "engineLeftRotation" : { "interpolated" : true },
+    "engineMidLeftRotation" : { "interpolated" : true },
+    "engineMidRightRotation" : { "interpolated" : true },
+    "engineRightRotation" : { "interpolated" : true }
+  },
+  "sounds" : {
+    "engineStart" : [ "/sfx/at_ext_ship/startup.ogg" ],
+    "engineLoop" : [ "/sfx/at_ext_ship/engineloop.ogg" ],
+    "shutDown" : [ "/sfx/at_ext_ship/shutdown.ogg" ],
+    "afterBurn" : [ "/sfx/at_ext_ship/afterburn.ogg" ],
+    "explode" : [ "/sfx/gun/grenadeblast_small_fire1.ogg" ]
+  }
+}

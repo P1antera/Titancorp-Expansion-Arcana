@@ -1,0 +1,31 @@
+{
+  "margin" : 0,
+  "name" : "at_ext_breads",
+  "properties" : {},
+  "spacing" : 0,
+  "tilecount" : 9,
+  "tileheight" : 16,
+  "tilewidth" : 16,
+  "tileproperties" : {
+    "0" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_bread_deco", "tilesetDirection" : "right" },
+    "1" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_carrotbread_deco", "tilesetDirection" : "right" },
+    "2" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_beakseedbread_deco", "tilesetDirection" : "right" },
+    "3" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_chocolatebread_deco", "tilesetDirection" : "right" },
+    "4" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_strawberrybread_deco", "tilesetDirection" : "right" },
+    "5" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_mochabread_deco", "tilesetDirection" : "right" },
+    "6" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_frenchbread_deco", "tilesetDirection" : "right" },
+    "7" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_pastry_deco", "tilesetDirection" : "right" },
+    "8" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_croissant_deco", "tilesetDirection" : "right" }
+  },
+  "tiles" : {
+    "0" : { "image" : "../../../objects/at_ext_food/breads/bread/at_ext_bread_icon.png" },
+    "1" : { "image" : "../../../objects/at_ext_food/breads/carrotbread/at_ext_carrotbread_icon.png" },
+    "2" : { "image" : "../../../objects/at_ext_food/breads/beakseedbread/at_ext_beakseedbread_icon.png" },
+    "3" : { "image" : "../../../objects/at_ext_food/breads/chocolatebread/at_ext_chocolatebread_icon.png" },
+    "4" : { "image" : "../../../objects/at_ext_food/breads/strawberrybread/at_ext_strawberrybread_icon.png" },
+    "5" : { "image" : "../../../objects/at_ext_food/breads/mocha/at_ext_mochabread_icon.png" },
+    "6" : { "image" : "../../../objects/at_ext_food/breads/frenchbread/at_ext_frenchbread_icon.png" },
+    "7" : { "image" : "../../../objects/at_ext_food/breads/pastry/at_ext_pastry_icon.png" },
+    "8" : { "image" : "../../../objects/at_ext_food/breads/croissant/at_ext_croissant_icon.png" }
+  }
+}

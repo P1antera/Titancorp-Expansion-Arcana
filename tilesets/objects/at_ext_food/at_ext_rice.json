@@ -1,0 +1,29 @@
+{
+  "margin" : 0,
+  "name" : "at_ext_rice",
+  "properties" : {},
+  "spacing" : 0,
+  "tilecount" : 8,
+  "tileheight" : 16,
+  "tilewidth" : 16,
+  "tileproperties" : {
+    "0" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_boiledrice_deco", "tilesetDirection" : "right" },
+    "1" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_coconutrice_deco", "tilesetDirection" : "right" },
+    "2" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_pearlpearisotto_deco", "tilesetDirection" : "right" },
+    "3" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_oceanrisotto_deco", "tilesetDirection" : "right" },
+    "4" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_ricecake_deco", "tilesetDirection" : "right" },
+    "5" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_ricepudding_deco", "tilesetDirection" : "right" },
+    "6" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_specialrice_deco", "tilesetDirection" : "right" },
+    "7" : { "\/\/shortdescription" : "", "imagePositionX" : "0", "imagePositionY" : "0", "object" : "at_ext_mangorice_deco", "tilesetDirection" : "right" }
+  },
+  "tiles" : {
+    "0" : { "image" : "../../../objects/at_ext_food/rice/boiledrice/at_ext_boiledrice_icon.png" },
+    "1" : { "image" : "../../../objects/at_ext_food/rice/coconutrice/at_ext_coconutrice_icon.png" },
+    "2" : { "image" : "../../../objects/at_ext_food/rice/pearlpearisotto/at_ext_pearlpearisotto_icon.png" },
+    "3" : { "image" : "../../../objects/at_ext_food/rice/oceanrisotto/at_ext_oceanrisotto_icon.png" },
+    "4" : { "image" : "../../../objects/at_ext_food/rice/ricecake/at_ext_ricecake_icon.png" },
+    "5" : { "image" : "../../../objects/at_ext_food/rice/ricepudding/at_ext_ricepudding_icon.png" },
+    "6" : { "image" : "../../../objects/at_ext_food/rice/specialrice/at_ext_specialrice_icon.png" },
+    "7" : { "image" : "../../../objects/at_ext_food/rice/mangorice/at_ext_mangorice_icon.png" }
+  }
+}

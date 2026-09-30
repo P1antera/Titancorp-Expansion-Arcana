@@ -1,0 +1,21 @@
+{
+  "margin" : 0,
+  "name" : "at_ext_riceshop",
+  "properties" : {},
+  "spacing" : 0,
+  "tilecount" : 1,
+  "tileheight" : 55,
+  "tilewidth" : 56,
+  "tileproperties" : {
+    "0" : {
+      "\/\/shortdescription" : "",
+      "imagePositionX" : "0",
+      "imagePositionY" : "0",
+      "object" : "at_ext_riceshop",
+      "tilesetDirection" : "right"
+    }
+  },
+  "tiles" : {
+    "0" : { "image" : "../../../objects/at_ext_food/rice/riceshop/at_ext_riceshop.png" }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "objectName": "at_ext_breadshop",
+  "colonyTags": [
+    "commerce",
+    "cooking"
+  ],
+  "rarity": "Uncommon",
+  "description": "A wall-mounted menu from BaKings Bakery, where every loaf leaves the oven warm.",
+  "shortdescription": "BaKings Bakery",
+  "race": "generic",
+  "category": "decorative",
+  "price": 0,
+  "inventoryIcon": "at_ext_breadshop.png",
+  "placementImage": "at_ext_breadshop.png:default",
+  "placementImagePosition": [
+    -28,
+    0
+  ],
+  "largeImage": "at_ext_breadshop.png:default",
+  "interactAction": "OpenCraftingInterface",
+  "interactData": {
+    "config": "/interface/arcana/arcana_crafting_trading/at_ext_foodshop.config",
+    "filter": [
+      "at_ext_foodshop_breads"
+    ],
+    "paneLayoutOverride": {
+      "lblTitle": {
+        "value": "^#ffd556;''BaKings'' Bakery"
+      },
+      "lblSlogan": {
+        "value": "Fresh from the oven, wherever you roam."
+      }
+    }
+  },
+  "orientations": [
+    {
+      "imageLayers": [
+        {
+          "image": "at_ext_breadshop.png:default"
+        }
+      ],
+      "direction": "left",
+      "flipImages": true,
+      "imagePosition": [
+        0,
+        0
+      ],
+      "spaceScan": 0.1,
+      "anchors": [
+        "background"
+      ]
+    },
+    {
+      "imageLayers": [
+        {
+          "image": "at_ext_breadshop.png:default"
+        }
+      ],
+      "direction": "right",
+      "imagePosition": [
+        0,
+        0
+      ],
+      "spaceScan": 0.1,
+      "anchors": [
+        "background"
+      ]
+    }
+  ]
+}

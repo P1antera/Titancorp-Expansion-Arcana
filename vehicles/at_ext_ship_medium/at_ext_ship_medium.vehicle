@@ -1,0 +1,52 @@
+{
+  "name" : "at_ext_ship_medium",
+  "script" : "at_ext_ship_mediumcontrol.lua",
+  "boundBox" : [-12, -5, 12, 5],
+  "slaveControlTimeout" : 2.0,
+  "slaveControlHeartbeat" : 1.0,
+  "canBeHit" : true,
+  "animation" : "at_ext_ship_medium.animation",
+
+  "moveSpeed" : 70,
+  "airForce" : 180,
+  "minHeight" : 1,
+  "maxHeight" : 2000,
+
+  "vectorThrusterRotationSpeed" : 200,
+  "vectorThrusterMinAngle" : -90,
+  "vectorThrusterMaxAngle" : 90,
+  "vectorThrusterHoverAngle" : 0,
+  "vectorThrusterAccelerationThreshold" : 0.25,
+  "vectorThrusterVelocityThreshold" : 0.25,
+
+  "health" : 6000,
+  "protection" : 60,
+
+  "loungePositions" : {
+    "seat" : {
+      "part" : "background",
+      "partAnchor" : "seatPosition",
+      "orientation" : "sit",
+      "statusEffects" : ["invulnerable"],
+      "cameraFocus" : true,
+      "armorCosmeticOverrides" : {
+        "head" : "mechpilothead"
+      }
+    }
+  },
+
+  "movementSettings" : {
+    "collisionPoly" : [ [-8.0, 3.25], [-1.0, 3.25], [0.5, 2.75], [8.0, 2.6], [10.2, 1.75], [11.2, 0.75], [11.2, -1.0], [10.5, -1.9], [8.25, -3.0], [7.0, -4.5], [-7.25, -4.5], [-8.0, -3.0], [-9.0, -2.75], [-10.75, -1.5], [-11.3, 1.75], [-10.8, 2.25] ],
+    "mass" : 12,
+    "airFriction" : 0.05,
+    "ignorePlatformCollision" : true,
+    "gravityEnabled" : true,
+    "collisionEnabled" : true
+  },
+
+  "occupiedMovementSettings" : {
+    "mass" : 12,
+    "gravityEnabled" : false,
+    "collisionEnabled" : true
+  }
+}

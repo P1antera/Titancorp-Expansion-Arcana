@@ -4,7 +4,7 @@
     "cooking"
   ],
   "rarity": "Common",
-  "description": "A cheap but tasty fish sandwich that fills your stomach.\n^green;Interact to eat.^reset;",
+  "description": "A cheap but tasty fish sandwich that fills your stomach.\n^green;Place and interact to eat.^reset;",
   "shortdescription": "Fish Burger",
   "race": "generic",
   "category": "preparedFood",

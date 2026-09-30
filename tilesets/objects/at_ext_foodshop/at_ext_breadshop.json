@@ -1,0 +1,21 @@
+{
+  "margin" : 0,
+  "name" : "at_ext_breadshop",
+  "properties" : {},
+  "spacing" : 0,
+  "tilecount" : 1,
+  "tileheight" : 50,
+  "tilewidth" : 56,
+  "tileproperties" : {
+    "0" : {
+      "\/\/shortdescription" : "",
+      "imagePositionX" : "0",
+      "imagePositionY" : "0",
+      "object" : "at_ext_breadshop",
+      "tilesetDirection" : "right"
+    }
+  },
+  "tiles" : {
+    "0" : { "image" : "../../../objects/at_ext_food/breads/breadshop/at_ext_breadshop.png" }
+  }
+}
