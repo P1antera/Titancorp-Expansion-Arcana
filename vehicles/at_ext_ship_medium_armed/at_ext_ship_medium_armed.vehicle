@@ -1,11 +1,11 @@
 {
-  "name" : "at_ext_ship_medium",
-  "script" : "at_ext_ship_mediumcontrol.lua",
+  "name" : "at_ext_ship_medium_armed",
+  "script" : "at_ext_ship_medium_armedcontrol.lua",
   "boundBox" : [-12, -5, 12, 5],
   "slaveControlTimeout" : 2.0,
   "slaveControlHeartbeat" : 1.0,
   "canBeHit" : true,
-  "animation" : "at_ext_ship_medium.animation",
+  "animation" : "at_ext_ship_medium_armed.animation",
 
   "moveSpeed" : 70,
   "airForce" : 180,
@@ -20,7 +20,7 @@
   "vectorThrusterVelocityThreshold" : 0.25,
 
   "health" : 6000,
-  "protection" : 60,
+  "protection" : 70,
 
   "loungePositions" : {
     "seat" : {

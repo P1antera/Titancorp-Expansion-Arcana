@@ -1,0 +1,222 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "default" : "landed",
+        "states" : {
+          "invisible" : {},
+          "landed" : { "frames" : 1, "mode" : "end" },
+          "landing" : { "frames" : 4, "cycle" : 0.5, "mode" : "transition", "transition" : "landed" },
+          "flying" : { "frames" : 1, "mode" : "end" },
+          "up" : { "frames" : 4, "cycle" : 0.5, "mode" : "transition", "transition" : "flying" }
+        }
+      },
+      "engine" : {
+        "default" : "off",
+        "states" : { "off" : {}, "on" : {} }
+      },
+      "thruster" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "idle" : { "frames" : 2, "cycle" : 0.3, "mode" : "loop" },
+          "thrust" : { "frames" : 3, "cycle" : 0.2, "mode" : "loop" }
+        }
+      },
+      "frontcannon" : {
+        "default" : "idle",
+        "states" : { "idle" : {}, "fire" : { "frames" : 2, "cycle" : 0.1, "mode" : "transition", "transition" : "idle" } }
+      },
+      "backcannon" : {
+        "default" : "idle",
+        "states" : { "idle" : {}, "fire" : { "frames" : 2, "cycle" : 0.1, "mode" : "transition", "transition" : "idle" } }
+      },
+      "missilelauncher" : {
+        "default" : "loaded",
+        "states" : {
+          "two" : {}, "one" : {}, "empty" : {},
+          "reload" : { "frames" : 2, "cycle" : 1.0, "mode" : "transition", "transition" : "loaded" },
+          "loaded" : {}
+        }
+      },
+      "bombbay" : {
+        "default" : "loaded",
+        "states" : { "one" : {}, "empty" : {}, "loaded" : {} }
+      }
+    },
+    "parts" : {
+      "background" : {
+        "properties" : { "centered" : true, "zLevel" : -1, "image" : "background.png", "seatPosition" : [8.25, -0.2], "transformationGroups" : ["rotation"] }
+      },
+      "body" : {
+        "properties" : { "centered" : true, "zLevel" : 0, "image" : "body.png:landed", "transformationGroups" : ["rotation"] },
+        "partStates" : {
+          "body" : {
+            "invisible" : { "properties" : { "image" : "" } },
+            "landed" : { "properties" : { "image" : "body.png:landed" } },
+            "landing" : { "properties" : { "image" : "body.png:landing.<frame>" } },
+            "up" : { "properties" : { "image" : "body.png:up.<frame>" } },
+            "flying" : { "properties" : { "image" : "body.png:flying" } }
+          }
+        }
+      },
+      "bodyFullbright" : {
+        "properties" : { "centered" : true, "zLevel" : 0.1, "fullbright" : true, "image" : "body_fb.png:landed", "transformationGroups" : ["rotation"] },
+        "partStates" : {
+          "body" : {
+            "invisible" : { "properties" : { "image" : "" } },
+            "landed" : { "properties" : { "image" : "body_fb.png:landed" } },
+            "landing" : { "properties" : { "image" : "body_fb.png:landing.<frame>" } },
+            "up" : { "properties" : { "image" : "body_fb.png:up.<frame>" } },
+            "flying" : { "properties" : { "image" : "body_fb.png:flying" } }
+          }
+        }
+      },
+      "engineLeft" : {
+        "properties" : { "offset" : [-8.75, 1.5], "centered" : true, "zLevel" : 1, "image" : "engine.png:off", "transformationGroups" : ["engineLeftRotation", "rotation"] },
+        "partStates" : { "engine" : { "off" : { "properties" : { "image" : "engine.png:off" } }, "on" : { "properties" : { "image" : "engine.png:on" } } } }
+      },
+      "engineLeftFullbright" : {
+        "properties" : { "offset" : [-8.75, 1.5], "centered" : true, "zLevel" : 1.1, "fullbright" : true, "image" : "engine_fb.png:off", "transformationGroups" : ["engineLeftRotation", "rotation"] },
+        "partStates" : { "engine" : { "off" : { "properties" : { "image" : "engine_fb.png:off" } }, "on" : { "properties" : { "image" : "engine_fb.png:on" } } } }
+      },
+      "engineMidLeft" : {
+        "properties" : { "offset" : [-2.25, 1.5], "centered" : true, "zLevel" : -2, "image" : "engine.png:off", "transformationGroups" : ["engineMidLeftRotation", "rotation"] },
+        "partStates" : { "engine" : { "off" : { "properties" : { "image" : "engine.png:off" } }, "on" : { "properties" : { "image" : "engine.png:on" } } } }
+      },
+      "engineMidLeftFullbright" : {
+        "properties" : { "offset" : [-2.25, 1.5], "centered" : true, "zLevel" : -1.9, "fullbright" : true, "image" : "engine_fb.png:off", "transformationGroups" : ["engineMidLeftRotation", "rotation"] },
+        "partStates" : { "engine" : { "off" : { "properties" : { "image" : "engine_fb.png:off" } }, "on" : { "properties" : { "image" : "engine_fb.png:on" } } } }
+      },
+      "engineMidRight" : {
+        "properties" : { "offset" : [-0.875, 0.125], "centered" : true, "zLevel" : 1, "image" : "engine.png:off", "transformationGroups" : ["engineMidRightRotation", "rotation"] },
+        "partStates" : { "engine" : { "off" : { "properties" : { "image" : "engine.png:off" } }, "on" : { "properties" : { "image" : "engine.png:on" } } } }
+      },
+      "engineMidRightFullbright" : {
+        "properties" : { "offset" : [-0.875, 0.125], "centered" : true, "zLevel" : 1.1, "fullbright" : true, "image" : "engine_fb.png:off", "transformationGroups" : ["engineMidRightRotation", "rotation"] },
+        "partStates" : { "engine" : { "off" : { "properties" : { "image" : "engine_fb.png:off" } }, "on" : { "properties" : { "image" : "engine_fb.png:on" } } } }
+      },
+      "engineRight" : {
+        "properties" : { "offset" : [6.625, 0.125], "centered" : true, "zLevel" : -2, "image" : "engine.png:off", "transformationGroups" : ["engineRightRotation", "rotation"] },
+        "partStates" : { "engine" : { "off" : { "properties" : { "image" : "engine.png:off" } }, "on" : { "properties" : { "image" : "engine.png:on" } } } }
+      },
+      "engineRightFullbright" : {
+        "properties" : { "offset" : [6.625, 0.125], "centered" : true, "zLevel" : -1.9, "fullbright" : true, "image" : "engine_fb.png:off", "transformationGroups" : ["engineRightRotation", "rotation"] },
+        "partStates" : { "engine" : { "off" : { "properties" : { "image" : "engine_fb.png:off" } }, "on" : { "properties" : { "image" : "engine_fb.png:on" } } } }
+      },
+      "thrusterLeft" : {
+        "properties" : { "offset" : [-8.75, 0.5], "centered" : true, "zLevel" : 1, "fullbright" : true, "image" : "", "transformationGroups" : ["engineLeftRotation", "rotation"] },
+        "partStates" : { "thruster" : { "off" : { "properties" : { "image" : "" } }, "idle" : { "properties" : { "image" : "thruster.png:idle.<frame>" } }, "thrust" : { "properties" : { "image" : "thruster.png:thrust.<frame>" } } } }
+      },
+      "thrusterMidLeft" : {
+        "properties" : { "offset" : [-2.25, 0.5], "centered" : true, "zLevel" : -2, "fullbright" : true, "image" : "", "transformationGroups" : ["engineMidLeftRotation", "rotation"] },
+        "partStates" : { "thruster" : { "off" : { "properties" : { "image" : "" } }, "idle" : { "properties" : { "image" : "thruster.png:idle.<frame>" } }, "thrust" : { "properties" : { "image" : "thruster.png:thrust.<frame>" } } } }
+      },
+      "thrusterMidRight" : {
+        "properties" : { "offset" : [-0.875, -0.875], "centered" : true, "zLevel" : 1, "fullbright" : true, "image" : "", "transformationGroups" : ["engineMidRightRotation", "rotation"] },
+        "partStates" : { "thruster" : { "off" : { "properties" : { "image" : "" } }, "idle" : { "properties" : { "image" : "thruster.png:idle.<frame>" } }, "thrust" : { "properties" : { "image" : "thruster.png:thrust.<frame>" } } } }
+      },
+      "thrusterRight" : {
+        "properties" : { "offset" : [6.625, -0.875], "centered" : true, "zLevel" : -2, "fullbright" : true, "image" : "", "transformationGroups" : ["engineRightRotation", "rotation"] },
+        "partStates" : { "thruster" : { "off" : { "properties" : { "image" : "" } }, "idle" : { "properties" : { "image" : "thruster.png:idle.<frame>" } }, "thrust" : { "properties" : { "image" : "thruster.png:thrust.<frame>" } } } }
+      },
+      "backcannoncap" : {
+        "properties" : { "offset" : [-0.125, 0], "centered" : true, "zLevel" : -3, "image" : "cannoncap_back.png", "anchorPart" : "body" }
+      },
+      "backcannon" : {
+        "properties" : { "offset" : [10.925, -3.425], "centered" : true, "zLevel" : -2.5, "image" : "cannon.png:idle", "rotationCenter" : [8.9875, -3.425], "rotationGroup" : "backCannon", "anchorPart" : "body" },
+        "partStates" : { "backcannon" : { "idle" : { "properties" : { "image" : "cannon.png:idle" } }, "fire" : { "properties" : { "image" : "cannon.png:fire.<frame>" } } } }
+      },
+      "backcannonFullbright" : {
+        "properties" : { "centered" : true, "zLevel" : -2.4, "fullbright" : true, "image" : "cannon_fb.png:idle", "anchorPart" : "backcannon" },
+        "partStates" : { "backcannon" : { "idle" : { "properties" : { "image" : "cannon_fb.png:idle" } }, "fire" : { "properties" : { "image" : "cannon_fb.png:fire.<frame>" } } } }
+      },
+      "missilelauncher" : {
+        "properties" : { "centered" : true, "zLevel" : 0.2, "image" : "missilelauncher.png:loaded", "transformationGroups" : ["rotation"] },
+        "partStates" : { "missilelauncher" : { "two" : { "properties" : { "image" : "missilelauncher.png:two" } }, "one" : { "properties" : { "image" : "missilelauncher.png:one" } }, "empty" : { "properties" : { "image" : "missilelauncher.png:empty" } }, "reload" : { "properties" : { "image" : "missilelauncher.png:reload.<frame>" } }, "loaded" : { "properties" : { "image" : "missilelauncher.png:loaded" } } } }
+      },
+      "bombbay" : {
+        "properties" : { "centered" : true, "zLevel" : 0.2, "image" : "bombbay.png:loaded", "transformationGroups" : ["rotation"] },
+        "partStates" : { "bombbay" : { "one" : { "properties" : { "image" : "bombbay.png:one" } }, "empty" : { "properties" : { "image" : "bombbay.png:empty" } }, "loaded" : { "properties" : { "image" : "bombbay.png:loaded" } } } }
+      },
+      "frontcannon" : {
+        "properties" : { "offset" : [9.5, -3.363], "centered" : true, "zLevel" : 1.5, "image" : "cannon.png:idle", "rotationCenter" : [7.5, -3.363], "rotationGroup" : "frontCannon", "anchorPart" : "body" },
+        "partStates" : { "frontcannon" : { "idle" : { "properties" : { "image" : "cannon.png:idle" } }, "fire" : { "properties" : { "image" : "cannon.png:fire.<frame>" } } } }
+      },
+      "frontcannonFullbright" : {
+        "properties" : { "centered" : true, "zLevel" : 1.6, "fullbright" : true, "image" : "cannon_fb.png:idle", "anchorPart" : "frontcannon" },
+        "partStates" : { "frontcannon" : { "idle" : { "properties" : { "image" : "cannon_fb.png:idle" } }, "fire" : { "properties" : { "image" : "cannon_fb.png:fire.<frame>" } } } }
+      },
+      "frontcannoncap" : {
+        "properties" : { "centered" : true, "zLevel" : 2, "image" : "cannoncap_front.png", "anchorPart" : "body" }
+      }
+    }
+  },
+  "transformationGroups" : {
+    "rotation" : { "interpolated" : true },
+    "engineLeftRotation" : { "interpolated" : true },
+    "engineMidLeftRotation" : { "interpolated" : true },
+    "engineMidRightRotation" : { "interpolated" : true },
+    "engineRightRotation" : { "interpolated" : true },
+    "frontCannonLightAim" : { "interpolated" : true }
+  },
+  "rotationGroups" : {
+    "frontCannon" : { "angularVelocity" : 10.0 },
+    "backCannon" : { "angularVelocity" : 10.0 }
+  },
+  "lights" : {
+    "headlight" : {
+      "active" : false,
+      "beamLevel" : 4,
+      "beamAmbience" : 0.1,
+      "transformationGroups" : ["rotation"],
+      "position" : [7.0, -0.125],
+      "color" : [255, 244, 210],
+      "pointLight" : true,
+      "pointAngle" : 0,
+      "pointBeam" : 40
+    },
+    "frontCannonSpotlight" : {
+      "active" : false,
+      "beamLevel" : 4,
+      "beamAmbience" : 0.05,
+      "transformationGroups" : ["frontCannonLightAim", "rotation"],
+      "position" : [10.25, -3.363],
+      "color" : [220, 235, 255],
+      "pointLight" : true,
+      "pointAngle" : 0,
+      "pointBeam" : 14
+    }
+  },
+  "particleEmitters" : {
+    "missileMuzzleSmokeTop" : {
+      "transformationGroups" : ["rotation"],
+      "burstCount" : 5,
+      "offsetRegion" : [4.0, -0.25, 4.2, -0.25],
+      "particles" : [{ "particle" : { "type" : "animated", "animation" : "/animations/dust2/dust2.animation", "initialVelocity" : [6, 0], "finalVelocity" : [0, 0], "approach" : [7, 7], "destructionAction" : "shrink", "destructionTime" : 1.1, "fade" : 1, "size" : 1.5, "layer" : "front", "timeToLive" : 0.7, "variance" : { "initialVelocity" : [8, 0] } } }]
+    },
+    "missileMuzzleSmokeMiddle" : {
+      "transformationGroups" : ["rotation"],
+      "burstCount" : 5,
+      "offsetRegion" : [4.0, -1.25, 4.2, -1.25],
+      "particles" : [{ "particle" : { "type" : "animated", "animation" : "/animations/dust2/dust2.animation", "initialVelocity" : [6, 0], "finalVelocity" : [0, 0], "approach" : [7, 7], "destructionAction" : "shrink", "destructionTime" : 1.1, "fade" : 1, "size" : 1.5, "layer" : "front", "timeToLive" : 0.7, "variance" : { "initialVelocity" : [8, 0] } } }]
+    },
+    "missileMuzzleSmokeBottom" : {
+      "transformationGroups" : ["rotation"],
+      "burstCount" : 5,
+      "offsetRegion" : [4.0, -2.25, 4.2, -2.25],
+      "particles" : [{ "particle" : { "type" : "animated", "animation" : "/animations/dust2/dust2.animation", "initialVelocity" : [6, 0], "finalVelocity" : [0, 0], "approach" : [7, 7], "destructionAction" : "shrink", "destructionTime" : 1.1, "fade" : 1, "size" : 1.5, "layer" : "front", "timeToLive" : 0.7, "variance" : { "initialVelocity" : [8, 0] } } }]
+    }
+  },
+  "sounds" : {
+    "engineStart" : [ "/sfx/at_ext_ship/startup.ogg" ],
+    "engineLoop" : [ "/sfx/at_ext_ship/engineloop.ogg" ],
+    "shutDown" : [ "/sfx/at_ext_ship/shutdown.ogg" ],
+    "afterBurn" : [ "/sfx/at_ext_ship/afterburn_medium.ogg" ],
+    "cannonFire" : [ "/sfx/at_ext_ship/at_ext_ship_medium_armed_cannon.ogg" ],
+    "missileFire" : [ "/sfx/gun/rocket1.ogg" ],
+    "fire" : [ "/sfx/gun/rocket1.ogg" ],
+    "reloadComplete" : [ "/sfx/interface/ship_confirm1.ogg" ],
+    "explode" : [ "/sfx/gun/grenadeblast_small_fire1.ogg" ]
+  }
+}

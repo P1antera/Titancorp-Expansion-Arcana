@@ -19,8 +19,8 @@
   "vehicleType" : "at_ext_ship_medium",
   "vehicleBoundingBox" : [-12, -5, 12, 5],
   "vehicleImage" : "/vehicles/at_ext_ship_medium/icon.png",
-  "animationParts" : { "casing" : "at_ext_shipcontroller2.png" },
-  "inventoryIcon" : "at_ext_shipcontroller2.png:full",
+  "animationParts" : { "casing" : "at_ext_shipcontroller_medium.png" },
+  "inventoryIcon" : "at_ext_shipcontroller_medium.png:full",
   "emptyInventoryIcon" : "/items/active/vehiclecontroller/at_ext_shipcontroller_medium.png:empty",
   "filledInventoryIcon" : "/items/active/vehiclecontroller/at_ext_shipcontroller_medium.png:full"
 }

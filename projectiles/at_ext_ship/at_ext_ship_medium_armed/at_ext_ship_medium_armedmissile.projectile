@@ -1,11 +1,11 @@
 {
-  "projectileName" : "at_ext_ship_c3missile",
+  "projectileName" : "at_ext_ship_medium_armedmissile",
   "physics" : "laser",
   "piercing" : false,
   "timeToLive" : 3,
   "bounces" : 0,
   "speed" : 80,
-  "power" : 50.0,
+  "power" : 60.0,
   "image" : "missile.png",
   "autoFlipAdjust" : true,
   "renderLayer" : "foregroundEntity",
@@ -14,7 +14,7 @@
   "pointLight" : true,
   "supportsProcessing" : true,
   "actionOnReap" : [
-    { "action" : "config", "file" : "/projectiles/at_ext_ship/at_ext_ship_c3/at_ext_ship_c3missile_impact.config" }
+    { "action" : "config", "file" : "/projectiles/at_ext_ship/at_ext_ship_medium_armed/at_ext_ship_medium_armedmissile_impact.config" }
   ],
   "periodicActions" : [
     {
@@ -35,11 +35,27 @@
         "size" : 1.1,
         "layer" : "back",
         "timeToLive" : 0.45,
-        "variance" : { "initialVelocity" : [2.0, 2.0],"position" : [-0.45, -0.4], "rotation" : 180 }
+        "variance" : { "initialVelocity" : [2.0, 2.0], "position" : [-0.45, -0.4], "rotation" : 180 }
+      }
+    },
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/at_ext_ship/at_ext_missile/trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.3,
+        "destructionAction" : "shrink",
+        "fullbright" : true
       }
     }
   ],
-  "scripts" : ["at_ext_ship_c3missile.lua"],
+  "scripts" : ["/projectiles/at_ext_ship/at_ext_ship_c3/at_ext_ship_c3missile.lua"],
   "homingDistance" : 100,
   "rotationRate" : 4,
   "trackingLimit" : 1.57,

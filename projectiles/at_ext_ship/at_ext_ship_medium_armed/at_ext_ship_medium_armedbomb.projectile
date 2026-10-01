@@ -1,0 +1,45 @@
+{
+  "projectileName" : "at_ext_ship_medium_armedbomb",
+  "image" : "bomb.png",
+  "animationCycle" : 0.25,
+  "physics" : "at_ext_bulletfall_rf",
+  "frameNumber" : 1,
+  "pointLight" : false,
+    "renderLayer" : "foregroundEntity",
+  "speed" : 6,
+  "damagePoly" : [[-6, 0], [-6, -6], [0, -6], [6, -6], [6, 0], [6, 6], [0, 6], [-6, 6]],
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/at_ext_ship/at_ext_bomb/trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.3,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+  "actionOnReap" : [
+    { "action" : "config", "file" : "/projectiles/at_ext_ship/at_ext_ship_medium_armed/at_ext_ship_medium_armedbomb_impact.config" },
+    { "action" : "projectile", "type" : "at_ext_bomb_shard4", "fuzzAngle" : 0, "inheritDamageFactor" : 0.1, "angleAdjust" : 105 },
+    { "action" : "projectile", "type" : "at_ext_bomb_shard4", "fuzzAngle" : 0, "inheritDamageFactor" : 0.1, "angleAdjust" : 135 },
+    { "action" : "projectile", "type" : "at_ext_bomb_shard4", "fuzzAngle" : 0, "inheritDamageFactor" : 0.1, "angleAdjust" : 165 },
+    { "action" : "projectile", "type" : "at_ext_bomb_shard4", "fuzzAngle" : 0, "inheritDamageFactor" : 0.1, "angleAdjust" : 195 },
+    { "action" : "projectile", "type" : "at_ext_bomb_shard4", "fuzzAngle" : 0, "inheritDamageFactor" : 0.1, "angleAdjust" : 225 },
+    { "action" : "projectile", "type" : "at_ext_bomb_shard4", "fuzzAngle" : 0, "inheritDamageFactor" : 0.1, "angleAdjust" : 255 },
+    { "action" : "projectile", "type" : "at_ext_bomb_shard4", "fuzzAngle" : 0, "inheritDamageFactor" : 0.1, "angleAdjust" : 112.5 },
+    { "action" : "projectile", "type" : "at_ext_bomb_shard4", "fuzzAngle" : 0, "inheritDamageFactor" : 0.1, "angleAdjust" : 157.5 },
+    { "action" : "projectile", "type" : "at_ext_bomb_shard4", "fuzzAngle" : 0, "inheritDamageFactor" : 0.1, "angleAdjust" : 202.5 },
+    { "action" : "projectile", "type" : "at_ext_bomb_shard4", "fuzzAngle" : 0, "inheritDamageFactor" : 0.1, "angleAdjust" : 247.5 }
+
+  ],
+  "power" : 300.0,
+  "damageKind" : "fire"
+}
