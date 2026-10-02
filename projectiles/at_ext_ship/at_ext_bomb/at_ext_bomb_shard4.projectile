@@ -2,16 +2,17 @@
   "projectileName" : "at_ext_bomb_shard4",
   "physics" : "at_ext_bombshard",
   "piercing" : true,
-  "timeToLive" : 0.22,
+  "timeToLive" : 0.30,
   "speed" : 54,
   "knockback" : 0,
   "power" : 100.0,
   "movementSettings" : {
     "bounceFactor" : 0
   },
-  "image" : "assetmissing.png",
-  "animationCycle" : 1,
-  "frameNumber" : 1,
+  "image" : "/animations/at_ext_ship_medium_armed_flame/mediumflamefire.png",
+  "animationCycle" : 0.3,
+  "frameNumber" : 12,
+  "fullbright" : true,
   "damageKind" : "default",
   "periodicActions" : [
     {
@@ -20,7 +21,7 @@
       "rotate" : true,
       "specification" : {
         "type" : "textured",
-        "image" : "/animations/fog/fog.png:8?setcolor=4a4a4aff",
+        "image" : "/animations/fog/fog.png:8?setcolor=000000ff",
         "timeToLive" : 5.5,
         "destructionAction" : "fade",
         "finalVelocity" : [0, 0],

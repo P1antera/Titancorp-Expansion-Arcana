@@ -215,7 +215,7 @@
     "afterBurn" : [ "/sfx/at_ext_ship/afterburn_medium.ogg" ],
     "cannonFire" : [ "/sfx/at_ext_ship/at_ext_ship_medium_armed_cannon.ogg" ],
     "missileFire" : [ "/sfx/gun/rocket1.ogg" ],
-    "fire" : [ "/sfx/gun/rocket1.ogg" ],
+    "fire" : [ "/sfx/gun/grenade1.ogg" ],
     "reloadComplete" : [ "/sfx/interface/ship_confirm1.ogg" ],
     "explode" : [ "/sfx/gun/grenadeblast_small_fire1.ogg" ]
   }

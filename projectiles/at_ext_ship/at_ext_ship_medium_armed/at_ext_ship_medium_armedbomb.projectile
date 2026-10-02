@@ -2,7 +2,7 @@
   "projectileName" : "at_ext_ship_medium_armedbomb",
   "image" : "bomb.png",
   "animationCycle" : 0.25,
-  "physics" : "at_ext_bulletfall_rf",
+  "physics" : "at_ext_bulletfall_mediumbomb",
   "frameNumber" : 1,
   "pointLight" : false,
     "renderLayer" : "foregroundEntity",
