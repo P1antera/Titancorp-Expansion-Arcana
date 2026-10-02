@@ -34,13 +34,13 @@
     "conditions" : [
 	  {
         "type" : "gatherItem",
-        "itemName" : "cheeseburger",
+        "itemName" : "at_ext_cheeseburger",
         "count" : 1,
         "consume" : true
       },
 	  {
         "type" : "gatherItem",
-        "itemName" : "potatogrids",
+        "itemName" : "at_ext_chips",
         "count" : 1,
         "consume" : true
       }

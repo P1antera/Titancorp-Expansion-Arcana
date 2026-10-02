@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "A Tirandian dessert of mango and sweet sticky rice.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Mango Sticky Rice",
+  "shortdescription": "^yellow;[TC]^reset; Mango Sticky Rice",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,

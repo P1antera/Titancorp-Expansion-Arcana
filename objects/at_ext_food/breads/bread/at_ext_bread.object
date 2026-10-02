@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "An ordinary, soft loaf of bread.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Bread",
+  "shortdescription": "^yellow;[TC]^reset; Bread",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,

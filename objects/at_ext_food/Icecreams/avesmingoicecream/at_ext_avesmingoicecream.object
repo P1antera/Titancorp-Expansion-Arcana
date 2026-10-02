@@ -3,7 +3,7 @@
   "colonyTags" : [ "cooking" ],
   "rarity" : "Common",
   "description" : "Avesmingos can taste like anything! For better or worse, so can this ice cream.\n^green;Place and interact to eat.^reset;",
-  "shortdescription" : "Avesmingo Ice Cream",
+  "shortdescription" : "^yellow;[TC]^reset; Avesmingo Ice Cream",
   "race" : "generic",
   "category" : "preparedFood",
   "price" : 0,"retainObjectParametersInItem" : true,

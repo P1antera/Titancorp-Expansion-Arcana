@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "So flaky that crumbs fall with every bite.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Croissant",
+  "shortdescription": "^yellow;[TC]^reset; Croissant",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,

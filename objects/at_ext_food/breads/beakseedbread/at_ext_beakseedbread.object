@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "A Winged specialty bread, now available here.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Beakseed Bread",
+  "shortdescription": "^yellow;[TC]^reset; Beakseed Bread",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,

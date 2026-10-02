@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "A pastry from far away, with a flavor all its own.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Pastry",
+  "shortdescription": "^yellow;[TC]^reset; Pastry",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,

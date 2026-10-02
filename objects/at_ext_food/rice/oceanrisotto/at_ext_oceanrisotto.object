@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "Rice simmered with creamy ocean ingredients in a delightfully strange palette.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Ocean Risotto",
+  "shortdescription": "^yellow;[TC]^reset; Ocean Risotto",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,

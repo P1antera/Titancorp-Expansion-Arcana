@@ -34,7 +34,7 @@
     "conditions" : [
 	  {
         "type" : "gatherItem",
-        "itemName" : "arcana_food_fishSandwich",
+        "itemName" : "at_ext_fishnchips",
         "count" : 1,
         "consume" : true
       }

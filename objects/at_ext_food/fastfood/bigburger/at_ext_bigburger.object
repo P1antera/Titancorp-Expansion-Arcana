@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "Too much for one bite.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Big Burger",
+  "shortdescription": "^yellow;[TC]^reset; Big Burger",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,"retainObjectParametersInItem":true,

@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "Soft bread kneaded with carrot pieces for a wholesome bite.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Carrot Bread",
+  "shortdescription": "^yellow;[TC]^reset; Carrot Bread",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,

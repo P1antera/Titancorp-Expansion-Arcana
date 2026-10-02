@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "Warm cooked rice pressed into a triangle for an easy meal at work.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Rice Ball",
+  "shortdescription": "^yellow;[TC]^reset; Rice Ball",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,

@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "A duet of chocolate filling and chocolate chips.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Chocolate Bread",
+  "shortdescription": "^yellow;[TC]^reset; Chocolate Bread",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,

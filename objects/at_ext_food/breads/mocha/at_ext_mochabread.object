@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "Matcha chocolate folded into bread: crisp, bitter, and sweet.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Matcha Bread",
+  "shortdescription": "^yellow;[TC]^reset; Matcha Bread",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,

@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "The purest, most unassuming food in the universe.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Rice",
+  "shortdescription": "^yellow;[TC]^reset; Rice",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,

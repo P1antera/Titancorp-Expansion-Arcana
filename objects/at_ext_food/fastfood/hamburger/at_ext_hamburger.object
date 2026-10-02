@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "A juicy hamburger.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Hamburger",
+  "shortdescription": "^yellow;[TC]^reset; Hamburger",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,"retainObjectParametersInItem":true,

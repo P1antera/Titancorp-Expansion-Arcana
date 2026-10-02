@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "A cheap but tasty fish sandwich that fills your stomach.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Fish Burger",
+  "shortdescription": "^yellow;[TC]^reset; Fish Burger",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,"retainObjectParametersInItem":true,

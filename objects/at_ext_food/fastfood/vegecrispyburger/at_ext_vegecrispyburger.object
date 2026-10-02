@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "Chicken, vegetables and carbs. Surely that makes a healthy meal?\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Veggie Crispy Chicken Burger",
+  "shortdescription": "^yellow;[TC]^reset; Veggie Crispy Chicken Burger",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,"retainObjectParametersInItem":true,

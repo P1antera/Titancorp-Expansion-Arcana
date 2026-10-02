@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "Rice and pearlpeas simmered in light cream, though the grains are still a little firm.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Pearlpea Risotto",
+  "shortdescription": "^yellow;[TC]^reset; Pearlpea Risotto",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,

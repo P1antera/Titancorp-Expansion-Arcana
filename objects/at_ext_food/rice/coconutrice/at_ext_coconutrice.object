@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "Sweet sticky rice and coconut flesh served in its shell.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Coconut Rice",
+  "shortdescription": "^yellow;[TC]^reset; Coconut Rice",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,

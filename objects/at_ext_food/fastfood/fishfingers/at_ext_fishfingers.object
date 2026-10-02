@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "Tasty fried fish in stick form. Where's the custard?\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Fish Fingers",
+  "shortdescription": "^yellow;[TC]^reset; Fish Fingers",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,"retainObjectParametersInItem":true,

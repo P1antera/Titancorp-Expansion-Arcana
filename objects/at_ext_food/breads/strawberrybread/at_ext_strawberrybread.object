@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "Soft bread with freeze-dried strawberry pieces: sweet and tart.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Strawberry Bread",
+  "shortdescription": "^yellow;[TC]^reset; Strawberry Bread",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,

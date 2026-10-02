@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "Fry all the things! This is an old favorite for humans.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Fish and Chips",
+  "shortdescription": "^yellow;[TC]^reset; Fish and Chips",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,"retainObjectParametersInItem":true,

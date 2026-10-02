@@ -1,6 +1,6 @@
 {
   "objectName" : "at_ext_bananaicecream",
-  "colonyTags" : [ "cooking" ], "rarity" : "Common", "description" : "Creamy, icy, banana goodness.\n^green;Place and interact to eat.^reset;", "shortdescription" : "Banana Ice Cream", "race" : "generic", "category" : "preparedFood", "price" : 0,"retainObjectParametersInItem" : true,
+  "colonyTags" : [ "cooking" ], "rarity" : "Common", "description" : "Creamy, icy, banana goodness.\n^green;Place and interact to eat.^reset;", "shortdescription" : "^yellow;[TC]^reset; Banana Ice Cream", "race" : "generic", "category" : "preparedFood", "price" : 0,"retainObjectParametersInItem" : true,
   "inventoryIcon" : "at_ext_bananaicecream_icon.png", "placementImage" : "at_ext_bananaicecream.png:full", "placementImagePosition" : [ 0, 0 ], "largeImage" : "at_ext_bananaicecream.png:full",
   "orientations" : [
     { "image" : "/assetmissing.png", "direction" : "left", "flipImages" : true, "imagePosition" : [ 0, 0 ], "spaceScan" : 0.1, "anchors" : [ "bottom" ], "interactiveSpaces" : [ [ 0, 0 ], [ 0, 1 ] ] },

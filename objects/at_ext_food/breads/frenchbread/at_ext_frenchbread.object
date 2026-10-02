@@ -5,7 +5,7 @@
   ],
   "rarity": "Common",
   "description": "Best sliced while the baguette is still crisp.\n^green;Place and interact to eat.^reset;",
-  "shortdescription": "Sliced Baguette",
+  "shortdescription": "^yellow;[TC]^reset; Sliced Baguette",
   "race": "generic",
   "category": "preparedFood",
   "price": 0,
