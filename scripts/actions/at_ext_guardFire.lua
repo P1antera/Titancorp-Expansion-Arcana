@@ -122,7 +122,8 @@ function atExtAdvanceWhileFiring(args, board, nodeId)
 end
 
 function atExtBackpedalFromTarget(args, board, nodeId)
-  if args.entity == nil or not world.entityExists(args.entity) then
+  if args.entity == nil or not world.entityExists(args.entity) or not entity.entityInSight(args.entity) then
+    board:setNumber("atExtRetreatHold", 0)
     return false
   end
 
@@ -155,7 +156,8 @@ function atExtBackpedalFromTarget(args, board, nodeId)
   local lastProgressPosition = selfPosition
   local stuckTimer = stuckTimeout
   while stuckTimer > 0 do
-    if args.entity == nil or not world.entityExists(args.entity) or atExtMovementBlockedByCrouch(board) then
+    if args.entity == nil or not world.entityExists(args.entity) or not entity.entityInSight(args.entity)
+        or atExtMovementBlockedByCrouch(board) then
       board:setNumber("atExtRetreatHold", 0)
       return false
     end
@@ -190,7 +192,8 @@ function atExtBackpedalFromTarget(args, board, nodeId)
 end
 
 function atExtHoldRetreatPosition(args, board)
-  if args.entity == nil or not world.entityExists(args.entity) then
+  if args.entity == nil or not world.entityExists(args.entity) or not entity.entityInSight(args.entity) then
+    board:setNumber("atExtRetreatHold", 0)
     return false
   end
 

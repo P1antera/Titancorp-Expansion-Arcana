@@ -4,6 +4,103 @@ require "/scripts/rect.lua"
 
 local DEBUG_COMBAT_POSITIONS = false
 
+-- Generate coordinates without querying terrain. Only exactly equal rounded
+-- positions are merged; the first occurrence supplies the distance tie-break.
+local function attackPositionCandidates(maxRange, minRange, center)
+  local candidates = {}
+  local seen = {}
+  local range = maxRange
+  while range >= minRange do
+    local maxSteps = math.min(range, 25)
+    for i = 0, maxSteps do
+      local yStep = range / maxSteps
+      local y = i * yStep
+      local x = range * math.cos(math.asin(i / maxSteps))
+
+      for _,xDir in ipairs({1, -1}) do
+        for _,yDir in ipairs({1, -1}) do
+          local position = {center[1] + xDir * x, center[2] + yDir * y}
+          position[2] = math.ceil(position[2]) - (self.npcBounds[2] % 1)
+          local seenYs = seen[position[1]]
+          if not seenYs then
+            seenYs = {}
+            seen[position[1]] = seenYs
+          end
+          if not seenYs[position[2]] then
+            seenYs[position[2]] = true
+            candidates[#candidates + 1] = {
+              position = position,
+              targetDistance = world.magnitude(center, position),
+              order = #candidates + 1
+            }
+          end
+        end
+      end
+    end
+    range = range - 1
+  end
+  return candidates
+end
+
+local function closerCandidate(a, b)
+  if a.distance == b.distance then
+    return a.candidate.order < b.candidate.order
+  end
+  return a.distance < b.distance
+end
+
+local function siftCandidateDown(heap, index)
+  local entry = heap[index]
+  while index * 2 <= #heap do
+    local child = index * 2
+    if child < #heap and closerCandidate(heap[child + 1], heap[child]) then
+      child = child + 1
+    end
+    if not closerCandidate(heap[child], entry) then break end
+    heap[index] = heap[child]
+    index = child
+  end
+  heap[index] = entry
+end
+
+local function candidateHeap(candidates, npcPosition, ranges)
+  local heap = {}
+  for _,candidate in ipairs(candidates) do
+    if candidate.valid ~= false and candidate.targetDistance >= ranges.minRange
+        and candidate.targetDistance <= ranges.maxRange then
+      heap[#heap + 1] = {
+        candidate = candidate,
+        distance = world.magnitude(candidate.position, npcPosition)
+      }
+    end
+  end
+  for index = math.floor(#heap / 2), 1, -1 do
+    siftCandidateDown(heap, index)
+  end
+  return heap
+end
+
+local function popCandidate(heap)
+  local candidate = heap[1].candidate
+  local last = table.remove(heap)
+  if #heap > 0 then
+    heap[1] = last
+    siftCandidateDown(heap, 1)
+  end
+  return candidate
+end
+
+local function validateCandidate(candidate, losPosition)
+  if candidate.valid == nil then
+    candidate.valid = validAttackPosition(candidate.position, self.npcBounds, true)
+        and not world.lineTileCollision(candidate.position, losPosition)
+    if candidate.valid and DEBUG_COMBAT_POSITIONS then
+      world.debugPoint(candidate.position, "green")
+    end
+  end
+  return candidate.valid
+end
+
 --Tactical planner script for NPC Combat
 function npcCombat(dt)
   if not world.entityExists(self.goal) then
@@ -115,6 +212,14 @@ function setRangedAttackerPositions()
 
     
     local needPosition = util.filter(memberRanges, function(pair)
+      -- Lost-sight pursuit owns movement until this member sees the target again.
+      -- Searching for firing positions behind cover can exhaust every candidate.
+      if not world.entityExists(pair[1])
+          or not world.callScriptedEntity(pair[1], "entity.entityInSight", self.goal) then
+        self.memberResources[pair[1]]:set("movePosition", nil)
+        return false
+      end
+
       local positions = {
         self.memberResources[pair[1]]:get("movePosition"),
         world.entityPosition(pair[1])
@@ -137,25 +242,29 @@ function setRangedAttackerPositions()
       table.sort(needPosition, function(a,b) return a[2].minRange < b[2].minRange end)
       local minRange = needPosition[1][2].minRange
 
-      local rangedPositions = attackPositionsInRange(maxRange, minRange, targetPosition)
+      -- Candidate validity is shared by members only for this assignment pass.
+      local candidates = attackPositionCandidates(maxRange, minRange, targetPosition)
+      local losPosition = vec2.add(targetPosition, {0, -1})
 
       -- Find a good position for npcs that need one
       for _,pair in pairs(needPosition) do
         local npcPosition = world.entityPosition(pair[1])
-        table.sort(rangedPositions, function(a,b)
-          return world.magnitude(a, npcPosition) < world.magnitude(b, npcPosition)
-        end)
-
-        -- Get closest open position
-        local movePosition = util.find(rangedPositions, function(position)
-          local magnitude = world.magnitude(targetPosition, position)
-          -- make sure the position is in range
-          if magnitude < pair[2].minRange or magnitude > pair[2].maxRange then return false end
-
-          -- If we can't find a close position in the already used positions, it's available
-          return util.find(usedPositions, function(used) return world.magnitude(position, used) < 2 end) == nil
-        end)
-        table.insert(usedPositions, movePosition)
+        local heap = candidateHeap(candidates, npcPosition, pair[2])
+        local movePosition
+        while #heap > 0 do
+          local candidate = popCandidate(heap)
+          local position = candidate.position
+          local occupied = util.find(usedPositions, function(used)
+            return world.magnitude(position, used) < 2
+          end) ~= nil
+          if not occupied and validateCandidate(candidate, losPosition) then
+            movePosition = position
+            break
+          end
+        end
+        if movePosition then
+          table.insert(usedPositions, movePosition)
+        end
         self.memberResources[pair[1]]:set("movePosition", movePosition)
       end
     end
@@ -231,30 +340,11 @@ end
 
 function attackPositionsInRange(maxRange, minRange, center)
   local positions = {}
-  local range = maxRange
-  while range >= minRange do
-    local step = (math.pi / 2) / range
-    local maxSteps = math.min(range, 25)
-    for i = 0, maxSteps do
-      local yStep = (range / maxSteps)
-      local y = i * yStep
-      local x = range * math.cos(math.asin(i/maxSteps))
-
-      for _,xDir in ipairs({1, -1}) do
-        for _,yDir in ipairs({1, -1}) do
-          local position = {center[1] + xDir * x, center[2] + yDir * y}
-          position[2] = math.ceil(position[2]) - (self.npcBounds[2] % 1)
-          if validAttackPosition(position, self.npcBounds, true) and not world.lineTileCollision(position, vec2.add(center, {0, -1})) then
-            if DEBUG_COMBAT_POSITIONS then
-              world.debugPoint(position, "green")
-            end
-            table.insert(positions, position)
-          end
-        end
-      end
+  local losPosition = vec2.add(center, {0, -1})
+  for _,candidate in ipairs(attackPositionCandidates(maxRange, minRange, center)) do
+    if validateCandidate(candidate, losPosition) then
+      table.insert(positions, candidate.position)
     end
-
-    range = range - 1
   end
   return positions
 end

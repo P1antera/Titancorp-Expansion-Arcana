@@ -92,34 +92,91 @@ local function atExtIsCurrentTrackedTarget(board, entityId)
       or atExtListContainsEntity(board:getList("outOfSight"), entityId)
 end
 
+local function atExtIdleRangedAim(board)
+  local idleAimPosition = vec2.add(mcontroller.position(), {mcontroller.facingDirection() * 4, -4})
+  board:setNumber("atExtCrouchTimer", 0)
+  board:setNumber("atExtRetreatHold", 0)
+  board:setPosition("aimPosition", idleAimPosition)
+  self.primaryFire = false
+  self.altFire = false
+  npc.endPrimaryFire()
+  npc.endAltFire()
+  npc.setAimPosition(idleAimPosition)
+end
+
 function atExtMaintainLostSight(args, board)
   while args.entity ~= nil
       and world.entityExists(args.entity)
       and atExtIsCurrentTrackedTarget(board, args.entity)
       and not entity.entityInSight(args.entity) do
-    local idleAimPosition = vec2.add(mcontroller.position(), {mcontroller.facingDirection() * 4, -4})
-    board:setNumber("atExtCrouchTimer", 0)
+    atExtIdleRangedAim(board)
     board:setPosition("pursuitPosition", world.entityPosition(args.entity))
-    board:setPosition("aimPosition", idleAimPosition)
-    self.primaryFire = false
-    self.altFire = false
-    npc.endPrimaryFire()
-    npc.endAltFire()
-    npc.setAimPosition(idleAimPosition)
     coroutine.yield()
   end
 
+  atExtIdleRangedAim(board)
   if args.entity ~= nil and world.entityExists(args.entity) and entity.entityInSight(args.entity) then
     local targetPosition = world.entityPosition(args.entity)
     board:setPosition("aimPosition", targetPosition)
     npc.setAimPosition(targetPosition)
-  else
-    local idleAimPosition = vec2.add(mcontroller.position(), {mcontroller.facingDirection() * 4, -4})
-    board:setPosition("aimPosition", idleAimPosition)
-    npc.setAimPosition(idleAimPosition)
   end
-  npc.endPrimaryFire()
-  npc.endAltFire()
+  return false
+end
+
+function atExtPursueLostTarget(args, board)
+  local target = args.entity
+  if target == nil or not world.entityExists(target)
+      or not atExtIsCurrentTrackedTarget(board, target) or entity.entityInSight(target) then
+    return false
+  end
+
+  if board:getEntity("atExtPursuitTarget") ~= target then
+    board:setEntity("atExtPursuitTarget", target)
+    board:setNumber("atExtPursuitRetryAt", 0)
+  end
+
+  -- Keep the original ground search and path options in moveToPosition. Hold
+  -- this branch while waiting so failure cannot fall through to ranged movement.
+  local moveArgs = {
+    avoidLiquid = true, groundPosition = true, minGround = -20, maxGround = 5,
+    run = args.run ~= false
+  }
+  local movement
+  local retryDelay = args.retryDelay or 1
+  while world.entityExists(target)
+      and atExtIsCurrentTrackedTarget(board, target)
+      and not entity.entityInSight(target) do
+    atExtIdleRangedAim(board)
+    moveArgs.position = world.entityPosition(target)
+    board:setPosition("pursuitPosition", moveArgs.position)
+
+    if atExtMovementAllowed(args, board) then
+      if not movement and world.time() >= (board:getNumber("atExtPursuitRetryAt") or 0) then
+        movement = coroutine.create(function() return moveToPosition(moveArgs, board) end)
+      end
+      if movement then
+        local ok, result = coroutine.resume(movement)
+        if not ok then error(result) end
+        if coroutine.status(movement) == "dead" then
+          movement = nil
+          board:setNumber("atExtPursuitRetryAt", world.time() + retryDelay)
+        end
+      end
+    end
+
+    -- Movement can change aim/facing. Finish the tick with weapons lowered.
+    atExtIdleRangedAim(board)
+    coroutine.yield(nil, {pathfinding = movement ~= nil and mcontroller.pathfinding() or false})
+  end
+
+  board:setNumber("atExtPursuitRetryAt", 0)
+  atExtIdleRangedAim(board)
+  if world.entityExists(target) and atExtIsCurrentTrackedTarget(board, target)
+      and entity.entityInSight(target) then
+    local targetPosition = world.entityPosition(target)
+    board:setPosition("aimPosition", targetPosition)
+    npc.setAimPosition(targetPosition)
+  end
   return false
 end
 
@@ -146,6 +203,7 @@ function atExtResetRangedCombat(args, board)
   board:setNumber("atExtPursuitActive", 0)
   board:setNumber("atExtCrouchTimer", 0)
   board:setNumber("atExtRetreatHold", 0)
+  board:setNumber("atExtPursuitRetryAt", 0)
   npc.endPrimaryFire()
   npc.endAltFire()
   npc.setAimPosition(vec2.add(mcontroller.position(), {mcontroller.facingDirection() * 4, -4}))
@@ -169,25 +227,19 @@ function atExtRangedFireMonitor(args, board)
 
     if entity.entityInSight(args.entity) then
       board:setNumber("atExtPursuitActive", 0)
+      board:setNumber("atExtPursuitRetryAt", 0)
       board:setPosition("aimPosition", world.entityPosition(args.entity))
     else
       board:setNumber("atExtPursuitActive", 1)
-      board:setNumber("atExtCrouchTimer", 0)
       board:setPosition("pursuitPosition", world.entityPosition(args.entity))
-      self.primaryFire = false
-      self.altFire = false
-      npc.endPrimaryFire()
-      npc.endAltFire()
+      atExtIdleRangedAim(board)
     end
 
     coroutine.yield()
   end
 
-  self.primaryFire = false
-  self.altFire = false
   board:setNumber("atExtPursuitActive", 0)
-  npc.endPrimaryFire()
-  npc.endAltFire()
-  npc.setAimPosition(vec2.add(mcontroller.position(), {mcontroller.facingDirection() * 4, -4}))
+  board:setNumber("atExtPursuitRetryAt", 0)
+  atExtIdleRangedAim(board)
   return false
 end

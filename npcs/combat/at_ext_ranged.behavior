@@ -561,11 +561,24 @@
             }
           },
           {
-            "title": "selector",
+            "title": "dynamic",
             "type": "composite",
-            "name": "selector",
+            "name": "dynamic",
             "parameters": {},
             "children": [
+              {
+                "title": "Lost Sight Pursuit",
+                "type": "action",
+                "name": "atExtPursueLostTarget",
+                "parameters": {
+                  "entity": {"key": "target"},
+                  "retryDelay": {"value": 1},
+                  "run": {"value": true}
+                },
+                "output": {
+                  "pathfinding": "pursuitPathing"
+                }
+              },
               {
                 "title": "Block Movement While Crouched",
                 "type": "decorator",
@@ -577,86 +590,6 @@
                   "name": "atExtMovementAllowed",
                   "parameters": {}
                 }
-              },
-              {
-                "title": "Lost Sight Pursuit",
-                "type": "composite",
-                "name": "sequence",
-                "parameters": {},
-                "children": [
-                  {
-                    "title": "inverter",
-                    "type": "decorator",
-                    "name": "inverter",
-                    "parameters": {},
-                    "child": {
-                      "title": "entityInSight",
-                      "type": "action",
-                      "name": "entityInSight",
-                      "parameters": {
-                        "entity": {"key": "target"}
-                      }
-                    }
-                  },
-                  {
-                    "title": "entityPosition",
-                    "type": "action",
-                    "name": "entityPosition",
-                    "parameters": {
-                      "entity": {"key": "target"}
-                    },
-                    "output": {
-                      "position": "pursuitPosition"
-                    }
-                  },
-                  {
-                    "title": "parallel",
-                    "type": "composite",
-                    "name": "parallel",
-                    "parameters": {
-                      "fail": {"value": 1},
-                      "success": {"value": -1}
-                    },
-                    "children": [
-                      {
-                        "title": "atExtMaintainMovementAllowed",
-                        "type": "action",
-                        "name": "atExtMaintainMovementAllowed",
-                        "parameters": {}
-                      },
-                      {
-                        "title": "moveToPosition",
-                        "type": "action",
-                        "name": "moveToPosition",
-                        "parameters": {
-                          "avoidLiquid": {"value": true},
-                          "groundPosition": {"value": true},
-                          "maxGround": {"value": 5},
-                          "minGround": {"value": -20},
-                          "position": {"key": "pursuitPosition"},
-                          "run": {"value": true}
-                        },
-                        "output": {
-                          "pathfinding": "pursuitPathing"
-                        }
-                      },
-                      {
-                        "title": "Maintain Lost Sight",
-                        "type": "action",
-                        "name": "atExtMaintainLostSight",
-                        "parameters": {
-                          "entity": {"key": "target"}
-                        }
-                      },
-                      {
-                        "title": "runner",
-                        "type": "action",
-                        "name": "runner",
-                        "parameters": {}
-                      }
-                    ]
-                  }
-                ]
               },
               {
                 "title": "sequence",
