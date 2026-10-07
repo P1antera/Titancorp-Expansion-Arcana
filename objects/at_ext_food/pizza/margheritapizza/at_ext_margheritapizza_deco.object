@@ -1,0 +1,6 @@
+{
+  "objectName":"at_ext_margheritapizza_deco", "colonyTags":["cooking"], "rarity":"Uncommon", "description":"Red tomato sauce, green basil leaves, and white cheese: the colors of the Italian flag.", "shortdescription":"Margherita Pizza", "race":"generic", "category":"decorative", "price":0,
+  "inventoryIcon":"at_ext_margheritapizza_icon.png", "placementImage":"at_ext_margheritapizza.png:full", "placementImagePosition":[0,0], "largeImage":"at_ext_margheritapizza.png:full",
+  "orientations":[{"image":"/assetmissing.png","direction":"left","flipImages":true,"imagePosition":[0,0],"spaceScan":0.1,"anchors":["bottom"]},{"image":"/assetmissing.png","direction":"right","imagePosition":[0,0],"spaceScan":0.1,"anchors":["bottom"]}],
+  "animation":"/objects/at_ext_food/servedfood/at_ext_hotservedfood.animation", "animationParts":{"food":"at_ext_margheritapizza.png"}, "animationPosition":[0,0], "scripts":["/objects/at_ext_food/servedfood/at_ext_hotfooddeco.lua"], "scriptDelta":10, "steamEmitter":"steam", "interactive":false
+}

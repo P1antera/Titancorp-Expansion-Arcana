@@ -1,0 +1,13 @@
+{
+  "margin":0, "name":"at_ext_pizza", "properties":{}, "spacing":0, "tilecount":5, "tileheight":8, "tilewidth":17,
+  "tileproperties": {
+    "0":{"\/\/shortdescription":"","imagePositionX":"0","imagePositionY":"0","object":"at_ext_classicpizza_deco","tilesetDirection":"right"},
+    "1":{"\/\/shortdescription":"","imagePositionX":"0","imagePositionY":"0","object":"at_ext_pineapplepizza_deco","tilesetDirection":"right"},
+    "2":{"\/\/shortdescription":"","imagePositionX":"0","imagePositionY":"0","object":"at_ext_margheritapizza_deco","tilesetDirection":"right"},
+    "3":{"\/\/shortdescription":"","imagePositionX":"0","imagePositionY":"0","object":"at_ext_supremepizza_deco","tilesetDirection":"right"},
+    "4":{"\/\/shortdescription":"","imagePositionX":"0","imagePositionY":"0","object":"at_ext_chicagodeepdishpizza_deco","tilesetDirection":"right"}
+  },
+  "tiles": {
+    "0":{"image":"../../../objects/at_ext_food/pizza/classicpizza/at_ext_classicpizza_icon.png"}, "1":{"image":"../../../objects/at_ext_food/pizza/pineapplepizza/at_ext_pineapplepizza_icon.png"}, "2":{"image":"../../../objects/at_ext_food/pizza/margheritapizza/at_ext_margheritapizza_icon.png"}, "3":{"image":"../../../objects/at_ext_food/pizza/supremepizza/at_ext_supremepizza_icon.png"}, "4":{"image":"../../../objects/at_ext_food/pizza/chicagodeepdishpizza/at_ext_chicagodeepdishpizza_icon.png"}
+  }
+}

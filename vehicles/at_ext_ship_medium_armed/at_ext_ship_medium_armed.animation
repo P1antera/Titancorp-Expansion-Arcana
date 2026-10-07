@@ -35,7 +35,7 @@
         "default" : "loaded",
         "states" : {
           "two" : {}, "one" : {}, "empty" : {},
-          "reload" : { "frames" : 2, "cycle" : 1.0, "mode" : "transition", "transition" : "loaded" },
+          "reload" : { "frames" : 2, "cycle" : 0.1, "mode" : "transition", "transition" : "loaded" },
           "loaded" : {}
         }
       },

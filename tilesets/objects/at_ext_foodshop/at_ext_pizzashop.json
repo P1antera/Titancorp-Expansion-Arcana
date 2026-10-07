@@ -1,0 +1,5 @@
+{
+  "margin":0, "name":"at_ext_pizzashop", "properties":{}, "spacing":0, "tilecount":1, "tileheight":65, "tilewidth":51,
+  "tileproperties":{"0":{"\/\/shortdescription":"","imagePositionX":"0","imagePositionY":"0","object":"at_ext_pizzashop","tilesetDirection":"right"}},
+  "tiles":{"0":{"image":"../../../objects/at_ext_food/pizza/pizzashop/at_ext_pizzashop.png"}}
+}

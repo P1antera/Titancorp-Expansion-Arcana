@@ -90,11 +90,12 @@ function finish()
 
   self.finished = true
 
-  local activeEffects = activeEffectNames()
+  local hasFirstEffect = status.uniqueStatusEffectActive(self.firstEffectName)
+  local hasSecondEffect = status.uniqueStatusEffectActive(self.secondEffectName)
   local effectName = self.firstEffectName
   local effectDuration = self.firstEffectDuration
 
-  if activeEffects[self.firstEffectName] or activeEffects[self.secondEffectName] then
+  if hasFirstEffect or hasSecondEffect then
     effectName = self.secondEffectName
     effectDuration = self.secondEffectDuration
   end
@@ -118,18 +119,6 @@ function finish()
   giveEmptyBottle()
   self.finished = false
   idle()
-end
-
-function activeEffectNames()
-  local effects = {}
-
-  for _, effect in ipairs(status.activeUniqueStatusEffectSummary() or {}) do
-    if effect[1] and effect[1] ~= "" then
-      effects[effect[1]] = true
-    end
-  end
-
-  return effects
 end
 
 function consumeFood()

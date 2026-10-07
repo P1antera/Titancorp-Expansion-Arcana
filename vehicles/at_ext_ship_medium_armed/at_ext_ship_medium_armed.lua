@@ -280,7 +280,7 @@ function updateWeaponSystems(dt, driver, hullTilt)
     if self.missileTimer <= 0 then
       self.missileMode = "reload"
       animator.setAnimationState("missilelauncher", "reload")
-      self.missileTimer = 1.0
+      self.missileTimer = 0.1
     end
   elseif self.missileMode == "reload" then
     self.missileTimer = self.missileTimer - dt

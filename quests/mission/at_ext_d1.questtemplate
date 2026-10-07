@@ -1,7 +1,7 @@
 {
   "id" : "at_ext_d1",
   //"mainQuest" : true,
-  "prerequisites" : [ "at_ext_shippad", "at_ext_pre" ],
+  //"prerequisites" : [ "at_ext_shippad", "at_ext_pre" ],
   "title" : "^cyan;[Senior]^yellow;Special mission",
   "text" : "We have received a message that a transport ship belonging to Titancorp has crashed in the asteroid belt, which carrying an important document. We need a contractor to go to that location to locate the wreckage and eliminate all threats.",
   "completionText" : "Good job! The ^yellow;Credits^reset; will be sent to you right now!",

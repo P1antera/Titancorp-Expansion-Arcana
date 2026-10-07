@@ -27,8 +27,7 @@
 	"at_ext_d11",
     "at_ext_coupon",
     "at_ext_shipcontroller",	
-    "at_ext_d8_pistol",
-	"at_ext_pre"
+    "at_ext_d8_pistol"
 	
 	],
 	
@@ -48,8 +47,7 @@
 	"at_ext_d10_item",
 	"at_ext_coupon",
   "at_ext_shipcontroller",	
-    "at_ext_d8_pistol",
-	"at_ext_pre"
+    "at_ext_d8_pistol"
 	 ],
 
   "category" : "light",

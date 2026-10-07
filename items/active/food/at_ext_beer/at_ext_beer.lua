@@ -74,13 +74,15 @@ end
 function finish()
   if self.finished then return end
   self.finished = true
-  local activeEffects = activeEffectNames()
+  local hasFirstEffect = status.uniqueStatusEffectActive(self.firstEffectName)
+  local hasSecondEffect = status.uniqueStatusEffectActive(self.secondEffectName)
+  local hasThirdEffect = status.uniqueStatusEffectActive(self.thirdEffectName)
   local effectName = self.firstEffectName
   local effectDuration = self.firstEffectDuration
-  if activeEffects[self.thirdEffectName] or activeEffects[self.secondEffectName] then
+  if hasThirdEffect or hasSecondEffect then
     effectName = self.thirdEffectName
     effectDuration = self.thirdEffectDuration
-  elseif activeEffects[self.firstEffectName] then
+  elseif hasFirstEffect then
     effectName = self.secondEffectName
     effectDuration = self.secondEffectDuration
   end
@@ -100,14 +102,6 @@ function finish()
   giveEmptyBottle()
   self.finished = false
   idle()
-end
-
-function activeEffectNames()
-  local effects = {}
-  for _, effect in ipairs(status.activeUniqueStatusEffectSummary() or {}) do
-    if effect[1] and effect[1] ~= "" then effects[effect[1]] = true end
-  end
-  return effects
 end
 
 function giveEmptyBottle()
