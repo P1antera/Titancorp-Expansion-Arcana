@@ -1,0 +1,1 @@
+{"name":"at_ext_chocolatewaffle_bite","defaultDuration":0.1,"scripts":["/stats/effects/at_ext_foodbite/at_ext_foodbite.lua"],"effectConfig":{"foodValue":23.75}}

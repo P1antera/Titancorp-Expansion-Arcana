@@ -89,7 +89,7 @@ function updateMediumShip(dt, driver, moveDir)
     local bottom = vec2.add(start, {0, -self.maxHeight * 2.0})
     local groundDist = self.maxHeight * 2.0
     for xOffset = -10, 10 do
-      local ground = world.collisionBlocksAlongLine(vec2.add(start, {xOffset, 0}), vec2.add(bottom, {xOffset, 0}))[1]
+      local ground = world.collisionBlocksAlongLine(vec2.add(start, {xOffset, 0}), vec2.add(bottom, {xOffset, 0}), nil, 1)[1]
       if ground then
         groundDist = math.min(groundDist, world.distance(start, vec2.add(ground, {0, 1}))[2])
       end

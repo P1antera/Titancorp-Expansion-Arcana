@@ -1,6 +1,6 @@
 {
-  "objectName":"at_ext_pizzashop", "colonyTags":["commerce","cooking"], "rarity":"Uncommon", "description":"A wall-mounted menu for pizzas hot enough to cross the galaxy.", "shortdescription":"Cosmic Pizza Parlor", "race":"generic", "category":"decorative", "price":0,
+  "objectName":"at_ext_pizzashop", "colonyTags":["commerce","cooking"], "rarity":"Uncommon", "description":"A wall-mounted menu for pizzas hot enough to cross the galaxy.", "shortdescription":"Pizza House", "race":"generic", "category":"decorative", "price":0,
   "inventoryIcon":"at_ext_pizzashop.png", "placementImage":"at_ext_pizzashop.png:default", "placementImagePosition":[-25,0], "largeImage":"at_ext_pizzashop.png:default", "interactAction":"OpenCraftingInterface",
-  "interactData":{"config":"/interface/arcana/arcana_crafting_trading/at_ext_foodshop.config","filter":["at_ext_foodshop_pizza"],"paneLayoutOverride":{"lblTitle":{"value":"^#ff9f43;Cosmic Pizza Parlor"},"lblSlogan":{"value":"Hot slices, whole worlds of flavor."}}},
+  "interactData":{"config":"/interface/arcana/arcana_crafting_trading/at_ext_foodshop.config","filter":["at_ext_foodshop_pizza"],"paneLayoutOverride":{"lblTitle":{"value":"^#ff9f43;Pizza House"},"lblSlogan":{"value":"Hot slices, whole worlds of flavor."}}},
   "orientations":[{"imageLayers":[{"image":"at_ext_pizzashop.png:default"}],"direction":"left","flipImages":true,"imagePosition":[0,0],"spaceScan":0.1,"anchors":["background"]},{"imageLayers":[{"image":"at_ext_pizzashop.png:default"}],"direction":"right","imagePosition":[0,0],"spaceScan":0.1,"anchors":["background"]}]
 }
