@@ -7,5 +7,5 @@
     "count" : 1
   },
   "duration" : 0.1,
-  "groups" : ["at_ext_food" ]
+  "groups" : ["at_ext_food", "at_ext_foodshop_fastfood" ]
 }

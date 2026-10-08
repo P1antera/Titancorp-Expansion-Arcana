@@ -142,7 +142,7 @@ function applyFlightMovement(moveDir)
   local bottom = vec2.add(start, {0, -self.maxHeight * 2})
   local ground
   for xOffset = -5, 5 do
-    local findGround = world.collisionBlocksAlongLine(vec2.add(start, {xOffset, 0}), vec2.add(bottom, {xOffset, 0}))[1]
+    local findGround = world.collisionBlocksAlongLine(vec2.add(start, {xOffset, 0}), vec2.add(bottom, {xOffset, 0}), nil, 1)[1]
     if findGround and (not ground or findGround[2] > ground[2]) then ground = findGround end
   end
   local groundDist = self.maxHeight * 2
