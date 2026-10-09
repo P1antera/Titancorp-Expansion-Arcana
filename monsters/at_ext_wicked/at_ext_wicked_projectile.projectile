@@ -1,0 +1,29 @@
+{
+  "projectileName": "at_ext_wicked_projectile",
+  "physics": "laser",
+  "timeToLive": 3,
+  "bounces": 0,
+  "speed": 114,
+  "image": "at_ext_wicked_projectile.png",
+  "animationCycle": 0.25,
+  "frameNumber": 4,
+  "lightColor": [
+    235,
+    126,
+    2
+  ],
+  "emitters": [
+    "fireplasma",
+    "smoke",
+    "flames"
+  ],
+  "supportsProcessing": true,
+  "actionOnReap": [
+    {
+      "action": "config",
+      "file": "/projectiles/explosions/vsmallregularexplosion/vsmallregularexplosionnodamage.config"
+    }
+  ],
+  "damageKind": "plasma",
+  "persistentAudio": "/sfx/projectiles/dragonprojectile_loop.ogg"
+}

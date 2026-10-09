@@ -4,7 +4,7 @@
   "canBeAbandoned" : true,
   "prerequisites" : ["at_ext_d4"],
   "title" : "^red;[Hard]^yellow;Special mission^reset;",
-  "text" : "We've received intelligence that Orion is testing a new technology. To facilitate this, they have constructed a secret outpost in a remote location for classified experiments. If this technology is successfully developed, it will be integrated into Orion’s military weaponry, posing a significant security threat to us. The prototype blueprint is stored within that outpost. Therefore, we need a contractor to infiltrate the facility under an ''unknown identity'', steal the technology, and ensure this potential threat is eliminated before it become a threat to us.",
+  "text" : "Orion is developing new weapons technology at a secret outpost. Infiltrate the facility under an unknown identity and steal the prototype blueprint before it becomes a threat to us.",
   "completionText" : "Great, We will begin analyzing this blueprint. ^yellow;Payment^reset; have been sent to you!",
   "moneyRange" : [0, 0],
   "rewards" : [

@@ -14661,6 +14661,91 @@
                  "width":40,
                  "x":11752,
                  "y":1240
+                }, 
+                {
+                 "height":8,
+                 "id":3785,
+                 "name":"Drone",
+                 "properties":[
+                        {
+                         "name":"monster",
+                         "type":"string",
+                         "value":"at_ext_wicked"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":12712,
+                 "y":928
+                }, 
+                {
+                 "height":8,
+                 "id":3786,
+                 "name":"Drone",
+                 "properties":[
+                        {
+                         "name":"monster",
+                         "type":"string",
+                         "value":"at_ext_wicked"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":12048,
+                 "y":1232
+                }, 
+                {
+                 "height":8,
+                 "id":3787,
+                 "name":"Drone",
+                 "properties":[
+                        {
+                         "name":"monster",
+                         "type":"string",
+                         "value":"at_ext_wicked"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":11504,
+                 "y":1056
+                }, 
+                {
+                 "height":8,
+                 "id":3788,
+                 "name":"Drone",
+                 "properties":[
+                        {
+                         "name":"monster",
+                         "type":"string",
+                         "value":"at_ext_wicked"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":10664,
+                 "y":1344
+                }, 
+                {
+                 "height":8,
+                 "id":3789,
+                 "name":"Drone",
+                 "properties":[
+                        {
+                         "name":"monster",
+                         "type":"string",
+                         "value":"at_ext_wicked"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":10288,
+                 "y":1288
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -16337,7 +16422,7 @@
          "y":0
         }],
  "nextlayerid":10,
- "nextobjectid":3785,
+ "nextobjectid":3790,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
