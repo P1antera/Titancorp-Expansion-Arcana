@@ -14,8 +14,9 @@
   ],
 
   "updateDelta" : 10,
-  "script" : "/quests/scripts/at_ext_mptg.lua",
+  "script" : "/quests/scripts/at_ext_skippable_mptg.lua",
   "scriptConfig" : {
+    "atExtSkipId" : "at_ext_d3",
     "portraits" : {
       "questStarted" : 
         { 
