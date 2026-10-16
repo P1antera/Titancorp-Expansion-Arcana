@@ -1,7 +1,7 @@
 {
   "id" : "at_ext_dailyjob_intro",
   "mainQuest" : false,
-  "prerequisites" : [  "at_ext_shippad", "at_ext_pre" ],
+  //"prerequisites" : [  "at_ext_shippad", "at_ext_pre" ],
   "title" : "^yellow;Incoming message^reset;",
   "text" : "Hello there! I'm looking for a partner. If you're interested, come find me in the ^yellow;TitanColony^reset;.",
   "completionText" : "Hi, my name is Forgex, thank you for being willing to help me!",

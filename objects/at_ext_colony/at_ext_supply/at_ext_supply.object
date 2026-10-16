@@ -7,7 +7,7 @@
   "race" : "generic",
   "category" : "crafting",
   "price" : 0,
-  
+   "printable" : false, 
   //"lightColor" : [100, 50, 120],
 
    "scripts" : [ "at_ext_supply.lua" ],
