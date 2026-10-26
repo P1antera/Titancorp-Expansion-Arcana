@@ -1,0 +1,136 @@
+{
+  "globalTagDefaults": {
+    "idlePose": "5"
+  },
+  "animatedParts": {
+    "stateTypes": {
+      "movement": {
+        "default": "idle",
+        "states": {
+          "idle": {
+            "frames": 1
+          },
+          "walk": {
+            "frames": 8,
+            "cycle": 0.75,
+            "mode": "loop"
+          },
+          "jump": {
+            "frames": 4,
+            "cycle": 0.25,
+            "mode": "end"
+          },
+          "fall": {
+            "frames": 4,
+            "cycle": 0.25,
+            "mode": "end"
+          }
+        }
+      }
+    },
+    "parts": {
+      "backArm": {
+        "properties": {
+          "centered": true,
+          "offset": [
+            0,
+            0.0625
+          ],
+          "zLevel": -1
+        },
+        "partStates": {
+          "movement": {
+            "idle": {
+              "properties": {
+                "image": "/monsters/at_ext_deepseek/backarm.png:idle.<idlePose>"
+              }
+            },
+            "walk": {
+              "properties": {
+                "image": "/monsters/at_ext_deepseek/backarm.png:walkCycle.<frame>"
+              }
+            },
+            "jump": {
+              "properties": {
+                "image": "/monsters/at_ext_deepseek/backarm.png:jump.<frame>"
+              }
+            },
+            "fall": {
+              "properties": {
+                "image": "/monsters/at_ext_deepseek/backarm.png:fall.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "body": {
+        "properties": {
+          "centered": true,
+          "offset": [
+            0,
+            0.0625
+          ],
+          "zLevel": 0
+        },
+        "partStates": {
+          "movement": {
+            "idle": {
+              "properties": {
+                "image": "/monsters/at_ext_deepseek/body.png:idle.<idlePose>"
+              }
+            },
+            "walk": {
+              "properties": {
+                "image": "/monsters/at_ext_deepseek/body.png:walk.<frame>"
+              }
+            },
+            "jump": {
+              "properties": {
+                "image": "/monsters/at_ext_deepseek/body.png:jump.<frame>"
+              }
+            },
+            "fall": {
+              "properties": {
+                "image": "/monsters/at_ext_deepseek/body.png:fall.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "frontArm": {
+        "properties": {
+          "centered": true,
+          "offset": [
+            0,
+            0.0625
+          ],
+          "zLevel": 1
+        },
+        "partStates": {
+          "movement": {
+            "idle": {
+              "properties": {
+                "image": "/monsters/at_ext_deepseek/frontarm.png:idle.<idlePose>"
+              }
+            },
+            "walk": {
+              "properties": {
+                "image": "/monsters/at_ext_deepseek/frontarm.png:walkCycle.<frame>"
+              }
+            },
+            "jump": {
+              "properties": {
+                "image": "/monsters/at_ext_deepseek/frontarm.png:jump.<frame>"
+              }
+            },
+            "fall": {
+              "properties": {
+                "image": "/monsters/at_ext_deepseek/frontarm.png:fall.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

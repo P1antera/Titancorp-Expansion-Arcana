@@ -60,6 +60,23 @@
                 }, 
                 {
                  "height":8,
+                 "id":2748,
+                 "name":"deepseek",
+                 "properties":[
+                        {
+                         "name":"monster",
+                         "type":"string",
+                         "value":"at_ext_deepseek"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":5904,
+                 "y":256
+                }, 
+                {
+                 "height":8,
                  "id":497,
                  "name":"",
                  "properties":[
@@ -24649,7 +24666,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":2748,
+ "nextobjectid":2749,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

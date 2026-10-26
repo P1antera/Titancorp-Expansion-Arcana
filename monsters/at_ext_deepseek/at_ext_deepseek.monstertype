@@ -1,0 +1,187 @@
+{
+  "type": "at_ext_deepseek",
+  "shortdescription": "DeepSeek",
+  "description": "A quiet wanderer who enjoys taking a break.",
+  "categories": [
+    "at_ext_deepseek"
+  ],
+  "parts": [],
+  "animation": "at_ext_deepseek.animation",
+  "reversed": false,
+  "dropPools": [],
+  "baseParameters": {
+    "scripts": [
+      "/monsters/at_ext_deepseek/at_ext_deepseek.lua"
+    ],
+    "initialScriptDelta": 5,
+    "persistent": true,
+    "damageTeamType": "friendly",
+    "damageBar": "None",
+    "knockoutEffect": "",
+    "capturable": false,
+    "interactive": true,
+    "chatPortrait": "/monsters/at_ext_deepseek/at_ext_deepseek_portrait.png:<frame>",
+    "dialogRange": 8,
+    "dialogResetRange": 10,
+    "dialogCooldown": 12,
+    "dialogDuration": 8,
+    "dialog": [
+      "Oh, a new face? I'm Little Whale! I help everyone out around here.",
+      "Don't call me a big fat fish! It's my tail taking up all that room.",
+      "Backpack full? My tail can hold stuff... Just kidding! Don't actually put anything in there!",
+      "You must've seen all sorts of things on your adventures. I'd love to hear about them.",
+      "Want to hear a song? I can sing whale tunes... The off-key kind, though!"
+    ],
+    "metaBoundBox": [
+      -3,
+      -3,
+      3,
+      3
+    ],
+    "scale": 1,
+    "selfDamagePoly": [
+      [
+        -0.75,
+        -2
+      ],
+      [
+        -0.35,
+        -2.5
+      ],
+      [
+        0.35,
+        -2.5
+      ],
+      [
+        0.75,
+        -2
+      ],
+      [
+        0.75,
+        0.65
+      ],
+      [
+        0.35,
+        1.22
+      ],
+      [
+        -0.35,
+        1.22
+      ],
+      [
+        -0.75,
+        0.65
+      ]
+    ],
+    "idleTime": [
+      3,
+      10
+    ],
+    "wanderTime": [
+      2,
+      5
+    ],
+    "wanderRadius": 50,
+    "movementSettings": {
+      "collisionPoly": [
+        [
+          -0.75,
+          -2
+        ],
+        [
+          -0.35,
+          -2.5
+        ],
+        [
+          0.35,
+          -2.5
+        ],
+        [
+          0.75,
+          -2
+        ],
+        [
+          0.75,
+          0.65
+        ],
+        [
+          0.35,
+          1.22
+        ],
+        [
+          -0.35,
+          1.22
+        ],
+        [
+          -0.75,
+          0.65
+        ]
+      ],
+      "mass": 1.6,
+      "walkSpeed": 8,
+      "runSpeed": 15,
+      "groundForce": 250,
+      "airForce": 50,
+      "airFriction": 0,
+      "airJumpProfile": {
+        "jumpSpeed": 45,
+        "jumpInitialPercentage": 1,
+        "jumpHoldTime": 0
+      }
+    },
+    "statusSettings": {
+      "statusProperties": {
+        "targetMaterialKind": "organic"
+      },
+      "appliesEnvironmentStatusEffects": false,
+      "appliesWeatherStatusEffects": false,
+      "minimumLiquidStatusEffectPercentage": 0.1,
+      "primaryScriptSources": [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta": 5,
+      "stats": {
+        "invulnerable": {
+          "baseValue": 1
+        },
+        "maxHealth": {
+          "baseValue": 100
+        },
+        "healthRegen": {
+          "baseValue": 1
+        },
+        "protection": {
+          "baseValue": 0
+        },
+        "powerMultiplier": {
+          "baseValue": 1
+        },
+        "knockbackThreshold": {
+          "baseValue": 9
+        },
+        "knockbackStunTime": {
+          "baseValue": 0.25
+        }
+      },
+      "resources": {
+        "health": {
+          "maxStat": "maxHealth",
+          "deltaStat": "healthRegen",
+          "defaultPercentage": 100
+        },
+        "stunned": {
+          "deltaValue": -1,
+          "initialValue": 0
+        }
+      }
+    },
+    "mouthOffset": [
+      0,
+      0.375
+    ],
+    "feetOffset": [
+      0,
+      -20
+    ]
+  }
+}
