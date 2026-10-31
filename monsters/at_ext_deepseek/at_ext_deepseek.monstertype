@@ -25,6 +25,11 @@
     "dialogResetRange": 10,
     "dialogCooldown": 12,
     "dialogDuration": 8,
+    "foodGiftDialog": [
+      "You're back! Here, catch!",
+      "Take this for the road.",
+      "Have you eaten? I can share some with you!"
+    ],
     "dialog": [
       "Oh, a new face? I'm Little Whale! I help everyone out around here.",
       "Don't call me a big fat fish! It's my tail taking up all that room.",

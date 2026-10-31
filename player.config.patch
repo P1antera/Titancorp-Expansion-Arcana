@@ -1,0 +1,7 @@
+[
+  {
+    "op": "add",
+    "path": "/genericScriptContexts/at_ext_deepseekFoodGift",
+    "value": "/scripts/player/at_ext_deepseek_foodgift.lua"
+  }
+]

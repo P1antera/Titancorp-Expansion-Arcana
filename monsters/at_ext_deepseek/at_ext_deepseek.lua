@@ -16,6 +16,9 @@ function init()
   self.dialogCooldownTimer = 0
   self.dialogInteractTimer = 0
   self.dialogNearby = false
+  self.foodGift = root.assetJson("/monsters/at_ext_deepseek/foodgift.config")
+  self.foodGiftDialog = config.getParameter("foodGiftDialog", {})
+  self.foodGiftNearby = {}
   self.obstaclePathOptions = {
     returnBest = false,
     mustEndOnGround = true,
@@ -51,6 +54,11 @@ function update(dt)
     return
   end
 
+  if updateFoodGift() then
+    mcontroller.controlApproachXVelocity(0, self.dialogStopForce)
+    updateAnimation()
+    return
+  end
   updateDialog(dt)
   if self.dialogTimer > 0 then
     local playerPosition = world.entityPosition(self.dialogTarget)
@@ -89,7 +97,7 @@ function update(dt)
     end
   end
 
-  if self.state == "wander" and mcontroller.onGround() then
+  if self.state == "wander" and (mcontroller.onGround() or mcontroller.groundMovement()) then
     local position = mcontroller.position()
     local distance = world.distance(position, storage.homePosition)[1]
     local walkable, wall = canWalk(self.direction, position)
@@ -101,11 +109,91 @@ function update(dt)
       mcontroller.controlMove(self.direction, false)
     elseif not startObstaclePath(position, not wall) then
       self.nextDirection = -self.direction
+      mcontroller.setXVelocity(0)
       enterIdle()
     end
   end
 
   updateAnimation()
+end
+
+function updateFoodGift()
+  if self.foodGiftRequest then
+    if not self.foodGiftRequest:finished() then
+      return true
+    end
+    local allowed = self.foodGiftRequest:succeeded() and self.foodGiftRequest:result()
+    self.foodGiftRequest = nil
+    if allowed and throwFoodGift(self.foodGiftTarget) then
+      local line = self.foodGiftDialog[math.random(#self.foodGiftDialog)]
+      monster.sayPortrait(line, self.chatPortrait)
+      self.dialogTarget = self.foodGiftTarget
+      self.dialogTimer = self.dialogDuration
+      self.dialogCooldownTimer = self.dialogCooldown
+      self.dialogInteractTimer = 1
+      self.dialogNearby = true
+      enterIdle()
+    elseif allowed then
+      -- Release only this reservation if the player left or the server could not spawn food.
+      world.sendEntityMessage(self.foodGiftTarget, "at_ext_deepseek.cancelFoodGift", self.foodGiftRequestId)
+    end
+    self.foodGiftTarget = nil
+    self.foodGiftRequestId = nil
+    return false
+  end
+  if self.dialogTimer > 0 or self.obstacleTarget or not mcontroller.onGround()
+      or #self.foodGiftDialog == 0 then
+    return false
+  end
+
+  local position = mcontroller.position()
+  local players = world.playerQuery(position, self.foodGift.resetRange,
+    {order = "nearest", boundMode = "position"})
+  local nearby = {}
+  for _, playerId in ipairs(players) do
+    nearby[playerId] = self.foodGiftNearby[playerId]
+  end
+  self.foodGiftNearby = nearby
+  for _, playerId in ipairs(players) do
+    local playerPosition = world.entityPosition(playerId)
+    if not nearby[playerId] and playerPosition
+        and world.magnitude(playerPosition, position) <= self.foodGift.range then
+      local playerMouth = world.entityMouthPosition(playerId) or playerPosition
+      if not world.lineTileCollision(monster.mouthPosition(), playerMouth,
+          {"Null", "Block", "Dynamic", "Slippery"}) then
+        nearby[playerId] = true
+        self.foodGiftTarget = playerId
+        mcontroller.controlFace(world.distance(playerPosition, position)[1])
+        -- Player-side cooldown reservation survives the instance; spawn server-side for a reliable result.
+        self.foodGiftRequestId = sb.makeUuid()
+        self.foodGiftRequest = world.sendEntityMessage(playerId, "at_ext_deepseek.foodGift",
+          entity.id(), self.foodGiftRequestId)
+        return true
+      end
+    end
+  end
+  return false
+end
+
+function throwFoodGift(playerId)
+  local position = mcontroller.position()
+  local playerPosition = world.entityPosition(playerId)
+  if not playerPosition or world.magnitude(playerPosition, position) > self.foodGift.range then
+    return false
+  end
+  local playerMouth = world.entityMouthPosition(playerId) or playerPosition
+  if world.lineTileCollision(monster.mouthPosition(), playerMouth,
+      {"Null", "Block", "Dynamic", "Slippery"}) then
+    return false
+  end
+  local distance = world.distance(playerPosition, position)
+  local flightTime = self.foodGift.flightTime
+  local velocity = {
+    distance[1] / flightTime,
+    distance[2] / flightTime + world.gravity(position) * flightTime / 2
+  }
+  local food = self.foodGift.foods[math.random(#self.foodGift.foods)]
+  return world.spawnItem(food, position, 1, {}, velocity, 0.2) ~= nil
 end
 
 function updateDialog(dt)
@@ -135,7 +223,7 @@ function updateDialog(dt)
 end
 
 function sayDialog(playerId)
-  if #self.dialog == 0 or self.dialogInteractTimer > 0
+  if #self.dialog == 0 or self.dialogInteractTimer > 0 or self.foodGiftRequest
       or self.obstacleTarget or not mcontroller.onGround() then
     return false
   end
@@ -208,23 +296,54 @@ function startObstaclePath(position, descending)
 end
 
 function canWalk(direction, position)
-  -- Leave a little room above the floor so the wall test does not hit the ground.
-  local wall = {
-    position[1] + self.bounds[1] + direction * 0.5,
-    position[2] + self.bounds[2] + 0.25,
-    position[1] + self.bounds[3] + direction * 0.5,
-    position[2] + self.bounds[4] - 0.125
-  }
-  if world.rectTileCollision(wall, {"Null", "Block", "Dynamic", "Slippery"}) then
+  local bounds = self.bounds
+  -- Match the vanilla NPC move action: align feet and allow a one-block slope.
+  position = {position[1], math.ceil(position[2]) - (bounds[2] % 1)}
+  local solidCollisions = {"Null", "Block", "Dynamic", "Slippery"}
+  local clear = false
+  for _, yOffset in ipairs({0, -1, 1}) do
+    local body = rect.translate(bounds, {position[1] + direction * 0.2, position[2] + yOffset})
+    if not world.rectTileCollision(body, solidCollisions) then
+      clear = true
+      break
+    end
+  end
+  if not clear then
     return false, true
   end
 
-  -- Platforms support her feet but do not count as walls.
-  local edge = direction > 0 and self.bounds[3] or self.bounds[1]
-  local ahead = position[1] + edge + direction * 0.5
-  local feet = position[2] + self.bounds[2]
-  return world.lineTileCollision({ahead, feet + 0.125}, {ahead, feet - 1.0},
-    {"Null", "Block", "Dynamic", "Slippery", "Platform"})
+  local edge = direction > 0 and bounds[3] or bounds[1]
+  local wallPoint = {position[1] + edge + direction * 0.5, position[2] + bounds[2] + 0.5}
+  local groundPoint = {position[1] + edge - direction * 0.5, position[2] + bounds[2] - 0.5}
+  if world.pointTileCollision(wallPoint, solidCollisions)
+      and not world.pointTileCollision(groundPoint, solidCollisions) then
+    return false, true
+  end
+
+  -- Check support across the whole next footprint, including one-way platforms.
+  -- A single ray can miss a platform staircase and incorrectly start jump/drop pathing.
+  local groundRect = {
+    position[1] + bounds[1], position[2] + bounds[2] - 1,
+    position[1] + bounds[3], position[2] + bounds[2]
+  }
+  local supportCollisions = {"Null", "Block", "Dynamic", "Slippery", "Platform"}
+  local width = bounds[3] - bounds[1]
+  local heightOffset = 0
+  for distance = width % 1, math.ceil(width) do
+    local supported = false
+    for _, yOffset in ipairs({0, -1, 1}) do
+      local ahead = rect.translate(groundRect, {direction * distance, heightOffset + yOffset})
+      if world.rectTileCollision(ahead, supportCollisions) then
+        heightOffset = heightOffset + yOffset
+        supported = true
+        break
+      end
+    end
+    if not supported then
+      return false, false
+    end
+  end
+  return true, false
 end
 
 function updateAnimation()
