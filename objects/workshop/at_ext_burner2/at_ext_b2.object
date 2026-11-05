@@ -86,7 +86,7 @@
   "soundEffectRangeMultiplier" : 0.5,
 
   "openSounds" : [ "/sfx/objects/campfire_use.ogg" ],
-  "slotCount" : 2,
+  "slotCount" : 1,
   "uiConfig" : "/interface/arcana/arcana_auto/at_ext_b2.config",
   "frameCooldown" : 5,
   "autoCloseCooldown" : 3600,
